@@ -1,0 +1,101 @@
+{
+  "emulators": {
+    "default": {
+      "port": 3569,
+      "serviceAccount": "emulator-account"
+    }
+  },
+  "networks": {
+    "emulator": {
+      "host": "127.0.0.1:3569",
+      "chain": "flow-emulator"
+    },
+    "testnet": {
+      "host": "access.devnet.nodes.onflow.org:9000",
+      "chain": "flow-testnet"
+    },
+    "mainnet": {
+      "host": "access.mainnet.nodes.onflow.org:9000",
+      "chain": "flow-mainnet"
+    }
+  },
+  "accounts": {
+    "dete": {
+      "address": "e467b9dd11fa00df",
+      "keys": [
+        {
+          "type": "google-kms",
+          "index": 2,
+          "signatureAlgorithm": "ECDSA_secp256k1",
+          "hashAlgorithm": "SHA2_256",
+          "context": {
+            "resourceName": "projects/dl-flow-admin/locations/us/keyRings/flow-service-account/cryptoKeys/dete_shirley/cryptoKeyVersions/1"
+          }
+        }
+      ],
+      "chain": "flow-mainnet"
+    },
+    "layne": {
+      "address": "e467b9dd11fa00df",
+      "keys": [
+        {
+          "type": "google-kms",
+          "index": 3,
+          "signatureAlgorithm": "ECDSA_secp256k1",
+          "hashAlgorithm": "SHA2_256",
+          "context": {
+            "resourceName": "projects/dl-flow-admin/locations/us/keyRings/flow-service-account/cryptoKeys/layne_lafrance/cryptoKeyVersions/1"
+          }
+        }
+      ],
+      "chain": "flow-mainnet"
+    },
+    "kan": {
+      "address": "e467b9dd11fa00df",
+      "keys": [
+        {
+          "type": "google-kms",
+          "index": 4,
+          "signatureAlgorithm": "ECDSA_secp256k1",
+          "hashAlgorithm": "SHA2_256",
+          "context": {
+            "resourceName": "projects/dl-flow-admin/locations/us/keyRings/flow-service-account/cryptoKeys/kan_zhang/cryptoKeyVersions/1"
+          }
+        }
+      ],
+      "chain": "flow-mainnet"
+    },
+    "alex": {
+      "address": "e467b9dd11fa00df",
+      "keys": [
+        {
+          "type": "google-kms",
+          "index": 5,
+          "signatureAlgorithm": "ECDSA_secp256k1",
+          "hashAlgorithm": "SHA2_256",
+          "context": {
+            "resourceName": "projects/dl-flow-admin/locations/us/keyRings/flow-service-account/cryptoKeys/alex_hentschell/cryptoKeyVersions/1"
+          }
+        }
+      ],
+      "chain": "flow-mainnet"
+    },
+    "peter": {
+      "address": "e467b9dd11fa00df",
+      "keys": [
+        {
+          "type": "google-kms",
+          "index": 6,
+          "signatureAlgorithm": "ECDSA_secp256k1",
+          "hashAlgorithm": "SHA2_256",
+          "context": {
+            "resourceName": "projects/dl-flow-admin/locations/us/keyRings/flow-service-account/cryptoKeys/peter_siemens/cryptoKeyVersions/1"
+          }
+        }
+      ],
+      "chain": "flow-mainnet"
+    }
+  },
+  "contracts": {},
+  "deployments": {}
+}
