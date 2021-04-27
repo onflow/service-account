@@ -11,5 +11,5 @@ flow transactions build ./templates/end_epoch_change_payout.cdc \
   --authorizer 0xe467b9dd11fa00df \
   --payer 0xe467b9dd11fa00df \
   -x payload \
-  --save end-epoch-apr-27-1.rlp
+  --save ./transactions/end-epoch-apr-27/end-epoch-apr-27-1.rlp
 ```
