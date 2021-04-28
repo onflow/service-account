@@ -6,7 +6,7 @@
 ```sh
 flow transactions build ./templates/end_epoch_change_payout.cdc \
   --network mainnet \
-  --args "$(cat "./transactions/end-epoch-apr-27/arguments.json")" \
+  --args-json "$(cat "./transactions/end-epoch-apr-27/arguments.json")" \
   --proposer 0xe467b9dd11fa00df \
   --proposer-key-index 4 \
   --authorizer 0xe467b9dd11fa00df \
