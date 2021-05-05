@@ -11,7 +11,7 @@ We will be using this Git repository as a means to pass transaction files back a
 
 If you do not have Git configured to authenticate with GitHub, [Github Desktop](https://desktop.github.com/) is likely the easiest way to get started
 
-To ensure it's properlly installed, please `git pull` the main branch of this repo
+To ensure that it's properly installed, please `git pull` the main branch of this repository.
 
 ### Flow CLI
 
