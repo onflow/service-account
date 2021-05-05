@@ -8,6 +8,14 @@
 brew install flow-cli
 ```
 
+### If using secp256k1
+
+```sh
+brew uninstall flow-cli # if you previously installed with Homebrew
+
+sh -ci "$(curl -fsSL https://storage.googleapis.com/flow-cli/install.sh)" -- v0.20.0-alpha.1
+```
+
 ## Build
 
 ```sh
