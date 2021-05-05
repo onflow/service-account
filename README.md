@@ -3,7 +3,7 @@
 ## Requirements
 - Git
 - Flow CLI
-- GCloud SDK
+- Google Cloud SDK
 
 ### Git
 
