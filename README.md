@@ -9,7 +9,7 @@
 
 We will be using this Git repository as a means to pass transaction files back and forth, so you will need to clone it on your local machine.
 
-If you do not have git setup to interact with Github yet, [github desktop](https://desktop.github.com/) would likely be the easiest to get you started
+If you do not have Git configured to authenticate with GitHub, [Github Desktop](https://desktop.github.com/) is likely the easiest way to get started
 
 To ensure it's properlly installed, please `git pull` the main branch of this repo
 
