@@ -7,7 +7,7 @@
 
 ### Git
 
-We will be using this repo as a means to pass files back and forth, this means that you will need to have this repo cloned.
+We will be using this Git repository as a means to pass transaction files back and forth, so you will need to clone it on your local machine.
 
 If you do not have git setup to interact with Github yet, [github desktop](https://desktop.github.com/) would likely be the easiest to get you started
 
