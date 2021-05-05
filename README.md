@@ -31,7 +31,7 @@ flow version
 
 This should show you the latest version of the Flow CLI
 
-### GCloud SDK
+### Google Cloud SDK
 
 If you have homebrew:
 
