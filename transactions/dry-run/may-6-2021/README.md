@@ -46,7 +46,7 @@ flow transactions sign transactions/dry-run/may-6-2021/hello1.rlp \
 ## Equilibrium Signs
 
 ```sh
-./flow-arm64-darwin-v0.20.0-alpha.1 version transactions sign transactions/dry-run/may-6-2021/hello2.rlp \
+./flow-arm64-darwin-v0.20.0-alpha.1 transactions sign transactions/dry-run/may-6-2021/hello2.rlp \
   --signer equilibrium \
   --filter payload \
   --save transactions/dry-run/may-6-2021/hello3.rlp
