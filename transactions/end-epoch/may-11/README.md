@@ -46,10 +46,10 @@ flow transactions sign ./transactions/end-epoch/may-11/end-epoch-may-11-sig-2.rl
 ## Animoca Signs
 
 ```sh
-flow transactions sign ./transactions/end-epoch/may-11/end-epoch-may-11-sig-1.rlp \
+flow transactions sign ./transactions/end-epoch/may-11/end-epoch-may-11-sig-2.rlp \
   --signer animoca \
   --filter payload \
-  --save ./transactions/end-epoch/may-11/end-epoch-may-11-sig-2.rlp
+  --save ./transactions/end-epoch/may-11/end-epoch-may-11-sig-3.rlp
 ```
 
 ## Kan Signs (skip)
@@ -61,7 +61,7 @@ flow transactions sign ./transactions/end-epoch/may-11/end-epoch-may-11-sig-4.rl
   --save ./transactions/end-epoch/may-11/end-epoch-may-11-sig-5.rlp
 ```
 
-## Alex Signs
+## Alex Signs (Skip)
 
 ```sh
 flow transactions sign ./transactions/end-epoch/may-11/end-epoch-may-11-sig-2.rlp \
