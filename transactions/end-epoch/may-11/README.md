@@ -11,7 +11,7 @@ flow transactions build ./templates/capability_end_epoch.cdc \
   --proposer-key-index 13 \
   --authorizer 0xe467b9dd11fa00df \
   --payer 0xe467b9dd11fa00df \
-  --gas-limit 9999 \
+  --gas-limit 500000 \
   -x payload \
   --save ./transactions/end-epoch/may-11/end-epoch-may-11-unsigned.rlp
 ```
