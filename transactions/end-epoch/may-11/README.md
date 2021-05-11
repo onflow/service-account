@@ -25,7 +25,7 @@ flow transactions sign ./transactions/end-epoch/may-11/end-epoch-may-11-unsigned
   --save ./transactions/end-epoch/may-11/end-epoch-may-11-sig-1.rlp
 ```
 
-## Equilibrium Signs
+## Equilibrium Signs (Skip)
 
 ```sh
 ./flow-arm64-darwin-v0.20.0-alpha.1 transactions sign ./transactions/end-epoch/may-11/end-epoch-may-11-sig-1.rlp \
@@ -34,7 +34,7 @@ flow transactions sign ./transactions/end-epoch/may-11/end-epoch-may-11-unsigned
   --save ./transactions/end-epoch/may-11/end-epoch-may-11-sig-2.rlp
 ```
 
-## Ichi Signs
+## Ichi Signs (Skip)
 
 ```sh
 flow transactions sign ./transactions/end-epoch/may-11/end-epoch-may-11-sig-2.rlp \
@@ -46,13 +46,13 @@ flow transactions sign ./transactions/end-epoch/may-11/end-epoch-may-11-sig-2.rl
 ## Animoca Signs
 
 ```sh
-flow transactions sign ./transactions/end-epoch/may-11/end-epoch-may-11-sig-3.rlp \
+flow transactions sign ./transactions/end-epoch/may-11/end-epoch-may-11-sig-1.rlp \
   --signer animoca \
   --filter payload \
-  --save ./transactions/end-epoch/may-11/end-epoch-may-11-sig-4.rlp
+  --save ./transactions/end-epoch/may-11/end-epoch-may-11-sig-2.rlp
 ```
 
-## Kan Signs
+## Kan Signs (skip)
 
 ```sh
 flow transactions sign ./transactions/end-epoch/may-11/end-epoch-may-11-sig-4.rlp \
@@ -64,23 +64,23 @@ flow transactions sign ./transactions/end-epoch/may-11/end-epoch-may-11-sig-4.rl
 ## Alex Signs
 
 ```sh
-flow transactions sign ./transactions/end-epoch/may-11/end-epoch-may-11-sig-5.rlp \
+flow transactions sign ./transactions/end-epoch/may-11/end-epoch-may-11-sig-2.rlp \
   --signer alex \
   --filter payload \
-  --save ./transactions/end-epoch/may-11/end-epoch-may-11-sig-6.rlp
+  --save ./transactions/end-epoch/may-11/end-epoch-may-11-sig-3.rlp
 ```
 
-## Peter Signs (If Needed)
+## Peter Signs
 
 ```sh
-flow transactions sign ./transactions/end-epoch/may-11/end-epoch-may-11-sig-6.rlp \
+flow transactions sign ./transactions/end-epoch/may-11/end-epoch-may-11-sig-3.rlp \
   --signer peter \
   --filter payload \
-  --save ./transactions/end-epoch/may-11/end-epoch-may-11-sig-7.rlp
+  --save ./transactions/end-epoch/may-11/end-epoch-may-11-sig-4.rlp
 ```
 
 ## Somebody Submits
 
 ```sh
-flow transactions send-signed --network mainnet ./transactions/end-epoch/may-11/end-epoch-may-11-sig-7.rlp
+flow transactions send-signed --network mainnet ./transactions/end-epoch/may-11/end-epoch-may-11-sig-4.rlp
 ```
