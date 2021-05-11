@@ -20,81 +20,6 @@
     }
   },
   "accounts": {
-    "dete": {
-      "address": "e467b9dd11fa00df",
-      "keys": [
-        {
-          "type": "google-kms",
-          "index": 2,
-          "signatureAlgorithm": "ECDSA_secp256k1",
-          "hashAlgorithm": "SHA2_256",
-          "context": {
-            "resourceName": "projects/dl-flow-admin/locations/us/keyRings/flow-service-account/cryptoKeys/dete_shirley/cryptoKeyVersions/1"
-          }
-        }
-      ],
-      "chain": "flow-mainnet"
-    },
-    "layne": {
-      "address": "e467b9dd11fa00df",
-      "keys": [
-        {
-          "type": "google-kms",
-          "index": 3,
-          "signatureAlgorithm": "ECDSA_secp256k1",
-          "hashAlgorithm": "SHA2_256",
-          "context": {
-            "resourceName": "projects/dl-flow-admin/locations/us/keyRings/flow-service-account/cryptoKeys/layne_lafrance/cryptoKeyVersions/1"
-          }
-        }
-      ],
-      "chain": "flow-mainnet"
-    },
-    "kan": {
-      "address": "e467b9dd11fa00df",
-      "keys": [
-        {
-          "type": "google-kms",
-          "index": 4,
-          "signatureAlgorithm": "ECDSA_secp256k1",
-          "hashAlgorithm": "SHA2_256",
-          "context": {
-            "resourceName": "projects/dl-flow-admin/locations/us/keyRings/flow-service-account/cryptoKeys/kan_zhang/cryptoKeyVersions/1"
-          }
-        }
-      ],
-      "chain": "flow-mainnet"
-    },
-    "alex": {
-      "address": "e467b9dd11fa00df",
-      "keys": [
-        {
-          "type": "google-kms",
-          "index": 5,
-          "signatureAlgorithm": "ECDSA_secp256k1",
-          "hashAlgorithm": "SHA2_256",
-          "context": {
-            "resourceName": "projects/dl-flow-admin/locations/us/keyRings/flow-service-account/cryptoKeys/alex_hentschell/cryptoKeyVersions/1"
-          }
-        }
-      ],
-      "chain": "flow-mainnet"
-    },
-    "peter": {
-      "address": "e467b9dd11fa00df",
-      "keys": [
-        {
-          "type": "google-kms",
-          "index": 6,
-          "signatureAlgorithm": "ECDSA_secp256k1",
-          "hashAlgorithm": "SHA2_256",
-          "context": {
-            "resourceName": "projects/dl-flow-admin/locations/us/keyRings/flow-service-account/cryptoKeys/peter_siemens/cryptoKeyVersions/1"
-          }
-        }
-      ],
-      "chain": "flow-mainnet"
-    },
     "blocto": {
       "address": "e467b9dd11fa00df",
       "keys": [
@@ -150,6 +75,51 @@
           "hashAlgorithm": "SHA2_256",
           "context": {
             "resourceName": "projects/ab1-flow-service-account/locations/global/keyRings/flow/cryptoKeys/service-account/cryptoKeyVersions/1"
+          }
+        }
+      ],
+      "chain": "flow-mainnet"
+    },
+    "kan": {
+      "address": "e467b9dd11fa00df",
+      "keys": [
+        {
+          "type": "google-kms",
+          "index": 11,
+          "signatureAlgorithm": "ECDSA_P256",
+          "hashAlgorithm": "SHA2_256",
+          "context": {
+            "resourceName": "projects/dl-flow-admin/locations/us/keyRings/flow-service-account/cryptoKeys/dapperlabs_1/cryptoKeyVersions/1"
+          }
+        }
+      ],
+      "chain": "flow-mainnet"
+    },
+    "layne": {
+      "address": "e467b9dd11fa00df",
+      "keys": [
+        {
+          "type": "google-kms",
+          "index": 12,
+          "signatureAlgorithm": "ECDSA_P256",
+          "hashAlgorithm": "SHA2_256",
+          "context": {
+            "resourceName": "projects/dl-flow-admin/locations/us/keyRings/flow-service-account/cryptoKeys/dapperlabs_2/cryptoKeyVersions/1"
+          }
+        }
+      ],
+      "chain": "flow-mainnet"
+    },
+    "peter": {
+      "address": "e467b9dd11fa00df",
+      "keys": [
+        {
+          "type": "google-kms",
+          "index": 13,
+          "signatureAlgorithm": "ECDSA_P256",
+          "hashAlgorithm": "SHA2_256",
+          "context": {
+            "resourceName": "projects/dl-flow-admin/locations/us/keyRings/flow-service-account/cryptoKeys/dapperlabs_3/cryptoKeyVersions/1"
           }
         }
       ],
