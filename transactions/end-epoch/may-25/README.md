@@ -60,10 +60,10 @@ flow transactions sign ./transactions/end-epoch/may-25/end-epoch-may-25-sig-3.rl
 ## Kan Signs
 
 ```sh
-flow transactions sign ./transactions/end-epoch/may-25/end-epoch-may-25-sig-4.rlp \
+flow transactions sign ./transactions/end-epoch/may-25/end-epoch-may-25-sig-2.rlp \
   --signer kan \
   --filter payload \
-  --save ./transactions/end-epoch/may-25/end-epoch-may-25-sig-complete.rlp
+  --save ./transactions/end-epoch/may-25/end-epoch-may-25-sig-3.rlp
 ```
 
 ## Alex Signs
