@@ -87,5 +87,9 @@ flow transactions sign ./transactions/end-epoch/may-25/end-epoch-may-25-sig-3.rl
 ## Somebody Submits
 
 ```sh
-flow transactions send-signed --network mainnet ./transactions/end-epoch/may-25/end-epoch-may-25-sig-complete.rlp
+flow transactions send-signed --network mainnet ./transactions/end-epoch/may-25/end-epoch-may-25-sig-4.rlp
 ```
+
+## Results
+
+https://flowscan.org/transaction/5a3093f7e577ba8e6dc3c6241c7b3a0c09d3068a91a684a477277d4f792e19da
