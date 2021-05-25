@@ -89,7 +89,3 @@ flow transactions sign ./transactions/end-epoch/may-25/end-epoch-may-25-sig-3.rl
 ```sh
 flow transactions send-signed --network mainnet ./transactions/end-epoch/may-25/end-epoch-may-25-sig-complete.rlp
 ```
-
-## Results
-
-https://flowscan.org/transaction/a0ea12fe8166b3d3b10cb221cbc3dd236dba5990274e9a90c32e6a904f72d96f
