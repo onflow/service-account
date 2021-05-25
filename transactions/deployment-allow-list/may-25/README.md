@@ -4,7 +4,7 @@
 ## Dapper Labs Builds
 
 ```sh
-flow transactions build ./templates/capability_end_epoch.cdc \
+flow transactions build ./templates/set_deployment_allow_list.cdc \
   --network mainnet \
   --args-json "$(cat "./transactions/deployment-allow-list/may-25/arguments.json")" \
   --proposer 0xe467b9dd11fa00df \
