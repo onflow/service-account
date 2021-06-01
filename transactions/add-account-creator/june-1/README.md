@@ -3,8 +3,12 @@
 
 ## Addresses in Arguments, and their Owners
 `0x19f550fddc885e0d` - Finoa
-`` - 
-`` - 
+`0x8d0f8df62029f75a` - Flow Contract Admin
+`0x202be4fdad6a431e` - Temp 1
+`0x38c0aa1b1eaa65cc` - Temp 2
+`0xcaf376f596546f72` - Temp 3
+`0xc1d9446c5ad1115b` - Temp 4
+`0x25befdb14b2b1184` - Temp 5
 
 ## Dapper Labs Builds
 
