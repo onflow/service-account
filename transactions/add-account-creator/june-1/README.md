@@ -37,7 +37,7 @@ flow transactions sign ./transactions/add-account-creator/june-1/add-account-cre
 ## Equilibrium Signs
 
 ```sh
-./flow-arm64-darwin-v0.20.0-alpha.1 transactions sign ./transactions/add-account-creator/june-1/add-account-creator-june-1-sig-1.rlp \
+flow transactions sign ./transactions/add-account-creator/june-1/add-account-creator-june-1-sig-1.rlp \
   --signer equilibrium \
   --filter payload \
   --save ./transactions/add-account-creator/june-1/add-account-creator-june-1-sig-2.rlp

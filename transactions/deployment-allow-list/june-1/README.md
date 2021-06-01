@@ -28,7 +28,7 @@ flow transactions sign ./transactions/deployment-allow-list/june-1/deployment-al
 ## Equilibrium Signs
 
 ```sh
-./flow-arm64-darwin-v0.20.0-alpha.1 transactions sign ./transactions/deployment-allow-list/june-1/deployment-allow-list-june-1-sig-1.rlp \
+flow transactions sign ./transactions/deployment-allow-list/june-1/deployment-allow-list-june-1-sig-1.rlp \
   --signer equilibrium \
   --filter payload \
   --save ./transactions/deployment-allow-list/june-1/deployment-allow-list-june-1-sig-2.rlp
