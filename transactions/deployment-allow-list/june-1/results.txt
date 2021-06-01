@@ -1,0 +1,28 @@
+⚠️  DEPRECATION WARNING: use "flow transactions get" instead
+
+Status		✅ SEALED
+ID		d4abe53d41264634e1937f20a4ce5e25e50a1f3e1fc257e0c3cf05bc81cf1d47
+Payer		e467b9dd11fa00df
+Authorizers	[e467b9dd11fa00df]
+
+Proposal Key:	
+    Address	e467b9dd11fa00df
+    Index	11
+    Sequence	3
+
+No Payload Signatures
+
+Envelope Signature 0: e467b9dd11fa00df
+Envelope Signature 1: e467b9dd11fa00df
+Envelope Signature 2: e467b9dd11fa00df
+Envelope Signature 3: e467b9dd11fa00df
+Envelope Signature 4: e467b9dd11fa00df
+Signatures (minimized, use --include signatures)
+
+Events:	 None
+
+
+Code (hidden, use --include code)
+
+Payload (hidden, use --include payload)
+
