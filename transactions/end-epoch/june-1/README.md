@@ -60,10 +60,10 @@ flow transactions sign ./transactions/end-epoch/june-1/end-epoch-june-1-sig-3.rl
 ## Kan Signs
 
 ```sh
-flow transactions sign ./transactions/end-epoch/june-1/end-epoch-june-1-sig-2.rlp \
+flow transactions sign ./transactions/end-epoch/june-1/end-epoch-june-1-sig-4.rlp \
   --signer kan \
   --filter payload \
-  --save ./transactions/end-epoch/june-1/end-epoch-june-1-sig-3.rlp
+  --save ./transactions/end-epoch/june-1/end-epoch-june-1-sig-complete.rlp
 ```
 
 ## Alex Signs
@@ -87,9 +87,9 @@ flow transactions sign ./transactions/end-epoch/june-1/end-epoch-june-1-sig-3.rl
 ## Somebody Submits
 
 ```sh
-flow transactions send-signed --network mainnet ./transactions/end-epoch/june-1/end-epoch-june-1-sig-4.rlp
+flow transactions send-signed --network mainnet ./transactions/end-epoch/june-1/end-epoch-june-1-sig-complete.rlp
 ```
 
 ## Results
 
-LINK HERE
+Failed - https://flowscan.org/transaction/e8b9b27c6254e7c58da8f8488f7ab14c08ae6b6b7d254e99a266cd579be3e189
