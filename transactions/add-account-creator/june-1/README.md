@@ -98,3 +98,7 @@ flow transactions sign ./transactions/add-account-creator/june-1/add-account-cre
 ```sh
 flow transactions send-signed --network mainnet ./transactions/add-account-creator/june-1/add-account-creator-june-1-sig-complete.rlp
 ```
+
+## Results
+
+https://flowscan.org/transaction/9b0e38d3b1fba1194e6d4bb441e095013ab9c2a634f9d18d7250a7e4f62a620d

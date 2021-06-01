@@ -89,3 +89,7 @@ flow transactions sign ./transactions/deployment-allow-list/june-1/deployment-al
 ```sh
 flow transactions send-signed --network mainnet ./transactions/deployment-allow-list/june-1/deployment-allow-list-june-1-sig-complete.rlp
 ```
+
+## Results
+
+https://flowscan.org/transaction/d4abe53d41264634e1937f20a4ce5e25e50a1f3e1fc257e0c3cf05bc81cf1d47

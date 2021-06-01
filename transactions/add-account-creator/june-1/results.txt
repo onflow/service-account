@@ -1,0 +1,69 @@
+
+Status		✅ SEALED
+ID		9b0e38d3b1fba1194e6d4bb441e095013ab9c2a634f9d18d7250a7e4f62a620d
+Payer		e467b9dd11fa00df
+Authorizers	[e467b9dd11fa00df]
+
+Proposal Key:	
+    Address	e467b9dd11fa00df
+    Index	11
+    Sequence	4
+
+No Payload Signatures
+
+Envelope Signature 0: e467b9dd11fa00df
+Envelope Signature 1: e467b9dd11fa00df
+Envelope Signature 2: e467b9dd11fa00df
+Envelope Signature 3: e467b9dd11fa00df
+Envelope Signature 4: e467b9dd11fa00df
+Signatures (minimized, use --include signatures)
+
+Events:		 
+    Index	0
+    Type	A.e467b9dd11fa00df.FlowServiceAccount.AccountCreatorAdded
+    Tx ID	9b0e38d3b1fba1194e6d4bb441e095013ab9c2a634f9d18d7250a7e4f62a620d
+    Values
+		- accountCreator (Address):	19f550fddc885e0d
+
+    Index	1
+    Type	A.e467b9dd11fa00df.FlowServiceAccount.AccountCreatorAdded
+    Tx ID	9b0e38d3b1fba1194e6d4bb441e095013ab9c2a634f9d18d7250a7e4f62a620d
+    Values
+		- accountCreator (Address):	8d0f8df62029f75a
+
+    Index	2
+    Type	A.e467b9dd11fa00df.FlowServiceAccount.AccountCreatorAdded
+    Tx ID	9b0e38d3b1fba1194e6d4bb441e095013ab9c2a634f9d18d7250a7e4f62a620d
+    Values
+		- accountCreator (Address):	202be4fdad6a431e
+
+    Index	3
+    Type	A.e467b9dd11fa00df.FlowServiceAccount.AccountCreatorAdded
+    Tx ID	9b0e38d3b1fba1194e6d4bb441e095013ab9c2a634f9d18d7250a7e4f62a620d
+    Values
+		- accountCreator (Address):	38c0aa1b1eaa65cc
+
+    Index	4
+    Type	A.e467b9dd11fa00df.FlowServiceAccount.AccountCreatorAdded
+    Tx ID	9b0e38d3b1fba1194e6d4bb441e095013ab9c2a634f9d18d7250a7e4f62a620d
+    Values
+		- accountCreator (Address):	caf376f596546f72
+
+    Index	5
+    Type	A.e467b9dd11fa00df.FlowServiceAccount.AccountCreatorAdded
+    Tx ID	9b0e38d3b1fba1194e6d4bb441e095013ab9c2a634f9d18d7250a7e4f62a620d
+    Values
+		- accountCreator (Address):	c1d9446c5ad1115b
+
+    Index	6
+    Type	A.e467b9dd11fa00df.FlowServiceAccount.AccountCreatorAdded
+    Tx ID	9b0e38d3b1fba1194e6d4bb441e095013ab9c2a634f9d18d7250a7e4f62a620d
+    Values
+		- accountCreator (Address):	25befdb14b2b1184
+
+
+
+Code (hidden, use --include code)
+
+Payload (hidden, use --include payload)
+
