@@ -93,3 +93,4 @@ flow transactions send-signed --network mainnet ./transactions/end-epoch/june-1/
 ## Results
 
 Failed - https://flowscan.org/transaction/e8b9b27c6254e7c58da8f8488f7ab14c08ae6b6b7d254e99a266cd579be3e189
+Success - https://flowscan.org/transaction/6e97bf58f0261bbf06733c7b225f56f32032dd974e73aa8c2c72e2fddd6ab4f9
