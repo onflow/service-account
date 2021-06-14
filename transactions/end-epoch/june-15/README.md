@@ -8,7 +8,7 @@ flow transactions build ./templates/capability_end_epoch.cdc \
   --network mainnet \
   --args-json "$(cat "./transactions/end-epoch/june-15/arguments.json")" \
   --proposer 0xe467b9dd11fa00df \
-  --proposer-key-index 11 \
+  --proposer-key-index 13 \
   --authorizer 0xe467b9dd11fa00df \
   --payer 0xe467b9dd11fa00df \
   --gas-limit 500000 \
@@ -34,11 +34,11 @@ flow transactions sign ./transactions/end-epoch/june-15/end-epoch-june-15-sig-1.
   --save ./transactions/end-epoch/june-15/end-epoch-june-15-sig-2.rlp
 ```
 
-## Kan Signs
+## Layne Signs
 
 ```sh
 flow transactions sign ./transactions/end-epoch/june-15/end-epoch-june-15-sig-2.rlp \
-  --signer kan \
+  --signer layne \
   --filter payload \
   --save ./transactions/end-epoch/june-15/end-epoch-june-15-sig-3.rlp
 ```
