@@ -22,7 +22,7 @@ flow transactions build ./templates/add_account_creator.cdc \
 ## Equilibrium Signs
 
 ```sh
-flow transactions sign ./transactions/add-account-creator/june-15/add-account-creator-june-15-sig-unsigned.rlp \
+flow transactions sign ./transactions/add-account-creator/june-15/add-account-creator-june-15-unsigned.rlp \
   --signer equilibrium \
   --filter payload \
   --save ./transactions/add-account-creator/june-15/add-account-creator-june-15-sig-1.rlp
