@@ -16,20 +16,20 @@ flow transactions build ./templates/capability_end_epoch.cdc \
   --save ./transactions/end-epoch/june-28/end-epoch-june-28-unsigned.rlp
 ```
 
-## Equilibrium Signs
+## Ichi Signs
 
 ```sh
 flow transactions sign ./transactions/end-epoch/june-28/end-epoch-june-28-unsigned.rlp \
-  --signer equilibrium \
+  --signer ichi \
   --filter payload \
   --save ./transactions/end-epoch/june-28/end-epoch-june-28-sig-1.rlp
 ```
 
-## Ichi Signs
+## Layne Signs
 
 ```sh
 flow transactions sign ./transactions/end-epoch/june-28/end-epoch-june-28-sig-1.rlp \
-  --signer ichi \
+  --signer layne \
   --filter payload \
   --save ./transactions/end-epoch/june-28/end-epoch-june-28-sig-2.rlp
 ```
