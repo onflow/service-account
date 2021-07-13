@@ -23,20 +23,20 @@ flow transactions build ./templates/add_account_creator.cdc \
   --save ./transactions/add-account-creator/july-13/add-account-creator-july-13-unsigned.rlp
 ```
 
-## Blocto Signs
+## Ichi Signs
 
 ```sh
 flow transactions sign ./transactions/add-account-creator/july-13/add-account-creator-july-13-unsigned.rlp \
-  --signer blocto \
+  --signer ichi \
   --filter payload \
   --save ./transactions/add-account-creator/july-13/add-account-creator-july-13-sig-1.rlp
 ```
 
-## Animoca Signs
+## Layne Signs
 
 ```sh
 flow transactions sign ./transactions/add-account-creator/july-13/add-account-creator-july-13-sig-1.rlp \
-  --signer animoca \
+  --signer layne \
   --filter payload \
   --save ./transactions/add-account-creator/july-13/add-account-creator-july-13-sig-2.rlp
 ```
