@@ -13,7 +13,6 @@ flow transactions build ./templates/set_storage_cost.cdc \
   --proposer-key-index 13 \
   --authorizer 0xe467b9dd11fa00df \
   --payer 0xe467b9dd11fa00df \
-  --gas-limit 500000 \
   -x payload \
   --save ./transactions/set-storage-cost/july-20/set-storage-cost-july-20-unsigned.rlp
 ```
