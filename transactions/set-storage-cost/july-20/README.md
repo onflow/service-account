@@ -61,4 +61,5 @@ flow transactions send-signed --network mainnet ./transactions/set-storage-cost/
 
 ## Results
 
+Failure - https://flowscan.org/transaction/3641b54d59623aaa9968a2235480c75e949e5e8aa51db8b0f8486c90bbc903ea
 https://flowscan.org/transaction/

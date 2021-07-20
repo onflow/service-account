@@ -1,4 +1,4 @@
-import FlowStorageFees from 0x8c5303eaa26202d6
+import FlowStorageFees from 0xe467b9dd11fa00df
 // This transaction changes the flow storage fees parameters
 transaction(storageMegaBytesPerReservedFLOW: UFix64) {
     
