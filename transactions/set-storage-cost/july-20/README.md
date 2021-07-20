@@ -10,7 +10,7 @@ flow transactions build ./templates/set_storage_cost.cdc \
   --network mainnet \
   --args-json "$(cat "./transactions/set-storage-cost/july-20/arguments.json")" \
   --proposer 0xe467b9dd11fa00df \
-  --proposer-key-index 13 \
+  --proposer-key-index 11 \
   --authorizer 0xe467b9dd11fa00df \
   --payer 0xe467b9dd11fa00df \
   -x payload \
@@ -44,11 +44,11 @@ flow transactions sign ./transactions/set-storage-cost/july-20/set-storage-cost-
   --save ./transactions/set-storage-cost/july-20/set-storage-cost-july-20-sig-3.rlp
 ```
 
-## Peter Signs
+## Kan Signs
 
 ```sh
 flow transactions sign ./transactions/set-storage-cost/july-20/set-storage-cost-july-20-sig-3.rlp \
-  --signer peter \
+  --signer kan \
   --filter payload \
   --save ./transactions/set-storage-cost/july-20/set-storage-cost-july-20-sig-complete.rlp
 ```
