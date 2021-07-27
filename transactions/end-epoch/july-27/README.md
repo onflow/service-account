@@ -60,4 +60,4 @@ flow transactions send-signed --network mainnet ./transactions/end-epoch/july-27
 
 ## Results
 
-https://flowscan.org/transaction/
+https://flowscan.org/transaction/8730f4ff3552ca1e47777e51eda0169f49880bf49da19106839a8e20ae6bbec6
