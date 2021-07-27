@@ -14,7 +14,7 @@ flow transactions build ./templates/add_account_creator.cdc \
   --network mainnet \
   --args-json "$(cat "./transactions/add-account-creator/july-27/arguments.json")" \
   --proposer 0xe467b9dd11fa00df \
-  --proposer-key-index 13 \
+  --proposer-key-index 11 \
   --authorizer 0xe467b9dd11fa00df \
   --payer 0xe467b9dd11fa00df \
   --gas-limit 500000 \
