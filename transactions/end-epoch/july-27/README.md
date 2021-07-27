@@ -29,7 +29,7 @@ flow transactions sign ./transactions/end-epoch/july-27/end-epoch-july-27-unsign
 
 ```sh
 flow transactions sign ./transactions/end-epoch/july-27/end-epoch-july-27-sig-1.rlp \
-  --signer Ichi \
+  --signer ichi \
   --filter payload \
   --save ./transactions/end-epoch/july-27/end-epoch-july-27-sig-2.rlp
 ```
