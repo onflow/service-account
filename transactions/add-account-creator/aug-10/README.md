@@ -67,4 +67,4 @@ flow transactions send-signed --network mainnet ./transactions/add-account-creat
 
 ## Results
 
-https://flowscan.org/transaction/
+https://flowscan.org/transaction/66be8d07b43d76b151d4b1e206ccb6f3615641287c112a7567bbabd568e47b81
