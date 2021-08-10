@@ -49,11 +49,11 @@ flow transactions sign ./transactions/add-account-creator/aug-10/add-account-cre
   --save ./transactions/add-account-creator/aug-10/add-account-creator-aug-10-sig-3.rlp
 ```
 
-## Kan Signs
+## Peter Signs
 
 ```sh
 flow transactions sign ./transactions/add-account-creator/aug-10/add-account-creator-aug-10-sig-3.rlp \
-  --signer kan \
+  --signer peter \
   --filter payload \
   --save ./transactions/add-account-creator/aug-10/add-account-creator-aug-10-sig-complete.rlp
 ```
