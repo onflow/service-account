@@ -7,6 +7,7 @@
 - `0x8f4f599546e2d7eb` (24Karat)
 - `0x61d5d84225718c45` (NFTco)
 - `0x5230bbe48aaa0104` (Peek Social)
+- `0x6f649aee955bef6d` (LTMP)
 
 ## Dapper Labs Builds
 
