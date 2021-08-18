@@ -10,6 +10,7 @@ https://github.com/onflow/flow-core-contracts/tree/lib/go/templates/v0.7.7/contr
 
 ```sh
 flow transactions build ./templates/deploy_contract_admin.cdc \
+  --config-path flow-staking.json \
   --network mainnet \
   --args-json "$(cat "./transactions/staking-contract-upgrade/v0-7-7/flow-dkg-staking-arguments.json")" \
   --proposer 0x8d0f8df62029f75a \
@@ -25,6 +26,7 @@ flow transactions build ./templates/deploy_contract_admin.cdc \
 
 ```sh
 flow transactions sign ./transactions/staking-contract-upgrade/june-23/dkg-contract-deployment-v0-7-7-unsigned.rlp \
+  --config-path flow-staking.json \
   --signer blocto \
   --filter payload \
   --save ./transactions/staking-contract-upgrade/june-23/dkg-contract-deployment-v0-7-7-sig-1.rlp
@@ -34,6 +36,7 @@ flow transactions sign ./transactions/staking-contract-upgrade/june-23/dkg-contr
 
 ```sh
 flow transactions sign ./transactions/staking-contract-upgrade/june-23/dkg-contract-deployment-v0-7-7-sig-1.rlp \
+  --config-path flow-staking.json \
   --signer kan \
   --filter payload \
   --save ./transactions/staking-contract-upgrade/june-23/dkg-contract-deployment-v0-7-7-sig-2.rlp
@@ -43,6 +46,7 @@ flow transactions sign ./transactions/staking-contract-upgrade/june-23/dkg-contr
 
 ```sh
 flow transactions sign ./transactions/staking-contract-upgrade/june-23/dkg-contract-deployment-v0-7-7-sig-2.rlp \
+  --config-path flow-staking.json \
   --signer layne \
   --filter payload \
   --save ./transactions/staking-contract-upgrade/june-23/dkg-contract-deployment-v0-7-7-sig-3.rlp
@@ -52,16 +56,26 @@ flow transactions sign ./transactions/staking-contract-upgrade/june-23/dkg-contr
 
 ```sh
 flow transactions sign ./transactions/staking-contract-upgrade/june-23/dkg-contract-deployment-v0-7-7-sig-3.rlp \
+  --config-path flow-staking.json \
   --signer peter \
   --filter payload \
-  --save ./transactions/staking-contract-upgrade/june-23/dkg-contract-deployment-v0-7-7-sig-complete.rlp
+  --save ./transactions/staking-contract-upgrade/june-23/dkg-contract-deployment-v0-7-7-sig-4.rlp
 ```
 
+## Contract Admin Signs
+
+```sh
+flow transactions sign ./transactions/staking-contract-upgrade/june-23/set-approved-list-v0-7-7-sig-4.rlp \
+  --config-path flow-staking.json \
+  --signer contract-admint \
+  --filter payload \
+  --save ./transactions/staking-contract-upgrade/june-23/set-approved-list-v0-7-7-sig-complete.rlp
+```
 
 ## Somebody Submits
 
 ```sh
-flow transactions send-signed --network mainnet ./transactions/staking-contract-upgrade/june-23/dkg-contract-deployment-v0-7-7-sig-complete.rlp
+flow transactions send-signed --config-path flow-staking.json  --network mainnet ./transactions/staking-contract-upgrade/june-23/dkg-contract-deployment-v0-7-7-sig-complete.rlp
 ```
 
 ## Results
