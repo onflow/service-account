@@ -30,12 +30,12 @@ flow transactions sign ./transactions/staking-contract-upgrade/june-23/set-appro
   --save ./transactions/staking-contract-upgrade/june-23/set-approved-list-v0-7-7-sig-1.rlp
 ```
 
-## Kan Signs
+## Equilibrium Signs
 
 ```sh
 flow transactions sign ./transactions/staking-contract-upgrade/june-23/set-approved-list-v0-7-7-sig-1.rlp \
   --config-path flow-staking.json \
-  --signer kan \
+  --signer equilibrium \
   --filter payload \
   --save ./transactions/staking-contract-upgrade/june-23/set-approved-list-v0-7-7-sig-2.rlp
 ```
@@ -50,12 +50,12 @@ flow transactions sign ./transactions/staking-contract-upgrade/june-23/set-appro
   --save ./transactions/staking-contract-upgrade/june-23/set-approved-list-v0-7-7-sig-3.rlp
 ```
 
-## Peter Signs
+## Kan Signs
 
 ```sh
 flow transactions sign ./transactions/staking-contract-upgrade/june-23/set-approved-list-v0-7-7-sig-3.rlp \
   --config-path flow-staking.json \
-  --signer peter \
+  --signer kan \
   --filter payload \
   --save ./transactions/staking-contract-upgrade/june-23/set-approved-list-v0-7-7-sig-complete.rlp
 ```

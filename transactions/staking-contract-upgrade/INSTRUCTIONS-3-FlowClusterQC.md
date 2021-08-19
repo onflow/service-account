@@ -32,12 +32,12 @@ flow transactions sign ./transactions/staking-contract-upgrade/june-23/cluster-q
   --save ./transactions/staking-contract-upgrade/june-23/cluster-qc-contract-deployment-v0-7-7-sig-1.rlp
 ```
 
-## Kan Signs
+## Equilibrium Signs
 
 ```sh
 flow transactions sign ./transactions/staking-contract-upgrade/june-23/cluster-qc-contract-deployment-v0-7-7-sig-1.rlp \
   --config-path flow-staking.json \
-  --signer kan \
+  --signer equilibrium \
   --filter payload \
   --save ./transactions/staking-contract-upgrade/june-23/cluster-qc-contract-deployment-v0-7-7-sig-2.rlp
 ```
