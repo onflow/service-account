@@ -5,6 +5,7 @@
 ## Addresses in arguments, and their owners
 
 - `0x576e6bf10198583e` (Wyre, Inc)
+- `0xbccf7298185fd0c4` (Study Exchange)
 
 ## Dapper Labs Builds
 
