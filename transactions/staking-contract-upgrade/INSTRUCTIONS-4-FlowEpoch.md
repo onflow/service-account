@@ -67,7 +67,7 @@ flow transactions sign ./transactions/staking-contract-upgrade/june-23/epoch-con
 ```sh
 flow transactions sign ./transactions/staking-contract-upgrade/june-23/set-approved-list-v0-7-7-sig-4.rlp \
   --config-path flow-staking.json \
-  --signer contract-admint \
+  --signer contract-admin \
   --filter payload \
   --save ./transactions/staking-contract-upgrade/june-23/set-approved-list-v0-7-7-sig-complete.rlp
 ```
