@@ -1,5 +1,5 @@
 {
-  "emulators": {},
+
   "networks": {
     "emulator": {
       "host": "127.0.0.1:3569",
@@ -128,6 +128,9 @@
               "index": 0,
               "signatureAlgorithm": "ECDSA_P256",
               "hashAlgorithm": "SHA2_256",
+              "context": {
+                "resourceName": "projects/dl-flow/locations/global/keyRings/mainnet/cryptoKeys/contract-admin/cryptoKeyVersions/1"
+              },
               "resourceID": "projects/dl-flow/locations/global/keyRings/mainnet/cryptoKeys/contract-admin/cryptoKeyVersions/1"
           }
       ],

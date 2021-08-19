@@ -12,7 +12,7 @@ https://github.com/onflow/flow-core-contracts/tree/lib/go/templates/v0.7.7/contr
 flow transactions build ./templates/deploy_epochs_admin.cdc \
   --config-path flow-staking.json \
   --network mainnet \
-  --args-json "$(cat "./transactions/staking-contract-upgrade/v0-7-7/flow-epoch-staking-arguments.json")" \
+  --args-json "$(cat "./transactions/staking-contract-upgrade/v0-7-7/flow-epoch-arguments.json")" \
   --proposer 0x8d0f8df62029f75a \
   --proposer-key-index 0 \
   --authorizer 0x8624b52f9ddcd04a \

@@ -9,13 +9,13 @@ https://github.com/onflow/flow-core-contracts/tree/lib/go/templates/v0.7.7/contr
 ## Dapper Labs Builds
 
 ```sh
-flow transactions build ./templates/update_contract_admin.cdc \
+flow transactions build ./templates/set_approved_id_list.cdc \
   --config-path flow-staking.json \
   --network mainnet \
-  --proposer 0x8d0f8df62029f75a \
-  --proposer-key-index 0 \
+  --proposer 0x8624b52f9ddcd04a \
+  --proposer-key-index 6 \
   --authorizer 0x8624b52f9ddcd04a \
-  --payer 0x8d0f8df62029f75a \
+  --payer 0x8624b52f9ddcd04a \
   -x payload \
   --save ./transactions/staking-contract-upgrade/v0-7-7/set-approved-list-v0-7-7-unsigned.rlp
 ```
