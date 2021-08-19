@@ -35,7 +35,7 @@
       "keys": [
         {
           "type": "google-kms",
-          "index": 3,
+          "index": 2,
           "signatureAlgorithm": "ECDSA_secp256k1",
           "hashAlgorithm": "SHA2_256",
           "context": {
@@ -50,7 +50,7 @@
       "keys": [
         {
           "type": "google-kms",
-          "index": 4,
+          "index": 3,
           "signatureAlgorithm": "ECDSA_P256",
           "hashAlgorithm": "SHA2_256",
           "context": {
@@ -65,7 +65,7 @@
       "keys": [
         {
           "type": "google-kms",
-          "index": 5,
+          "index": 4,
           "signatureAlgorithm": "ECDSA_secp256k1",
           "hashAlgorithm": "SHA2_256",
           "context": {
@@ -80,7 +80,7 @@
       "keys": [
         {
           "type": "google-kms",
-          "index": 6,
+          "index": 5,
           "signatureAlgorithm": "ECDSA_P256",
           "hashAlgorithm": "SHA2_256",
           "context": {
@@ -95,7 +95,7 @@
       "keys": [
         {
           "type": "google-kms",
-          "index": 7,
+          "index": 6,
           "signatureAlgorithm": "ECDSA_P256",
           "hashAlgorithm": "SHA2_256",
           "context": {
@@ -110,7 +110,7 @@
       "keys": [
         {
           "type": "google-kms",
-          "index": 8,
+          "index": 7,
           "signatureAlgorithm": "ECDSA_P256",
           "hashAlgorithm": "SHA2_256",
           "context": {

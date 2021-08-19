@@ -13,7 +13,7 @@ flow transactions build ./templates/set_approved_id_list.cdc \
   --config-path flow-staking.json \
   --network mainnet \
   --proposer 0x8624b52f9ddcd04a \
-  --proposer-key-index 6 \
+  --proposer-key-index 5 \
   --authorizer 0x8624b52f9ddcd04a \
   --payer 0x8624b52f9ddcd04a \
   -x payload \
