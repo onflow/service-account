@@ -25,57 +25,57 @@ flow transactions build ./templates/deploy_contract_admin.cdc \
 ## Blocto Signs
 
 ```sh
-flow transactions sign ./transactions/staking-contract-upgrade/june-23/cluster-qc-contract-deployment-v0-7-7-unsigned.rlp \
+flow transactions sign ./transactions/staking-contract-upgrade/v0-7-7/cluster-qc-contract-deployment-v0-7-7-unsigned.rlp \
   --config-path flow-staking.json \
   --signer blocto \
   --filter payload \
-  --save ./transactions/staking-contract-upgrade/june-23/cluster-qc-contract-deployment-v0-7-7-sig-1.rlp
+  --save ./transactions/staking-contract-upgrade/v0-7-7/cluster-qc-contract-deployment-v0-7-7-sig-1.rlp
 ```
 
 ## Equilibrium Signs
 
 ```sh
-flow transactions sign ./transactions/staking-contract-upgrade/june-23/cluster-qc-contract-deployment-v0-7-7-sig-1.rlp \
+flow transactions sign ./transactions/staking-contract-upgrade/v0-7-7/cluster-qc-contract-deployment-v0-7-7-sig-1.rlp \
   --config-path flow-staking.json \
   --signer equilibrium \
   --filter payload \
-  --save ./transactions/staking-contract-upgrade/june-23/cluster-qc-contract-deployment-v0-7-7-sig-2.rlp
+  --save ./transactions/staking-contract-upgrade/v0-7-7/cluster-qc-contract-deployment-v0-7-7-sig-2.rlp
 ```
 
 ## Peter Signs
 
 ```sh
-flow transactions sign ./transactions/staking-contract-upgrade/june-23/cluster-qc-contract-deployment-v0-7-7-sig-2.rlp \
+flow transactions sign ./transactions/staking-contract-upgrade/v0-7-7/cluster-qc-contract-deployment-v0-7-7-sig-2.rlp \
   --config-path flow-staking.json \
   --signer peter \
   --filter payload \
-  --save ./transactions/staking-contract-upgrade/june-23/cluster-qc-contract-deployment-v0-7-7-sig-3.rlp
+  --save ./transactions/staking-contract-upgrade/v0-7-7/cluster-qc-contract-deployment-v0-7-7-sig-3.rlp
 ```
 
 ## Kan Signs
 
 ```sh
-flow transactions sign ./transactions/staking-contract-upgrade/june-23/cluster-qc-contract-deployment-v0-7-7-sig-3.rlp \
+flow transactions sign ./transactions/staking-contract-upgrade/v0-7-7/cluster-qc-contract-deployment-v0-7-7-sig-3.rlp \
   --config-path flow-staking.json \
   --signer kan \
   --filter payload \
-  --save ./transactions/staking-contract-upgrade/june-23/cluster-qc-contract-deployment-v0-7-7-sig-4.rlp
+  --save ./transactions/staking-contract-upgrade/v0-7-7/cluster-qc-contract-deployment-v0-7-7-sig-4.rlp
 ```
 
 ## Contract Admin Signs
 
 ```sh
-flow transactions sign ./transactions/staking-contract-upgrade/june-23/set-approved-list-v0-7-7-sig-4.rlp \
+flow transactions sign ./transactions/staking-contract-upgrade/v0-7-7/cluster-qc-contract-deployment-v0-7-7-sig-4.rlp \
   --config-path flow-staking.json \
   --signer contract-admin \
   --filter payload \
-  --save ./transactions/staking-contract-upgrade/june-23/set-approved-list-v0-7-7-sig-complete.rlp
+  --save ./transactions/staking-contract-upgrade/v0-7-7/cluster-qc-contract-deployment-v0-7-7-sig-complete.rlp
 ```
 
 ## Somebody Submits
 
 ```sh
-flow transactions send-signed --config-path flow-staking.json  --network mainnet ./transactions/staking-contract-upgrade/june-23/cluster-qc-contract-deployment-v0-7-7-sig-complete.rlp
+flow transactions send-signed --config-path flow-staking.json  --network mainnet ./transactions/staking-contract-upgrade/v0-7-7/cluster-qc-contract-deployment-v0-7-7-sig-complete.rlp
 ```
 
 ## Results

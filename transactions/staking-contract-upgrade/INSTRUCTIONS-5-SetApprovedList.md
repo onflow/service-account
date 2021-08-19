@@ -23,48 +23,48 @@ flow transactions build ./templates/set_approved_id_list.cdc \
 ## Blocto Signs
 
 ```sh
-flow transactions sign ./transactions/staking-contract-upgrade/june-23/set-approved-list-v0-7-7-unsigned.rlp \
+flow transactions sign ./transactions/staking-contract-upgrade/v0-7-7/set-approved-list-v0-7-7-unsigned.rlp \
   --config-path flow-staking.json \
   --signer blocto \
   --filter payload \
-  --save ./transactions/staking-contract-upgrade/june-23/set-approved-list-v0-7-7-sig-1.rlp
+  --save ./transactions/staking-contract-upgrade/v0-7-7/set-approved-list-v0-7-7-sig-1.rlp
 ```
 
 ## Equilibrium Signs
 
 ```sh
-flow transactions sign ./transactions/staking-contract-upgrade/june-23/set-approved-list-v0-7-7-sig-1.rlp \
+flow transactions sign ./transactions/staking-contract-upgrade/v0-7-7/set-approved-list-v0-7-7-sig-1.rlp \
   --config-path flow-staking.json \
   --signer equilibrium \
   --filter payload \
-  --save ./transactions/staking-contract-upgrade/june-23/set-approved-list-v0-7-7-sig-2.rlp
+  --save ./transactions/staking-contract-upgrade/v0-7-7/set-approved-list-v0-7-7-sig-2.rlp
 ```
 
 ## Peter Signs
 
 ```sh
-flow transactions sign ./transactions/staking-contract-upgrade/june-23/set-approved-list-v0-7-7-sig-2.rlp \
+flow transactions sign ./transactions/staking-contract-upgrade/v0-7-7/set-approved-list-v0-7-7-sig-2.rlp \
   --config-path flow-staking.json \
   --signer peter \
   --filter payload \
-  --save ./transactions/staking-contract-upgrade/june-23/set-approved-list-v0-7-7-sig-3.rlp
+  --save ./transactions/staking-contract-upgrade/v0-7-7/set-approved-list-v0-7-7-sig-3.rlp
 ```
 
 ## Kan Signs
 
 ```sh
-flow transactions sign ./transactions/staking-contract-upgrade/june-23/set-approved-list-v0-7-7-sig-3.rlp \
+flow transactions sign ./transactions/staking-contract-upgrade/v0-7-7/set-approved-list-v0-7-7-sig-3.rlp \
   --config-path flow-staking.json \
   --signer kan \
   --filter payload \
-  --save ./transactions/staking-contract-upgrade/june-23/set-approved-list-v0-7-7-sig-complete.rlp
+  --save ./transactions/staking-contract-upgrade/v0-7-7/set-approved-list-v0-7-7-sig-complete.rlp
 ```
 
 
 ## Somebody Submits
 
 ```sh
-flow transactions send-signed --network mainnet --config-path flow-staking.json ./transactions/staking-contract-upgrade/june-23/set-approved-list-v0-7-7-sig-complete.rlp
+flow transactions send-signed --network mainnet --config-path flow-staking.json ./transactions/staking-contract-upgrade/v0-7-7/set-approved-list-v0-7-7-sig-complete.rlp
 ```
 
 ## Results

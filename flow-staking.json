@@ -20,7 +20,7 @@
       "keys": [
         {
           "type": "google-kms",
-          "index": 2,
+          "index": 1,
           "signatureAlgorithm": "ECDSA_secp256k1",
           "hashAlgorithm": "SHA2_256",
           "context": {

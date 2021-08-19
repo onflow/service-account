@@ -65,11 +65,11 @@ flow transactions sign ./transactions/staking-contract-upgrade/v0-7-7/staking-co
 ## Contract Admin Signs
 
 ```sh
-flow transactions sign ./transactions/staking-contract-upgrade/v0-7-7/set-approved-list-v0-7-7-sig-4.rlp \
+flow transactions sign ./transactions/staking-contract-upgrade/v0-7-7/staking-contract-upgrade-v0-7-7-sig-4.rlp \
   --config-path flow-staking.json \
   --signer contract-admin \
   --filter payload \
-  --save ./transactions/staking-contract-upgrade/v0-7-7/set-approved-list-v0-7-7-sig-complete.rlp
+  --save ./transactions/staking-contract-upgrade/v0-7-7/staking-contract-upgrade-v0-7-7-sig-complete.rlp
 ```
 
 ## Somebody Submits
@@ -80,4 +80,4 @@ flow transactions send-signed --config-path flow-staking.json --network mainnet 
 
 ## Results
 
-https://flowscan.org/transaction/
+https://flowscan.org/transaction/7a5da9a326e5d5cb41ceb929dd6c60968a5a03367d858b7f87d4356f2348bca1
