@@ -40,12 +40,12 @@ flow transactions sign ./transactions/staking-contract-upgrade/june-23/set-appro
   --save ./transactions/staking-contract-upgrade/june-23/set-approved-list-v0-7-7-sig-2.rlp
 ```
 
-## Layne Signs
+## Peter Signs
 
 ```sh
 flow transactions sign ./transactions/staking-contract-upgrade/june-23/set-approved-list-v0-7-7-sig-2.rlp \
   --config-path flow-staking.json \
-  --signer layne \
+  --signer peter \
   --filter payload \
   --save ./transactions/staking-contract-upgrade/june-23/set-approved-list-v0-7-7-sig-3.rlp
 ```

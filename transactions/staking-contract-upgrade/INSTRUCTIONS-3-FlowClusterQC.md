@@ -42,22 +42,22 @@ flow transactions sign ./transactions/staking-contract-upgrade/june-23/cluster-q
   --save ./transactions/staking-contract-upgrade/june-23/cluster-qc-contract-deployment-v0-7-7-sig-2.rlp
 ```
 
-## Layne Signs
+## Peter Signs
 
 ```sh
 flow transactions sign ./transactions/staking-contract-upgrade/june-23/cluster-qc-contract-deployment-v0-7-7-sig-2.rlp \
   --config-path flow-staking.json \
-  --signer layne \
+  --signer peter \
   --filter payload \
   --save ./transactions/staking-contract-upgrade/june-23/cluster-qc-contract-deployment-v0-7-7-sig-3.rlp
 ```
 
-## Peter Signs
+## Kan Signs
 
 ```sh
 flow transactions sign ./transactions/staking-contract-upgrade/june-23/cluster-qc-contract-deployment-v0-7-7-sig-3.rlp \
   --config-path flow-staking.json \
-  --signer peter \
+  --signer kan \
   --filter payload \
   --save ./transactions/staking-contract-upgrade/june-23/cluster-qc-contract-deployment-v0-7-7-sig-4.rlp
 ```
