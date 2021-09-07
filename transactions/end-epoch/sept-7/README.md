@@ -16,20 +16,20 @@ flow transactions build ./templates/capability_end_epoch_v2.cdc \
   --save ./transactions/end-epoch/sept-7/end-epoch-sept-7-unsigned.rlp
 ```
 
-## Equilibrium Signs
+## Animoca Signs
 
 ```sh
 flow transactions sign ./transactions/end-epoch/sept-7/end-epoch-sept-7-unsigned.rlp \
-  --signer equilibrium \
+  --signer animoca \
   --filter payload \
   --save ./transactions/end-epoch/sept-7/end-epoch-sept-7-sig-1.rlp
 ```
 
-## Ichi Signs
+## Peter Signs
 
 ```sh
 flow transactions sign ./transactions/end-epoch/sept-7/end-epoch-sept-7-sig-1.rlp \
-  --signer ichi \
+  --signer peter \
   --filter payload \
   --save ./transactions/end-epoch/sept-7/end-epoch-sept-7-sig-2.rlp
 ```
