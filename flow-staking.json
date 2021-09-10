@@ -135,6 +135,38 @@
           }
       ],
       "chain": "flow-mainnet"
+    },
+    "flow-fees": {
+      "address": "f919ee77447b7497",
+      "keys": [
+          {
+              "type": "google-kms",
+              "index": 0,
+              "signatureAlgorithm": "ECDSA_P256",
+              "hashAlgorithm": "SHA2_256",
+              "context": {
+                "resourceName": "projects/dl-flow/locations/global/keyRings/mainnet/cryptoKeys/service-account/cryptoKeyVersions/1"
+              },
+              "resourceID": "projects/dl-flow/locations/global/keyRings/mainnet/cryptoKeys/service-account/cryptoKeyVersions/1"
+          }
+      ],
+      "chain": "flow-mainnet"
+    },
+    "locked-token": {
+      "address": "8d0e87b65159ae63",
+      "keys": [
+          {
+              "type": "google-kms",
+              "index": 0,
+              "signatureAlgorithm": "ECDSA_P256",
+              "hashAlgorithm": "SHA2_256",
+              "context": {
+                "resourceName": "projects/dl-flow/locations/global/keyRings/mainnet/cryptoKeys/token-admin/cryptoKeyVersions/1"
+              },
+              "resourceID": "projects/dl-flow/locations/global/keyRings/mainnet/cryptoKeys/token-admin/cryptoKeyVersions/1"
+          }
+      ],
+      "chain": "flow-mainnet"
     }
   },
   "contracts": {},
