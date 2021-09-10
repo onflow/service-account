@@ -50,4 +50,4 @@ flow transactions send-signed --config-path flow-staking.json --network mainnet 
 
 ## Results
 
-https://flowscan.org/transaction/
+https://flowscan.org/transaction/ff93b42fbc69f57fd573294b310a739ac188f8cb0ee293b47a47590a4c8fb0f3
