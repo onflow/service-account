@@ -12,7 +12,7 @@ https://github.com/onflow/flow-core-contracts/tree/lib/go/templates/6fcd492/cont
 flow transactions build ./templates/update_contract_admin.cdc \
   --config-path flow-staking.json \
   --network mainnet \
-  --args-json "$(cat "./transactions/staking-contract-upgrade/6fcd492/flow-id-table-staking-arguments.json")" \
+  --args-json "$(cat "./transactions/staking-contract-upgrade/6fcd492/flow-fees-arguments.json")" \
   --proposer 0x8d0f8df62029f75a \
   --proposer-key-index 0 \
   --authorizer 0xf919ee77447b7497 \
