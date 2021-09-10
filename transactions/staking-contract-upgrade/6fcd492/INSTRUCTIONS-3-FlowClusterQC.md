@@ -32,12 +32,12 @@ flow transactions sign ./transactions/staking-contract-upgrade/6fcd492/cluster-q
   --save ./transactions/staking-contract-upgrade/6fcd492/cluster-qc-contract-upgrade-6fcd492-sig-1.rlp
 ```
 
-## Equilibrium Signs
+## Ichi Signs
 
 ```sh
 flow transactions sign ./transactions/staking-contract-upgrade/6fcd492/cluster-qc-contract-upgrade-6fcd492-sig-1.rlp \
   --config-path flow-staking.json \
-  --signer equilibrium \
+  --signer ichi \
   --filter payload \
   --save ./transactions/staking-contract-upgrade/6fcd492/cluster-qc-contract-upgrade-6fcd492-sig-2.rlp
 ```
@@ -52,12 +52,12 @@ flow transactions sign ./transactions/staking-contract-upgrade/6fcd492/cluster-q
   --save ./transactions/staking-contract-upgrade/6fcd492/cluster-qc-contract-upgrade-6fcd492-sig-3.rlp
 ```
 
-## Kan Signs
+## Layne Signs
 
 ```sh
 flow transactions sign ./transactions/staking-contract-upgrade/6fcd492/cluster-qc-contract-upgrade-6fcd492-sig-3.rlp \
   --config-path flow-staking.json \
-  --signer kan \
+  --signer layne \
   --filter payload \
   --save ./transactions/staking-contract-upgrade/6fcd492/cluster-qc-contract-upgrade-6fcd492-sig-4.rlp
 ```
