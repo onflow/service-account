@@ -1,6 +1,6 @@
 # Update Service Account Contract
 
-> August 19, 2021
+> September 10, 2021
 
 ## Contract to be deployed
 

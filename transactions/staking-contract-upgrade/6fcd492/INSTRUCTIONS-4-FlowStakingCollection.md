@@ -25,7 +25,7 @@ flow transactions build ./templates/update_contract_admin.cdc \
 ## Locked Token signs
 
 ```sh
-flow transactions sign ./transactions/staking-contract-upgrade/6fcd492/staking-collection-contract-upgrade-6fcd492-sig-3.rlp \
+flow transactions sign ./transactions/staking-contract-upgrade/6fcd492/staking-collection-contract-upgrade-6fcd492-unsigned.rlp \
   --config-path flow-staking.json \
   --signer locked-token \
   --filter payload \
