@@ -9,7 +9,7 @@ flow transactions build ./templates/move_fees_admin.cdc \
   --config-path flow-staking.json \
   --network mainnet \
   --proposer 0xe467b9dd11fa00df \
-  --proposer-key-index 0 \
+  --proposer-key-index 11 \
   --authorizer 0xe467b9dd11fa00df \
   --authorizer 0x8624b52f9ddcd04a \
   --payer 0xe467b9dd11fa00df \
