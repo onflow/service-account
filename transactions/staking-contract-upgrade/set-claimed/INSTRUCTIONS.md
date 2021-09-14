@@ -52,7 +52,7 @@ flow transactions sign ./transactions/staking-contract-upgrade/set-claimed/set-c
   --config-path flow-staking.json \
   --signer kan \
   --filter payload \
-  --save ./transactions/staking-contract-upgrade/set-claimed/set-claimed-sept-14-sig-4.rlp
+  --save ./transactions/staking-contract-upgrade/set-claimed/set-claimed-sept-14-sig-complete.rlp
 ```
 
 ## Somebody Submits
@@ -63,4 +63,4 @@ flow transactions send-signed --config-path flow-staking.json --network mainnet 
 
 ## Results
 
-https://flowscan.org/transaction/
+https://flowscan.org/transaction/933f05bf8781b943899ac6c2767ffc8f8439de0b374893b8d8e20331f3c70a3c
