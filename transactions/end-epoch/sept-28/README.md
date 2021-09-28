@@ -11,7 +11,7 @@ flow transactions build ./templates/capability_end_epoch_v2.cdc \
   --proposer-key-index 11 \
   --authorizer 0xe467b9dd11fa00df \
   --payer 0xe467b9dd11fa00df \
-  --gas-limit 500000 \
+  --gas-limit 1000000 \
   -x payload \
   --save ./transactions/end-epoch/sept-28/end-epoch-sept-28-unsigned.rlp
 ```
@@ -59,5 +59,7 @@ flow transactions send-signed --network mainnet ./transactions/end-epoch/sept-28
 ```
 
 ## Results
+
+Attempt 1 - Failed: https://flowscan.org/transaction/446f0e96f5a07499509bacf4ddb6ffdc56bf3397f337a1e5449dceef4ad0b548
 
 https://flowscan.org/transaction/
