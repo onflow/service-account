@@ -1,6 +1,10 @@
 # Set Deployment Allow List
 > October 5th, 2021
 
+## New addition to the Deployment Allow List
+
+`0xa07cc02cbabe237e` - Quantstamp
+
 ## Dapper Labs Builds
 
 ```sh
