@@ -22,12 +22,12 @@ flow transactions build ./templates/update_contract_admin.cdc \
   --save ./transactions/staking-contract-upgrade/136d1f9/flow-epoch-contract-upgrade-136d1f9-unsigned.rlp
 ```
 
-## Blocto Signs
+## Equilibrium Signs
 
 ```sh
 flow transactions sign ./transactions/staking-contract-upgrade/136d1f9/flow-epoch-contract-upgrade-136d1f9-unsigned.rlp \
   --config-path flow-staking.json \
-  --signer blocto \
+  --signer equilibrium \
   --filter payload \
   --save ./transactions/staking-contract-upgrade/136d1f9/flow-epoch-contract-upgrade-136d1f9-sig-1.rlp
 ```
@@ -42,22 +42,22 @@ flow transactions sign ./transactions/staking-contract-upgrade/136d1f9/flow-epoc
   --save ./transactions/staking-contract-upgrade/136d1f9/flow-epoch-contract-upgrade-136d1f9-sig-2.rlp
 ```
 
-## Peter Signs
+## Layne Signs
 
 ```sh
 flow transactions sign ./transactions/staking-contract-upgrade/136d1f9/flow-epoch-contract-upgrade-136d1f9-sig-2.rlp \
   --config-path flow-staking.json \
-  --signer peter \
+  --signer layne \
   --filter payload \
   --save ./transactions/staking-contract-upgrade/136d1f9/flow-epoch-contract-upgrade-136d1f9-sig-3.rlp
 ```
 
-## Layne Signs
+## Kan Signs
 
 ```sh
 flow transactions sign ./transactions/staking-contract-upgrade/136d1f9/flow-epoch-contract-upgrade-136d1f9-sig-3.rlp \
   --config-path flow-staking.json \
-  --signer layne \
+  --signer kan \
   --filter payload \
   --save ./transactions/staking-contract-upgrade/136d1f9/flow-epoch-contract-upgrade-136d1f9-sig-4.rlp
 ```
