@@ -4,7 +4,7 @@
 ## Dapper Labs Builds
 
 ```sh
-flow transactions build ./templates/capability_end_epoch_v2.cdc \
+flow transactions build ./templates/capability_end_epoch_v3.cdc \
   --network mainnet \
   --args-json "$(cat "./transactions/end-epoch/oct-6/arguments.json")" \
   --proposer 0xe467b9dd11fa00df \
