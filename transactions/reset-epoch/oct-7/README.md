@@ -1,4 +1,4 @@
-# Adjust Epoch Legth
+# Reset Epoch
 
 > October 7th, 2021
 

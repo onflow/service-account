@@ -1,4 +1,4 @@
-# Adjust Epoch Legth
+# Adjust Epoch Length
 
 > October 7th, 2021
 
