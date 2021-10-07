@@ -9,6 +9,5 @@ transaction(dkgPhaseLen: UInt64, stakingLen: UInt64) {
 				// must update in this order DKG->staking->epoch.
         epochAdmin.updateDKGPhaseViews(dkgPhaseLen)
 				epochAdmin.updateAuctionViews(stakingLen)
-				epochAdmin.updateEpochViews(epochLen)
     }
 }
