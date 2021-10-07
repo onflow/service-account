@@ -5,7 +5,7 @@
 ## Dapper Labs Builds
 
 ```sh
-flow transactions build ./templates/set_non_operation_node_list_id_list.cdc \
+flow transactions build ./transactions/set-non-operational-list/oct-7/init_non_operation_node_list_id_list.cdc \
   --config-path flow-staking.json \
   --network mainnet \
   --args-json "$(cat "./transactions/set-non-operational-list/oct-7/arguments.json")" \
