@@ -13,6 +13,7 @@ flow transactions build ./templates/reset_epoch.cdc \
   --proposer-key-index 5 \
   --authorizer 0x8624b52f9ddcd04a \
   --payer 0x8624b52f9ddcd04a \
+  --gas-limit 1000000 \
   -x payload \
   --save ./transactions/reset-epoch/oct-7/reset-epoch-oct-7-unsigned.rlp
 ```
@@ -66,4 +67,5 @@ flow transactions send-signed --network mainnet --config-path flow-staking.json 
 
 ## Results
 
+Attempt 1 - Failed: https://flowscan.org/transaction/394029380eca26bb1b760fcbdb6413f9f9693b61798a35be33d17b0c7d4d692c
 https://flowscan.org/transaction/
