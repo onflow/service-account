@@ -12,7 +12,7 @@ flow transactions build ./templates/reset_epoch.cdc \
   --proposer 0x8624b52f9ddcd04a \
   --proposer-key-index 5 \
   --authorizer 0x8624b52f9ddcd04a \
-  --payer 0x47fd53250cc3982f \
+  --payer 0xe467b9dd11fa00df \
   --gas-limit 1000000 \
   -x payload \
   --save ./transactions/reset-epoch/oct-7/reset-epoch-oct-7-unsigned.rlp
