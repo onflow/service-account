@@ -8,7 +8,6 @@
 flow transactions build ./transactions/set-non-operational-list/oct-7/init_non_operation_node_list_id_list.cdc \
   --config-path flow-staking.json \
   --network mainnet \
-  --args-json "$(cat "./transactions/set-non-operational-list/oct-7/arguments.json")" \
   --proposer 0x8624b52f9ddcd04a \
   --proposer-key-index 5 \
   --authorizer 0x8624b52f9ddcd04a \
