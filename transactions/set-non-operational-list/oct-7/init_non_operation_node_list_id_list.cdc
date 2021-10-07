@@ -1,6 +1,6 @@
 import FlowIDTableStaking from 0x8624b52f9ddcd04a
 
-// This transaction sets the list of approved nodes in the ID table
+// This transaction sets the list of non-operational nodes in the ID table
 
 transaction() {
 
