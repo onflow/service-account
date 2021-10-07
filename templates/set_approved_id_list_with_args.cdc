@@ -2,7 +2,7 @@ import FlowIDTableStaking from 0x8624b52f9ddcd04a
 
 // This transaction sets the list of approved nodes in the ID table
 
-transaction {
+transaction(ids: [String]) {
 
     // Local variable for a reference to the ID Table Admin object
     let adminRef: &FlowIDTableStaking.Admin
@@ -14,7 +14,6 @@ transaction {
     }
 
     execute {
-        let nodeList: {String: UFix64} = {}
         self.adminRef.setApprovedList(ids)
     }
 }
