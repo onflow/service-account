@@ -61,4 +61,4 @@ flow transactions send-signed --network mainnet ./transactions/set-transaction-f
 
 ## Results
 
-https://flowscan.org/transaction/
+https://flowscan.org/transaction/79a0192763156fd3f5ca4910c310384a30b8151638cd7a4d1c58407cc8a9e90c
