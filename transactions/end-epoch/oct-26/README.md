@@ -1,6 +1,14 @@
 # End Epoch
 > October 26th, 2021
 
+Link to node IDs here: https://github.com/onflow/flow/blob/master/nodeoperators/NodeOperatorList.md
+
+| Node Operator             | Node Type          | Node ID  |
+|:--------------------------|:-------------------|:---------|
+| Optakt | Consensus | f3b72c50794c29319f0f77f0c7d623662eb15253c291a5360d095a4ea282fadb
+| Foundry | Collection | bd368122b0ccf67ebdd59d7f9b75edfa85106c3af41854c946ad0fa46e5c3ddd
+
+
 ## Dapper Labs Builds
 
 ```sh
