@@ -5,6 +5,7 @@ Link to node IDs here: https://github.com/onflow/flow/blob/master/nodeoperators/
 
 | Node Operator             | Node Type          | Node ID  |
 |:--------------------------|:-------------------|:---------|
+| Alxo | Verification | f7422f2d3296ede4d1efb36ec55e3fd93702c061f7ee627881f0b3007beff2ed
 
 
 
