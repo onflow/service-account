@@ -69,4 +69,4 @@ flow transactions send-signed --network mainnet ./transactions/end-epoch/nov-16/
 
 ## Results
 
-https://flowscan.org/transaction/
+https://flowscan.org/transaction/993e78c383dc071d7d1bc10f4b387aed83a243115a77c3e1ff7f69cf0503cefe
