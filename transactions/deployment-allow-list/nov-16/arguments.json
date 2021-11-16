@@ -1,0 +1,38 @@
+[
+    {
+        "type": "Array",
+        "value": [
+            {
+                "type": "Address",
+                "value": "0xe467b9dd11fa00df"
+            },
+            {
+                "type": "Address",
+                "value": "0x8d0f8df62029f75a"
+            },
+            {
+                "type": "Address",
+                "value": "0xa07cc02cbabe237e"
+            },
+            {
+                "type": "Address",
+                "value": "0xd796ff17107bbff6"
+            },
+            {
+                "type": "Address",
+                "value": "0x329feb3ab062d289"
+            },
+            {
+                "type": "Address",
+                "value": "0xdc53ab155826d528"
+            }
+        ]
+    },
+    {
+        "type": "Path",
+        "value": {
+            "domain": "storage",
+            "identifier": "authorizedAddressesToDeployContracts"
+        }
+    }
+]
