@@ -35,11 +35,11 @@ flow transactions sign ./transactions/end-epoch/nov-30/end-epoch-nov-30-unsigned
   --save ./transactions/end-epoch/nov-30/end-epoch-nov-30-sig-1.rlp
 ```
 
-## Ichi Signs
+## Peter Signs
 
 ```sh
 flow transactions sign ./transactions/end-epoch/nov-30/end-epoch-nov-30-sig-1.rlp \
-  --signer ichi \
+  --signer peter \
   --filter payload \
   --save ./transactions/end-epoch/nov-30/end-epoch-nov-30-sig-2.rlp
 ```
