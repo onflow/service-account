@@ -2,7 +2,7 @@
    
 import FlowDKG from 0x8624b52f9ddcd04a
 
-transaction(newThresholdPercentage: UFix64?) {
+transaction(newThresholdPercentage: UFix64) {
 
     let dkgAdmin: &FlowDKG.Admin
 
