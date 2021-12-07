@@ -37,12 +37,12 @@ flow transactions sign ./transactions/set-dkg-threshold/dec-7/set-dkg-threshold-
   --save ./transactions/set-dkg-threshold/dec-7/set-dkg-threshold-dec-7-sig-2.rlp
 ```
 
-## Layne Signs
+## Peter Signs
 
 ```sh
 flow transactions sign ./transactions/set-dkg-threshold/dec-7/set-dkg-threshold-dec-7-sig-2.rlp \
   --config-path flow-staking.json \
-  --signer layne \
+  --signer peter \
   --filter payload \
   --save ./transactions/set-dkg-threshold/dec-7/set-dkg-threshold-dec-7-sig-3.rlp
 ```
