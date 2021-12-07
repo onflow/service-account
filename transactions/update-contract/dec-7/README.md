@@ -42,12 +42,12 @@ flow transactions sign ./transactions/update-contract/dec-7/flow-dkg-contract-up
   --save ./transactions/update-contract/dec-7/flow-dkg-contract-upgrade-dec-7-sig-2.rlp
 ```
 
-## Layne Signs
+## Peter Signs
 
 ```sh
 flow transactions sign ./transactions/update-contract/dec-7/flow-dkg-contract-upgrade-dec-7-sig-2.rlp \
   --config-path flow-staking.json \
-  --signer layne \
+  --signer peter \
   --filter payload \
   --save ./transactions/update-contract/dec-7/flow-dkg-contract-upgrade-dec-7-sig-3.rlp
 ```
