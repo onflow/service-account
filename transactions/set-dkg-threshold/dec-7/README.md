@@ -66,4 +66,4 @@ flow transactions send-signed --network mainnet --config-path flow-staking.json 
 
 ## Results
 
-https://flowscan.org/transaction/
+Failed - https://flowscan.org/transaction/9e98057038c499dcac45c80decb25956c30fec18d1c5477bbb2aa926c5f6a1a5
