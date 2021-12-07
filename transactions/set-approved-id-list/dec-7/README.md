@@ -41,12 +41,12 @@ flow transactions sign ./transactions/set-approved-id-list/dec-7/set-approved-li
   --save ./transactions/set-approved-id-list/dec-7/set-approved-list-dec-7-sig-2.rlp
 ```
 
-## Layne Signs
+## Peter Signs
 
 ```sh
 flow transactions sign ./transactions/set-approved-id-list/dec-7/set-approved-list-dec-7-sig-2.rlp \
   --config-path flow-staking.json \
-  --signer layne \
+  --signer peter \
   --filter payload \
   --save ./transactions/set-approved-id-list/dec-7/set-approved-list-dec-7-sig-3.rlp
 ```
