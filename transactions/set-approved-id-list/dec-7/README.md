@@ -2,7 +2,7 @@
 
 > December 7th, 2021
 
-15 new external access nodes
+13 new external access nodes
 
 1 new Dapper Labs access node
 
