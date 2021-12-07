@@ -9,7 +9,7 @@
 ## Dapper Labs Builds
 
 ```sh
-flow transactions build ./templates/set_approved_id_list_with_args.cdc \
+flow transactions build ./templates/add_approved_id_list.cdc \
   --config-path flow-staking.json \
   --network mainnet \
   --args-json "$(cat "./transactions/set-approved-id-list/dec-7/arguments.json")" \
