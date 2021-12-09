@@ -5,7 +5,7 @@
 ## Dapper Labs Builds
 
 ```sh
-flow transactions build ./templates/reset_epoch.cdc \
+flow transactions build ./templates/reset_epoch_with_end_staking_auction.cdc \
   --config-path flow-staking.json \
   --network mainnet \
   --args-json "$(cat "./transactions/reset-epoch/dec-9/arguments.json")" \
