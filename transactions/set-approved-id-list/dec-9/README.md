@@ -30,12 +30,12 @@ flow transactions sign ./transactions/set-approved-id-list/dec-9/set-approved-li
   --save ./transactions/set-approved-id-list/dec-9/set-approved-list-dec-9-sig-1.rlp
 ```
 
-## Layne Signs
+## Ichi Signs
 
 ```sh
 flow transactions sign ./transactions/set-approved-id-list/dec-9/set-approved-list-dec-9-sig-1.rlp \
   --config-path flow-staking.json \
-  --signer layne \
+  --signer ichi \
   --filter payload \
   --save ./transactions/set-approved-id-list/dec-9/set-approved-list-dec-9-sig-2.rlp
 ```
