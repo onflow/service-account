@@ -27,12 +27,12 @@ flow transactions sign ./transactions/adjust-epoch-length/dec-9/adjust-epoch-len
   --save ./transactions/adjust-epoch-length/dec-9/adjust-epoch-length-dec-9-sig-1.rlp
 ```
 
-## Layne Signs
+## Ichi Signs
 
 ```sh
 flow transactions sign ./transactions/adjust-epoch-length/dec-9/adjust-epoch-length-dec-9-sig-1.rlp \
   --config-path flow-staking.json \
-  --signer layne \
+  --signer ichi \
   --filter payload \
   --save ./transactions/adjust-epoch-length/dec-9/adjust-epoch-length-dec-9-sig-2.rlp
 ```

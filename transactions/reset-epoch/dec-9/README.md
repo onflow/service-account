@@ -29,12 +29,12 @@ flow transactions sign ./transactions/reset-epoch/dec-9/reset-epoch-dec-9-unsign
   --save ./transactions/reset-epoch/dec-9/reset-epoch-dec-9-sig-1.rlp
 ```
 
-## Layne Signs
+## Ichi Signs
 
 ```sh
 flow transactions sign ./transactions/reset-epoch/dec-9/reset-epoch-dec-9-sig-1.rlp \
   --config-path flow-staking.json \
-  --signer layne \
+  --signer ichi \
   --filter payload \
   --save ./transactions/reset-epoch/dec-9/reset-epoch-dec-9-sig-2.rlp
 ```
@@ -72,12 +72,12 @@ flow transactions sign ./transactions/reset-epoch/dec-9/reset-epoch-dec-9-sig-4.
   --save ./transactions/reset-epoch/dec-9/reset-epoch-dec-9-sig-5.rlp
 ```
 
-## Layne Signs
+## Ichi Signs
 
 ```sh
 flow transactions sign ./transactions/reset-epoch/dec-9/reset-epoch-dec-9-sig-5.rlp \
   --config-path flow.json \
-  --signer layne \
+  --signer ichi \
   --filter payload \
   --save ./transactions/reset-epoch/dec-9/reset-epoch-dec-9-sig-6.rlp
 ```
