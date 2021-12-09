@@ -1,4 +1,4 @@
-# Add Approved Node Operators ID List
+# Set Approved Node Operators ID List
 
 > December 9th, 2021
 
@@ -8,7 +8,7 @@
 ## Dapper Labs Builds
 
 ```sh
-flow transactions build ./templates/add_approved_id_list.cdc \
+flow transactions build ./templates/set_approved_id_list_with_args.cdc \
   --config-path flow-staking.json \
   --network mainnet \
   --args-json "$(cat "./transactions/set-approved-id-list/dec-9/arguments.json")" \
