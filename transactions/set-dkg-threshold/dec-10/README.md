@@ -27,12 +27,12 @@ flow transactions sign ./transactions/set-dkg-threshold/dec-10/set-dkg-threshold
   --save ./transactions/set-dkg-threshold/dec-10/set-dkg-threshold-dec-10-sig-1.rlp
 ```
 
-## Ichi Signs
+## Layne Signs
 
 ```sh
 flow transactions sign ./transactions/set-dkg-threshold/dec-10/set-dkg-threshold-dec-10-sig-1.rlp \
   --config-path flow-staking.json \
-  --signer ichi \
+  --signer layne \
   --filter payload \
   --save ./transactions/set-dkg-threshold/dec-10/set-dkg-threshold-dec-10-sig-2.rlp
 ```
