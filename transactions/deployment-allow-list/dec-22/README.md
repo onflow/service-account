@@ -21,29 +21,29 @@ flow transactions build ./templates/set_deployment_allow_list.cdc \
   --save ./transactions/deployment-allow-list/dec-22/deployment-allow-list-dec-22-unsigned.rlp
 ```
 
-## Equilibrium Signs
+## Blocto Signs
 
 ```sh
 flow transactions sign ./transactions/deployment-allow-list/dec-22/deployment-allow-list-dec-22-unsigned.rlp \
-  --signer equilibrium \
+  --signer blocto \
   --filter payload \
   --save ./transactions/deployment-allow-list/dec-22/deployment-allow-list-dec-22-sig-1.rlp
 ```
 
-## Ichi Signs
+## Animoca Signs
 
 ```sh
 flow transactions sign ./transactions/deployment-allow-list/dec-22/deployment-allow-list-dec-22-sig-1.rlp \
-  --signer ichi \
+  --signer animoca \
   --filter payload \
   --save ./transactions/deployment-allow-list/dec-22/deployment-allow-list-dec-22-sig-2.rlp
 ```
 
-## Layne Signs
+## Peter Signs
 
 ```sh
 flow transactions sign ./transactions/deployment-allow-list/dec-22/deployment-allow-list-dec-22-sig-2.rlp \
-  --signer layne \
+  --signer peter \
   --filter payload \
   --save ./transactions/deployment-allow-list/dec-22/deployment-allow-list-dec-22-sig-3.rlp
 ```
