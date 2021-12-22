@@ -66,4 +66,4 @@ flow transactions send-signed --network mainnet ./transactions/deployment-allow-
 
 ## Results
 
-https://flowscan.org/transaction/
+https://flowscan.org/transaction/41ce934a49be7e52852f2786f5e43e313ef0abadb5df23865abc92afb1d14a8b
