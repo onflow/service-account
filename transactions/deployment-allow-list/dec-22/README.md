@@ -3,8 +3,8 @@
 
 ## New addition to the Deployment Allow List
 
-`0x329feb3ab062d289` - GigLabs
-`0xdc53ab155826d528` - Blocto
+- `0x329feb3ab062d289` - GigLabs
+- `0xdc53ab155826d528` - Blocto
 
 ## Dapper Labs Builds
 
