@@ -35,11 +35,11 @@ flow transactions sign ./transactions/end-epoch/dec-29/end-epoch-dec-29-sig-1.rl
   --save ./transactions/end-epoch/dec-29/end-epoch-dec-29-sig-2.rlp
 ```
 
-## Peter Signs
+## Layne Signs
 
 ```sh
 flow transactions sign ./transactions/end-epoch/dec-29/end-epoch-dec-29-sig-2.rlp \
-  --signer peter \
+  --signer layne \
   --filter payload \
   --save ./transactions/end-epoch/dec-29/end-epoch-dec-29-sig-3.rlp
 ```
