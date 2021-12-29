@@ -26,11 +26,11 @@ flow transactions sign ./transactions/end-epoch/dec-29/end-epoch-dec-29-unsigned
   --save ./transactions/end-epoch/dec-29/end-epoch-dec-29-sig-1.rlp
 ```
 
-## Ichi Signs
+## Peter Signs
 
 ```sh
 flow transactions sign ./transactions/end-epoch/dec-29/end-epoch-dec-29-sig-1.rlp \
-  --signer ichi \
+  --signer peter \
   --filter payload \
   --save ./transactions/end-epoch/dec-29/end-epoch-dec-29-sig-2.rlp
 ```
