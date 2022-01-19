@@ -19,50 +19,50 @@ flow transactions build ./templates/set_deployment_allow_list.cdc \
   --payer 0xe467b9dd11fa00df \
   --gas-limit 500000 \
   -x payload \
-  --save ./transactions/deployment-allow-list/2022/jan-19/deployment-allow-list-dec-22-unsigned.rlp
+  --save ./transactions/deployment-allow-list/2022/jan-19/deployment-allow-list-jan-19-unsigned.rlp
 ```
 
 ## Blocto Signs
 
 ```sh
-flow transactions sign ./transactions/deployment-allow-list/2022/jan-19/deployment-allow-list-dec-22-unsigned.rlp \
+flow transactions sign ./transactions/deployment-allow-list/2022/jan-19/deployment-allow-list-jan-19-unsigned.rlp \
   --signer blocto \
   --filter payload \
-  --save ./transactions/deployment-allow-list/2022/jan-19/deployment-allow-list-dec-22-sig-1.rlp
+  --save ./transactions/deployment-allow-list/2022/jan-19/deployment-allow-list-jan-19-sig-1.rlp
 ```
 
 ## Animoca Signs
 
 ```sh
-flow transactions sign ./transactions/deployment-allow-list/2022/jan-19/deployment-allow-list-dec-22-sig-1.rlp \
+flow transactions sign ./transactions/deployment-allow-list/2022/jan-19/deployment-allow-list-jan-19-sig-1.rlp \
   --signer animoca \
   --filter payload \
-  --save ./transactions/deployment-allow-list/2022/jan-19/deployment-allow-list-dec-22-sig-2.rlp
+  --save ./transactions/deployment-allow-list/2022/jan-19/deployment-allow-list-jan-19-sig-2.rlp
 ```
 
 ## Layne Signs
 
 ```sh
-flow transactions sign ./transactions/deployment-allow-list/2022/jan-19/deployment-allow-list-dec-22-sig-2.rlp \
+flow transactions sign ./transactions/deployment-allow-list/2022/jan-19/deployment-allow-list-jan-19-sig-2.rlp \
   --signer layne \
   --filter payload \
-  --save ./transactions/deployment-allow-list/2022/jan-19/deployment-allow-list-dec-22-sig-3.rlp
+  --save ./transactions/deployment-allow-list/2022/jan-19/deployment-allow-list-jan-19-sig-3.rlp
 ```
 
 ## Kan Signs
 
 ```sh
-flow transactions sign ./transactions/deployment-allow-list/2022/jan-19/deployment-allow-list-dec-22-sig-3.rlp \
+flow transactions sign ./transactions/deployment-allow-list/2022/jan-19/deployment-allow-list-jan-19-sig-3.rlp \
   --signer kan \
   --filter payload \
-  --save ./transactions/deployment-allow-list/2022/jan-19/deployment-allow-list-dec-22-sig-complete.rlp
+  --save ./transactions/deployment-allow-list/2022/jan-19/deployment-allow-list-jan-19-sig-complete.rlp
 ```
 
 
 ## Somebody Submits
 
 ```sh
-flow transactions send-signed --network mainnet ./transactions/deployment-allow-list/2022/jan-19/deployment-allow-list-dec-22-sig-complete.rlp
+flow transactions send-signed --network mainnet ./transactions/deployment-allow-list/2022/jan-19/deployment-allow-list-jan-19-sig-complete.rlp
 ```
 
 ## Results
