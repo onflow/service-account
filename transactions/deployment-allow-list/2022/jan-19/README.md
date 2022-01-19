@@ -40,11 +40,11 @@ flow transactions sign ./transactions/deployment-allow-list/2022/jan-19/deployme
   --save ./transactions/deployment-allow-list/2022/jan-19/deployment-allow-list-dec-22-sig-2.rlp
 ```
 
-## Peter Signs
+## Layne Signs
 
 ```sh
 flow transactions sign ./transactions/deployment-allow-list/2022/jan-19/deployment-allow-list-dec-22-sig-2.rlp \
-  --signer peter \
+  --signer layne \
   --filter payload \
   --save ./transactions/deployment-allow-list/2022/jan-19/deployment-allow-list-dec-22-sig-3.rlp
 ```
