@@ -17,12 +17,12 @@ flow transactions build ./templates/adjust_epoch_length.cdc \
   --save ./transactions/adjust-epoch-length/2022/jan-26/adjust-epoch-length-jan-26-unsigned.rlp
 ```
 
-## Equilibrium Signs
+## Layne Signs
 
 ```sh
 flow transactions sign ./transactions/adjust-epoch-length/2022/jan-26/adjust-epoch-length-jan-26-unsigned.rlp \
   --config-path flow-staking.json \
-  --signer equilibrium \
+  --signer layne \
   --filter payload \
   --save ./transactions/adjust-epoch-length/2022/jan-26/adjust-epoch-length-jan-26-sig-1.rlp
 ```

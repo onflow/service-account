@@ -17,11 +17,11 @@ flow transactions build ./templates/capability_pay_rewards.cdc \
   --save ./transactions/pay-rewards/2022/jan-26/pay-rewards-jan-26-unsigned.rlp
 ```
 
-## Equilibrium Signs
+## Layne Signs
 
 ```sh
 flow transactions sign ./transactions/pay-rewards/2022/jan-26/pay-rewards-jan-26-unsigned.rlp \
-  --signer equilibrium \
+  --signer layne \
   --filter payload \
   --save ./transactions/pay-rewards/2022/jan-26/pay-rewards-jan-26-sig-1.rlp
 ```
