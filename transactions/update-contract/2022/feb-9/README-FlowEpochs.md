@@ -12,7 +12,7 @@ https://github.com/onflow/flow-core-contracts/blob/e2f28762f87896428ffb1f385296c
 flow transactions build ./templates/update_contract_admin.cdc \
   --config-path flow-staking.json \
   --network mainnet \
-  --args-json "$(cat "./transactions/update-contract/2022/feb-9/arguments.json")" \
+  --args-json "$(cat "./transactions/update-contract/2022/feb-9/arguments-flow-epochs.json")" \
   --proposer 0x8d0f8df62029f75a \
   --proposer-key-index 0 \
   --authorizer 0x8624b52f9ddcd04a \
