@@ -14,7 +14,7 @@ flow transactions build ./templates/deploy_contract.cdc \
   --network mainnet \
   --args-json "$(cat "./transactions/deploy-contract/2022/feb-9/arguments.json")" \
   --proposer 0xe467b9dd11fa00df \
-  --proposer-key-index 0 \
+  --proposer-key-index 11 \
   --authorizer 0xe467b9dd11fa00df \
   --payer 0xe467b9dd11fa00df \
   -x payload \
@@ -58,7 +58,7 @@ flow transactions sign ./transactions/deploy-contract/2022/feb-9/flow-contract-a
   --config-path flow.json \
   --signer kan \
   --filter payload \
-  --save ./transactions/deploy-contract/2022/feb-9/flow-contract-audit-contract-deployment-feb-9-sig-4.rlp
+  --save ./transactions/deploy-contract/2022/feb-9/flow-contract-audit-contract-deployment-feb-9-sig-complete.rlp
 ```
 
 ## Somebody Submits
@@ -70,4 +70,5 @@ flow transactions send-signed --config-path flow.json --network mainnet ./transa
 
 ## Results
 
+Attempt 1 - Fail - https://flowscan.org/transaction/160a205fa36b82a1b55e4ceccaf1157ad976684d919a1e90e44cd6b0a49cbf7a
 https://flowscan.org/transaction/
