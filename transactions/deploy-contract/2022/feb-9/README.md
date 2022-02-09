@@ -71,4 +71,4 @@ flow transactions send-signed --config-path flow.json --network mainnet ./transa
 ## Results
 
 Attempt 1 - Fail - https://flowscan.org/transaction/160a205fa36b82a1b55e4ceccaf1157ad976684d919a1e90e44cd6b0a49cbf7a
-https://flowscan.org/transaction/
+Attempt 2 - Susccess - https://flowscan.org/transaction/b1f6b8b5a270277551d8e7112a183d8924cb1f8b5673c2cd44d8532e10c8741d
