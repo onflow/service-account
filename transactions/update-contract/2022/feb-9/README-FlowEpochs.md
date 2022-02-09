@@ -19,63 +19,63 @@ flow transactions build ./templates/update_contract_admin.cdc \
   --authorizer 0x8d0f8df62029f75a \
   --payer 0x8d0f8df62029f75a \
   -x payload \
-  --save ./transactions/update-contract/2022/feb-9/flow-dkg-contract-upgrade-feb-9-unsigned.rlp
+  --save ./transactions/update-contract/2022/feb-9/flow-epoch-contract-upgrade-feb-9-unsigned.rlp
 ```
 
 ## Equilibrium Signs
 
 ```sh
-flow transactions sign ./transactions/update-contract/2022/feb-9/flow-dkg-contract-upgrade-feb-9-unsigned.rlp \
+flow transactions sign ./transactions/update-contract/2022/feb-9/flow-epoch-contract-upgrade-feb-9-unsigned.rlp \
   --config-path flow-staking.json \
   --signer equilibrium \
   --filter payload \
-  --save ./transactions/update-contract/2022/feb-9/flow-dkg-contract-upgrade-feb-9-sig-1.rlp
+  --save ./transactions/update-contract/2022/feb-9/flow-epoch-contract-upgrade-feb-9-sig-1.rlp
 ```
 
 ## Ichi Signs
 
 ```sh
-flow transactions sign ./transactions/update-contract/2022/feb-9/flow-dkg-contract-upgrade-feb-9-sig-1.rlp \
+flow transactions sign ./transactions/update-contract/2022/feb-9/flow-epoch-contract-upgrade-feb-9-sig-1.rlp \
   --config-path flow-staking.json \
   --signer ichi \
   --filter payload \
-  --save ./transactions/update-contract/2022/feb-9/flow-dkg-contract-upgrade-feb-9-sig-2.rlp
+  --save ./transactions/update-contract/2022/feb-9/flow-epoch-contract-upgrade-feb-9-sig-2.rlp
 ```
 
 ## Layne Signs
 
 ```sh
-flow transactions sign ./transactions/update-contract/2022/feb-9/flow-dkg-contract-upgrade-feb-9-sig-2.rlp \
+flow transactions sign ./transactions/update-contract/2022/feb-9/flow-epoch-contract-upgrade-feb-9-sig-2.rlp \
   --config-path flow-staking.json \
   --signer layne \
   --filter payload \
-  --save ./transactions/update-contract/2022/feb-9/flow-dkg-contract-upgrade-feb-9-sig-3.rlp
+  --save ./transactions/update-contract/2022/feb-9/flow-epoch-contract-upgrade-feb-9-sig-3.rlp
 ```
 
 ## Kan Signs
 
 ```sh
-flow transactions sign ./transactions/update-contract/2022/feb-9/flow-dkg-contract-upgrade-feb-9-sig-3.rlp \
+flow transactions sign ./transactions/update-contract/2022/feb-9/flow-epoch-contract-upgrade-feb-9-sig-3.rlp \
   --config-path flow-staking.json \
   --signer kan \
   --filter payload \
-  --save ./transactions/update-contract/2022/feb-9/flow-dkg-contract-upgrade-feb-9-sig-4.rlp
+  --save ./transactions/update-contract/2022/feb-9/flow-epoch-contract-upgrade-feb-9-sig-4.rlp
 ```
 
 ## Contract Admin Signs
 
 ```sh
-flow transactions sign ./transactions/update-contract/2022/feb-9/flow-dkg-contract-upgrade-feb-9-sig-4.rlp \
+flow transactions sign ./transactions/update-contract/2022/feb-9/flow-epoch-contract-upgrade-feb-9-sig-4.rlp \
   --config-path flow-staking.json \
   --signer contract-admin \
   --filter payload \
-  --save ./transactions/update-contract/2022/feb-9/flow-dkg-contract-upgrade-feb-9-sig-complete.rlp
+  --save ./transactions/update-contract/2022/feb-9/flow-epoch-contract-upgrade-feb-9-sig-complete.rlp
 ```
 
 ## Somebody Submits
 
 ```sh
-flow transactions send-signed --config-path flow-staking.json --network mainnet ./transactions/update-contract/2022/feb-9/flow-dkg-contract-upgrade-feb-9-sig-complete.rlp
+flow transactions send-signed --config-path flow-staking.json --network mainnet ./transactions/update-contract/2022/feb-9/flow-epoch-contract-upgrade-feb-9-sig-complete.rlp
 ```
 
 
