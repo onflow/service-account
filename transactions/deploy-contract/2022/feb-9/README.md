@@ -41,12 +41,12 @@ flow transactions sign ./transactions/deploy-contract/2022/feb-9/flow-contract-a
   --save ./transactions/deploy-contract/2022/feb-9/flow-contract-audit-contract-deployment-feb-9-sig-2.rlp
 ```
 
-## Layne Signs
+## Peter Signs
 
 ```sh
 flow transactions sign ./transactions/deploy-contract/2022/feb-9/flow-contract-audit-contract-deployment-feb-9-sig-2.rlp \
   --config-path flow.json \
-  --signer layne \
+  --signer peter \
   --filter payload \
   --save ./transactions/deploy-contract/2022/feb-9/flow-contract-audit-contract-deployment-feb-9-sig-3.rlp
 ```
