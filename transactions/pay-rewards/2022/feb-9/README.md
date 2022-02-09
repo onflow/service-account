@@ -35,11 +35,11 @@ flow transactions sign ./transactions/pay-rewards/2022/feb-9/pay-rewards-feb-9-s
   --save ./transactions/pay-rewards/2022/feb-9/pay-rewards-feb-9-sig-2.rlp
 ```
 
-## Layne Signs
+## Peter Signs
 
 ```sh
 flow transactions sign ./transactions/pay-rewards/2022/feb-9/pay-rewards-feb-9-sig-2.rlp \
-  --signer layne \
+  --signer peter \
   --filter payload \
   --save ./transactions/pay-rewards/2022/feb-9/pay-rewards-feb-9-sig-3.rlp
 ```
