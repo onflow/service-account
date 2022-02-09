@@ -5,6 +5,7 @@ transaction(currentEpochCounter: UInt64,
             randomSource: String,
             newPayout: UFix64?,
             startView: UInt64,
+            stakingEndView: UInt64,
             endView: UInt64) {
 
     prepare(signer: AuthAccount) {
@@ -20,6 +21,7 @@ transaction(currentEpochCounter: UInt64,
                             randomSource: randomSource,
                              newPayout: newPayout,
                              startView: startView,
+                             stakingEndView: stakingEndView,
                              endView: endView,
                              collectorClusters: [],
                              clusterQCs: [],
