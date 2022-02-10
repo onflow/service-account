@@ -29,12 +29,12 @@ flow transactions sign ./transactions/reset-epoch/2022/feb-10/reset-epoch-feb-10
   --save ./transactions/reset-epoch/2022/feb-10/reset-epoch-feb-10-sig-1.rlp
 ```
 
-## Layne Signs
+## Animoca Signs
 
 ```sh
 flow transactions sign ./transactions/reset-epoch/2022/feb-10/reset-epoch-feb-10-sig-1.rlp \
   --config-path flow-staking.json \
-  --signer layne \
+  --signer animoca \
   --filter payload \
   --save ./transactions/reset-epoch/2022/feb-10/reset-epoch-feb-10-sig-2.rlp
 ```
@@ -72,12 +72,12 @@ flow transactions sign ./transactions/reset-epoch/2022/feb-10/reset-epoch-feb-10
   --save ./transactions/reset-epoch/2022/feb-10/reset-epoch-feb-10-sig-5.rlp
 ```
 
-## Layne Signs
+## Animoca Signs
 
 ```sh
 flow transactions sign ./transactions/reset-epoch/2022/feb-10/reset-epoch-feb-10-sig-5.rlp \
   --config-path flow.json \
-  --signer layne \
+  --signer animoca \
   --filter payload \
   --save ./transactions/reset-epoch/2022/feb-10/reset-epoch-feb-10-sig-6.rlp
 ```
