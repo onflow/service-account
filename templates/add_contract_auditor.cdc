@@ -20,8 +20,8 @@ transaction(auditorAddress: Address) {
     prepare(adminAccount: AuthAccount) {
 
         // These paths must be unique within the contract account's storage for each auditor
-        let resourceStoragePath = /storage/FlowContractAudits-auditors-flowSE
-        let capabilityPrivatePath = /private/FlowContractAudits-auditors-flowSE
+        let resourceStoragePath = /storage/FlowContractAudits_auditors_flowSE
+        let capabilityPrivatePath = /private/FlowContractAudits_auditors_flowSE
 
         // Create a reference to the admin resource in storage
         let auditorAdmin = adminAccount.borrow<&FlowContractAudits.Administrator>(from: FlowContractAudits.AdminStoragePath)
