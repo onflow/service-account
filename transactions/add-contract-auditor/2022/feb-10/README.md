@@ -25,7 +25,7 @@ flow transactions build ./templates/add_contract_auditor.cdc \
 
 ```sh
 flow transactions sign ./transactions/add-contract-auditor/2022/feb-10/add-contract-auditor-feb-10-unsigned.rlp \
-  --signer Blocto \
+  --signer blocto \
   --filter payload \
   --save ./transactions/add-contract-auditor/2022/feb-10/add-contract-auditor-feb-10-sig-1.rlp
 ```
@@ -66,4 +66,4 @@ flow transactions send-signed --network mainnet ./transactions/add-contract-audi
 
 ## Results
 
-https://flowscan.org/transaction/
+https://flowscan.org/transaction/e3b7ef3603f9e96e27429e5c80b4e048ecf694b03386ceefa71e5f46d093aae9
