@@ -66,4 +66,4 @@ flow transactions send-signed --network mainnet --config-path flow-staking.json 
 
 ## Results
 
-https://flowscan.org/transaction/
+Attempt 1 - https://flowscan.org/transaction/05b64b8350e028b30ce2432ef555b788cf1c4b192fc7ccad425cdb72cb862d7b
