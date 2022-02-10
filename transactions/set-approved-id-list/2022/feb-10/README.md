@@ -32,12 +32,12 @@ flow transactions sign ./transactions/set-approved-id-list/2022/feb-10/set-appro
   --save ./transactions/set-approved-id-list/2022/feb-10/set-approved-list-feb-10-sig-1.rlp
 ```
 
-## Layne Signs
+## Animoca Signs
 
 ```sh
 flow transactions sign ./transactions/set-approved-id-list/2022/feb-10/set-approved-list-feb-10-sig-1.rlp \
   --config-path flow-staking.json \
-  --signer layne \
+  --signer animoca \
   --filter payload \
   --save ./transactions/set-approved-id-list/2022/feb-10/set-approved-list-feb-10-sig-2.rlp
 ```
