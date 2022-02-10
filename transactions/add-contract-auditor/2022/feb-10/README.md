@@ -30,11 +30,11 @@ flow transactions sign ./transactions/add-contract-auditor/2022/feb-10/add-contr
   --save ./transactions/add-contract-auditor/2022/feb-10/add-contract-auditor-feb-10-sig-1.rlp
 ```
 
-## Layne Signs
+## Animoca Signs
 
 ```sh
 flow transactions sign ./transactions/add-contract-auditor/2022/feb-10/add-contract-auditor-feb-10-sig-1.rlp \
-  --signer layne \
+  --signer animoca \
   --filter payload \
   --save ./transactions/add-contract-auditor/2022/feb-10/add-contract-auditor-feb-10-sig-2.rlp
 ```
