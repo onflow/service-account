@@ -17,12 +17,12 @@ flow transactions build ./templates/adjust_epoch_length_v2.cdc \
   --save ./transactions/adjust-epoch-length/2022/mar-1/adjust-epoch-length-mar-1-unsigned.rlp
 ```
 
-## Blocto Signs
+## Equilibrium Signs
 
 ```sh
 flow transactions sign ./transactions/adjust-epoch-length/2022/mar-1/adjust-epoch-length-mar-1-unsigned.rlp \
   --config-path flow-staking.json \
-  --signer blocto \
+  --signer equilibrium \
   --filter payload \
   --save ./transactions/adjust-epoch-length/2022/mar-1/adjust-epoch-length-mar-1-sig-1.rlp
 ```
