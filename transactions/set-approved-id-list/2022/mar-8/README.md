@@ -40,12 +40,12 @@ flow transactions sign ./transactions/set-approved-id-list/2022/mar-8/set-approv
   --save ./transactions/set-approved-id-list/2022/mar-8/set-approved-list-mar-8-sig-2.rlp
 ```
 
-## Peter Signs
+## Ichi Signs
 
 ```sh
 flow transactions sign ./transactions/set-approved-id-list/2022/mar-8/set-approved-list-mar-8-sig-2.rlp \
   --config-path flow-staking.json \
-  --signer peter \
+  --signer ichi \
   --filter payload \
   --save ./transactions/set-approved-id-list/2022/mar-8/set-approved-list-mar-8-sig-3.rlp
 ```
