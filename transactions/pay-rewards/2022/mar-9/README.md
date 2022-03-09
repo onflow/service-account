@@ -17,20 +17,20 @@ flow transactions build ./templates/capability_pay_rewards.cdc \
   --save ./transactions/pay-rewards/2022/mar-9/pay-rewards-mar-9-unsigned.rlp
 ```
 
-## Equilibrium Signs
+## Ichi Signs
 
 ```sh
 flow transactions sign ./transactions/pay-rewards/2022/mar-9/pay-rewards-mar-9-unsigned.rlp \
-  --signer equilibrium \
+  --signer ichi \
   --filter payload \
   --save ./transactions/pay-rewards/2022/mar-9/pay-rewards-mar-9-sig-1.rlp
 ```
 
-## Ichi Signs
+## Layne Signs
 
 ```sh
 flow transactions sign ./transactions/pay-rewards/2022/mar-9/pay-rewards-mar-9-sig-1.rlp \
-  --signer ichi \
+  --signer layne \
   --filter payload \
   --save ./transactions/pay-rewards/2022/mar-9/pay-rewards-mar-9-sig-2.rlp
 ```
