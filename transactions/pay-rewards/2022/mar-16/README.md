@@ -21,8 +21,8 @@ flow transactions build ./templates/capability_pay_rewards.cdc \
 
 ```sh
 flow transactions sign ./transactions/pay-rewards/2022/mar-16/pay-rewards-mar-16-unsigned.rlp \
-  --signer blocto \
-  --filter animoca \
+  --signer animoca \
+  --filter payload \
   --save ./transactions/pay-rewards/2022/mar-16/pay-rewards-mar-16-sig-1.rlp
 ```
 
