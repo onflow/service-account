@@ -17,29 +17,29 @@ flow transactions build ./templates/capability_pay_rewards.cdc \
   --save ./transactions/pay-rewards/2022/mar-16/pay-rewards-mar-16-unsigned.rlp
 ```
 
-## Blocto Signs
+## Animoca Signs
 
 ```sh
 flow transactions sign ./transactions/pay-rewards/2022/mar-16/pay-rewards-mar-16-unsigned.rlp \
   --signer blocto \
-  --filter payload \
+  --filter animoca \
   --save ./transactions/pay-rewards/2022/mar-16/pay-rewards-mar-16-sig-1.rlp
-```
-
-## Animoca Signs
-
-```sh
-flow transactions sign ./transactions/pay-rewards/2022/mar-16/pay-rewards-mar-16-sig-1.rlp \
-  --signer animoca \
-  --filter payload \
-  --save ./transactions/pay-rewards/2022/mar-16/pay-rewards-mar-16-sig-2.rlp
 ```
 
 ## Layne Signs
 
 ```sh
-flow transactions sign ./transactions/pay-rewards/2022/mar-16/pay-rewards-mar-16-sig-2.rlp \
+flow transactions sign ./transactions/pay-rewards/2022/mar-16/pay-rewards-mar-16-sig-1.rlp \
   --signer layne \
+  --filter payload \
+  --save ./transactions/pay-rewards/2022/mar-16/pay-rewards-mar-16-sig-2.rlp
+```
+
+## Peter Signs
+
+```sh
+flow transactions sign ./transactions/pay-rewards/2022/mar-16/pay-rewards-mar-16-sig-2.rlp \
+  --signer peter \
   --filter payload \
   --save ./transactions/pay-rewards/2022/mar-16/pay-rewards-mar-16-sig-3.rlp
 ```
