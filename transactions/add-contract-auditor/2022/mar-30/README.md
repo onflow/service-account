@@ -12,7 +12,6 @@
 ```sh
 flow transactions build ./templates/add_contract_auditor_hard_coded.cdc \
   --network mainnet \
-  --args-json "$(cat "./transactions/add-contract-auditor/2022/mar-30/arguments.json")" \
   --proposer 0xe467b9dd11fa00df \
   --proposer-key-index 11 \
   --authorizer 0xe467b9dd11fa00df \
@@ -67,4 +66,5 @@ flow transactions send-signed --network mainnet ./transactions/add-contract-audi
 
 ## Results
 
+Attempt 1 - https://flowscan.org/transaction/0b30c6cb5c5e6b3b2f2dbc8d45ba8479812c653778f31f3ff2585e3fe42bac10
 https://flowscan.org/transaction/
