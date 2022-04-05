@@ -6,13 +6,13 @@
 
 ```sh
 flow transactions build ./templates/set_tx_fee_parameters.cdc \
-  --config-path flow.json \
+  --config-path flow-staking.json \
   --network mainnet \
   --args-json "$(cat "./transactions/update-contract/2022/mar-30/arguments-flow-tx-fee-parameters.json")" \
-  --proposer 0xe467b9dd11fa00df \
+  --proposer 0x8624b52f9ddcd04a \
   --proposer-key-index 11 \
-  --authorizer 0xe467b9dd11fa00df \
-  --payer 0xe467b9dd11fa00df \
+  --authorizer 0x8624b52f9ddcd04a \
+  --payer 0x8624b52f9ddcd04a \
   -x payload \
   --save ./transactions/update-contract/2022/mar-30/set-tx-fee-parameters-mar-30-unsigned.rlp
 ```
@@ -21,6 +21,7 @@ flow transactions build ./templates/set_tx_fee_parameters.cdc \
 
 ```sh
 flow transactions sign ./transactions/update-contract/2022/mar-30/set-tx-fee-parameters-mar-30-unsigned.rlp \
+  --config-path flow-staking.json \
   --signer blocto \
   --filter payload \
   --save ./transactions/update-contract/2022/mar-30/set-tx-fee-parameters-mar-30-sig-1.rlp
@@ -30,6 +31,7 @@ flow transactions sign ./transactions/update-contract/2022/mar-30/set-tx-fee-par
 
 ```sh
 flow transactions sign ./transactions/update-contract/2022/mar-30/set-tx-fee-parameters-mar-30-sig-1.rlp \
+  --config-path flow-staking.json \
   --signer animoca \
   --filter payload \
   --save ./transactions/update-contract/2022/mar-30/set-tx-fee-parameters-mar-30-sig-2.rlp
@@ -39,6 +41,7 @@ flow transactions sign ./transactions/update-contract/2022/mar-30/set-tx-fee-par
 
 ```sh
 flow transactions sign ./transactions/update-contract/2022/mar-30/set-tx-fee-parameters-mar-30-sig-2.rlp \
+  --config-path flow-staking.json \
   --signer layne \
   --filter payload \
   --save ./transactions/update-contract/2022/mar-30/set-tx-fee-parameters-mar-30-sig-3.rlp
@@ -48,6 +51,7 @@ flow transactions sign ./transactions/update-contract/2022/mar-30/set-tx-fee-par
 
 ```sh
 flow transactions sign ./transactions/update-contract/2022/mar-30/set-tx-fee-parameters-mar-30-sig-3.rlp \
+  --config-path flow-staking.json \
   --signer kan \
   --filter payload \
   --save ./transactions/update-contract/2022/mar-30/set-tx-fee-parameters-mar-30-sig-complete.rlp
@@ -56,7 +60,7 @@ flow transactions sign ./transactions/update-contract/2022/mar-30/set-tx-fee-par
 ## Somebody Submits
 
 ```sh
-flow transactions send-signed --network mainnet ./transactions/update-contract/2022/mar-30/set-tx-fee-parameters-mar-30-sig-complete.rlp
+flow transactions send-signed --config-path flow-staking.json --network mainnet ./transactions/update-contract/2022/mar-30/set-tx-fee-parameters-mar-30-sig-complete.rlp
 ```
 
 ## Results
