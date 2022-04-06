@@ -1,0 +1,82 @@
+[{
+    "type": "Array",
+    "value": [
+        {
+            "type": "Dictionary",
+            "value": [
+                {
+                    "key": {
+                        "type": "String",
+                        "value": "address"
+                    },
+                    "value": {
+                        "type": "Address",
+                        "value": "0x06b8336f29face9e"
+                    }
+                }, {
+                    "key": {
+                        "type": "String",
+                        "value": "adminResourceStoragePath"
+                    },
+                    "value": {
+                        "type": "Path",
+                        "value": {
+                            "domain": "storage",
+                            "identifier": "FlowContractAudits_auditors_JoshHannan"
+                        }
+                    }
+                }, {
+                    "key": {
+                        "type": "String",
+                        "value": "adminCapabilityPrivatePath"
+                    },
+                    "value": {
+                        "type": "Path",
+                        "value": {
+                            "domain": "private",
+                            "identifier": "FlowContractAudits_auditors_JoshHannan"
+                        }
+                    }
+                }
+            ]
+        }, {
+            "type": "Dictionary",
+            "value": [
+                {
+                    "key": {
+                        "type": "String",
+                        "value": "address"
+                    },
+                    "value": {
+                        "type": "Address",
+                        "value": "0x38391285cd7d45bb"
+                    }
+                }, {
+                    "key": {
+                        "type": "String",
+                        "value": "adminResourceStoragePath"
+                    },
+                    "value": {
+                        "type": "Path",
+                        "value": {
+                            "domain": "storage",
+                            "identifier": "FlowContractAudits_auditors_SatyamAgrawal"
+                        }
+                    }
+                }, {
+                    "key": {
+                        "type": "String",
+                        "value": "adminCapabilityPrivatePath"
+                    },
+                    "value": {
+                        "type": "Path",
+                        "value": {
+                            "domain": "private",
+                            "identifier": "FlowContractAudits_auditors_SatyamAgrawal"
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}]
