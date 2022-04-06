@@ -31,11 +31,11 @@ flow transactions sign ./transactions/add-contract-auditor/2022/apr-6/add-contra
   --save ./transactions/add-contract-auditor/2022/apr-6/add-contract-auditor-apr-6-sig-1.rlp
 ```
 
-## Ichi Signs
+## Blocto Signs
 
 ```sh
 flow transactions sign ./transactions/add-contract-auditor/2022/apr-6/add-contract-auditor-apr-6-sig-1.rlp \
-  --signer ichi \
+  --signer blocto \
   --filter payload \
   --save ./transactions/add-contract-auditor/2022/apr-6/add-contract-auditor-apr-6-sig-2.rlp
 ```
