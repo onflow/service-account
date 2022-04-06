@@ -67,4 +67,4 @@ flow transactions send-signed --network mainnet ./transactions/add-contract-audi
 
 ## Results
 
-https://flowscan.org/transaction/
+https://flowscan.org/transaction/d249227a221142d20677d4a0cb2d7ef5eb4dc2eb2a68f534ddb5120d706638ae
