@@ -1,4 +1,4 @@
-# Update Flow Cluster QC Contract
+# Update Flow ID Table Staking Contract
 
 > April 6th, 2022
 
