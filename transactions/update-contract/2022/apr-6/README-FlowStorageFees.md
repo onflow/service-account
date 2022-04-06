@@ -1,4 +1,4 @@
-# Update Service Account Contract
+# Update Flow Storage Fees Contract
 
 > April 6th, 2022
 
