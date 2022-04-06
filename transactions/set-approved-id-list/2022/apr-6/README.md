@@ -3,6 +3,7 @@
 > April 6th, 2022
 
 1 new external verification node
+4 less access nodes
 
 
 ## Dapper Labs Builds
