@@ -31,11 +31,11 @@ flow transactions sign ./transactions/pay-rewards/2022/apr-6/pay-rewards-apr-6-u
   --save ./transactions/pay-rewards/2022/apr-6/pay-rewards-apr-6-sig-1.rlp
 ```
 
-## Ichi Signs
+## Blocto Signs
 
 ```sh
 flow transactions sign ./transactions/pay-rewards/2022/apr-6/pay-rewards-apr-6-sig-1.rlp \
-  --signer ichi \
+  --signer blocto \
   --filter payload \
   --save ./transactions/pay-rewards/2022/apr-6/pay-rewards-apr-6-sig-2.rlp
 ```
