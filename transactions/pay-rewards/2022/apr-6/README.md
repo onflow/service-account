@@ -1,6 +1,12 @@
 # Pay Rewards
 > April 6th, 2022
 
+Link to node IDs here: https://github.com/onflow/flow/blob/master/nodeoperators/NodeOperatorList.md
+
+| Node Operator             | Node Type          | Node ID  |
+|:--------------------------|:-------------------|:---------|
+| Bison Trails | Consensus | 501b5243b91d93622a18ef1cd42848bb7c47a55b2f02ea6404cd7add2229f8e3
+
 ## Dapper Labs Builds
 
 ```sh
