@@ -31,12 +31,12 @@ flow transactions sign ./transactions/set-approved-id-list/2022/apr-6/set-approv
   --save ./transactions/set-approved-id-list/2022/apr-6/set-approved-list-apr-6-sig-1.rlp
 ```
 
-## Ichi Signs
+## Blocto Signs
 
 ```sh
 flow transactions sign ./transactions/set-approved-id-list/2022/apr-6/set-approved-list-apr-6-sig-1.rlp \
   --config-path flow-staking.json \
-  --signer ichi \
+  --signer blocto \
   --filter payload \
   --save ./transactions/set-approved-id-list/2022/apr-6/set-approved-list-apr-6-sig-2.rlp
 ```
