@@ -10,7 +10,7 @@ flow transactions build ./templates/set_tx_fee_parameters.cdc \
   --network mainnet \
   --args-json "$(cat "./transactions/update-contract/2022/apr-6/arguments-flow-tx-fee-parameters.json")" \
   --proposer 0x8624b52f9ddcd04a \
-  --proposer-key-index 11 \
+  --proposer-key-index 5 \
   --authorizer 0x8624b52f9ddcd04a \
   --payer 0x8624b52f9ddcd04a \
   -x payload \
