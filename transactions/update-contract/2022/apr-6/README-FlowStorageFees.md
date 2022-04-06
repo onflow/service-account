@@ -65,4 +65,4 @@ flow transactions send-signed --network mainnet ./transactions/update-contract/2
 
 ## Results
 
-https://flowscan.org/transaction/d249227a221142d20677d4a0cb2d7ef5eb4dc2eb2a68f534ddb5120d706638ae
+https://flowscan.org/transaction/
