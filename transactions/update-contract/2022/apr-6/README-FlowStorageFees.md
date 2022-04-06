@@ -20,20 +20,20 @@ flow transactions build ./templates/update_contract.cdc \
   --save ./transactions/update-contract/2022/apr-6/update-contract-flow-storage-fees-apr-6-unsigned.rlp
 ```
 
-## Blocto Signs
+## Equilibrium Signs
 
 ```sh
 flow transactions sign ./transactions/update-contract/2022/apr-6/update-contract-flow-storage-fees-apr-6-unsigned.rlp \
-  --signer blocto \
+  --signer equilibrium \
   --filter payload \
   --save ./transactions/update-contract/2022/apr-6/update-contract-flow-storage-fees-apr-6-sig-1.rlp
 ```
 
-## Animoca Signs
+## Blocto Signs
 
 ```sh
 flow transactions sign ./transactions/update-contract/2022/apr-6/update-contract-flow-storage-fees-apr-6-sig-1.rlp \
-  --signer animoca \
+  --signer blocto \
   --filter payload \
   --save ./transactions/update-contract/2022/apr-6/update-contract-flow-storage-fees-apr-6-sig-2.rlp
 ```

@@ -22,22 +22,22 @@ flow transactions build ./templates/update_contract_admin.cdc \
   --save ./transactions/update-contract/2022/apr-6/flow-cluster-qc-contract-upgrade-apr-6-unsigned.rlp
 ```
 
-## Blocto Signs
+## Equilibrium Signs
 
 ```sh
 flow transactions sign ./transactions/update-contract/2022/apr-6/flow-cluster-qc-contract-upgrade-apr-6-unsigned.rlp \
   --config-path flow-staking.json \
-  --signer blocto \
+  --signer equilibrium \
   --filter payload \
   --save ./transactions/update-contract/2022/apr-6/flow-cluster-qc-contract-upgrade-apr-6-sig-1.rlp
 ```
 
-## Animoca Signs
+## Blocto Signs
 
 ```sh
 flow transactions sign ./transactions/update-contract/2022/apr-6/flow-cluster-qc-contract-upgrade-apr-6-sig-1.rlp \
   --config-path flow-staking.json \
-  --signer animoca \
+  --signer blocto \
   --filter payload \
   --save ./transactions/update-contract/2022/apr-6/flow-cluster-qc-contract-upgrade-apr-6-sig-2.rlp
 ```

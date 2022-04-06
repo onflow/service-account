@@ -17,22 +17,22 @@ flow transactions build ./templates/set_tx_fee_parameters.cdc \
   --save ./transactions/update-contract/2022/apr-6/set-tx-fee-parameters-apr-6-unsigned.rlp
 ```
 
-## Blocto Signs
+## Equilibrium Signs
 
 ```sh
 flow transactions sign ./transactions/update-contract/2022/apr-6/set-tx-fee-parameters-apr-6-unsigned.rlp \
   --config-path flow-staking.json \
-  --signer blocto \
+  --signer equilibrium \
   --filter payload \
   --save ./transactions/update-contract/2022/apr-6/set-tx-fee-parameters-apr-6-sig-1.rlp
 ```
 
-## Animoca Signs
+## Blocto Signs
 
 ```sh
 flow transactions sign ./transactions/update-contract/2022/apr-6/set-tx-fee-parameters-apr-6-sig-1.rlp \
   --config-path flow-staking.json \
-  --signer animoca \
+  --signer blocto \
   --filter payload \
   --save ./transactions/update-contract/2022/apr-6/set-tx-fee-parameters-apr-6-sig-2.rlp
 ```

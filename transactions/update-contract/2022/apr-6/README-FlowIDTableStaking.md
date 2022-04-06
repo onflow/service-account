@@ -32,12 +32,12 @@ flow transactions sign ./transactions/update-contract/2022/apr-6/flow-id-table-s
   --save ./transactions/update-contract/2022/apr-6/flow-id-table-staking-contract-upgrade-apr-6-sig-1.rlp
 ```
 
-## Ichi Signs
+## Blocto Signs
 
 ```sh
 flow transactions sign ./transactions/update-contract/2022/apr-6/flow-id-table-staking-contract-upgrade-apr-6-sig-1.rlp \
   --config-path flow-staking.json \
-  --signer ichi \
+  --signer blocto \
   --filter payload \
   --save ./transactions/update-contract/2022/apr-6/flow-id-table-staking-contract-upgrade-apr-6-sig-2.rlp
 ```
