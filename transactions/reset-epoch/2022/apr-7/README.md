@@ -1,6 +1,6 @@
 # Reset Epoch
 
-> April 6th, 2022
+> April 7th, 2022
 
 ## Dapper Labs Builds
 
@@ -8,55 +8,55 @@
 flow transactions build ./templates/reset_epoch_with_end_staking_auction.cdc \
   --config-path flow-staking.json \
   --network mainnet \
-  --args-json "$(cat "./transactions/reset-epoch/2022/apr-6/arguments.json")" \
+  --args-json "$(cat "./transactions/reset-epoch/2022/apr-7/arguments.json")" \
   --proposer 0x8624b52f9ddcd04a \
   --proposer-key-index 5 \
   --authorizer 0x8624b52f9ddcd04a \
   --payer 0xe467b9dd11fa00df \
   --gas-limit 1000000 \
   -x payload \
-  --save ./transactions/reset-epoch/2022/apr-6/reset-epoch-apr-6-unsigned.rlp
+  --save ./transactions/reset-epoch/2022/apr-7/reset-epoch-apr-7-unsigned.rlp
 ```
 
 ## Staking Account
 ## Blocto Signs
 
 ```sh
-flow transactions sign ./transactions/reset-epoch/2022/apr-6/reset-epoch-apr-6-unsigned.rlp \
+flow transactions sign ./transactions/reset-epoch/2022/apr-7/reset-epoch-apr-7-unsigned.rlp \
   --config-path flow-staking.json \
   --signer blocto \
   --filter payload \
-  --save ./transactions/reset-epoch/2022/apr-6/reset-epoch-apr-6-sig-1.rlp
+  --save ./transactions/reset-epoch/2022/apr-7/reset-epoch-apr-7-sig-1.rlp
 ```
 
 ## Animoca Signs
 
 ```sh
-flow transactions sign ./transactions/reset-epoch/2022/apr-6/reset-epoch-apr-6-sig-1.rlp \
+flow transactions sign ./transactions/reset-epoch/2022/apr-7/reset-epoch-apr-7-sig-1.rlp \
   --config-path flow-staking.json \
   --signer animoca \
   --filter payload \
-  --save ./transactions/reset-epoch/2022/apr-6/reset-epoch-apr-6-sig-2.rlp
+  --save ./transactions/reset-epoch/2022/apr-7/reset-epoch-apr-7-sig-2.rlp
 ```
 
-## Peter Signs
+## Ichi Signs
 
 ```sh
-flow transactions sign ./transactions/reset-epoch/2022/apr-6/reset-epoch-apr-6-sig-2.rlp \
+flow transactions sign ./transactions/reset-epoch/2022/apr-7/reset-epoch-apr-7-sig-2.rlp \
   --config-path flow-staking.json \
-  --signer peter \
+  --signer ichi \
   --filter payload \
-  --save ./transactions/reset-epoch/2022/apr-6/reset-epoch-apr-6-sig-3.rlp
+  --save ./transactions/reset-epoch/2022/apr-7/reset-epoch-apr-7-sig-3.rlp
 ```
 
 ## Kan Signs
 
 ```sh
-flow transactions sign ./transactions/reset-epoch/2022/apr-6/reset-epoch-apr-6-sig-3.rlp \
+flow transactions sign ./transactions/reset-epoch/2022/apr-7/reset-epoch-apr-7-sig-3.rlp \
   --config-path flow-staking.json \
   --signer kan \
   --filter payload \
-  --save ./transactions/reset-epoch/2022/apr-6/reset-epoch-apr-6-sig-4.rlp
+  --save ./transactions/reset-epoch/2022/apr-7/reset-epoch-apr-7-sig-4.rlp
 ```
 
 ---
@@ -65,48 +65,48 @@ flow transactions sign ./transactions/reset-epoch/2022/apr-6/reset-epoch-apr-6-s
 ## Blocto Signs
 
 ```sh
-flow transactions sign ./transactions/reset-epoch/2022/apr-6/reset-epoch-apr-6-sig-4.rlp \
+flow transactions sign ./transactions/reset-epoch/2022/apr-7/reset-epoch-apr-7-sig-4.rlp \
   --config-path flow.json \
   --signer blocto \
   --filter payload \
-  --save ./transactions/reset-epoch/2022/apr-6/reset-epoch-apr-6-sig-5.rlp
+  --save ./transactions/reset-epoch/2022/apr-7/reset-epoch-apr-7-sig-5.rlp
 ```
 
 ## Animoca Signs
 
 ```sh
-flow transactions sign ./transactions/reset-epoch/2022/apr-6/reset-epoch-apr-6-sig-5.rlp \
+flow transactions sign ./transactions/reset-epoch/2022/apr-7/reset-epoch-apr-7-sig-5.rlp \
   --config-path flow.json \
   --signer animoca \
   --filter payload \
-  --save ./transactions/reset-epoch/2022/apr-6/reset-epoch-apr-6-sig-6.rlp
+  --save ./transactions/reset-epoch/2022/apr-7/reset-epoch-apr-7-sig-6.rlp
 ```
 
-## Peter Signs
+## Ichi Signs
 
 ```sh
-flow transactions sign ./transactions/reset-epoch/2022/apr-6/reset-epoch-apr-6-sig-6.rlp \
+flow transactions sign ./transactions/reset-epoch/2022/apr-7/reset-epoch-apr-7-sig-6.rlp \
   --config-path flow.json \
-  --signer peter \
+  --signer ichi \
   --filter payload \
-  --save ./transactions/reset-epoch/2022/apr-6/reset-epoch-apr-6-sig-7.rlp
+  --save ./transactions/reset-epoch/2022/apr-7/reset-epoch-apr-7-sig-7.rlp
 ```
 
 ## Kan Signs
 
 ```sh
-flow transactions sign ./transactions/reset-epoch/2022/apr-6/reset-epoch-apr-6-sig-7.rlp \
+flow transactions sign ./transactions/reset-epoch/2022/apr-7/reset-epoch-apr-7-sig-7.rlp \
   --config-path flow.json \
   --signer kan \
   --filter payload \
-  --save ./transactions/reset-epoch/2022/apr-6/reset-epoch-apr-6-sig-complete.rlp
+  --save ./transactions/reset-epoch/2022/apr-7/reset-epoch-apr-7-sig-complete.rlp
 ```
 
 
 ## Somebody Submits
 
 ```sh
-flow transactions send-signed --network mainnet --config-path flow-staking.json ./transactions/reset-epoch/2022/apr-6/reset-epoch-apr-6-sig-complete.rlp
+flow transactions send-signed --network mainnet --config-path flow-staking.json ./transactions/reset-epoch/2022/apr-7/reset-epoch-apr-7-sig-complete.rlp
 ```
 
 ## Results
