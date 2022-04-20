@@ -18,20 +18,20 @@ flow transactions build ./templates/capability_pay_rewards.cdc \
   --save ./transactions/pay-rewards/2022/apr-20/pay-rewards-apr-20-unsigned.rlp
 ```
 
-## Blocto Signs
+## Equilibrium Signs
 
 ```sh
 flow transactions sign ./transactions/pay-rewards/2022/apr-20/pay-rewards-apr-20-unsigned.rlp \
-  --signer blocto \
+  --signer equilibrium \
   --filter payload \
   --save ./transactions/pay-rewards/2022/apr-20/pay-rewards-apr-20-sig-1.rlp
 ```
 
-## Animoca Signs
+## Ichi Signs
 
 ```sh
 flow transactions sign ./transactions/pay-rewards/2022/apr-20/pay-rewards-apr-20-sig-1.rlp \
-  --signer animoca \
+  --signer ichi \
   --filter payload \
   --save ./transactions/pay-rewards/2022/apr-20/pay-rewards-apr-20-sig-2.rlp
 ```
@@ -62,4 +62,4 @@ flow transactions send-signed --network mainnet ./transactions/pay-rewards/2022/
 
 ## Results
 
-https://flowscan.org/transaction/99f684594fcb73a91b37ea5fcd9de5c2c51d4feac5a0a08a6d799ed7933928bc
+https://flowscan.org/transaction/
