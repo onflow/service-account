@@ -41,11 +41,11 @@ flow transactions sign ./transactions/add-keys/2022/apr-26/add-keys-apr-26-sig-1
   --save ./transactions/add-keys/2022/apr-26/add-keys-apr-26-sig-2.rlp
 ```
 
-## Ichi Signs
+## Peter Signs
 
 ```sh
 flow transactions sign ./transactions/add-keys/2022/apr-26/add-keys-apr-26-sig-2.rlp \
-  --signer ichi \
+  --signer peter \
   --filter payload \
   --save ./transactions/add-keys/2022/apr-26/add-keys-apr-26-sig-3.rlp
 ```
