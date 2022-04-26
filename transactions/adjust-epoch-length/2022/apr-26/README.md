@@ -17,22 +17,22 @@ flow transactions build ./templates/adjust_epoch_length_v2.cdc \
   --save ./transactions/adjust-epoch-length/2022/apr-26/adjust-epoch-length-apr-26-unsigned.rlp
 ```
 
-## Ichi Signs
+## Blocto Signs
 
 ```sh
 flow transactions sign ./transactions/adjust-epoch-length/2022/apr-26/adjust-epoch-length-apr-26-unsigned.rlp \
   --config-path flow-staking.json \
-  --signer ichi \
+  --signer blocto \
   --filter payload \
   --save ./transactions/adjust-epoch-length/2022/apr-26/adjust-epoch-length-apr-26-sig-1.rlp
 ```
 
-## Layne Signs
+## Animoca Signs
 
 ```sh
 flow transactions sign ./transactions/adjust-epoch-length/2022/apr-26/adjust-epoch-length-apr-26-sig-1.rlp \
   --config-path flow-staking.json \
-  --signer layne \
+  --signer animoca \
   --filter payload \
   --save ./transactions/adjust-epoch-length/2022/apr-26/adjust-epoch-length-apr-26-sig-2.rlp
 ```
