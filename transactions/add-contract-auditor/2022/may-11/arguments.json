@@ -1,0 +1,82 @@
+[{
+    "type": "Array",
+    "value": [
+        {
+            "type": "Dictionary",
+            "value": [
+                {
+                    "key": {
+                        "type": "String",
+                        "value": "address"
+                    },
+                    "value": {
+                        "type": "Address",
+                        "value": "0xd66fa9f87170c7d3"
+                    }
+                }, {
+                    "key": {
+                        "type": "String",
+                        "value": "adminResourceStoragePath"
+                    },
+                    "value": {
+                        "type": "Path",
+                        "value": {
+                            "domain": "storage",
+                            "identifier": "FlowContractAudits_auditors_QS_Jan"
+                        }
+                    }
+                }, {
+                    "key": {
+                        "type": "String",
+                        "value": "adminCapabilityPrivatePath"
+                    },
+                    "value": {
+                        "type": "Path",
+                        "value": {
+                            "domain": "private",
+                            "identifier": "FlowContractAudits_auditors_QS_Jan"
+                        }
+                    }
+                }
+            ]
+        }, {
+            "type": "Dictionary",
+            "value": [
+                {
+                    "key": {
+                        "type": "String",
+                        "value": "address"
+                    },
+                    "value": {
+                        "type": "Address",
+                        "value": "0xceaa7dac7981d3d3"
+                    }
+                }, {
+                    "key": {
+                        "type": "String",
+                        "value": "adminResourceStoragePath"
+                    },
+                    "value": {
+                        "type": "Path",
+                        "value": {
+                            "domain": "storage",
+                            "identifier": "FlowContractAudits_auditors_OS_Richie"
+                        }
+                    }
+                }, {
+                    "key": {
+                        "type": "String",
+                        "value": "adminCapabilityPrivatePath"
+                    },
+                    "value": {
+                        "type": "Path",
+                        "value": {
+                            "domain": "private",
+                            "identifier": "FlowContractAudits_auditors_OS_Richie"
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}]
