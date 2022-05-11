@@ -142,6 +142,38 @@
         }
       ],
       "chain": "flow-mainnet"
+    },
+    "flowscan": {
+      "address": "e467b9dd11fa00df",
+      "keys": [
+        {
+          "type": "google-kms",
+          "index": 15,
+          "signatureAlgorithm": "ECDSA_P256",
+          "hashAlgorithm": "SHA2_256",
+          "context": {
+            "resourceName": ""
+          },
+          "resourceID": ""
+        }
+      ],
+      "chain": "flow-mainnet"
+    },
+    "find": {
+      "address": "e467b9dd11fa00df",
+      "keys": [
+        {
+          "type": "google-kms",
+          "index": 16,
+          "signatureAlgorithm": "ECDSA_P256",
+          "hashAlgorithm": "SHA2_256",
+          "context": {
+            "resourceName": "projects/bjartek/locations/europe-north1/keyRings/flow/cryptoKeys/flow/cryptoKeyVersions/1"
+          },
+          "resourceID": "projects/bjartek/locations/europe-north1/keyRings/flow/cryptoKeys/flow/cryptoKeyVersions/1"
+        }
+      ],
+      "chain": "flow-mainnet"
     }
   },
   "contracts": {},
