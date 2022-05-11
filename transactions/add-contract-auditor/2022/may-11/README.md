@@ -31,20 +31,20 @@ flow transactions sign ./transactions/add-contract-auditor/2022/may-11/add-contr
   --save ./transactions/add-contract-auditor/2022/may-11/add-contract-auditor-may-11-sig-1.rlp
 ```
 
-## Flowscan Signs
+## Animoca Signs
 
 ```sh
 flow transactions sign ./transactions/add-contract-auditor/2022/may-11/add-contract-auditor-may-11-sig-1.rlp \
-  --signer flowscan \
+  --signer animoca \
   --filter payload \
   --save ./transactions/add-contract-auditor/2022/may-11/add-contract-auditor-may-11-sig-2.rlp
 ```
 
-## Layne Signs
+## Peter Signs
 
 ```sh
 flow transactions sign ./transactions/add-contract-auditor/2022/may-11/add-contract-auditor-may-11-sig-2.rlp \
-  --signer layne \
+  --signer peter \
   --filter payload \
   --save ./transactions/add-contract-auditor/2022/may-11/add-contract-auditor-may-11-sig-3.rlp
 ```
