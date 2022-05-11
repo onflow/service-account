@@ -143,22 +143,6 @@
       ],
       "chain": "flow-mainnet"
     },
-    "flowscan": {
-      "address": "e467b9dd11fa00df",
-      "keys": [
-        {
-          "type": "google-kms",
-          "index": 15,
-          "signatureAlgorithm": "ECDSA_P256",
-          "hashAlgorithm": "SHA2_256",
-          "context": {
-            "resourceName": ""
-          },
-          "resourceID": ""
-        }
-      ],
-      "chain": "flow-mainnet"
-    },
     "find": {
       "address": "e467b9dd11fa00df",
       "keys": [
