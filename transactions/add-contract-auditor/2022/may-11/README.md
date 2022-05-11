@@ -40,11 +40,11 @@ flow transactions sign ./transactions/add-contract-auditor/2022/may-11/add-contr
   --save ./transactions/add-contract-auditor/2022/may-11/add-contract-auditor-may-11-sig-2.rlp
 ```
 
-## Peter Signs
+## Find Signs
 
 ```sh
 flow transactions sign ./transactions/add-contract-auditor/2022/may-11/add-contract-auditor-may-11-sig-2.rlp \
-  --signer peter \
+  --signer find \
   --filter payload \
   --save ./transactions/add-contract-auditor/2022/may-11/add-contract-auditor-may-11-sig-3.rlp
 ```
@@ -67,4 +67,4 @@ flow transactions send-signed --network mainnet ./transactions/add-contract-audi
 
 ## Results
 
-https://flowscan.org/transaction/ed8175e8873b98c14da8a0c05159ab117482848adda475ca06835c24d34663b6
+https://flowscan.org/transaction/
