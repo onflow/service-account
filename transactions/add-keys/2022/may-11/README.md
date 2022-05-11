@@ -43,11 +43,11 @@ flow transactions sign ./transactions/add-keys/2022/may-11/add-keys-may-11-sig-1
   --save ./transactions/add-keys/2022/may-11/add-keys-may-11-sig-2.rlp
 ```
 
-## Flowscan Signs
+## Peter Signs
 
 ```sh
 flow transactions sign ./transactions/add-keys/2022/may-11/add-keys-may-11-sig-2.rlp \
-  --signer flowscan \
+  --signer peter \
   --filter payload \
   --save ./transactions/add-keys/2022/may-11/add-keys-may-11-sig-3.rlp
 ```
