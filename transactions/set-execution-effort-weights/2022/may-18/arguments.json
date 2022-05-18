@@ -1,0 +1,37 @@
+[
+    {
+        "type": "Dictionary",
+        "value": [
+            {
+                "key": {
+                    "type": "UInt64",
+                    "value": "1001"
+                },
+                "value": {
+                    "type": "UInt64",
+                    "value": "65536"
+                }
+            },
+            {
+                "key": {
+                    "type": "UInt64",
+                    "value": "1002"
+                },
+                "value": {
+                    "type": "UInt64",
+                    "value": "65536"
+                }
+            },
+            {
+                "key": {
+                    "type": "UInt64",
+                    "value": "1003"
+                },
+                "value": {
+                    "type": "UInt64",
+                    "value": "65536"
+                }
+            }
+        ]
+    }
+]
