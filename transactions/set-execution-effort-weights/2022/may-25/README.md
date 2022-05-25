@@ -1,6 +1,6 @@
 # Set Execution Effort Weights
 
-> May 18th, 2022
+> May 25th, 2022
 
 
 ## Dapper Labs Builds
@@ -9,10 +9,10 @@
 flow transactions build ./templates/set_execution_effort_weights.cdc \
   --network mainnet \
   --args-json "$(cat "./transactions/set-execution-effort-weights/2022/may-25/arguments.json")" \
-  --proposer 0x8624b52f9ddcd04a \
+  --proposer 0xe467b9dd11fa00df \
   --proposer-key-index 11 \
-  --authorizer 0x8624b52f9ddcd04a \
-  --payer 0x8624b52f9ddcd04a \
+  --authorizer 0xe467b9dd11fa00df \
+  --payer 0xe467b9dd11fa00df \
   -x payload \
   --save ./transactions/set-execution-effort-weights/2022/may-25/set-execution-effort-weights-may-25-unsigned.rlp
 ```
