@@ -2,7 +2,7 @@
 
 > June 1st, 2022
 
-1 new external access node
+1 new external access node - NFTKred
 
 
 ## Dapper Labs Builds
@@ -20,53 +20,51 @@ flow transactions build ./templates/add_approved_id_list.cdc \
   --save ./transactions/set-approved-id-list/2022/june-1/add-approved-list-june-1-unsigned.rlp
 ```
 
-## Blocto Signs
+## Equilibrium Signs
 
 ```sh
-flow transactions sign ./transactions/set-approved-id-list/2022/june-1/add-approved-list-june-1-unsigned.rlp \
+flow transactions sign ./transactions/set-approved-id-list/2022/june-1/set-approved-list-june-1-unsigned.rlp \
   --config-path flow-staking.json \
-  --signer blocto \
+  --signer equilibrium \
   --filter payload \
-  --save ./transactions/set-approved-id-list/2022/june-1/add-approved-list-june-1-sig-1.rlp
-```
-
-## Animoca Signs
-
-```sh
-flow transactions sign ./transactions/set-approved-id-list/2022/june-1/add-approved-list-june-1-sig-1.rlp \
-  --config-path flow-staking.json \
-  --signer animoca \
-  --filter payload \
-  --save ./transactions/set-approved-id-list/2022/june-1/add-approved-list-june-1-sig-2.rlp
+  --save ./transactions/set-approved-id-list/2022/june-1/set-approved-list-june-1-sig-1.rlp
 ```
 
 ## Ichi Signs
 
 ```sh
-flow transactions sign ./transactions/set-approved-id-list/2022/june-1/add-approved-list-june-1-sig-2.rlp \
+flow transactions sign ./transactions/set-approved-id-list/2022/june-1/set-approved-list-june-1-sig-1.rlp \
   --config-path flow-staking.json \
   --signer ichi \
   --filter payload \
-  --save ./transactions/set-approved-id-list/2022/june-1/add-approved-list-june-1-sig-3.rlp
+  --save ./transactions/set-approved-id-list/2022/june-1/set-approved-list-june-1-sig-2.rlp
+```
+
+## Peter Signs
+
+```sh
+flow transactions sign ./transactions/set-approved-id-list/2022/june-1/set-approved-list-june-1-sig-2.rlp \
+  --config-path flow-staking.json \
+  --signer peter \
+  --filter payload \
+  --save ./transactions/set-approved-id-list/2022/june-1/set-approved-list-june-1-sig-3.rlp
 ```
 
 ## Kan Signs
 
 ```sh
-flow transactions sign ./transactions/set-approved-id-list/2022/june-1/add-approved-list-june-1-sig-3.rlp \
+flow transactions sign ./transactions/set-approved-id-list/2022/june-1/set-approved-list-june-1-sig-3.rlp \
   --config-path flow-staking.json \
   --signer kan \
   --filter payload \
-  --save ./transactions/set-approved-id-list/2022/june-1/add-approved-list-june-1-sig-complete.rlp
+  --save ./transactions/set-approved-id-list/2022/june-1/set-approved-list-june-1-sig-complete.rlp
 ```
 
 
 ## Somebody Submits
 
 ```sh
-flow transactions send-signed --network mainnet --config-path flow-staking.json ./transactions/set-approved-id-list/2022/june-1/add-approved-list-june-1-sig-complete.rlp
+flow transactions send-signed --network mainnet --config-path flow-staking.json ./transactions/set-approved-id-list/2022/june-1/set-approved-list-june-1-sig-complete.rlp
 ```
 
 ## Results
-
-https://flowscan.org/transaction/bbbf4b644b81bc7e28f9383b5796a6f3de572bf7a31f641acf8ee5ea20a5718a
