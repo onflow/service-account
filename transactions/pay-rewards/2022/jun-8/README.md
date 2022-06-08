@@ -16,29 +16,29 @@ flow transactions build ./templates/capability_pay_rewards.cdc \
   --save ./transactions/pay-rewards/2022/jun-8/pay-rewards-jun-8-unsigned.rlp
 ```
 
-## Find Signs
+## Blocto Signs
 
 ```sh
 flow transactions sign ./transactions/pay-rewards/2022/jun-8/pay-rewards-jun-8-unsigned.rlp \
-  --signer find \
+  --signer blocto \
   --filter payload \
   --save ./transactions/pay-rewards/2022/jun-8/pay-rewards-jun-8-sig-1.rlp
 ```
 
-## Ichi Signs
+## Animoca Signs
 
 ```sh
 flow transactions sign ./transactions/pay-rewards/2022/jun-8/pay-rewards-jun-8-sig-1.rlp \
-  --signer ichi \
+  --signer animoca \
   --filter payload \
   --save ./transactions/pay-rewards/2022/jun-8/pay-rewards-jun-8-sig-2.rlp
 ```
 
-## Blocto Signs
+## Find Signs
 
 ```sh
 flow transactions sign ./transactions/pay-rewards/2022/jun-8/pay-rewards-jun-8-sig-2.rlp \
-  --signer blocto \
+  --signer find \
   --filter payload \
   --save ./transactions/pay-rewards/2022/jun-8/pay-rewards-jun-8-sig-3.rlp
 ```

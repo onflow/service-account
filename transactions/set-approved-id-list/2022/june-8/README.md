@@ -20,32 +20,32 @@ flow transactions build ./templates/add_approved_id_list.cdc \
   --save ./transactions/set-approved-id-list/2022/june-8/add-approved-list-june-8-unsigned.rlp
 ```
 
-## Find Signs
+## Blocto Signs
 
 ```sh
 flow transactions sign ./transactions/set-approved-id-list/2022/june-8/add-approved-list-june-8-unsigned.rlp \
   --config-path flow-staking.json \
-  --signer find \
+  --signer blocto \
   --filter payload \
   --save ./transactions/set-approved-id-list/2022/june-8/add-approved-list-june-8-sig-1.rlp
 ```
 
-## Ichi Signs
+## Animoca Signs
 
 ```sh
 flow transactions sign ./transactions/set-approved-id-list/2022/june-8/add-approved-list-june-8-sig-1.rlp \
   --config-path flow-staking.json \
-  --signer ichi \
+  --signer animoca \
   --filter payload \
   --save ./transactions/set-approved-id-list/2022/june-8/add-approved-list-june-8-sig-2.rlp
 ```
 
-## Blocto Signs
+## Find Signs
 
 ```sh
 flow transactions sign ./transactions/set-approved-id-list/2022/june-8/add-approved-list-june-8-sig-2.rlp \
   --config-path flow-staking.json \
-  --signer blocto \
+  --signer find \
   --filter payload \
   --save ./transactions/set-approved-id-list/2022/june-8/add-approved-list-june-8-sig-3.rlp
 ```
