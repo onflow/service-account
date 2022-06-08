@@ -40,12 +40,12 @@ flow transactions sign ./transactions/set-approved-id-list/2022/june-8/add-appro
   --save ./transactions/set-approved-id-list/2022/june-8/add-approved-list-june-8-sig-2.rlp
 ```
 
-## Find Signs
+## Equilibrium Signs
 
 ```sh
 flow transactions sign ./transactions/set-approved-id-list/2022/june-8/add-approved-list-june-8-sig-2.rlp \
   --config-path flow-staking.json \
-  --signer find \
+  --signer equilibrium \
   --filter payload \
   --save ./transactions/set-approved-id-list/2022/june-8/add-approved-list-june-8-sig-3.rlp
 ```
