@@ -1,6 +1,6 @@
 # Add Approved Node Operators ID List
 
-> June 9th, 2022
+> June 8th, 2022
 
 2 new external access node - Binance
 
