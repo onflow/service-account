@@ -5,6 +5,27 @@
     },
     {
         "type": "Dictionary",
-        "value": []
+        "value": [
+            {
+                "key": {
+                    "type": "String",
+                    "value": "f8af31c7c3294b246f34040e5685c351e89f1c1edf6c64f93f7babd73d149951"
+                },
+                "value": {
+                    "type": "UFix64",
+                    "value": "0.5"
+                }
+            },
+            {
+                "key": {
+                    "type": "String",
+                    "value": "fffba108a52e4ca8f5d30658c3f03f47ad1cc13a0995435c0532336236813218"
+                },
+                "value": {
+                    "type": "UFix64",
+                    "value": "0.5"
+                }
+            }
+        ]
     }
 ]

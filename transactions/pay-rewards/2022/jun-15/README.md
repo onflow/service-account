@@ -3,6 +3,11 @@
 
 ## Dapper Labs Builds
 
+| Node Operator | Node Type    | Node ID  |
+|:--------------|:-------------|:---------|
+| Bitcoun Louie | Verification | fffba108a52e4ca8f5d30658c3f03f47ad1cc13a0995435c0532336236813218
+| NateAlex      | Verification | f8af31c7c3294b246f34040e5685c351e89f1c1edf6c64f93f7babd73d149951
+
 ```sh
 flow transactions build ./templates/capability_pay_rewards.cdc \
   --network mainnet \
