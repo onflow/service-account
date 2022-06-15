@@ -21,22 +21,22 @@ flow transactions build ./templates/add_approved_id_list.cdc \
   --save ./transactions/set-approved-id-list/2022/june-15/add-approved-list-june-15-unsigned.rlp
 ```
 
-## Ichi Signs
+## Equilibrium Signs
 
 ```sh
 flow transactions sign ./transactions/set-approved-id-list/2022/june-15/add-approved-list-june-15-unsigned.rlp \
   --config-path flow-staking.json \
-  --signer ichi \
+  --signer equilibrium \
   --filter payload \
   --save ./transactions/set-approved-id-list/2022/june-15/add-approved-list-june-15-sig-1.rlp
 ```
 
-## Equilibrium Signs
+## Peter Signs
 
 ```sh
 flow transactions sign ./transactions/set-approved-id-list/2022/june-15/add-approved-list-june-15-sig-1.rlp \
   --config-path flow-staking.json \
-  --signer equilibrium \
+  --signer peter \
   --filter payload \
   --save ./transactions/set-approved-id-list/2022/june-15/add-approved-list-june-15-sig-2.rlp
 ```
