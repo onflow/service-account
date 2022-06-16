@@ -1,6 +1,6 @@
 # Reset Epoch
 
-> April 16th, 2022
+> June 16th, 2022
 
 ## Dapper Labs Builds
 
@@ -30,21 +30,21 @@ flow transactions sign ./transactions/reset-epoch/2022/jun-16/reset-epoch-jun-16
   --save ./transactions/reset-epoch/2022/jun-16/reset-epoch-jun-16-sig-1.rlp
 ```
 
-## Peter Signs
+## Blocto Signs
 
 ```sh
 flow transactions sign ./transactions/reset-epoch/2022/jun-16/reset-epoch-jun-16-sig-1.rlp \
   --config-path flow-staking.json \
-  --signer peter \
+  --signer blocto \
   --filter payload \
   --save ./transactions/reset-epoch/2022/jun-16/reset-epoch-jun-16-sig-2.rlp
 ```
-## Layne Signs
+## Peter Signs
 
 ```sh
 flow transactions sign ./transactions/reset-epoch/2022/jun-16/reset-epoch-jun-16-sig-2.rlp \
   --config-path flow-staking.json \
-  --signer layne \
+  --signer peter \
   --filter payload \
   --save ./transactions/reset-epoch/2022/jun-16/reset-epoch-jun-16-sig-3.rlp
 ```
@@ -82,12 +82,12 @@ flow transactions sign ./transactions/reset-epoch/2022/jun-16/reset-epoch-jun-16
   --save ./transactions/reset-epoch/2022/jun-16/reset-epoch-jun-16-sig-6.rlp
 ```
 
-## Peter Signs
+## Blocto Signs
 
 ```sh
 flow transactions sign ./transactions/reset-epoch/2022/jun-16/reset-epoch-jun-16-sig-6.rlp \
   --config-path flow.json \
-  --signer peter \
+  --signer blocto \
   --filter payload \
   --save ./transactions/reset-epoch/2022/jun-16/reset-epoch-jun-16-sig-7.rlp
 ```
@@ -105,7 +105,7 @@ flow transactions sign ./transactions/reset-epoch/2022/jun-16/reset-epoch-jun-16
 ## Somebody Submits
 
 ```sh
-flow transactions send-signed --network mainnet --config-path flow-staking.json ./transactions/reset-epoch/2022/jun-16/reset-epoch-jun-16-sig-complete.rlp
+flow transactions send-signed --network mainnet ./transactions/reset-epoch/2022/jun-16/reset-epoch-jun-16-sig-complete.rlp
 ```
 
 ## Results
