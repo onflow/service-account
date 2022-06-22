@@ -62,4 +62,4 @@ flow transactions send-signed --network mainnet ./transactions/set-execution-mem
 
 ## Results
 
-https://flowscan.org/transaction/
+https://flowscan.org/transaction/06a965cb9c73a650264e0424af12b0aa61f4270bb4684996c734d1047b66ecbf
