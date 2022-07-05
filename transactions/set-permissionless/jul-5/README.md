@@ -60,4 +60,4 @@ flow transactions send-signed --network mainnet ./transactions/set-permissionles
 
 ## Results
 
-https://flowscan.org/transaction/
+https://flowscan.org/transaction/90d047f66fe31445d08697e819db6c08809af45c202abeb63d2f0ff0838f26d1/script
