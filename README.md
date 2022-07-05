@@ -29,7 +29,9 @@ To ensure it's properlly installed, please run the following:
 flow version
 ```
 
-This should show you the latest version of the Flow CLI
+This should show you the latest version of the Flow CLI. The current flow.json and flow-staking.json require v0.37.0+. If you require an older version, the previous versions of flow.json and flow-staking.json are available via the commit e21ab1a via
+
+```git checkout e21ab1a -- flow.json flow-staking.json```
 
 ### Google Cloud SDK
 
