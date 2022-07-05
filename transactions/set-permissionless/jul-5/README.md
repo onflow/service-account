@@ -34,11 +34,11 @@ flow transactions sign ./transactions/set-permissionless/jul-5/set-permissionles
   --save ./transactions/set-permissionless/jul-5/set-permissionless-jul-5-sig-2.rlp
 ```
 
-## Peter Signs
+## Find Signs
 
 ```sh
 flow transactions sign ./transactions/set-permissionless/jul-5/set-permissionless-jul-5-sig-2.rlp \
-  --signer peter \
+  --signer find \
   --filter payload \
   --save ./transactions/set-permissionless/jul-5/set-permissionless-jul-5-sig-3.rlp
 ```
