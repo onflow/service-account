@@ -16,11 +16,11 @@ flow transactions build ./templates/set_contract_deployment_restricted.cdc \
   --save ./transactions/set-permissionless/jul-5/set-permissionless-jul-5-unsigned.rlp
 ```
 
-## Ichi Signs
+## Layne Signs
 
 ```sh
 flow transactions sign ./transactions/set-permissionless/jul-5/set-permissionless-jul-5-unsigned.rlp \
-  --signer ichi \
+  --signer layne \
   --filter payload \
   --save ./transactions/set-permissionless/jul-5/set-permissionless-jul-5-sig-1.rlp
 ```
