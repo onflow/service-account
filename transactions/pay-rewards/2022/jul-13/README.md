@@ -6,7 +6,7 @@
 1. DapperLabs generates the Signature Request ID on the [site](https://flow-multisig-git-service-account-onflow.vercel.app/mainnet) for the `capability_rewards_pay.cdc` transaction with the given args.
 
 2. Signers sign with the multisign tool specifying the Signature Request ID
-`./multisig -f flow.json <Signature Request ID>`
+`bash multisig.sh -f flow.json <Signature Request ID>`
 
 3. Someone submits the transaction from the [site](https://flow-multisig-git-service-account-onflow.vercel.app/mainnet)
 
