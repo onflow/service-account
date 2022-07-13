@@ -72,4 +72,6 @@ flow transactions send-signed --network mainnet ./transactions/pay-rewards/2022/
 
 ## Results
 
-https://flowscan.org/transaction/704df55da29d2e9c07159d95297541bbc3da5f6df4053271249db85a12751a35
+https://flowscan.org/transaction/4d6df8903be2edb892a948c6a57d4926bce0ef2f2935da25c599e7b3b454fd44
+
+**Failed since the tool did not provide sufficient gas-limit.** 
