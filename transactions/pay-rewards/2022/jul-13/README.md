@@ -28,11 +28,11 @@ flow transactions build ./templates/capability_pay_rewards.cdc \
   --save ./transactions/pay-rewards/2022/jul-13/pay-rewards-jul-13-unsigned.rlp
 ```
 
-### Ichi Signs
+### Peter Signs
 
 ```sh
 flow transactions sign ./transactions/pay-rewards/2022/jul-13/pay-rewards-jul-13-unsigned.rlp \
-  --signer ichi \
+  --signer peter \
   --filter payload \
   --save ./transactions/pay-rewards/2022/jul-13/pay-rewards-jul-13-sig-1.rlp
 ```
