@@ -75,4 +75,6 @@ flow transactions send-signed --network mainnet ./transactions/set-rewards/2022/
 
 ## Results
 
-https://flowscan.org/transaction/f1c419c8bcd678778daeeecfcc98663bb7396e1c4b1a17caec143cd8c35874de
+https://flowscan.org/transaction/b820957ef068360d5e1d3c425ffa0e3e334d2524c111c3cbbf35ce3fdd788d64
+
+** Failed since incorrect account (0xe467b9dd11fa00df) was used instead of 0x8624b52f9ddcd04a **
