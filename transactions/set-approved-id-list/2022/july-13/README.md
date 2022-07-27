@@ -78,6 +78,6 @@ flow transactions send-signed --network mainnet --config-path flow-staking.json 
 
 ## Results
 
-https://flowscan.org/transaction/
+https://flowscan.org/transaction/478811597377670e55161305613088361896f3d7c854f22be14809a0ec4c1a80
 
 **Did not submit since there were not enough signers**
