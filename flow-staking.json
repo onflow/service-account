@@ -150,6 +150,19 @@
       ],
       "chain": "flow-mainnet"
     },
+    "find": {
+      "address": "e467b9dd11fa00df",
+      "keys": [
+        {
+          "type": "google-kms",
+          "index": 8,
+          "signatureAlgorithm": "ECDSA_P256",
+          "hashAlgorithm": "SHA2_256",
+          "resourceID": "projects/bjartek/locations/europe-north1/keyRings/flow/cryptoKeys/flow/cryptoKeyVersions/1"
+        }
+      ],
+      "chain": "flow-mainnet"
+    },
     "contract-admin": {
       "address": "8d0f8df62029f75a",
       "keys": [
