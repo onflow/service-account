@@ -151,7 +151,7 @@
       "chain": "flow-mainnet"
     },
     "find": {
-      "address": "e467b9dd11fa00df",
+			"address": "8624b52f9ddcd04a",
       "keys": [
         {
           "type": "google-kms",
