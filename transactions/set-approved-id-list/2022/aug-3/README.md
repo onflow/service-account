@@ -2,8 +2,8 @@
 
 > Aug 3rd, 2022
 
-1 new external access node - Greenfield One
-1 new external access node - flowty.io
+1 new external access node  - Greenfield One
+2 new external access nodes - flowty.io
 
 ## New method using Multisign tool
 
