@@ -3,7 +3,7 @@
 
 ## New method using Multisign tool
 
-1. DapperLabs generates the Signature Request ID on the [site](https://flow-multisig-git-service-account-onflow.vercel.app/mainnet?type=serviceAccount&name=capability_pay_rewards.cdc&param=&acct=0x8624b52f9ddcd04a&limit=1000000) for the `capability_rewards_pay.cdc` transaction with the given args.
+1. DapperLabs generates the Signature Request ID on the [site](https://flow-multisig-git-service-account-onflow.vercel.app/mainnet?type=serviceAccount&name=capability_pay_rewards.cdc&param=&acct=0xe467b9dd11fa00df&limit=1000000) for the `capability_rewards_pay.cdc` transaction with the given args.
 
 2. Signers sign with the multisign tool specifying the Signature Request ID
 `bash multisig.sh -f flow.json <Signature Request ID>`
@@ -37,15 +37,6 @@ flow transactions sign ./transactions/pay-rewards/2022/aug-3/pay-rewards-aug-3-u
   --save ./transactions/pay-rewards/2022/aug-3/pay-rewards-aug-3-sig-1.rlp
 ```
 
-### Animoca Signs
-
-```sh
-flow transactions sign ./transactions/pay-rewards/2022/aug-3/pay-rewards-aug-3-sig-1.rlp \
-  --signer animoca \
-  --filter payload \
-  --save ./transactions/pay-rewards/2022/aug-3/pay-rewards-aug-3-sig-2.rlp
-```
-
 ### Find Signs
 
 ```sh
@@ -55,11 +46,11 @@ flow transactions sign ./transactions/pay-rewards/2022/aug-3/pay-rewards-aug-3-s
   --save ./transactions/pay-rewards/2022/aug-3/pay-rewards-aug-3-sig-3.rlp
 ```
 
-### Ichi Signs
+### Peter Signs
 
 ```sh
 flow transactions sign ./transactions/pay-rewards/2022/aug-3/pay-rewards-aug-3-sig-3.rlp \
-  --signer ichi \
+  --signer peter \
   --filter payload \
   --save ./transactions/pay-rewards/2022/aug-3/pay-rewards-aug-3-sig-complete.rlp
 ```
@@ -72,4 +63,4 @@ flow transactions send-signed --network mainnet ./transactions/pay-rewards/2022/
 
 ## Results
 
-https://flowscan.org/transaction/
+https://flowscan.org/transaction/e5d24eed4a1dc4f1a402dd418b01c82b4e4191cbfe4175caf4d0d60d16e29287
