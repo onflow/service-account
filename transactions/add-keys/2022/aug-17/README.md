@@ -82,5 +82,5 @@ flow transactions send-signed --network mainnet ./transactions/add-keys/2022/aug
 ## Results
 
 
-1. https://flowscan.org/transaction/
-2. https://flowscan.org/transaction/
+1. https://flowscan.org/transaction/8dcf9b01c9089dd26642da2e41184fb5295a64d20af53789ba572084deb9c0f5
+2. https://flowscan.org/transaction/8ed08f99e2f98573d53958f343469d4688f93c6f885f6e01f275e82f07d9841d
