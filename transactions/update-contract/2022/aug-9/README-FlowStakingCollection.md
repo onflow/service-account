@@ -1,4 +1,4 @@
-# Update Flow Cluster QC Contract
+# Update FlowStakingCollection.cdc
 
 > 2022 aug-9
 
@@ -6,7 +6,14 @@
 
 https://github.com/onflow/flow-core-contracts/797b149ceaaa/contracts/FlowStakingCollection.cdc
 
-## Dapper Labs Builds
+## Transaction
+
+:exclamation: Must paste the arguments from: [arguments-update-contract-FlowStakingCollection.json](./arguments-update-contract-FlowStakingCollection.json)
+
+[Send Transction using Multisig tool](https://flow-multisig-git-service-account-onflow.vercel.app/mainnet?type=serviceAccount&name=update_contract.cdc&acct=0x8d0e87b65159ae63&limit=9999)
+
+## Fallback
+### Dapper Labs Builds
 
 ```sh
 flow transactions build ./templates/update_contract.cdc \
@@ -22,7 +29,7 @@ flow transactions build ./templates/update_contract.cdc \
   --save ./transactions/update-contract/2022/aug-9/update-contract-FlowStakingCollection-unsigned.rlp
 ```
 
-## TODO Signs
+### TODO Signs
 
 ```sh
 flow transactions sign ./transactions/update-contract/2022/aug-9/update-contract-FlowStakingCollection-unsigned.rlp \
@@ -32,7 +39,7 @@ flow transactions sign ./transactions/update-contract/2022/aug-9/update-contract
   --save ./transactions/update-contract/2022/aug-9/update-contract-FlowStakingCollection-sig-1.rlp
 ```
 
-## Contract Admin Signs
+### Contract Admin Signs
 
 ```sh
 flow transactions sign ./transactions/update-contract/2022/aug-9/update-contract-FlowStakingCollection-sig-1.rlp \
@@ -42,7 +49,7 @@ flow transactions sign ./transactions/update-contract/2022/aug-9/update-contract
   --save ./transactions/update-contract/2022/aug-9/update-contract-FlowStakingCollection-sig-complete.rlp
 ```
 
-## Somebody Submits
+### Somebody Submits
 
 ```sh
 flow transactions send-signed --config-path flow.json --network mainnet ./transactions/update-contract/2022/aug-9/update-contract-FlowStakingCollection-sig-complete.rlp
