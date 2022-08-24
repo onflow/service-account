@@ -1,0 +1,123 @@
+# Reset Epoch
+
+> Aug 25th, 2022
+
+## New method using flow cli and multi-sign site
+
+1. DapperLabs generates the Signature Request ID on the [site](https://flow-multisig-git-service-account-onflow.vercel.app/mainnet?type=serviceAccount&name=reset_epoch_with_end_staking_auction.cdc&param=&acct=0x8624b52f9ddcd04a&limit=9999) for the `reset_epoch_with_end_staking_auction.cdc` transaction with the given args.
+
+2. Signers sign with flow-cli specifying the Signature Request ID
+
+3. Site submits the transaction when sufficient signatures have been received.
+
+## Old method (Fallback)
+
+## Dapper Labs Builds
+
+```sh
+flow transactions build ./templates/reset_epoch_with_end_staking_auction.cdc \
+  --config-path flow-staking.json \
+  --network mainnet \
+  --args-json "$(cat "./transactions/reset-epoch/2022/aug-25/arguments.json")" \
+  --proposer 0x8624b52f9ddcd04a \
+  --proposer-key-index 5 \
+  --authorizer 0x8624b52f9ddcd04a \
+  --payer 0xe467b9dd11fa00df \
+  --gas-limit 1000000 \
+  -x payload \
+  --save ./transactions/reset-epoch/2022/aug-25/reset-epoch-aug-25-unsigned.rlp
+```
+
+## Staking Account
+
+## Ichi Signs
+
+```sh
+flow transactions sign ./transactions/reset-epoch/2022/aug-25/reset-epoch-aug-25-unsigned.rlp \
+  --config-path flow-staking.json \
+  --signer ichi \
+  --filter payload \
+  --save ./transactions/reset-epoch/2022/aug-25/reset-epoch-aug-25-sig-1.rlp
+```
+
+## Blocto Signs
+
+```sh
+flow transactions sign ./transactions/reset-epoch/2022/aug-25/reset-epoch-aug-25-sig-1.rlp \
+  --config-path flow-staking.json \
+  --signer blocto \
+  --filter payload \
+  --save ./transactions/reset-epoch/2022/aug-25/reset-epoch-aug-25-sig-2.rlp
+```
+## Peter Signs
+
+```sh
+flow transactions sign ./transactions/reset-epoch/2022/aug-25/reset-epoch-aug-25-sig-2.rlp \
+  --config-path flow-staking.json \
+  --signer peter \
+  --filter payload \
+  --save ./transactions/reset-epoch/2022/aug-25/reset-epoch-aug-25-sig-3.rlp
+```
+
+## Kan Signs
+
+```sh
+flow transactions sign ./transactions/reset-epoch/2022/aug-25/reset-epoch-aug-25-sig-3.rlp \
+  --config-path flow-staking.json \
+  --signer kan \
+  --filter payload \
+  --save ./transactions/reset-epoch/2022/aug-25/reset-epoch-aug-25-sig-4.rlp
+```
+
+---
+
+## Service Account
+## Find Signs
+
+```sh
+flow transactions sign ./transactions/reset-epoch/2022/aug-25/reset-epoch-aug-25-sig-4.rlp \
+  --config-path flow.json \
+  --signer find \
+  --filter payload \
+  --save ./transactions/reset-epoch/2022/aug-25/reset-epoch-aug-25-sig-5.rlp
+```
+
+## Ichi Signs
+
+```sh
+flow transactions sign ./transactions/reset-epoch/2022/aug-25/reset-epoch-aug-25-sig-5.rlp \
+  --config-path flow.json \
+  --signer ichi \
+  --filter payload \
+  --save ./transactions/reset-epoch/2022/aug-25/reset-epoch-aug-25-sig-6.rlp
+```
+
+## Blocto Signs
+
+```sh
+flow transactions sign ./transactions/reset-epoch/2022/aug-25/reset-epoch-aug-25-sig-6.rlp \
+  --config-path flow.json \
+  --signer blocto \
+  --filter payload \
+  --save ./transactions/reset-epoch/2022/aug-25/reset-epoch-aug-25-sig-7.rlp
+```
+
+## Kan Signs
+
+```sh
+flow transactions sign ./transactions/reset-epoch/2022/aug-25/reset-epoch-aug-25-sig-7.rlp \
+  --config-path flow.json \
+  --signer kan \
+  --filter payload \
+  --save ./transactions/reset-epoch/2022/aug-25/reset-epoch-aug-25-sig-complete.rlp
+```
+
+## Somebody Submits
+
+```sh
+flow transactions send-signed --network mainnet ./transactions/reset-epoch/2022/aug-25/reset-epoch-aug-25-sig-complete.rlp
+```
+
+## Results
+
+https://flowscan.org/transaction/
