@@ -1,4 +1,4 @@
-# Update Flow Cluster QC Contract
+# Update StakingProxy.cdc
 
 > 2022 aug-9
 
@@ -56,4 +56,4 @@ flow transactions send-signed --config-path flow.json --network mainnet ./transa
 
 ## Results
 
-https://flowscan.org/transaction/
+https://flowscan.org/transaction/c07e4c594c832c7b9f1955ca7d629215f5401e4716a1f4ef9372c6cdf21b5f68
