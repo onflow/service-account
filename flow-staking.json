@@ -163,6 +163,19 @@
       ],
       "chain": "flow-mainnet"
     },
+    "flowscan": {
+      "address": "8624b52f9ddcd04a",
+      "keys": [
+        {
+          "type": "google-kms",
+          "index": 9,
+          "signatureAlgorithm": "ECDSA_P256",
+          "hashAlgorithm": "SHA2_256",
+          "resourceID": "projects/flowscan/locations/global/keyRings/flow/cryptoKeys/flowscan/cryptoKeyVersions/1"
+        }
+      ],
+      "chain": "flow-mainnet"
+    },
     "contract-admin": {
       "address": "8d0f8df62029f75a",
       "keys": [
