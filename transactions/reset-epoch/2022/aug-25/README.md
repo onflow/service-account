@@ -35,7 +35,7 @@ flow transactions build ./templates/reset_epoch_with_end_staking_auction.cdc \
 ```sh
 flow transactions sign ./transactions/reset-epoch/2022/aug-25/reset-epoch-aug-25-unsigned.rlp \
   --config-path flow-staking.json \
-  --signer ichi \
+  --signer peter \
   --filter payload \
   --save ./transactions/reset-epoch/2022/aug-25/reset-epoch-aug-25-sig-1.rlp
 ```
@@ -49,12 +49,13 @@ flow transactions sign ./transactions/reset-epoch/2022/aug-25/reset-epoch-aug-25
   --filter payload \
   --save ./transactions/reset-epoch/2022/aug-25/reset-epoch-aug-25-sig-2.rlp
 ```
-## Animoca Signs
+
+## Blocto Signs
 
 ```sh
 flow transactions sign ./transactions/reset-epoch/2022/aug-25/reset-epoch-aug-25-sig-2.rlp \
   --config-path flow-staking.json \
-  --signer animoca \
+  --signer blocto \
   --filter payload \
   --save ./transactions/reset-epoch/2022/aug-25/reset-epoch-aug-25-sig-3.rlp
 ```
@@ -82,12 +83,12 @@ flow transactions sign ./transactions/reset-epoch/2022/aug-25/reset-epoch-aug-25
   --save ./transactions/reset-epoch/2022/aug-25/reset-epoch-aug-25-sig-5.rlp
 ```
 
-## Animica Signs
+## Blocto Signs
 
 ```sh
 flow transactions sign ./transactions/reset-epoch/2022/aug-25/reset-epoch-aug-25-sig-5.rlp \
   --config-path flow.json \
-  --signer animoca \
+  --signer blocto \
   --filter payload \
   --save ./transactions/reset-epoch/2022/aug-25/reset-epoch-aug-25-sig-6.rlp
 ```
