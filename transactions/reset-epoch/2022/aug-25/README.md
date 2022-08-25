@@ -4,7 +4,7 @@
 
 ## New method using flow cli and multi-sign site
 
-1. DapperLabs generates the Signature Request ID on the [site](https://flow-multisig-git-service-account-onflow.vercel.app/mainnet?type=serviceAccount&name=reset_epoch_with_end_staking_auction.cdc&param=&acct=0x8624b52f9ddcd04a&limit=9999) for the `reset_epoch_with_end_staking_auction.cdc` transaction with the given args.
+1. DapperLabs generates the Signature Request ID on the [site](https://flow-multisig-git-service-account-onflow.vercel.app/mainnet?type=serviceAccount&name=reset_epoch_with_end_staking_auction.cdc&param=%5B%20%09%7B%20%09%09%22type%22:%22UInt64%22,%20%09%09%22value%22:%2238%22%20%09%7D,%20%09%7B%20%09%09%22type%22:%22String%22,%20%09%09%22value%22:%22d4713cbe010d0da3b8d9a621b688a146%22%20%09%7D,%20%09%7B%20%09%09%22type%22:%22Optional%22,%20%09%09%22value%22:null%20%09%7D,%20%09%7B%20%09%09%22type%22:%22UInt64%22,%20%09%09%22value%22:%220%22%20%09%7D,%20%09%7B%20%09%09%22type%22:%22UInt64%22,%20%09%09%22value%22:%22426399%22%20%09%7D,%20%09%7B%20%09%09%22type%22:%22UInt64%22,%20%09%09%22value%22:%22447719%22%20%09%7D%20%5D&acct=0x8624b52f9ddcd04a&limit=9999) for the `reset_epoch_with_end_staking_auction.cdc` transaction with the given args.
 
 2. Signers sign with flow-cli specifying the Signature Request ID
 
