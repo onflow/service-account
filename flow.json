@@ -124,7 +124,7 @@
     },
     "flowscan": {
       "address": "e467b9dd11fa00df",
-      "keys": {
+      "key": {
         "type": "google-kms",
         "index": 17,
         "signatureAlgorithm": "ECDSA_P256",
