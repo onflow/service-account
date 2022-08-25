@@ -73,12 +73,12 @@ flow transactions sign ./transactions/reset-epoch/2022/aug-25/reset-epoch-aug-25
 ---
 
 ## Service Account
-## Find Signs
+## Flowscan Signs
 
 ```sh
 flow transactions sign ./transactions/reset-epoch/2022/aug-25/reset-epoch-aug-25-sig-4.rlp \
   --config-path flow.json \
-  --signer find \
+  --signer flowscan \
   --filter payload \
   --save ./transactions/reset-epoch/2022/aug-25/reset-epoch-aug-25-sig-5.rlp
 ```
