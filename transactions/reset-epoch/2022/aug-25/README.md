@@ -30,7 +30,7 @@ flow transactions build ./templates/reset_epoch_with_end_staking_auction.cdc \
 
 ## Staking Account
 
-## Ichi Signs
+## Peter Signs
 
 ```sh
 flow transactions sign ./transactions/reset-epoch/2022/aug-25/reset-epoch-aug-25-unsigned.rlp \
@@ -40,31 +40,31 @@ flow transactions sign ./transactions/reset-epoch/2022/aug-25/reset-epoch-aug-25
   --save ./transactions/reset-epoch/2022/aug-25/reset-epoch-aug-25-sig-1.rlp
 ```
 
-## Blocto Signs
+## Jonathan Signs
 
 ```sh
 flow transactions sign ./transactions/reset-epoch/2022/aug-25/reset-epoch-aug-25-sig-1.rlp \
   --config-path flow-staking.json \
-  --signer blocto \
+  --signer flowscan \
   --filter payload \
   --save ./transactions/reset-epoch/2022/aug-25/reset-epoch-aug-25-sig-2.rlp
 ```
-## Peter Signs
+## Animoca Signs
 
 ```sh
 flow transactions sign ./transactions/reset-epoch/2022/aug-25/reset-epoch-aug-25-sig-2.rlp \
   --config-path flow-staking.json \
-  --signer peter \
+  --signer animoca \
   --filter payload \
   --save ./transactions/reset-epoch/2022/aug-25/reset-epoch-aug-25-sig-3.rlp
 ```
 
-## Kan Signs
+## Vishal Signs
 
 ```sh
 flow transactions sign ./transactions/reset-epoch/2022/aug-25/reset-epoch-aug-25-sig-3.rlp \
   --config-path flow-staking.json \
-  --signer kan \
+  --signer vishal \
   --filter payload \
   --save ./transactions/reset-epoch/2022/aug-25/reset-epoch-aug-25-sig-4.rlp
 ```
@@ -82,32 +82,32 @@ flow transactions sign ./transactions/reset-epoch/2022/aug-25/reset-epoch-aug-25
   --save ./transactions/reset-epoch/2022/aug-25/reset-epoch-aug-25-sig-5.rlp
 ```
 
-## Ichi Signs
+## Animica Signs
 
 ```sh
 flow transactions sign ./transactions/reset-epoch/2022/aug-25/reset-epoch-aug-25-sig-5.rlp \
   --config-path flow.json \
-  --signer ichi \
+  --signer animoca \
   --filter payload \
   --save ./transactions/reset-epoch/2022/aug-25/reset-epoch-aug-25-sig-6.rlp
 ```
 
-## Blocto Signs
+## Peter Signs
 
 ```sh
 flow transactions sign ./transactions/reset-epoch/2022/aug-25/reset-epoch-aug-25-sig-6.rlp \
   --config-path flow.json \
-  --signer blocto \
+  --signer peter \
   --filter payload \
   --save ./transactions/reset-epoch/2022/aug-25/reset-epoch-aug-25-sig-7.rlp
 ```
 
-## Kan Signs
+## Vishal Signs
 
 ```sh
 flow transactions sign ./transactions/reset-epoch/2022/aug-25/reset-epoch-aug-25-sig-7.rlp \
   --config-path flow.json \
-  --signer kan \
+  --signer vishal \
   --filter payload \
   --save ./transactions/reset-epoch/2022/aug-25/reset-epoch-aug-25-sig-complete.rlp
 ```
@@ -120,4 +120,7 @@ flow transactions send-signed --network mainnet ./transactions/reset-epoch/2022/
 
 ## Results
 
+Failed
 https://flowscan.org/transaction/
+
+
