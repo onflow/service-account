@@ -1,0 +1,10 @@
+[
+  {
+    "type": "String",
+    "value": "${CONTRACT_NAME}"
+  },
+  {
+    "type": "String",
+    "value": "${CONTRACT_HEX}"
+  }
+]
