@@ -1,12 +1,10 @@
 #!/bin/bash
 
 # INPUTS
-
-# Find/Create the correct directory 
-# OUTPUT_DIR ../transactions/update-contract/2022/apr-6/
-CONTRACT_NAME=$1
-YEAR_DATE_PATH="2022/aug-18" # TODO input
-CONTRACT_VERSION="797b149ceaaa"
+# ./generate_contract_update.sh FlowIDTableStaking 921e068 2022/sep-6
+CONTRACT_NAME="$1"
+CONTRACT_VERSION="$2"
+YEAR_DATE_PATH="$3"
 
 source common.sh
 
@@ -51,5 +49,18 @@ CONTRACT_HEX=$( cat "$DOWNLOADED_CONTRACT_PATH" | xxd -p -c0 | tr -d '\n')
 
 # Use contract name and hex string to create arguments
 ARG_PATH="$OUTPUT_DIR/arguments-update-contract-$CONTRACT_NAME.json"
-$( export CONTRACT_HEX="$CONTRACT_HEX" CONTRACT_NAME="$CONTRACT_NAME"; envsubst "\$CONTRACT_NAME,\$CONTRACT_HEX" < "$DIR/contract-update/arg-template.json" > "$ARG_PATH" )
-echo "Created json arguments"
+
+echo """
+[
+  {
+    \"type\": \"String\",
+    \"value\": \"$CONTRACT_NAME\"
+  },
+  {
+    \"type\": \"String\",
+    \"value\": \"$CONTRACT_HEX\"
+  }
+]
+""" > "$ARG_PATH"
+
+echo "Created Json arguments"
