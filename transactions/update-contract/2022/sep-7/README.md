@@ -6,6 +6,6 @@ Both transactions will be signed by the staking account.
 
 | Contract                                            | Arguments | Multisig Link   | Transaction |
 |---------------------------------------              |----------                                                                                               |-----------------|-------------|
-| [FlowEpoch.cdc](./FlowEpoch)                        | [arguments-update-contract-FlowEpoch.json](./arguments-update-contract-FlowEpoch.json)                  | [Update Contract](https://flow-multisig-git-service-account-onflow.vercel.app/mainnet?type=serviceAccount&name=update_contract.cdc&param=%5B%5D&acct=0x8624b52f9ddcd04a&limit=9999) |             |
+| [FlowEpoch.cdc](./FlowEpoch.cdc)                        | [arguments-update-contract-FlowEpoch.json](./arguments-update-contract-FlowEpoch.json)                  | [Update Contract](https://flow-multisig-git-service-account-onflow.vercel.app/mainnet?type=serviceAccount&name=update_contract.cdc&param=%5B%5D&acct=0x8624b52f9ddcd04a&limit=9999) |             |
 | [FlowIDTableStaking.cdc](./FlowIDTableStaking.cdc)  | [arguments-update-contract-FlowIDTableStaking.json](./arguments-update-contract-FlowIDTableStaking.json)| [Update Contract](https://flow-multisig-git-service-account-onflow.vercel.app/mainnet?type=serviceAccount&name=update_contract.cdc&param=%5B%5D&acct=0x8624b52f9ddcd04a&limit=9999) |
 
