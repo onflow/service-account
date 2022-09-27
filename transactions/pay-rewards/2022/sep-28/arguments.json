@@ -1,0 +1,21 @@
+[
+    {
+        "type": "UFix64",
+        "value": ".0"??
+    },
+    {
+        "type": "Dictionary",
+        "value": [
+            {
+                "key": {
+                    "type": "String",
+                    "value": "21b21ad1ddb5e3002cc6a3faa55e23d70db014ee229c213f7a43769789125536"
+                },
+                "value": {
+                    "type": "UFix64",
+                    "value": "0.5"
+                }
+            }
+        ]
+    }
+]
