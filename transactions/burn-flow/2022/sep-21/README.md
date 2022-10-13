@@ -1,9 +1,14 @@
 # Burn Flow - Sep 21
 
 The Flow Service account will burn 38,357,187 FLOW after it has been
-transferred from the Genesis Token Account. These tokens are accounted for as
-part of the FlowToken.totalSupplybut are *not currently considered* as part of
+transferred from the Genesis Token Account. These tokens are "Bonus Tokens" and 
+are accounted for as part of the FlowToken.totalSupply but are *not currently considered* as part of
 the FlowToken inflation while paying rewards.
+
+## About Bonus Tokens
+
+During the initial Flow launch two batches of tokens were initially created by the Gensis Account. These consisted of the initial token supply mint and a second batch of 65mm tokens which are referred to as "Bonus Tokens." These 65mm tokens were withheld from the Flow Total Supply and distributed as locked tokens, only to be unlocked if Flow milestones were not achieved. These milestomnes were all achieved, and the 65mm Bonus Tokens are all reclaimed and will be destroyed. These locked tokens were not in circulation as they were not transferrable by the holding parties, and were not considered for totalSupply inflation as part of the rewards calculation.
+
 
 | Template                                                 | Arguments | Multisig Link   | Transaction |
 |---                                                       |---        |---              |---          |
