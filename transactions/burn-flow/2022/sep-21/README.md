@@ -7,7 +7,7 @@ the FlowToken inflation while paying rewards.
 
 ## About Bonus Tokens
 
-During the initial Flow launch two batches of tokens were created by the Gensis Account. These consisted of the initial Flow token supply and a second batch of 65mm tokens which are referred to as "Bonus Tokens." These 65mm tokens were withheld from the Flow Total Supply and distributed as locked tokens, only to be unlocked if the Flow mainnet launch milestones were NOT reached. These milestones were all achieved, and the 65mm Bonus Tokens can now be destroyed. These locked tokens were not in circulation as they were not transferrable by the holding parties, and were not considered for totalSupply inflation as part of the rewards calculation.
+During the initial Flow launch two batches of tokens were created by the Gensis Account. These consisted of the initial Flow token supply and a second batch of 65mm tokens which are referred to as "Bonus Tokens." These 65mm tokens were withheld from the Flow Total Supply and distributed as locked tokens, only to be unlocked if the Flow mainnet launch milestones were NOT reached. "Bonus Tokens" were not considered included in "total supply" while calculating staking rewards. These milestones were all achieved, and the 65mm Bonus Tokens can now be destroyed. These locked tokens were not in circulation as they were not transferrable by the holding parties.
 
 ## Transaction
 
