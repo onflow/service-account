@@ -1,6 +1,6 @@
 # Burn Flow - Sep 21
 
-The Flow Service account will burn 38,357,187 FLOW after it has been
+The Flow Service account will burn 38,357,187 FLOW
 transferred from the Genesis Token Account. These tokens are "Bonus Tokens" and 
 are accounted for as part of the FlowToken.totalSupply but are *not considered* as part of
 the FlowToken inflation while paying rewards.
