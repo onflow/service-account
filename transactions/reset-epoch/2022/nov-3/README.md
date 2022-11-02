@@ -2,6 +2,20 @@
 
 > Nov 3rd, 2022
 
+Sequence of signing: 
+1. Paul generates the Tx
+2. Round one - 
+   1. XXX signs with flow-staking.json
+   2. Peter Signs with flow-staking.json
+   3. Vishal Signs with flow-staking.json
+   4. Paul Signs with flow-staking.json
+3. Roune two -
+   1. XXX signs with flow.json
+   2. Peter Signs with flow.json
+   3. Vishal Signs with flow.json
+   4. Paul Signs with flow.json
+4. Paul submits
+
 ## Dapper Labs Builds
 
 ```sh
@@ -20,42 +34,42 @@ flow transactions build ./templates/reset_epoch_with_end_staking_auction.cdc \
 
 ## Staking Account
 
-## Peter Signs
+## XXX Signs
 
 ```sh
 flow transactions sign ./transactions/reset-epoch/2022/nov-3/reset-epoch-nov-3-unsigned.rlp \
   --config-path flow-staking.json \
-  --signer peter \
+  --signer XXX \
   --filter payload \
   --save ./transactions/reset-epoch/2022/nov-3/reset-epoch-nov-3-sig-1.rlp
 ```
 
-## Jonathan Signs
+## Peter Signs
 
 ```sh
 flow transactions sign ./transactions/reset-epoch/2022/nov-3/reset-epoch-nov-3-sig-1.rlp \
   --config-path flow-staking.json \
-  --signer flowscan \
+  --signer peter \
   --filter payload \
   --save ./transactions/reset-epoch/2022/nov-3/reset-epoch-nov-3-sig-2.rlp
-```
-
-## Blocto Signs
-
-```sh
-flow transactions sign ./transactions/reset-epoch/2022/nov-3/reset-epoch-nov-3-sig-2.rlp \
-  --config-path flow-staking.json \
-  --signer blocto \
-  --filter payload \
-  --save ./transactions/reset-epoch/2022/nov-3/reset-epoch-nov-3-sig-3.rlp
 ```
 
 ## Vishal Signs
 
 ```sh
-flow transactions sign ./transactions/reset-epoch/2022/nov-3/reset-epoch-nov-3-sig-3.rlp \
+flow transactions sign ./transactions/reset-epoch/2022/nov-3/reset-epoch-nov-3-sig-2.rlp \
   --config-path flow-staking.json \
   --signer vishal \
+  --filter payload \
+  --save ./transactions/reset-epoch/2022/nov-3/reset-epoch-nov-3-sig-3.rlp
+```
+
+## Paul Signs
+
+```sh
+flow transactions sign ./transactions/reset-epoch/2022/nov-3/reset-epoch-nov-3-sig-3.rlp \
+  --config-path flow-staking.json \
+  --signer paul \
   --filter payload \
   --save ./transactions/reset-epoch/2022/nov-3/reset-epoch-nov-3-sig-4.rlp
 ```
@@ -63,42 +77,42 @@ flow transactions sign ./transactions/reset-epoch/2022/nov-3/reset-epoch-nov-3-s
 ---
 
 ## Service Account
-## Flowscan Signs
+## XXX Signs
 
 ```sh
 flow transactions sign ./transactions/reset-epoch/2022/nov-3/reset-epoch-nov-3-sig-4.rlp \
   --config-path flow.json \
-  --signer flowscan \
+  --signer XXX \
   --filter payload \
   --save ./transactions/reset-epoch/2022/nov-3/reset-epoch-nov-3-sig-5.rlp
-```
-
-## Blocto Signs
-
-```sh
-flow transactions sign ./transactions/reset-epoch/2022/nov-3/reset-epoch-nov-3-sig-5.rlp \
-  --config-path flow.json \
-  --signer blocto \
-  --filter payload \
-  --save ./transactions/reset-epoch/2022/nov-3/reset-epoch-nov-3-sig-6.rlp
 ```
 
 ## Peter Signs
 
 ```sh
-flow transactions sign ./transactions/reset-epoch/2022/nov-3/reset-epoch-nov-3-sig-6.rlp \
+flow transactions sign ./transactions/reset-epoch/2022/nov-3/reset-epoch-nov-3-sig-5.rlp \
   --config-path flow.json \
   --signer peter \
   --filter payload \
-  --save ./transactions/reset-epoch/2022/nov-3/reset-epoch-nov-3-sig-7.rlp
+  --save ./transactions/reset-epoch/2022/nov-3/reset-epoch-nov-3-sig-6.rlp
 ```
 
 ## Vishal Signs
 
 ```sh
-flow transactions sign ./transactions/reset-epoch/2022/nov-3/reset-epoch-nov-3-sig-7.rlp \
+flow transactions sign ./transactions/reset-epoch/2022/nov-3/reset-epoch-nov-3-sig-6.rlp \
   --config-path flow.json \
   --signer vishal \
+  --filter payload \
+  --save ./transactions/reset-epoch/2022/nov-3/reset-epoch-nov-3-sig-7.rlp
+```
+
+## Paul Signs
+
+```sh
+flow transactions sign ./transactions/reset-epoch/2022/nov-3/reset-epoch-nov-3-sig-7.rlp \
+  --config-path flow.json \
+  --signer Paul \
   --filter payload \
   --save ./transactions/reset-epoch/2022/nov-3/reset-epoch-nov-3-sig-complete.rlp
 ```
