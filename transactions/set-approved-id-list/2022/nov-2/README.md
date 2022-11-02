@@ -5,6 +5,7 @@
 1. One Verification node - Lilco (Node ID: 3c6519ba8be35e338df7273a895ad3abaeb0c232eb908ee7b05462018c112fe1)
 2. Two Access nodes - Huobi (Node ID: 8c85f3d48e8c4db4881869a67543f6002c2f14eca9519fecc6860043bbc4df14 and d343c1f8579bc26eb58e42fae2ae945fe45ea3437e41b0138258a756ad4626d1)
 3. One Verification node - Binance (Node ID: 7c589e6cc38508b27545d052073ab3aa84a35425bd2881205d778cca95f10a7b)
+4. Two Access Nodes - BTCTrader (Node ID: 16caf1edab4c8e92068f5d1f5639180ecd361795ee4f8709f5f931f6289aa939 and 7dedc9c3af28387bf6741b851830c6afc607a01547a4342b6d0f76638ef5d7f9)
 
 ## New method using Multisign tool
 
