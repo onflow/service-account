@@ -125,6 +125,4 @@ flow transactions send-signed --network mainnet ./transactions/reset-epoch/2022/
 
 ## Results
 
-https://flowscan.org/transaction/
-
-
+https://flowscan.org/transaction/e28f75b428dcf37d68b7a5a4f45bd61264685f1be5b7bbaea39500c4da257cce
