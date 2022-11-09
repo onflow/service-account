@@ -62,4 +62,4 @@ flow transactions send-signed --network mainnet ./transactions/pay-rewards/2022/
 
 ## Results
 
-https://flowscan.org/transaction/3c04497d0a9632b6a180f5bdcb23552482001d87d8a56e97c195fcb0949a16cd
+https://flowscan.org/transaction/
