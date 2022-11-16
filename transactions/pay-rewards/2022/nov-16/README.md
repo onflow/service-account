@@ -62,4 +62,6 @@ flow transactions send-signed --network mainnet ./transactions/pay-rewards/2022/
 
 ## Results
 
-https://flowscan.org/transaction/
+Failed once due to insufficient balance on the service account.
+
+https://flowscan.org/transaction/02f7ea39c662d4a6de0eb6c5a966f40d18e0a8cc7819faa62084b00bd9a1c14b
