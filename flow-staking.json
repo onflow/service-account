@@ -139,7 +139,7 @@
       "keys": [
         {
           "type": "google-kms",
-          "index": 6,
+          "index": 7,
           "signatureAlgorithm": "ECDSA_P256",
           "hashAlgorithm": "SHA2_256",
           "context": {
@@ -155,7 +155,7 @@
       "keys": [
         {
           "type": "google-kms",
-          "index": 6,
+          "index": 7,
           "signatureAlgorithm": "ECDSA_P256",
           "hashAlgorithm": "SHA2_256",
           "context": {
@@ -171,7 +171,7 @@
       "keys": [
         {
           "type": "google-kms",
-          "index": 6,
+          "index": 7,
           "signatureAlgorithm": "ECDSA_P256",
           "hashAlgorithm": "SHA2_256",
           "context": {
