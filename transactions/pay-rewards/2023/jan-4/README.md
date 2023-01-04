@@ -62,4 +62,5 @@ flow transactions send-signed --network mainnet ./transactions/pay-rewards/2023/
 
 ## Results
 
-https://flowscan.org/transaction/c3cfe0ef898cf4ca7ca5b49c6b9c2f5820472e903ca79ae27eea0ed2f1406acb
+Failed tx: https://flowscan.org/transaction/0545fef722543bef71cd8c04266bb8c3663a385b0540a85b0c3a1b81700ea506 (failed due to invalid args)
+Successful tx: https://flowscan.org/transaction/c3cfe0ef898cf4ca7ca5b49c6b9c2f5820472e903ca79ae27eea0ed2f1406acb
