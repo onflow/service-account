@@ -62,4 +62,5 @@ flow transactions send-signed --network mainnet ./transactions/pay-rewards/2023/
 
 ## Results
 
-https://flowscan.org/transaction/
+First attempt: First submission from the UI tool resulted in no transaction ID being generated.
+Second attempt succeeded: https://flowscan.org/transaction/21d7fbb41945f71324ca72b05c52e87fbb34d75431b9170d66987252c0dc5f3d
