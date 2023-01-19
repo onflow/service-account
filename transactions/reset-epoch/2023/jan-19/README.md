@@ -216,4 +216,4 @@ flow transactions send-signed --network mainnet ./transactions/reset-epoch/2023/
 
 ## Results
 
-https://flowscan.org/transaction/
+https://flowscan.org/transaction/138def4565f1a52f603f860cf48f7f7704dacd624aab6c911569868a13c83032/script
