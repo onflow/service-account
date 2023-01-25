@@ -1,7 +1,7 @@
 # Add Approved Node Operators ID List
 
-> Jan 18th, 2023 
-One verification node - CoinbaseCloud (Node ID: 268572e59ccc469592bb434715ac3c10649d681e6eace6fd11d00d1247ef1fdc)
+> Jan 25th, 2023 
+One Access node - Giglabs (Node ID: 189487ae64e665e457280b68665af2c84aa726898df4c8ea9b92a16af0be2df5)
 
 ## New method using Multisign tool
 
@@ -20,61 +20,61 @@ One verification node - CoinbaseCloud (Node ID: 268572e59ccc469592bb434715ac3c10
 flow transactions build ./templates/add_approved_id_list.cdc \
   --config-path flow-staking.json \
   --network mainnet \
-  --args-json "$(cat "./transactions/set-approved-id-list/2023/jan-18/arguments.json")" \
+  --args-json "$(cat "./transactions/set-approved-id-list/2023/jan-25/arguments.json")" \
   --proposer 0x8624b52f9ddcd04a \
   --proposer-key-index 5 \
   --authorizer 0x8624b52f9ddcd04a \
   --payer 0x8624b52f9ddcd04a \
   -x payload \
-  --save ./transactions/set-approved-id-list/2023/jan-18/add-approved-list-jan-18-unsigned.rlp
+  --save ./transactions/set-approved-id-list/2023/jan-25/add-approved-list-jan-25-unsigned.rlp
 ```
 
 ### Vishal Signs
 
 ```sh
-flow transactions sign ./transactions/set-approved-id-list/2023/jan-18/add-approved-list-jan-18-unsigned.rlp \
+flow transactions sign ./transactions/set-approved-id-list/2023/jan-25/add-approved-list-jan-25-unsigned.rlp \
   --config-path flow-staking.json \
   --signer vishal \
   --filter payload \
-  --save ./transactions/set-approved-id-list/2023/jan-18/add-approved-list-jan-18-sig-1.rlp
+  --save ./transactions/set-approved-id-list/2023/jan-25/add-approved-list-jan-25-sig-1.rlp
 ```
 
 ### Blocto Signs
 
 ```sh
-flow transactions sign ./transactions/set-approved-id-list/2023/jan-18/add-approved-list-jan-18-sig-1.rlp \
+flow transactions sign ./transactions/set-approved-id-list/2023/jan-25/add-approved-list-jan-25-sig-1.rlp \
   --config-path flow-staking.json \
   --signer blocto \
   --filter payload \
-  --save ./transactions/set-approved-id-list/2023/jan-18/add-approved-list-jan-18-sig-2.rlp
+  --save ./transactions/set-approved-id-list/2023/jan-25/add-approved-list-jan-25-sig-2.rlp
 ```
 
 ### Ichi Signs
 
 ```sh
-flow transactions sign ./transactions/set-approved-id-list/2023/jan-18/add-approved-list-jan-18-sig-2.rlp \
+flow transactions sign ./transactions/set-approved-id-list/2023/jan-25/add-approved-list-jan-25-sig-2.rlp \
   --config-path flow-staking.json \
   --signer Ichi \
   --filter payload \
-  --save ./transactions/set-approved-id-list/2023/jan-18/add-approved-list-jan-18-sig-3.rlp
+  --save ./transactions/set-approved-id-list/2023/jan-25/add-approved-list-jan-25-sig-3.rlp
 ```
 
 ### Paul Signs
 
 ```sh
-flow transactions sign ./transactions/set-approved-id-list/2023/jan-18/add-approved-list-jan-18-sig-3.rlp \
+flow transactions sign ./transactions/set-approved-id-list/2023/jan-25/add-approved-list-jan-25-sig-3.rlp \
   --config-path flow-staking.json \
   --signer Paul \
   --filter payload \
-  --save ./transactions/set-approved-id-list/2023/jan-18/add-approved-list-jan-18-sig-complete.rlp
+  --save ./transactions/set-approved-id-list/2023/jan-25/add-approved-list-jan-25-sig-complete.rlp
 ```
 
 ### Somebody Submits
 
 ```sh
-flow transactions send-signed --network mainnet --config-path flow-staking.json ./transactions/set-approved-id-list/2023/jan-18/add-approved-list-jan-18-sig-complete.rlp
+flow transactions send-signed --network mainnet --config-path flow-staking.json ./transactions/set-approved-id-list/2023/jan-25/add-approved-list-jan-25-sig-complete.rlp
 ```
 
 ## Results
 
-https://flowscan.org/transaction/652370e6e39f9a6a60e73f2f6979084c8c4cbf24a1e92a018a036e15b6c85df0
+https://flowscan.org/transaction/
