@@ -1,6 +1,6 @@
 # Add Approved Node Operators ID List
 
-> Nov 23rd, 2023 
+> Jan 18th, 2023 
 One verification node - CoinbaseCloud (Node ID: 268572e59ccc469592bb434715ac3c10649d681e6eace6fd11d00d1247ef1fdc)
 
 ## New method using Multisign tool
