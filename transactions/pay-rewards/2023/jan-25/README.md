@@ -62,4 +62,5 @@ flow transactions send-signed --network mainnet ./transactions/pay-rewards/2023/
 
 ## Results
 
-https://flowscan.org/transaction/
+First attempt did not return any result and no transaction ID.
+Second attempt: https://flowscan.org/transaction/03aa46047cdadfcf7ee23ee86cd53064e05f8b5f8a6f570e9f53b2744eddbee4
