@@ -1,0 +1,41 @@
+[
+    {
+        "type": "UFix64",
+        "value": "1317778.0"
+    },
+    {
+        "type": "Dictionary",
+        "value": [
+            {
+                "key": {
+                    "type": "String",
+                    "value": "6c6af0933b710655ec553f4bead3b01c5e0a3ffd1194ee536efb926b356c54aa"
+                },
+                "value": {
+                    "type": "UFix64",
+                    "value": "0.5"
+                }
+            },
+            {
+                "key": {
+                    "type": "String",
+                    "value": "2cfab7e9163475282f67186b06ce6eea7fa0687d25dd9c7a84532f2016bc2e5e"
+                },
+                "value": {
+                    "type": "UFix64",
+                    "value": "0.5"
+                }
+            },
+            {
+                "key": {
+                    "type": "String",
+                    "value": "e52cbcd825e328acac8db6bcbdcbb6e7724862c8b89b09d85edccf41ff9981eb"
+                },
+                "value": {
+                    "type": "UFix64",
+                    "value": "0.5"
+                }
+            }
+        ]
+    }
+]
