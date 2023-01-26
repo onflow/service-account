@@ -31,19 +31,13 @@ transaction(slotLimits: {UInt8: UInt16}, code: String) {
         stakingAccount.save<{UInt8: UInt64}>(candidateNodeLimits, to: /storage/idTableCandidateNodeLimits)
 
         // Borrow the admin to set minimum stake requirement for access nodes
-        self.adminRef = acct.borrow<&FlowIDTableStaking.Admin>(from: FlowIDTableStaking.StakingAdminStoragePath)
+        let adminRef = stakingAccount.borrow<&FlowIDTableStaking.Admin>(from: FlowIDTableStaking.StakingAdminStoragePath)
             ?? panic("Could not borrow reference to staking admin")
         
         // Set Access node minimum stake requirement to 100 FLOW
         let minimums: {UInt8: UFix64} = FlowIDTableStaking.getMinimumStakeRequirements()
-        minimums[5] = 100
-        self.adminRef.setMinimumStakeRequirements(minimums)
-
-        // Initialize the Staking Slot Counts
-        // `getCurrentRoleNodeCounts` calculates the counts based on the current list
-        // so we just store the result in storage after calculating
-        Let slotCounts = FlowIDTableStaking.getCurrentRoleNodeCounts()
-        stakingAccount.save(slotCounts, to: /storage/flowStakingRoleNodeCounts)
+        minimums[5] = 100.0
+        adminRef.setMinimumStakeRequirements(minimums)
 
         // Approve List needs to be changed from [String] to {String: Bool}
         let approveList: [String] = stakingAccount.load<[String]>(from: /storage/idTableApproveList)
@@ -55,16 +49,31 @@ transaction(slotLimits: {UInt8: UInt16}, code: String) {
             approveDict[nodeID] = true
         }
 
+        stakingAccount.save<{String: Bool}>(approveDict, to: /storage/idTableApproveList)
+
         // Participant Node list needs to be changed from [String] to {String: Bool}
         let participantList: [String] = stakingAccount.load<[String]>(from: /storage/idTableCurrentList)
             ?? panic("Could not load the participant list from storage")
+
+        let roleCounts: {UInt8: UInt16} = {1: 0, 2: 0, 3: 0, 4: 0, 5: 0}
 
         // Create the participant dictionary with the loaded value, then store the dictionary in the same path
         var participantDict: {String: Bool} = {}
         for nodeID in participantList {
             participantDict[nodeID] = true
+
+            let nodeInfo = FlowIDTableStaking.NodeInfo(id: nodeID)
+            roleCounts[nodeInfo.role] = roleCounts[nodeInfo.role]! + 1
         }
 
-        acct.contracts.update__experimental(name: "FlowIDTableStaking", code: code.decodeHex())
+        stakingAccount.save<{String: Bool}>(participantDict, to: /storage/idTableCurrentList)
+
+        // Initialize the Staking Slot Counts
+        // `getCurrentRoleNodeCounts` calculates the counts based on the current list
+        // so we just store the result in storage after calculating
+        stakingAccount.save(roleCounts, to: /storage/flowStakingRoleNodeCounts)
+    
+        stakingAccount.contracts.update__experimental(name: "FlowIDTableStaking", code: code.decodeHex())
+
     }
 }

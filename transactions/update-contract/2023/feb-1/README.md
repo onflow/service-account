@@ -82,7 +82,7 @@ transaction(slotLimits: {UInt8: UInt16}, code: String) {
 
 | Contract                                     | Arguments                                                                                      | Multisig Link   | Transaction |
 |----------------------------------------------|------------------------------------------------------------------------------------------------|-----------------|-------------|
-| [FlowIDTableStaking.cdc](./FlowIDTableStaking.cdc) | [arguments-update-contract-FlowIDTableStaking.json](./arguments-update-contract-FlowIDTableStaking.json)   | [Update Contract]() | [Sealed Transaction](https://flowscan.org/transaction/) |
+| [FlowIDTableStaking.cdc](./FlowIDTableStaking.cdc) | [arguments-update-contract-FlowIDTableStaking.json](./arguments-update-contract-FlowIDTableStaking-mainnet.json)   | [Update Contract]() | [Sealed Transaction](https://flowscan.org/transaction/) |
 
 Used this to generate args:
 

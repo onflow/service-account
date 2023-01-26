@@ -17,32 +17,18 @@ transaction(ids: [String]) {
     }
 
     execute {
-	let nodeIDs = FlowIDTableStaking.getApprovedList()
+		let nodeIDs = FlowIDTableStaking.getApprovedList()
 
-	// create a map for existing node IDs to avoid double-adding
-	let nodeIDsMap: {String: Bool} = {}	
-	for nodeID in nodeIDs {
-		nodeIDsMap[nodeID] = true
-	}
-
-	// remove each node 
-	for nodeIDToRemove in ids {
-		if nodeIDsMap[nodeIDToRemove] != nil {
-			nodeIDsMap[nodeIDToRemove] = false
-		} else {
-			panic("attempted to remove non-existent node ID from allow-list: ".concat(nodeIDToRemove))
+		// remove each node 
+		for nodeIDToRemove in ids {
+			if nodeIDs[nodeIDToRemove] != nil {
+				nodeIDs[nodeIDToRemove] = nil
+			} else {
+				panic("attempted to remove non-existent node ID from allow-list: ".concat(nodeIDToRemove))
+			}
 		}
-	}
 
-	// create a new node ID list, omitted those marked for deletion
-	let newNodeIDs: [String] = []
-	for nodeID in nodeIDs {
-		if nodeIDsMap[nodeID]! == true {
-			newNodeIDs.append(nodeID)
-		}
-	}
-
-	// set the approved list to the new allow-list
-        self.adminRef.setApprovedList(newNodeIDs)
+		// set the approved list to the new allow-list
+        self.adminRef.setApprovedList(nodeIDs)
     }
 }

@@ -827,19 +827,6 @@ pub contract FlowIDTableStaking {
     /// Admin resource that has the ability to create new staker objects, remove insufficiently staked nodes
     /// at the end of the staking auction, and pay rewards to nodes at the end of an epoch
     pub resource Admin {
-        pub fun removeNode(_ nodeID: String): @NodeRecord {
-            let node <- FlowIDTableStaking.nodes.remove(key: nodeID)
-                ?? panic("Could not find a node with the specified ID")
-
-            // Remove the node as a candidate node if they were one before
-            FlowIDTableStaking.removeFromCandidateNodeList(nodeID: nodeID, role: node.role)
-
-            FlowIDTableStaking.updateClaimed(path: /storage/networkingAddressesClaimed, node.networkingAddress, claimed: false)
-            FlowIDTableStaking.updateClaimed(path: /storage/networkingKeysClaimed, node.networkingKey, claimed: false)
-            FlowIDTableStaking.updateClaimed(path: /storage/stakingKeysClaimed, node.stakingKey, claimed: false)
-
-            return <-node
-        }
 
         /// Allows the protocol to set a specific weight for a node
         /// if their staked amount changes or if they are removed
@@ -857,16 +844,32 @@ pub contract FlowIDTableStaking {
         /// Sets a list of approved node IDs for the next epoch
         /// Nodes not on this list will be unstaked at the end of the staking auction
         /// and not considered to be a proposed/staked node
-        pub fun setApprovedList(_ nodeIDs: {String: Bool}) {
-            for id in nodeIDs.keys {
+        pub fun setApprovedList(_ newApproveList: {String: Bool}) {
+            let currentApproveList = FlowIDTableStaking.account.load<{String: Bool}>(from: /storage/idTableApproveList)
+                ?? panic("Could not load the current approve list from storage")
+
+            for id in newApproveList.keys {
                 if FlowIDTableStaking.nodes[id] == nil {
                     panic("Approved node ".concat(id).concat(" does not already exist in the identity table"))
                 }
             }
 
-            let list = FlowIDTableStaking.account.load<{String: Bool}>(from: /storage/idTableApproveList)
+            // If one of the nodes has been removed from the approve list
+            // it need to be set as movesPending so it
+            // will be caught in the `removeInvalidNodes` method
+            // If this happens not during the staking auction, the node should be removed
+            // and marked to unstake immediately
+            for id in currentApproveList.keys {
+                if newApproveList[id] == nil {
+                    if FlowIDTableStaking.stakingEnabled() {
+                        FlowIDTableStaking.setNewMovesPending(nodeID: id, delegatorID: nil)
+                    } else {
+                        self.removeAndRefundNodeRecord(id)
+                    }
+                }
+            }
 
-            FlowIDTableStaking.account.save<{String: Bool}>(nodeIDs, to: /storage/idTableApproveList)
+            FlowIDTableStaking.account.save<{String: Bool}>(newApproveList, to: /storage/idTableApproveList)
         }
 
         /// Sets a list of node IDs who will not receive rewards for the current epoch
@@ -890,15 +893,32 @@ pub contract FlowIDTableStaking {
 
         /// Removes nodes by setting their weight to zero and refunding
         /// staked and delegated tokens.
-        access(self) fun removeAndRefundNodeRecord(nodeRecord: &NodeRecord) {
+        pub fun removeAndRefundNodeRecord(_ nodeID: String) {
+            let nodeRecord = FlowIDTableStaking.borrowNodeRecord(nodeID)
+
             emit NodeRemovedAndRefunded(nodeID: nodeRecord.id, amount: nodeRecord.tokensCommitted.balance + nodeRecord.tokensStaked.balance)
 
             // move their committed tokens back to their unstaked tokens
             nodeRecord.tokensUnstaked.deposit(from: <-nodeRecord.tokensCommitted.withdraw(amount: nodeRecord.tokensCommitted.balance))
 
-            // Set their request to unstake equal to all their staked tokens
-            // since they are forced to unstake
-            nodeRecord.tokensRequestedToUnstake = nodeRecord.tokensStaked.balance
+            // If the node is currently staked, unstake it and subtract one from the count
+            // if staking is currently disabled, then that means that the node
+            // has already been added to the node counts and needs to be subtracted also
+            if nodeRecord.tokensStaked.balance > 0.0 || !FlowIDTableStaking.stakingEnabled() {
+                // Set their request to unstake equal to all their staked tokens
+                // since they are forced to unstake
+                nodeRecord.tokensRequestedToUnstake = nodeRecord.tokensStaked.balance
+
+                // Subract 1 from the counts for this node's role
+                // Since they will not fill an open slot any more
+                var currentRoleNodeCounts: {UInt8: UInt16} = FlowIDTableStaking.getCurrentRoleNodeCounts()
+                var currentRoleCount = currentRoleNodeCounts[nodeRecord.role]!
+                if currentRoleCount > 0 {
+                    currentRoleNodeCounts[nodeRecord.role] = currentRoleCount - 1
+                }
+                FlowIDTableStaking.account.load<{UInt8: UInt16}>(from: /storage/flowStakingRoleNodeCounts)
+                FlowIDTableStaking.account.save(currentRoleNodeCounts, to: /storage/flowStakingRoleNodeCounts)
+            }
 
             // Iterate through all delegators and unstake their tokens
             // since their node has unstaked
@@ -921,6 +941,8 @@ pub contract FlowIDTableStaking {
 
             FlowIDTableStaking.setNewMovesPending(nodeID: nodeRecord.id, delegatorID: nil)
 
+            FlowIDTableStaking.removeFromCandidateNodeList(nodeID: nodeRecord.id, role: nodeRecord.role)
+
             // Clear initial weight because the node is not staked any more
             nodeRecord.initialWeight = 0
         }
@@ -937,7 +959,7 @@ pub contract FlowIDTableStaking {
         pub fun endStakingAuction() {
             let approvedNodeIDs = FlowIDTableStaking.getApprovedList()
 
-            self.removeUnapprovedNodes(approvedNodeIDs: approvedNodeIDs)
+            self.removeInvalidNodes(approvedNodeIDs: approvedNodeIDs)
 
             self.fillNodeRoleSlots()
 
@@ -953,10 +975,18 @@ pub contract FlowIDTableStaking {
         /// by the protocol to be a staker for the next epoch. The node software
         /// checks if the node that corresponds to each proposed ID is running properly
         /// and that its node info is correct
-        pub fun removeUnapprovedNodes(approvedNodeIDs: {String: Bool}) {
-            let allNodeIDs = FlowIDTableStaking.getNodeIDs()
+        pub fun removeInvalidNodes(approvedNodeIDs: {String: Bool}) {
+            let movesPendingList = FlowIDTableStaking.getMovesPendingList()
+                ?? panic("Could not copy moves pending list from storage")
 
-            for nodeID in allNodeIDs {
+            // We only iterate through movesPendingList here because any node
+            // that has insufficient stake committed will be because it has submitted
+            // a staking operation that would have gotten it into that state to be removed
+            // and candidate nodes will also be on the movesPendingList
+            // to get their initialWeight set to 100
+            // Nodes removed from the approve list are already refunded at the time
+            // of removal in the setApprovedList method
+            for nodeID in movesPendingList.keys {
                 let nodeRecord = FlowIDTableStaking.borrowNodeRecord(nodeID)
 
                 let totalTokensCommitted = nodeRecord.nodeFullCommittedBalance()
@@ -967,7 +997,7 @@ pub contract FlowIDTableStaking {
                 // admin-approved node roles (execution/collection/consensus/verification)
                 // must be approved AND have sufficient stake
                 if nodeRecord.role != UInt8(5) && (!greaterThanMin || !nodeIsApproved) {
-                    self.removeAndRefundNodeRecord(nodeRecord: nodeRecord)
+                    self.removeAndRefundNodeRecord(nodeID)
                     FlowIDTableStaking.removeFromCandidateNodeList(nodeID: nodeRecord.id, role: nodeRecord.role)
                     continue
                 }
@@ -980,7 +1010,7 @@ pub contract FlowIDTableStaking {
                 //  - Old ANs must be approved, but are allowed to have zero stake
                 //  - New ANs may be unapproved, but must have submitted sufficient stake
                 if nodeRecord.role == UInt8(5) && !greaterThanMin && !nodeIsApproved {
-                    self.removeAndRefundNodeRecord(nodeRecord: nodeRecord)
+                    self.removeAndRefundNodeRecord(nodeID)
                     continue
                 }
 
@@ -1013,14 +1043,16 @@ pub contract FlowIDTableStaking {
                 if currentNodeCount[role]! >= slotLimits[role]! {
                     // if all slots are full, remove and refund all pending nodes
                     for nodeID in candidateNodesForRole.keys {
-                        let nodeRecord = FlowIDTableStaking.borrowNodeRecord(nodeID)
-                        self.removeAndRefundNodeRecord(nodeRecord: nodeRecord)
+                        self.removeAndRefundNodeRecord(nodeID)
                     }
                 } else if currentNodeCount[role]! + UInt16(candidateNodesForRole.keys.length) > slotLimits[role]! {
+                    
                     // Not all slots are full, but addition of all the candidate nodes exceeds the slot limit
                     // Calculate how many nodes to remove from the candidate list for this role
                     var numNodesToRemove: UInt16 = currentNodeCount[role]! + UInt16(candidateNodesForRole.keys.length) - slotLimits[role]!
                     
+                    let numNodesToAdd = UInt16(candidateNodesForRole.keys.length) - numNodesToRemove
+
                     // Indicates which indicies in the candidate nodes array will be removed
                     var deletionList: {UInt16: Bool} = {}
                     
@@ -1038,12 +1070,11 @@ pub contract FlowIDTableStaking {
                     // Remove and Refund the selected nodes
                     for nodeIndex in deletionList.keys {
                         let nodeID = candidateNodesForRole.keys[nodeIndex]
-                        let nodeRecord = FlowIDTableStaking.borrowNodeRecord(nodeID)
-                        self.removeAndRefundNodeRecord(nodeRecord: nodeRecord)
+                        self.removeAndRefundNodeRecord(nodeID)
                     }
 
                     // Set the current node count for the role to the limit for the role, since they were all filled
-                    currentNodeCount[role] = slotLimits[role]!
+                    currentNodeCount[role] = currentNodeCount[role]! + numNodesToAdd
 
                 } else {
                     // Not all the slots are full, and the addition of all the candidate nodes
@@ -1542,6 +1573,9 @@ pub contract FlowIDTableStaking {
     /// Adds a node and/or a delegator to the list of node IDs who have pending token movements
     /// or whose delegators have pending movements
     access(contract) fun setNewMovesPending(nodeID: String, delegatorID: UInt32?) {
+        if self.nodes[nodeID] == nil {
+            return
+        }
         let movesPendingList = self.account.load<{String: {UInt32: Bool}}>(from: /storage/idTableMovesPendingList)
             ?? panic("No moves pending list in account storage")
 
@@ -1666,20 +1700,26 @@ pub contract FlowIDTableStaking {
         return self.account.copy<Bool>(from: /storage/stakingEnabled) ?? false
     }
 
-    /// Gets an array of the node IDs that have committed sufficient stake
-    /// and are approved for the next epoch
+    /// Gets an array of the node IDs that have committed sufficient stake for the next epoch
+    /// During the staking auction, this will likely include some nodes who
+    /// will not actually be nodes in the next epoch because they aren't approved
+    /// or they won't be randomly selected by the slot selection algorithm
+    /// After the staking auction ends, specifically after unapproved nodes have been
+    /// removed and slots have been filled and for the rest of the epoch,
+    /// This list will accurately represent the nodes that will be in the next epoch
     pub fun getProposedNodeIDs(): [String] {
 
-        let proposedNodeIDs = FlowIDTableStaking.getApprovedList()
+        let nodeIDs = FlowIDTableStaking.getNodeIDs()
+        let proposedNodeIDs: {String: Bool} = {}
 
-        for nodeID in proposedNodeIDs.keys {
+        for nodeID in nodeIDs {
 
             let nodeRecord = FlowIDTableStaking.borrowNodeRecord(nodeID)
 
             // To be considered proposed, a node has to have tokens staked + committed equal or above the minimum
-            if !self.isGreaterThanMinimumForRole(numTokens: self.NodeInfo(nodeID: nodeRecord.id).totalCommittedWithoutDelegators(), role: nodeRecord.role)
+            if self.isGreaterThanMinimumForRole(numTokens: self.NodeInfo(nodeID: nodeRecord.id).totalCommittedWithoutDelegators(), role: nodeRecord.role)
             {
-                proposedNodeIDs[nodeID] = nil
+                proposedNodeIDs[nodeID] = true
             }
         }
         return proposedNodeIDs.keys
@@ -1818,5 +1858,4 @@ pub contract FlowIDTableStaking {
         self.account.save(<-create Admin(), to: self.StakingAdminStoragePath)
     }
 }
- 
  
