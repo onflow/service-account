@@ -21,7 +21,20 @@ transaction(slotLimits: {UInt8: UInt16}, code: String) {
         stakingAccount.save(slotLimits, to: /storage/flowStakingSlotLimits)
 
         // Initialize the Moves pending list
+        // For the first epoch, we just set all nodes and delegators as pending
+        // Even though they are set, the moveTokens method will stil skip them
         let movesPendingList: {String: {UInt32: Bool}} = {}
+        let nodeIDs = FlowIDTableStaking.getNodeIDs()
+        for nodeID in nodeIDs {
+            let nodeInfo = FlowIDTableStaking.NodeInfo(nodeID: nodeID)
+
+            let delegatorPendingMoves: {UInt32: Bool} = {}
+            for delegator in nodeInfo.delegators {
+                delegatorPendingMoves[delegator] = true
+            }
+
+            movesPendingList[nodeID] = delegatorPendingMoves
+        }
         stakingAccount.save<{String: {UInt32: Bool}}>(movesPendingList, to: /storage/idTableMovesPendingList)
 
         // Initialize the candidate Node Limits List
