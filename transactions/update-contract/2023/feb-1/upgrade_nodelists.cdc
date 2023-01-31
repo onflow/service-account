@@ -21,8 +21,6 @@ transaction(slotLimits: {UInt8: UInt16}, code: String) {
         stakingAccount.save(slotLimits, to: /storage/flowStakingSlotLimits)
 
         // Initialize the Moves pending list
-        // For the first epoch, we just set all nodes and delegators as pending
-        // Even though they are set, the moveTokens method will stil skip them
         let movesPendingList: {String: {UInt32: Bool}} = {}
         let nodeIDs = FlowIDTableStaking.getNodeIDs()
         for nodeID in nodeIDs {
@@ -40,7 +38,7 @@ transaction(slotLimits: {UInt8: UInt16}, code: String) {
         // Initialize the candidate Node Limits List
         // Currently, only access nodes are allowed as candidate nodes
         // because the other node roles are approval only
-        let candidateNodeLimits: {UInt8: UInt64} = {1: 0, 2: 0, 3: 0, 4: 0, 5: 1000}
+        let candidateNodeLimits: {UInt8: UInt64} = {1: 1, 2: 1, 3: 1, 4: 1, 5: 1000}
         stakingAccount.save<{UInt8: UInt64}>(candidateNodeLimits, to: /storage/idTableCandidateNodeLimits)
 
         // Borrow the admin to set minimum stake requirement for access nodes
