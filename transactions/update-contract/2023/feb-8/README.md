@@ -40,7 +40,7 @@ Used this to generate args:
 ## Dapper Labs Builds
 
 ```sh
-flow transactions build ./templates/upgrade_nodelists.cdc \
+flow transactions build ./transactions/update-contract/2023/feb-8/upgrade_nodelists.cdc \
   --config-path flow-staking.json \
   --network mainnet \
   --args-json "$(cat "./transactions/update-contract/2023/feb-8/arguments-update-contract-FlowIDTableStaking-mainnet.json")" \
