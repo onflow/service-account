@@ -13,3 +13,5 @@ Used this to generate args:
 
 `cat "./FlowStorageFees.cdc" | xxd -p -c0 | tr -d '\n'`
 
+## Result
+https://flowscan.org/transaction/611d7fcfe23473e3b064017cee0e86586ee0fa5af48efffdae039aed11c8c208
