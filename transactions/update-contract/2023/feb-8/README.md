@@ -19,14 +19,14 @@ Used this to generate args:
 ## Sequence of signing: 
 1. Vishal generates the Tx
 2. Round one - Signing for staking account
-   1. Kshitij signs with flow-staking.json
-   2. Justin Signs with flow-staking.json
-   3. Bjarte Signs with flow-staking.json
+   1. Bjarte signs with flow-staking.json
+   2. Josh Signs with flow-staking.json
+   3. Alex Signs with flow-staking.json
    4. Vishal Signs with flow-staking.json
 3. Round two - - Signing for service account
-   1. Kshitij signs with flow.json
-   2. Justin Signs with flow.json
-   3. Bjarte Signs with flow.json
+   1. Bjarte signs with flow.json
+   2. Josh Signs with flow.json
+   3. Alex Signs with flow.json
    4. Vishal Signs with flow.json
 4. Vishal submits the transaction
 
@@ -55,7 +55,7 @@ flow transactions build ./transactions/update-contract/2023/feb-8/upgrade_nodeli
 
 ## Staking Account
 
-## Kshitij Signs
+## Bjarte Signs
 
 Pull the transaction from git
 ```sh
@@ -66,7 +66,7 @@ Sign the transaction using Google Auth
 ```sh
 flow transactions sign ./transactions/update-contract/2023/feb-8/upgrade-nodelists-feb-8-unsigned.rlp \
   --config-path flow-staking.json \
-  --signer kshitij \
+  --signer find \
   --filter payload \
   --save ./transactions/update-contract/2023/feb-8/upgrade-nodelists-feb-8-sig-1.rlp
 ```
@@ -76,7 +76,7 @@ Push the vote to git
 git add .;git commit -m "upgrade staking for feb-8";git push origin main
 ```
 
-## Justin Signs
+## Josh Signs
 
 Pull the transaction from git
 ```sh
@@ -87,7 +87,7 @@ Sign the transaction using Google Auth
 ```sh
 flow transactions sign ./transactions/update-contract/2023/feb-8/upgrade-nodelists-feb-8-sig-1.rlp \
   --config-path flow-staking.json \
-  --signer justin \
+  --signer josh \
   --filter payload \
   --save ./transactions/update-contract/2023/feb-8/upgrade-nodelists-feb-8-sig-2.rlp
 ```
@@ -97,7 +97,7 @@ Push the vote to git
 git add .;git commit -m "upgrade staking for feb-8";git push origin main
 ```
 
-## Bjarte Signs
+## Alex Signs
 
 Pull the transaction from git
 ```sh
@@ -108,7 +108,7 @@ Sign the transaction using Google Auth
 ```sh
 flow transactions sign ./transactions/update-contract/2023/feb-8/upgrade-nodelists-feb-8-sig-2.rlp \
   --config-path flow-staking.json \
-  --signer bjarte \
+  --signer alexgrach \
   --filter payload \
   --save ./transactions/update-contract/2023/feb-8/upgrade-nodelists-feb-8-sig-3.rlp
 ```
@@ -142,7 +142,7 @@ git add .;git commit -m "upgrade staking for feb-8";git push origin main
 ---
 
 ## Service Account
-## Kshitij Signs
+## Bjarte Signs
 
 Pull the transaction from git
 ```sh
@@ -153,7 +153,7 @@ Sign the transaction using Google Auth
 ```sh
 flow transactions sign ./transactions/update-contract/2023/feb-8/upgrade-nodelists-feb-8-sig-4.rlp \
   --config-path flow.json \
-  --signer XXX \
+  --signer find \
   --filter payload \
   --save ./transactions/update-contract/2023/feb-8/upgrade-nodelists-feb-8-sig-5.rlp
 ```
@@ -163,7 +163,7 @@ Push the vote to git
 git add .;git commit -m "upgrade staking for feb-8";git push origin main
 ```
 
-## Justin Signs
+## Josh Signs
 
 Pull the transaction from git
 ```sh
@@ -174,7 +174,7 @@ Sign the transaction using Google Auth
 ```sh
 flow transactions sign ./transactions/update-contract/2023/feb-8/upgrade-nodelists-feb-8-sig-5.rlp \
   --config-path flow.json \
-  --signer peter \
+  --signer josh \
   --filter payload \
   --save ./transactions/update-contract/2023/feb-8/upgrade-nodelists-feb-8-sig-6.rlp
 ```
@@ -185,12 +185,12 @@ Push the vote to git
 git add .;git commit -m "upgrade staking for feb-8";git push origin main
 ```
 
-## Bjarte Signs
+## Alex Signs
 
 ```sh
 flow transactions sign ./transactions/update-contract/2023/feb-8/upgrade-nodelists-feb-8-sig-6.rlp \
   --config-path flow.json \
-  --signer bjarte \
+  --signer alexgrach \
   --filter payload \
   --save ./transactions/update-contract/2023/feb-8/upgrade-nodelists-feb-8-sig-7.rlp
 ```
