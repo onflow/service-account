@@ -14,8 +14,8 @@
  * 
  */
 
-import FungibleToken from 0xFUNGIBLETOKENADDRESS
-import FlowToken from 0xFLOWTOKENADDRESS
+import FungibleToken from 0xf233dcee88fe0abe
+import FlowToken from 0x1654653399040a61
 
 pub contract FlowStorageFees {
 
