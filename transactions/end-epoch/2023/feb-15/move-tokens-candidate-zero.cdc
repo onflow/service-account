@@ -9,8 +9,11 @@ transaction {
     let adminRef: &FlowIDTableStaking.Admin
 
     prepare(acct: AuthAccount) {
+        let adminCapability = acct.copy<Capability>(from: FlowIDTableStaking.StakingAdminStoragePath)
+            ?? panic("Could not get capability from account storage")
+
         // borrow a reference to the admin object
-        self.adminRef = acct.borrow<&FlowIDTableStaking.Admin>(from: FlowIDTableStaking.StakingAdminStoragePath)
+        self.adminRef = adminCapability.borrow<&FlowIDTableStaking.Admin>()
             ?? panic("Could not borrow reference to staking admin")
     }
 
