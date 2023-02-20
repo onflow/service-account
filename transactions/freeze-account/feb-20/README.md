@@ -30,4 +30,4 @@ flow transactions build ./templates/capability_pay_rewards.cdc \
 ## Results
 
 
-https://flowscan.org/transaction/fc1320e76188ae9b7e62af3027e41606a69c344a219157059bd70fec08f66dfc
+https://flowscan.org/transaction/6fcb4c9d584b1f0bf1e8fb546628ea8a7e614d2d289c0dcc9c8fbae8343c7261
