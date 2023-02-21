@@ -145,7 +145,7 @@ Sign the transaction using Google Auth
 ```sh
 flow transactions sign ./transactions/reset-epoch/2023/feb-23/reset-epoch-feb-23-sig-4.rlp \
   --config-path flow.json \
-  --signer XXX \
+  --signer kshitij \
   --filter payload \
   --save ./transactions/reset-epoch/2023/feb-23/reset-epoch-feb-23-sig-5.rlp
 ```
@@ -166,7 +166,7 @@ Sign the transaction using Google Auth
 ```sh
 flow transactions sign ./transactions/reset-epoch/2023/feb-23/reset-epoch-feb-23-sig-5.rlp \
   --config-path flow.json \
-  --signer peter \
+  --signer justin \
   --filter payload \
   --save ./transactions/reset-epoch/2023/feb-23/reset-epoch-feb-23-sig-6.rlp
 ```

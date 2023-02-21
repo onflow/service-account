@@ -1,11 +1,11 @@
 [
 	{
 		"type":"UInt64",
-		"value":"59"
+		"value":""
 	},
 	{
 		"type":"String",
-		"value":"6bbf87f18f42db1de550f29e915e5986"
+		"value":""
 	},
 	{
 		"type":"Optional",
@@ -17,10 +17,10 @@
 	},
 	{
 		"type":"UInt64",
-		"value":"426399"
+		"value":""
 	},
 	{
 		"type":"UInt64",
-		"value":"447719"
+		"value":""
 	}
 ]
