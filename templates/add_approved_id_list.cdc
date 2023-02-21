@@ -21,6 +21,7 @@ transaction(newApprovedIDs: [String]) {
 
     execute {
 		let existingApprovedIDs = FlowIDTableStaking.getApprovedList()
+			?? panic("Could not load approved list")
 
 		let slotLimits = FlowIDTableStaking.getRoleSlotLimits()
 
