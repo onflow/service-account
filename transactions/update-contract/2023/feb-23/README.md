@@ -48,7 +48,7 @@ flow transactions build ./transactions/update-contract/2023/feb-23/upgrade-set-c
 ```sh
 flow transactions sign ./transactions/update-contract/2023/feb-23/flow-id-table-staking-contract-upgrade-feb-23-unsigned.rlp \
   --config-path flow-staking.json \
-  --signer vishal \
+  --signer josh \
   --filter payload \
   --save ./transactions/update-contract/2023/feb-23/flow-id-table-staking-contract-upgrade-feb-23-sig-1.rlp
 ```
@@ -83,22 +83,11 @@ flow transactions sign ./transactions/update-contract/2023/feb-23/flow-id-table-
   --save ./transactions/update-contract/2023/feb-23/flow-id-table-staking-contract-upgrade-feb-23-sig-4.rlp
 ```
 
-## Contract Admin Signs (do we need this?)
-
-```sh
-flow transactions sign ./transactions/update-contract/2023/feb-23/flow-id-table-staking-contract-upgrade-feb-23-sig-4.rlp \
-  --config-path flow-staking.json \
-  --signer contract-admin \
-  --filter payload \
-  --save ./transactions/update-contract/2023/feb-23/flow-id-table-staking-contract-upgrade-feb-23-sig-complete.rlp
-```
-
 ## Somebody Submits
 
 ```sh
 flow transactions send-signed --config-path flow-staking.json --network mainnet ./transactions/update-contract/2023/feb-23/flow-id-table-staking-contract-upgrade-feb-23-sig-4.rlp
 ```
-
 
 ## Results
 
