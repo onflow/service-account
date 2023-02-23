@@ -1,6 +1,6 @@
 # Add Approved Node Operators ID List
 
-> Feb 23rd, 2023
+> March 1st, 2023
 Two Consensus node - BlockDaemon (Node IDs: 5a4bff17941a73909472afe23f1ccdc59d7526f93b16b4e374bd8353f8b624b4 & d98755f4ae8bef3f372889c4d7010ca784ea6da46fdde63d27ee57b2bf5efdd7)
 
 ## New method using Multisign tool
