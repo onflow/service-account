@@ -35,7 +35,7 @@ flow transactions build ./transactions/update-contract/2023/feb-23/upgrade-set-c
   --config-path flow-staking.json \
   --network mainnet \
   --args-json "$(cat "./transactions/update-contract/2023/feb-23/arguments-update-contract-FlowIDTableStaking-mainnet.json")" \
-  --proposer 0x8d0f8df62029f75a \
+  --proposer 0x8624b52f9ddcd04a \
   --proposer-key-index 0 \
   --authorizer 0x8624b52f9ddcd04a \
   --payer 0x8624b52f9ddcd04a \
