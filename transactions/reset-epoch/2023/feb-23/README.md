@@ -14,13 +14,13 @@ Currently, the [multi-sign vercel app](https://flow-multisig-git-service-account
    1. Josh signs with flow-staking.json
    2. Justin Signs with flow-staking.json
    3. Emerson Signs with flow-staking.json
-   4. Kan Signs with flow-staking.json
+   4. Vishal Signs with flow-staking.json
 3. Roune two - - Signing for service account
    1. Josh signs with flow.json
    2. Justin Signs with flow.json
    3. Emerson Signs with flow.json
-   4. Kan Signs with flow.json
-4. Kan submits the transaction
+   4. Vishal Signs with flow.json
+4. Vishal submits the transaction
 
 ## Prerequisites
 1. Latest version of the [flow-cli](https://developers.flow.com/tools/flow-cli).
@@ -47,7 +47,7 @@ flow transactions build ./templates/reset_epoch_with_end_staking_auction.cdc \
 
 ## Staking Account
 
-## Kan Signs
+## Josh Signs
 
 Pull the transaction from git
 ```sh
@@ -110,7 +110,7 @@ Push the vote to git
 git add .;git commit -m "reset epoch transaction for feb-23";git push origin main
 ```
 
-## Kan Signs
+## Vishal Signs
 
 Pull the transaction from git
 ```sh
@@ -121,7 +121,7 @@ Sign the transaction using Google Auth
 ```sh
 flow transactions sign ./transactions/reset-epoch/2023/feb-23/reset-epoch-feb-23-sig-3.rlp \
   --config-path flow-staking.json \
-  --signer kan \
+  --signer vishal \
   --filter payload \
   --save ./transactions/reset-epoch/2023/feb-23/reset-epoch-feb-23-sig-4.rlp
 ```
@@ -192,7 +192,7 @@ Push the vote to git
 git add .;git commit -m "reset epoch transaction for feb-23";git push origin main
 ```
 
-## Kan Signs
+## Vishal Signs
 
 Pull the transaction from git
 ```sh
@@ -203,12 +203,12 @@ Sign the transaction using Google Auth
 ```sh
 flow transactions sign ./transactions/reset-epoch/2023/feb-23/reset-epoch-feb-23-sig-7.rlp \
   --config-path flow.json \
-  --signer kan \
+  --signer vishal \
   --filter payload \
   --save ./transactions/reset-epoch/2023/feb-23/reset-epoch-feb-23-sig-complete.rlp
 ```
 
-## Kan Submits
+## Vishal Submits
 
 ```sh
 flow transactions send-signed --network mainnet ./transactions/reset-epoch/2023/feb-23/reset-epoch-feb-23-sig-complete.rlp
