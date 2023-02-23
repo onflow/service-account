@@ -63,12 +63,12 @@ flow transactions sign ./transactions/update-contract/2023/feb-23/flow-id-table-
   --save ./transactions/update-contract/2023/feb-23/flow-id-table-staking-contract-upgrade-feb-23-sig-2.rlp
 ```
 
-## Alex Signs
+## Justin Signs
 
 ```sh
 flow transactions sign ./transactions/update-contract/2023/feb-23/flow-id-table-staking-contract-upgrade-feb-23-sig-2.rlp \
   --config-path flow-staking.json \
-  --signer alexgrach \
+  --signer justin \
   --filter payload \
   --save ./transactions/update-contract/2023/feb-23/flow-id-table-staking-contract-upgrade-feb-23-sig-3.rlp
 ```
