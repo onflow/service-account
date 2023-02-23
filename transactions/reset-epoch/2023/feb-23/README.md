@@ -12,12 +12,12 @@ Currently, the [multi-sign vercel app](https://flow-multisig-git-service-account
 1. Kan generates the Tx
 2. Round one - Signing for staking account
    1. Josh signs with flow-staking.json
-   2. Alex Signs with flow-staking.json
+   2. Justin Signs with flow-staking.json
    3. Emerson Signs with flow-staking.json
    4. Kan Signs with flow-staking.json
 3. Roune two - - Signing for service account
    1. Josh signs with flow.json
-   2. Alex Signs with flow.json
+   2. Justin Signs with flow.json
    3. Emerson Signs with flow.json
    4. Kan Signs with flow.json
 4. Kan submits the transaction
@@ -68,7 +68,7 @@ Push the vote to git
 git add .;git commit -m "reset epoch transaction for feb-23";git push origin main
 ```
 
-## Alex Signs
+## Justin Signs
 
 Pull the transaction from git
 ```sh
@@ -79,7 +79,7 @@ Sign the transaction using Google Auth
 ```sh
 flow transactions sign ./transactions/reset-epoch/2023/feb-23/reset-epoch-feb-23-sig-1.rlp \
   --config-path flow-staking.json \
-  --signer alexgrach \
+  --signer justin \
   --filter payload \
   --save ./transactions/reset-epoch/2023/feb-23/reset-epoch-feb-23-sig-2.rlp
 ```
@@ -155,7 +155,7 @@ Push the vote to git
 git add .;git commit -m "reset epoch transaction for feb-23";git push origin main
 ```
 
-## Alex Signs
+## Justin Signs
 
 Pull the transaction from git
 ```sh
@@ -166,7 +166,7 @@ Sign the transaction using Google Auth
 ```sh
 flow transactions sign ./transactions/reset-epoch/2023/feb-23/reset-epoch-feb-23-sig-5.rlp \
   --config-path flow.json \
-  --signer alexgrach \
+  --signer justin \
   --filter payload \
   --save ./transactions/reset-epoch/2023/feb-23/reset-epoch-feb-23-sig-6.rlp
 ```
