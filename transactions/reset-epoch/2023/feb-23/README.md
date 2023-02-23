@@ -9,18 +9,18 @@ The ResetEpoch transaction however needs to be proposed by the staking contract 
 Currently, the [multi-sign vercel app](https://flow-multisig-git-service-account-onflow.vercel.app/mainnet) does not support transactions with different proposer and payer hence we have to execute this via the old method using the flow-cli.
 
 ## Sequence of signing: 
-1. Vishal generates the Tx
+1. Kan generates the Tx
 2. Round one - Signing for staking account
-   1. Kshitij signs with flow-staking.json
-   2. Justin Signs with flow-staking.json
-   3. Bjarte Signs with flow-staking.json
-   4. Vishal Signs with flow-staking.json
+   1. Josh signs with flow-staking.json
+   2. Alex Signs with flow-staking.json
+   3. Emerson Signs with flow-staking.json
+   4. Kan Signs with flow-staking.json
 3. Roune two - - Signing for service account
-   1. Kshitij signs with flow.json
-   2. Justin Signs with flow.json
-   3. Bjarte Signs with flow.json
-   4. Vishal Signs with flow.json
-4. Vishal submits the transaction
+   1. Josh signs with flow.json
+   2. Alex Signs with flow.json
+   3. Emerson Signs with flow.json
+   4. Kan Signs with flow.json
+4. Kan submits the transaction
 
 ## Prerequisites
 1. Latest version of the [flow-cli](https://developers.flow.com/tools/flow-cli).
@@ -47,7 +47,7 @@ flow transactions build ./templates/reset_epoch_with_end_staking_auction.cdc \
 
 ## Staking Account
 
-## Kshitij Signs
+## Kan Signs
 
 Pull the transaction from git
 ```sh
@@ -58,7 +58,7 @@ Sign the transaction using Google Auth
 ```sh
 flow transactions sign ./transactions/reset-epoch/2023/feb-23/reset-epoch-feb-23-unsigned.rlp \
   --config-path flow-staking.json \
-  --signer kshitij \
+  --signer josh \
   --filter payload \
   --save ./transactions/reset-epoch/2023/feb-23/reset-epoch-feb-23-sig-1.rlp
 ```
@@ -68,7 +68,7 @@ Push the vote to git
 git add .;git commit -m "reset epoch transaction for feb-23";git push origin main
 ```
 
-## Justin Signs
+## Alex Signs
 
 Pull the transaction from git
 ```sh
@@ -79,7 +79,7 @@ Sign the transaction using Google Auth
 ```sh
 flow transactions sign ./transactions/reset-epoch/2023/feb-23/reset-epoch-feb-23-sig-1.rlp \
   --config-path flow-staking.json \
-  --signer justin \
+  --signer alexgrach \
   --filter payload \
   --save ./transactions/reset-epoch/2023/feb-23/reset-epoch-feb-23-sig-2.rlp
 ```
@@ -89,7 +89,7 @@ Push the vote to git
 git add .;git commit -m "reset epoch transaction for feb-23";git push origin main
 ```
 
-## Bjarte Signs
+## Emerson Signs
 
 Pull the transaction from git
 ```sh
@@ -100,7 +100,7 @@ Sign the transaction using Google Auth
 ```sh
 flow transactions sign ./transactions/reset-epoch/2023/feb-23/reset-epoch-feb-23-sig-2.rlp \
   --config-path flow-staking.json \
-  --signer bjarte \
+  --signer animoca \
   --filter payload \
   --save ./transactions/reset-epoch/2023/feb-23/reset-epoch-feb-23-sig-3.rlp
 ```
@@ -110,7 +110,7 @@ Push the vote to git
 git add .;git commit -m "reset epoch transaction for feb-23";git push origin main
 ```
 
-## Vishal Signs
+## Kan Signs
 
 Pull the transaction from git
 ```sh
@@ -121,7 +121,7 @@ Sign the transaction using Google Auth
 ```sh
 flow transactions sign ./transactions/reset-epoch/2023/feb-23/reset-epoch-feb-23-sig-3.rlp \
   --config-path flow-staking.json \
-  --signer vishal \
+  --signer kan \
   --filter payload \
   --save ./transactions/reset-epoch/2023/feb-23/reset-epoch-feb-23-sig-4.rlp
 ```
@@ -134,7 +134,7 @@ git add .;git commit -m "reset epoch transaction for feb-23";git push origin mai
 ---
 
 ## Service Account
-## Kshitij Signs
+## Josh Signs
 
 Pull the transaction from git
 ```sh
@@ -145,7 +145,7 @@ Sign the transaction using Google Auth
 ```sh
 flow transactions sign ./transactions/reset-epoch/2023/feb-23/reset-epoch-feb-23-sig-4.rlp \
   --config-path flow.json \
-  --signer kshitij \
+  --signer josh \
   --filter payload \
   --save ./transactions/reset-epoch/2023/feb-23/reset-epoch-feb-23-sig-5.rlp
 ```
@@ -155,7 +155,7 @@ Push the vote to git
 git add .;git commit -m "reset epoch transaction for feb-23";git push origin main
 ```
 
-## Justin Signs
+## Alex Signs
 
 Pull the transaction from git
 ```sh
@@ -166,7 +166,7 @@ Sign the transaction using Google Auth
 ```sh
 flow transactions sign ./transactions/reset-epoch/2023/feb-23/reset-epoch-feb-23-sig-5.rlp \
   --config-path flow.json \
-  --signer justin \
+  --signer alexgrach \
   --filter payload \
   --save ./transactions/reset-epoch/2023/feb-23/reset-epoch-feb-23-sig-6.rlp
 ```
@@ -177,12 +177,12 @@ Push the vote to git
 git add .;git commit -m "reset epoch transaction for feb-23";git push origin main
 ```
 
-## Bjarte Signs
+## Emerson Signs
 
 ```sh
 flow transactions sign ./transactions/reset-epoch/2023/feb-23/reset-epoch-feb-23-sig-6.rlp \
   --config-path flow.json \
-  --signer bjarte \
+  --signer animoca \
   --filter payload \
   --save ./transactions/reset-epoch/2023/feb-23/reset-epoch-feb-23-sig-7.rlp
 ```
@@ -192,7 +192,7 @@ Push the vote to git
 git add .;git commit -m "reset epoch transaction for feb-23";git push origin main
 ```
 
-## Vishal Signs
+## Kan Signs
 
 Pull the transaction from git
 ```sh
@@ -203,12 +203,12 @@ Sign the transaction using Google Auth
 ```sh
 flow transactions sign ./transactions/reset-epoch/2023/feb-23/reset-epoch-feb-23-sig-7.rlp \
   --config-path flow.json \
-  --signer vishal \
+  --signer kan \
   --filter payload \
   --save ./transactions/reset-epoch/2023/feb-23/reset-epoch-feb-23-sig-complete.rlp
 ```
 
-## Vishal Submits
+## Kan Submits
 
 ```sh
 flow transactions send-signed --network mainnet ./transactions/reset-epoch/2023/feb-23/reset-epoch-feb-23-sig-complete.rlp
