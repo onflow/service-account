@@ -46,7 +46,7 @@ transaction(newApprovedIDs: [String]) {
 		currentAccessSlotLimit = slotLimits[UInt8(5)]
 			?? panic("Could not get access node slot limit")
 
-		slotLimits[UInt8(5)] = currentAccessSlotLimit + 2
+		slotLimits[UInt8(5)] = currentAccessSlotLimit + 7
 
 		// Set new slot limits
 		self.adminRef.setSlotLimits(slotLimits: slotLimits)
