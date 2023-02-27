@@ -1,6 +1,6 @@
 # Add Approved Node Operators ID List
 
-> March 1st, 2023
+> Feb 27th, 2023
 Two Consensus node - BlockDaemon (Node IDs: 5a4bff17941a73909472afe23f1ccdc59d7526f93b16b4e374bd8353f8b624b4 & d98755f4ae8bef3f372889c4d7010ca784ea6da46fdde63d27ee57b2bf5efdd7)
 
 ## New method using Multisign tool
@@ -20,59 +20,59 @@ Two Consensus node - BlockDaemon (Node IDs: 5a4bff17941a73909472afe23f1ccdc59d75
 flow transactions build ./templates/add_approved_id_list.cdc \
   --config-path flow-staking.json \
   --network mainnet \
-  --args-json "$(cat "./transactions/set-approved-id-list/2023/jan-25/arguments.json")" \
+  --args-json "$(cat "./transactions/set-approved-id-list/2023/feb-27/arguments.json")" \
   --proposer 0x8624b52f9ddcd04a \
   --proposer-key-index 5 \
   --authorizer 0x8624b52f9ddcd04a \
   --payer 0x8624b52f9ddcd04a \
   -x payload \
-  --save ./transactions/set-approved-id-list/2023/jan-25/add-approved-list-jan-25-unsigned.rlp
+  --save ./transactions/set-approved-id-list/2023/feb-27/add-approved-list-feb-27-unsigned.rlp
 ```
 
 ### Kan Signs
 
 ```sh
-flow transactions sign ./transactions/set-approved-id-list/2023/jan-25/add-approved-list-jan-25-unsigned.rlp \
+flow transactions sign ./transactions/set-approved-id-list/2023/feb-27/add-approved-list-feb-27-unsigned.rlp \
   --config-path flow-staking.json \
   --signer vishal \
   --filter payload \
-  --save ./transactions/set-approved-id-list/2023/jan-25/add-approved-list-jan-25-sig-1.rlp
+  --save ./transactions/set-approved-id-list/2023/feb-27/add-approved-list-feb-27-sig-1.rlp
 ```
 
 ### Emerson Signs
 
 ```sh
-flow transactions sign ./transactions/set-approved-id-list/2023/jan-25/add-approved-list-jan-25-sig-1.rlp \
+flow transactions sign ./transactions/set-approved-id-list/2023/feb-27/add-approved-list-feb-27-sig-1.rlp \
   --config-path flow-staking.json \
   --signer animoca \
   --filter payload \
-  --save ./transactions/set-approved-id-list/2023/jan-25/add-approved-list-jan-25-sig-2.rlp
+  --save ./transactions/set-approved-id-list/2023/feb-27/add-approved-list-feb-27-sig-2.rlp
 ```
 
 ### Justin Signs
 
 ```sh
-flow transactions sign ./transactions/set-approved-id-list/2023/jan-25/add-approved-list-jan-25-sig-2.rlp \
+flow transactions sign ./transactions/set-approved-id-list/2023/feb-27/add-approved-list-feb-27-sig-2.rlp \
   --config-path flow-staking.json \
   --signer justin \
   --filter payload \
-  --save ./transactions/set-approved-id-list/2023/jan-25/add-approved-list-jan-25-sig-3.rlp
+  --save ./transactions/set-approved-id-list/2023/feb-27/add-approved-list-feb-27-sig-3.rlp
 ```
 
 ### Josh Signs
 
 ```sh
-flow transactions sign ./transactions/set-approved-id-list/2023/jan-25/add-approved-list-jan-25-sig-3.rlp \
+flow transactions sign ./transactions/set-approved-id-list/2023/feb-27/add-approved-list-feb-27-sig-3.rlp \
   --config-path flow-staking.json \
   --signer josh \
   --filter payload \
-  --save ./transactions/set-approved-id-list/2023/jan-25/add-approved-list-jan-25-sig-complete.rlp
+  --save ./transactions/set-approved-id-list/2023/feb-27/add-approved-list-feb-27-sig-complete.rlp
 ```
 
 ### Kan Submits
 
 ```sh
-flow transactions send-signed --network mainnet --config-path flow-staking.json ./transactions/set-approved-id-list/2023/jan-25/add-approved-list-jan-25-sig-complete.rlp
+flow transactions send-signed --network mainnet --config-path flow-staking.json ./transactions/set-approved-id-list/2023/feb-27/add-approved-list-feb-27-sig-complete.rlp
 ```
 
 ## Results
