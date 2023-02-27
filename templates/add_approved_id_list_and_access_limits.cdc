@@ -43,7 +43,7 @@ transaction(newApprovedIDs: [String]) {
 		// set the approved list to the union of existing and new node IDs
         self.adminRef.setApprovedList(existingApprovedIDs)
 
-		currentAccessSlotLimit = slotLimits[UInt8(5)]
+		let currentAccessSlotLimit = slotLimits[UInt8(5)]
 			?? panic("Could not get access node slot limit")
 
 		slotLimits[UInt8(5)] = currentAccessSlotLimit + 6
