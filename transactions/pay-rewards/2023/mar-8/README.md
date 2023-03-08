@@ -7,7 +7,7 @@ Node ID: d98755f4ae8bef3f372889c4d7010ca784ea6da46fdde63d27ee57b2bf5efdd7
 
 ## New method using Flow CLI multi-sign
 
-1. DapperLabs generates the Signature Request ID on the [site](https://flow-multisig-git-service-account-onflow.vercel.app/mainnet?type=serviceAccount&name=capability_pay_rewards.cdc&param=%5B%7B%22type%22:%22UFix64%22,%22value%22:%221323975.0%22%7D,%7B%22type%22:%22Dictionary%22,%22value%22:%5B%7B%22key%22:%7B%22type%22:%22String%22,%22value%22:%223b57e0ee2ece1f1dbefbd868d3eaac63b32a11df5b1a37d231145ea219055dde%22%7D,%22value%22:%7B%22type%22:%22UFix64%22,%22value%22:%220.5%22%7D%7D,%7B%22key%22:%7B%22type%22:%22String%22,%22value%22:%22d98755f4ae8bef3f372889c4d7010ca784ea6da46fdde63d27ee57b2bf5efdd7%22%7D,%22value%22:%7B%22type%22:%22UFix64%22,%22value%22:%220.5%22%7D%7D%5D%7D%5D&acct=0xe467b9dd11fa00df&limit=1000000) for the `capability_rewards_pay.cdc` transaction with the given args.
+1. DapperLabs generates the Signature Request ID on the [site](https://flow-multisig-git-service-account-onflow.vercel.app/mainnet?type=serviceAccount&name=capability_pay_rewards.cdc&param=%5B%7B%22type%22:%22UFix64%22,%22value%22:%221325218.0%22%7D,%7B%22type%22:%22Dictionary%22,%22value%22:%5B%7B%22key%22:%7B%22type%22:%22String%22,%22value%22:%223b57e0ee2ece1f1dbefbd868d3eaac63b32a11df5b1a37d231145ea219055dde%22%7D,%22value%22:%7B%22type%22:%22UFix64%22,%22value%22:%220.5%22%7D%7D,%7B%22key%22:%7B%22type%22:%22String%22,%22value%22:%22d98755f4ae8bef3f372889c4d7010ca784ea6da46fdde63d27ee57b2bf5efdd7%22%7D,%22value%22:%7B%22type%22:%22UFix64%22,%22value%22:%220.5%22%7D%7D%5D%7D%5D&acct=0xe467b9dd11fa00df&limit=1000000) for the `capability_rewards_pay.cdc` transaction with the given args.
 
 2. Signers sign with flow cli specifying the Signature Request ID
 `bash multisig.sh -f flow.json <Signature Request ID>`
@@ -70,4 +70,4 @@ flow transactions send-signed --network mainnet ./transactions/pay-rewards/2023/
 ## Results
 
 
-https://flowscan.org/transaction/
+https://flowscan.org/transaction/35cbbe6e38571c067867325ef11914f02e35450ee11fb9ef233927e222560842
