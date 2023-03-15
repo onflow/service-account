@@ -16,4 +16,8 @@ Increases the slot limit for Access nodes by 5
 
 ## Results
 
-https://flowscan.org/transaction/
+
+Failed attempt: https://flowscan.org/transaction/cf800ad347b627aaffb545ba4cf6fd5589fa3f7461f8c461c0f621e8ed7be4a6
+Failed because of a Cadence error in the transaction.
+
+Successful attempt: https://flowscan.org/transaction/d8ebb3eb3d146656d957dbfabda9d77e32c9e52eba2405326a16a41fbcc2a7c0
