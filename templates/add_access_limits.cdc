@@ -3,7 +3,7 @@ import FlowIDTableStaking from 0x8624b52f9ddcd04a
 /// This transaction increments the access node slot limit by additionalAccessSlots
 /// Final access node slot limit will be current access node slot limit plus additionalAccessSlots
 
-transaction(additionalAccessSlots: UInt8) {
+transaction(additionalAccessSlots: UInt16) {
 
     // Local variable for a reference to the ID Table Admin object
     let adminRef: &FlowIDTableStaking.Admin
