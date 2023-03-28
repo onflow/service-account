@@ -21,4 +21,5 @@
 
 ## Results
 
-https://flowscan.org/transaction/
+Failed attempt: https://flowscan.org/transaction/5f6f9170917e0c06273056c40c4b6be1c40c751b8daec022721e70c53d4525b9
+Successful attempt: https://flowscan.org/transaction/7e67dd192902dbb9f9e65a7dfcfea735137f94aec9a48899e2f8ea0abc933b8f/
