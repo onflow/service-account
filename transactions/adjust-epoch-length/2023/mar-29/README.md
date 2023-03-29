@@ -1,6 +1,6 @@
 # Adjust Epoch Length
 
-> March 29th, 2023
+> March 30th, 2023
 
 ## Dapper Labs Builds
 
