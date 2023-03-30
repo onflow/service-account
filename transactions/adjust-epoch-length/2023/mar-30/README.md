@@ -69,4 +69,4 @@ flow transactions send-signed --network mainnet --config-path flow-staking.json 
 
 ## Results
 
-<<TODO transaction ID and link>>
+https://flowscan.org/transaction/cece34d2bbb36ea754873f7e4a7104d969f0f6f0e0c7d16ac5aea29980685855
