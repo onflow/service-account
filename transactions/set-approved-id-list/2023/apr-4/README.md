@@ -6,7 +6,6 @@
 `5a4bff17941a73909472afe23f1ccdc59d7526f93b16b4e374bd8353f8b624b4`
 
 
-2. Increases the slot limit for Access nodes to allow the one that was removed to be staked.
 
 ## Using Multisign tool
 
