@@ -31,7 +31,7 @@ $ diff /tmp/temp.txt NodeVersionBeacon.cdc
 
 ```sh
 flow transactions build ./templates/deploy_contract_node_version_beacon.cdc \
-  --config-path flow-staking.json \
+  --config-path flow.json \
   --network mainnet \
   --args-json "$(cat "./transactions/node-version-beacon/2023/apr-24/arguments.json")" \
   --proposer 0xe467b9dd11fa00df \
@@ -46,7 +46,7 @@ flow transactions build ./templates/deploy_contract_node_version_beacon.cdc \
 
 ```sh
 flow transactions sign ./transactions/node-version-beacon/2023/apr-24/deploy_contract_node_version_beacon-apr-24-unsigned.rlp \
-  --config-path flow-staking.json \
+  --config-path flow.json \
   --signer josh \
   --filter payload \
   --save ./transactions/node-version-beacon/2023/apr-24/deploy_contract_node_version_beacon-apr-24-sig-1.rlp
@@ -56,7 +56,7 @@ flow transactions sign ./transactions/node-version-beacon/2023/apr-24/deploy_con
 
 ```sh
 flow transactions sign ./transactions/node-version-beacon/2023/apr-24/deploy_contract_node_version_beacon-apr-24-sig-1.rlp \
-  --config-path flow-staking.json \
+  --config-path flow.json \
   --signer find \
   --filter payload \
   --save ./transactions/node-version-beacon/2023/apr-24/deploy_contract_node_version_beacon-apr-24-sig-2.rlp
@@ -66,7 +66,7 @@ flow transactions sign ./transactions/node-version-beacon/2023/apr-24/deploy_con
 
 ```sh
 flow transactions sign ./transactions/node-version-beacon/2023/apr-24/deploy_contract_node_version_beacon-apr-24-sig-2.rlp \
-  --config-path flow-staking.json \
+  --config-path flow.json \
   --signer chris \
   --filter payload \
   --save ./transactions/node-version-beacon/2023/apr-24/deploy_contract_node_version_beacon-apr-24-sig-3.rlp
@@ -76,7 +76,7 @@ flow transactions sign ./transactions/node-version-beacon/2023/apr-24/deploy_con
 
 ```sh
 flow transactions sign ./transactions/node-version-beacon/2023/apr-24/deploy_contract_node_version_beacon-apr-24-sig-3.rlp \
-  --config-path flow-staking.json \
+  --config-path flow.json \
   --signer vishal \
   --filter payload \
   --save ./transactions/node-version-beacon/2023/apr-24/deploy_contract_node_version_beacon-apr-24-sig-4.rlp
@@ -85,7 +85,7 @@ flow transactions sign ./transactions/node-version-beacon/2023/apr-24/deploy_con
 ## Somebody Submits
 
 ```sh
-flow transactions send-signed --config-path flow-staking.json --network mainnet ./transactions/node-version-beacon/2023/apr-24/deploy_contract_node_version_beacon-apr-24-sig-4.rlp
+flow transactions send-signed --config-path flow.json --network mainnet ./transactions/node-version-beacon/2023/apr-24/deploy_contract_node_version_beacon-apr-24-sig-4.rlp
 ```
 
 ## Results
