@@ -1,6 +1,6 @@
 # Deploy Node Version Beacon Contract
 
-> April 24, 2023
+> April 24th, 2023
 
 [pull request](https://github.com/onflow/service-account/pull/235)
 
