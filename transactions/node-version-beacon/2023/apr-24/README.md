@@ -2,13 +2,36 @@
 
 > April 24th, 2023
 
-[site](https://flow-multisig-git-service-account-onflow.vercel.app/mainnet?type=serviceAccount&name=deploy_contract_node_version_beacon.cdc&param=%5B%20%09%7B%20%09%09%22type%22:%20%22UInt64%22,%20%09%09%22value%22:%20%222000%22%20%09%7D,%20%09%7B%20%09%09%22type%22:%20%22UInt64%22,%20%09%09%22value%22:%20%22460000%22%20%09%7D,%20%09%7B%20%09%09%22type%22:%20%22UInt64%22,%20%09%09%22value%22:%20%22483000%22%20%09%7D%20%5D&acct=0x8624b52f9ddcd04a&limit=9999)
+[pull request](https://github.com/onflow/service-account/pull/235)
+
+## Transaction
+
+
+| Contract                                                                                           | Arguments                                                                                      | Multisig Link   | Transaction |
+|----------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|-----------------|-------------|
+| [deploy_contract_node_version_beacon.cdc](../../../../templates/deploy_contract_node_version_beacon.cdc) | [arguments.json](./arguments.json) | [Update Contract](https://flow-multisig-git-service-account-onflow.vercel.app/mainnet) | [Sealed Transaction](https://flowscan.org/transaction/) |
+
+
+
+Used this to generate args:
+
+`cat "../../../../templates/deploy_contract_node_version_beacon.cdc" | xxd -p -c0 | tr -d '\n'`
+
+Verified using:
+```
+$ cat arguments.json | jq '.[] | .value' | xxd -r -p > /tmp/temp.txt
+$ diff /tmp/temp.txt NodeVersionBeacon.cdc
+(Should produce no difference)
+```
+
+> Tools is unable to generate the link since the argument content is too large. We will have to do this using the old way using `flow cli`
 
 ## Fallback (if signing using the site does not work)
 ### Dapper Labs Builds
 
 ```sh
 flow transactions build ./templates/deploy_contract_node_version_beacon.cdc \
+  --config-path flow.json \
   --network mainnet \
   --args-json "$(cat "./transactions/node-version-beacon/2023/apr-24/arguments.json")" \
   --proposer 0xe467b9dd11fa00df \
@@ -16,11 +39,55 @@ flow transactions build ./templates/deploy_contract_node_version_beacon.cdc \
   --authorizer 0xe467b9dd11fa00df \
   --payer 0xe467b9dd11fa00df \
   -x payload \
-  --save ./transactions/node-version-beacon/2023/apr-24/deploy-contract-node-version-beacon-unsigned.rlp
+  --save ./transactions/node-version-beacon/2023/apr-24/deploy_contract_node_version_beacon-unsigned.rlp
+```
+
+## Josh Signs
+
+```sh
+flow transactions sign ./transactions/node-version-beacon/2023/apr-24/deploy_contract_node_version_beacon-unsigned.rlp \
+  --config-path flow.json \
+  --signer josh \
+  --filter payload \
+  --save ./transactions/node-version-beacon/2023/apr-24/deploy_contract_node_version_beacon-sig-1.rlp
+```
+
+## Bjarte Signs
+
+```sh
+flow transactions sign ./transactions/node-version-beacon/2023/apr-24/deploy_contract_node_version_beacon-sig-1.rlp \
+  --config-path flow.json \
+  --signer find \
+  --filter payload \
+  --save ./transactions/node-version-beacon/2023/apr-24/deploy_contract_node_version_beacon-sig-2.rlp
+```
+
+## Chris Signs
+
+```sh
+flow transactions sign ./transactions/node-version-beacon/2023/apr-24/deploy_contract_node_version_beacon-sig-2.rlp \
+  --config-path flow.json \
+  --signer chris \
+  --filter payload \
+  --save ./transactions/node-version-beacon/2023/apr-24/deploy_contract_node_version_beacon-sig-3.rlp
+```
+
+## Vishal Signs
+
+```sh
+flow transactions sign ./transactions/node-version-beacon/2023/apr-24/deploy_contract_node_version_beacon-sig-3.rlp \
+  --config-path flow.json \
+  --signer vishal \
+  --filter payload \
+  --save ./transactions/node-version-beacon/2023/apr-24/deploy_contract_node_version_beacon-sig-4.rlp
 ```
 
 ## Somebody Submits
 
 ```sh
-flow transactions send-signed --network mainnet --config-path flow-staking.json ./transactions/adjust-epoch-length/2023/mar-30/adjust-epoch-length-mar-30-sig-complete.rlp
+flow transactions send-signed --config-path flow.json --network mainnet ./transactions/node-version-beacon/2023/apr-24/deploy_contract_node_version_beacon-sig-4.rlp
 ```
+
+## Results
+
+https://flowscan.org/transaction/
