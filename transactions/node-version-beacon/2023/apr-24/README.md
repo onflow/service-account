@@ -39,53 +39,53 @@ flow transactions build ./templates/deploy_contract_node_version_beacon.cdc \
   --authorizer 0xe467b9dd11fa00df \
   --payer 0xe467b9dd11fa00df \
   -x payload \
-  --save ./transactions/node-version-beacon/2023/apr-24/deploy_contract_node_version_beacon_apr_24-unsigned.rlp
+  --save ./transactions/node-version-beacon/2023/apr-24/deploy_contract_node_version_beacon-unsigned.rlp
 ```
 
 ## Josh Signs
 
 ```sh
-flow transactions sign ./transactions/node-version-beacon/2023/apr-24/deploy_contract_node_version_beacon-apr-24-unsigned.rlp \
+flow transactions sign ./transactions/node-version-beacon/2023/apr-24/deploy_contract_node_version_beacon-unsigned.rlp \
   --config-path flow.json \
   --signer josh \
   --filter payload \
-  --save ./transactions/node-version-beacon/2023/apr-24/deploy_contract_node_version_beacon-apr-24-sig-1.rlp
+  --save ./transactions/node-version-beacon/2023/apr-24/deploy_contract_node_version_beacon-sig-1.rlp
 ```
 
 ## Bjarte Signs
 
 ```sh
-flow transactions sign ./transactions/node-version-beacon/2023/apr-24/deploy_contract_node_version_beacon-apr-24-sig-1.rlp \
+flow transactions sign ./transactions/node-version-beacon/2023/apr-24/deploy_contract_node_version_beacon-sig-1.rlp \
   --config-path flow.json \
   --signer find \
   --filter payload \
-  --save ./transactions/node-version-beacon/2023/apr-24/deploy_contract_node_version_beacon-apr-24-sig-2.rlp
+  --save ./transactions/node-version-beacon/2023/apr-24/deploy_contract_node_version_beacon-sig-2.rlp
 ```
 
 ## Chris Signs
 
 ```sh
-flow transactions sign ./transactions/node-version-beacon/2023/apr-24/deploy_contract_node_version_beacon-apr-24-sig-2.rlp \
+flow transactions sign ./transactions/node-version-beacon/2023/apr-24/deploy_contract_node_version_beacon-sig-2.rlp \
   --config-path flow.json \
   --signer chris \
   --filter payload \
-  --save ./transactions/node-version-beacon/2023/apr-24/deploy_contract_node_version_beacon-apr-24-sig-3.rlp
+  --save ./transactions/node-version-beacon/2023/apr-24/deploy_contract_node_version_beacon-sig-3.rlp
 ```
 
 ## Vishal Signs
 
 ```sh
-flow transactions sign ./transactions/node-version-beacon/2023/apr-24/deploy_contract_node_version_beacon-apr-24-sig-3.rlp \
+flow transactions sign ./transactions/node-version-beacon/2023/apr-24/deploy_contract_node_version_beacon-sig-3.rlp \
   --config-path flow.json \
   --signer vishal \
   --filter payload \
-  --save ./transactions/node-version-beacon/2023/apr-24/deploy_contract_node_version_beacon-apr-24-sig-4.rlp
+  --save ./transactions/node-version-beacon/2023/apr-24/deploy_contract_node_version_beacon-sig-4.rlp
 ```
 
 ## Somebody Submits
 
 ```sh
-flow transactions send-signed --config-path flow.json --network mainnet ./transactions/node-version-beacon/2023/apr-24/deploy_contract_node_version_beacon-apr-24-sig-4.rlp
+flow transactions send-signed --config-path flow.json --network mainnet ./transactions/node-version-beacon/2023/apr-24/deploy_contract_node_version_beacon-sig-4.rlp
 ```
 
 ## Results
