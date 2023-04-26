@@ -3,7 +3,7 @@ import FlowIDTableStaking from 0x8624b52f9ddcd04a
 /// Transaction to upgrade the FlowEpoch contract
 /// and enable automatic staking rewards
 
-transaction(code: String) {
+transaction(bonusTokenAmount: UFix64, code: String) {
 
     prepare(stakingAccount: AuthAccount) {
 
@@ -12,6 +12,9 @@ transaction(code: String) {
             ?? panic("Could not borrow reference to staking admin")
 
         adminRef.updateAutomaticRewardsEnabled(true)
+
+        stakingAccount.load<UFix64>(from: /storage/FlowBonusTokenAmount)
+        stakingAccount.save(bonusTokenAmount, to: /storage/FlowBonusTokenAmount)
         
         stakingAccount.contracts.update__experimental(name: "FlowEpoch", code: code.decodeHex())
     }

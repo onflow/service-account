@@ -1,6 +1,10 @@
 
 [
   {
+    "type": "UFix64",
+    "value": ""
+  },
+  {
     "type": "String",
     "value": ""
   }
