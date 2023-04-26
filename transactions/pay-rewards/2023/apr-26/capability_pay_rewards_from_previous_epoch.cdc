@@ -25,7 +25,7 @@ transaction(newPayout: UFix64) {
 
         let totalPayout = FlowIDTableStaking.getEpochTokenPayout()
 
-        if let previousEpochMetadata = FlowEpoch.getEpochMetadata(self.currentEpochCounter - (1 as UInt64)) {
+        if let previousEpochMetadata = FlowEpoch.getEpochMetadata(FlowEpoch.currentEpochCounter - (1 as UInt64)) {
             assert(
                 previousEpochMetadata.counter == UInt64(72),
                 message: "Previous Epoch counter is incorrect"
