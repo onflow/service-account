@@ -15,11 +15,11 @@ These include changes to enable automated staking rewards.
 
 Used this to generate args:
 
-`cat "./FlowEpoch.cdc" | xxd -p -c0 | tr -d '\n'`
+`cat "./FlowEpoch.cdc" | xxd -p | tr -d '\n'`
 
 Verified using:
 ```
-$ cat arguments.json | jq '.[] | .value' | xxd -r -p > /tmp/temp.txt
+$ cat arguments-update-contract-FlowEpoch-mainnet.json | jq '.[1] | .value' | xxd -r -p > /tmp/temp.txt
 $ diff /tmp/temp.txt FlowEpoch.cdc
 (Should produce no difference)
 ```
