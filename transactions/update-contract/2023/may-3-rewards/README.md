@@ -13,7 +13,7 @@ These include changes to enable automated staking rewards.
 
 [upgrade_and_enable_rewards.cdc](./upgrade_and_enable_rewards.cdc)
 
-Used this to generate args:
+Used this to generate the contract code argument:
 
 `cat "./FlowEpoch.cdc" | xxd -p | tr -d '\n'`
 
@@ -23,6 +23,15 @@ $ cat arguments-update-contract-FlowEpoch-mainnet.json | jq '.[1] | .value' | xx
 $ diff /tmp/temp.txt FlowEpoch.cdc
 (Should produce no difference)
 ```
+
+For the bonus tokens argument, this is where the number came from:
+
+- Original - 65M bonus tokens
+- ~44.1M+ burned in total so far
+- ~20.9M left to be burned
+Of which ~9.6M are in the queue to be burned (sitting in genesis wallet - will never go in circulation)
+11.1M are left to be brought back to the service account
+180,000 were never disbursed (were always in genesis wallet - will never go in circulation)
 
 ## Sequence of signing: 
 
