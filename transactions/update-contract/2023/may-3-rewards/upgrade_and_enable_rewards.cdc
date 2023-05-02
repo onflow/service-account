@@ -7,7 +7,7 @@ transaction(bonusTokenAmount: UFix64, code: String) {
 
     prepare(stakingAccount: AuthAccount) {
 
-        // Borrow the admin to set minimum stake requirement for access nodes
+        // Borrow the admin to enable automatic staking rewards
         let adminRef = stakingAccount.borrow<&FlowIDTableStaking.Admin>(from: FlowIDTableStaking.StakingAdminStoragePath)
             ?? panic("Could not borrow reference to staking admin")
 
