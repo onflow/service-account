@@ -8,7 +8,7 @@ transaction(bonusTokenAmount: UFix64, code: String) {
 
     prepare(stakingAccount: AuthAccount) {
 
-        let epochAdmin = signer.borrow<&FlowEpoch.Admin>(from: FlowEpoch.adminStoragePath)
+        let epochAdmin = stakingAccount.borrow<&FlowEpoch.Admin>(from: FlowEpoch.adminStoragePath)
             ?? panic("Could not borrow admin from storage path")
 
         epochAdmin.updateAutomaticRewardsEnabled(true)
