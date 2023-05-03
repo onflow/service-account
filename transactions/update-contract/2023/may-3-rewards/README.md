@@ -43,5 +43,9 @@ Of which ~9.6M are in the queue to be burned (sitting in genesis wallet - will n
 3. [Site](https://flow-multisig-git-service-account-onflow.vercel.app/mainnet) submits the transaction
 
 ## Results
+Failed attempts:
+1. ec12be731ef7e551446e0bb4683cb5e64b174e61587a076d6dbf23937d039eb8
+2. 325abc68becdc3f2a2d659605077f22bc01f051ba206309e56fd7b71c43f55a1
 
-https://flowscan.org/transaction/
+Successful attempt:
+https://flowscan.org/transaction/d19c74cfb7347bc0643990632fc8c7ba781de618da49ef50686ce06d043196e5
