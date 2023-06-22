@@ -6,9 +6,11 @@ import FlowDKG from 0x8624b52f9ddcd04a
 /// Transaction to move epoch admin resources from the staking
 /// account to the service account
 
-transaction() {
+transaction(epochCode: String) {
 
     prepare(stakingAccount: AuthAccount, serviceAccount: AuthAccount) {
+
+        stakingAccount.contracts.update__experimental(name: "FlowEpoch", code: epochCode.decodeHex())
 
         // move the staking admin to the service account
         let stakingAdmin <- stakingAccount.load<@FlowIDTableStaking.Admin>(from: FlowIDTableStaking.StakingAdminStoragePath)
