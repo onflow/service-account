@@ -40,7 +40,7 @@ flow transactions build ./templates/reset_epoch_with_end_staking_auction.cdc \
   --proposer-key-index 5 \
   --authorizer 0x8624b52f9ddcd04a \
   --payer 0xe467b9dd11fa00df \
-  --gas-limit 100000000 \
+  --gas-limit 1000000 \
   -x payload \
   --save ./transactions/reset-epoch/2023/jun-22/reset-epoch-jun-22-unsigned.rlp
 ```
@@ -216,6 +216,7 @@ flow transactions send-signed --network mainnet ./transactions/reset-epoch/2023/
 
 ## Results
 
-https://flowscan.org/transaction/
+Expired:
+https://flowscan.org/transaction/ae3536f56c378508390930fee4c16558c491c23d6e2ec910fdf921d9caf9f4d1
 
 
