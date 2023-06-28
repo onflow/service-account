@@ -13,7 +13,7 @@ and move epoch admins to the service account.
 
 This upgrade has to be completed in multiple transactions:
 
-1. Upgrade `FlowClusterQC`, `FlowDKG`, and `FlowIDTableStaking` and set delegator minimum to 50.
+1. Upgrade `FlowClusterQC`, `FlowDKG`, and `FlowIDTableStaking`.
 
 [upgrade_staking_qc_dkg.cdc](./upgrade_staking_qc_dkg.cdc)
 
@@ -74,12 +74,11 @@ https://flowscan.org/transaction/
 
 ## Transaction 3 Sequence of signing: 
 
-1. Flow generates the Signature Request ID on the [site]() for the `upgrade_lockedtokens.cdc` transaction with the given args.
+1. Josh executes the transaction from the command line manually:
 
-2. Signers sign with flow cli specifying the Signature Request ID
-`bash multisig.sh -f flow.json <Signature Request ID>`
-
-3. [Site](https://flow-multisig-git-service-account-onflow.vercel.app/mainnet) submits the transaction
+```
+flow transactions send -n mainnet --signer mainnet-locked upgrade_lockedtokens.cdc --args-json "$(cat "./arguments-update-LockedTokens.json")"
+```
 
 ## Results
 
@@ -88,12 +87,11 @@ https://flowscan.org/transaction/
 
 ## Transaction 4 Sequence of signing: 
 
-1. Flow generates the Signature Request ID on the [site]() for the `upgrade_stakingcollection.cdc` transaction with the given args.
+1. Josh executes the transaction from the command line manually:
 
-2. Signers sign with flow cli specifying the Signature Request ID
-`bash multisig.sh -f flow.json <Signature Request ID>`
-
-3. [Site](https://flow-multisig-git-service-account-onflow.vercel.app/mainnet) submits the transaction
+```
+flow transactions send -n mainnet --signer mainnet-locked upgrade_stakingcollection.cdc --args-json "$(cat "./arguments-update-FlowStakingCollection.json")"
+```
 
 ## Results
 

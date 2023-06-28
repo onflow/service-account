@@ -18,7 +18,6 @@ transaction(epochCode: String) {
 
         // The service account already stores a staking admin capability, so load that first
         serviceAccount.load<Capability>(from: FlowIDTableStaking.StakingAdminStoragePath)
-            ?? panic("Could not load staking admin capability from the service account")
 
         serviceAccount.save(<-stakingAdmin, to: FlowIDTableStaking.StakingAdminStoragePath)
 
