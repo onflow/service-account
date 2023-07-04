@@ -43,13 +43,139 @@ $ cat arguments-update-contract-{Filename}-mainnet.json | jq '.[1] | .value' | x
 $ diff /tmp/temp.txt {Filename}.cdc
 (Should produce no difference)
 ```
+___
+# Transaction 1
 
 ## Transaction 1 Sequence of signing: 
 
-1. Flow generates the Signature Request ID on the [site]() for the `upgrade_staking_qc_dkg.cdc` transaction with the given args.
+Signer: flow-staking
+Transaction: `upgrade_staking_qc_dkg.cdc`
+Args: `arguments-update-QCDKGStaking.json`
 
-2. Signers sign with flow cli specifying the Signature Request ID
-`bash multisig.sh -f flow.json <Signature Request ID>`
+Have to use the old way of signing because tool does not currently support a large request body.
+
+### Transaction 1 - Step 1 Flow team generates the Tx
+
+flow transactions build ./transactions/update-contract/2023/july-5-epoch-del/upgrade_staking_qc_dkg.cdc \
+--config-path flow-staking.json \
+--network mainnet \
+--args-json "$(cat "./transactions/update-contract/2023/july-5-epoch-del/arguments-update-QCDKGStaking.json")" \
+--proposer 0x8624b52f9ddcd04a \
+--proposer-key-index 5 \
+--authorizer 0x8624b52f9ddcd04a \
+--payer 0x8624b52f9ddcd04a \
+-x payload \
+--save ./transactions/update-contract/2023/july-5-epoch-del/upgrade-staking-qc-dkg-unsigned.rlp
+
+### Transaction 1 - Step 2 Vishal signs
+
+Sign the transaction using Google Auth
+```sh
+flow transactions sign ./transactions/update-contract/2023/july-5-epoch-del/upgrade-staking-qc-dkg-unsigned.rlp \
+  --config-path flow-staking.json \
+  --signer vishal \
+  --filter payload \
+  --save ./transactions/update-contract/2023/july-5-epoch-del/upgrade-staking-qc-dkg-sig-1.rlp
+```
+
+Push the vote to git
+```sh
+git add .;git commit -m "upgrade staking, QC and DKG transaction for july 5th";git push origin main
+```
+
+### Transaction 1 - Step 3 Josh signs
+
+Pull the transaction from git
+```sh
+git pull
+```
+
+Sign the transaction using Google Auth
+```sh
+flow transactions sign ./transactions/update-contract/2023/july-5-epoch-del/upgrade-staking-qc-dkg-sig-1.rlp \
+  --config-path flow-staking.json \
+  --signer josh \
+  --filter payload \
+  --save ./transactions/update-contract/2023/july-5-epoch-del/upgrade-staking-qc-dkg-sig-2.rlp
+```
+
+Push the vote to git
+```sh
+git add .;git commit -m "upgrade staking, QC and DKG transaction for july 5th";git push origin main
+```
+
+### Transaction 1 - Step 4 Find signs
+
+Pull the transaction from git
+```sh
+git pull
+```
+
+Sign the transaction using Google Auth
+```sh
+flow transactions sign ./transactions/update-contract/2023/july-5-epoch-del/upgrade-staking-qc-dkg-sig-2.rlp \
+  --config-path flow-staking.json \
+  --signer find \
+  --filter payload \
+  --save ./transactions/update-contract/2023/july-5-epoch-del/upgrade-staking-qc-dkg-sig-3.rlp
+```
+
+Push the vote to git
+```sh
+git add .;git commit -m "upgrade staking, QC and DKG transaction for july 5th";git push origin main
+```
+
+### Transaction 1 - Step 5 Dmitrii signs
+
+Pull the transaction from git
+```sh
+git pull
+```
+
+Sign the transaction using Google Auth
+```sh
+flow transactions sign ./transactions/update-contract/2023/july-5-epoch-del/upgrade-staking-qc-dkg-sig-3.rlp \
+  --config-path flow-staking.json \
+  --signer dmitrii \
+  --filter payload \
+  --save ./transactions/update-contract/2023/july-5-epoch-del/upgrade-staking-qc-dkg-sig-complete.rlp
+```
+
+Push the vote to git
+```sh
+git add .;git commit -m "upgrade staking, QC and DKG transaction for july 5th";git push origin main
+```
+
+### Transaction 1 - Step 6 Flow submits
+
+```sh
+git pull
+```
+
+Submit the transaction
+```sh
+flow transactions send-signed --network mainnet ./transactions/update-contract/2023/july-5-epoch-del/upgrade-staking-qc-dkg-sig-complete.rlp
+```
+
+### Results
+
+Successful attempt:
+https://flowscan.org/transaction/
+
+___
+# Transaction 2
+
+## Transaction 2 Sequence of signing:
+
+Signer: flow-staking
+Transaction: `set_del_min.cdc`
+Args: none
+
+This transaction can be executed using the web tool.
+
+1. Flow generates the Signature Request ID on the [site](https://flow-multisig-git-service-account-onflow.vercel.app/mainnet?type=&name=&param=%5B%5D&acct=0x8624b52f9ddcd04a&limit=9999) for the `set_del_min.cdc` transaction with the given args.
+
+2. Signers sign with the web tool or using flow cli specifying the Signature Request ID
 
 3. [Site](https://flow-multisig-git-service-account-onflow.vercel.app/mainnet) submits the transaction
 
@@ -58,20 +184,8 @@ $ diff /tmp/temp.txt {Filename}.cdc
 Successful attempt:
 https://flowscan.org/transaction/
 
-## Transaction 2 Sequence of signing: 
-
-1. Flow generates the Signature Request ID on the [site]() for the `set_del_min.cdc` transaction with the given args.
-
-2. Signers sign with flow cli specifying the Signature Request ID
-`bash multisig.sh -f flow.json <Signature Request ID>`
-
-3. [Site](https://flow-multisig-git-service-account-onflow.vercel.app/mainnet) submits the transaction
-
-### Results
-
-Successful attempt:
-https://flowscan.org/transaction/
-
+___
+# Transaction 3
 ## Transaction 3 Sequence of signing: 
 
 1. Josh executes the transaction from the command line manually:
@@ -85,6 +199,8 @@ flow transactions send -n mainnet --signer mainnet-locked upgrade_lockedtokens.c
 Successful attempt:
 https://flowscan.org/transaction/
 
+___
+# Transaction 4
 ## Transaction 4 Sequence of signing: 
 
 1. Josh executes the transaction from the command line manually:
@@ -98,34 +214,31 @@ flow transactions send -n mainnet --signer mainnet-locked upgrade_stakingcollect
 Successful attempt:
 https://flowscan.org/transaction/
 
+___
+# Transaction 5
 
 ## Transaction 5 Sequence of signing: 
 
-Must use the old way of signing because it is a multisig between the staking account and service account.
+For this transaction we have to use the old way of signing because it is a multi-sig between the staking account and service account.
 
-## Sequence of signing: 
-1. Vishal generates the Tx
+## Overview of sequence of signing: 
+1. Vishal generates the Tx (step 1)
 2. Round one - Signing for staking account
-   1. Josh signs with flow-staking.json
-   2. Dmitrii Signs with flow-staking.json
-   3. Emerson Signs with flow-staking.json
-   4. Vishal Signs with flow-staking.json
+   1. Vishal signs with flow-staking.json  (step 2)
+   2. Josh Signs with flow-staking.json (step 3)
+   3. Find Signs with flow-staking.json (step 4)
+   4. Dmitrii Signs with flow-staking.json (step 5)
 3. Roune two - - Signing for service account
-   1. Josh signs with flow.json
-   2. Dmitrii Signs with flow.json
-   3. Emerson Signs with flow.json
-   4. Vishal Signs with flow.json
-4. Vishal submits the transaction
+   1. Vishal signs with flow.json (step 6)
+   2. Josh Signs with flow.json (step 7)
+   3. Find Signs with flow.json (step 8)
+   4. Dmitrii Signs with flow.json (step 9)
+4. Vishal submits the transaction (step 10)
 
-## Prerequisites
-1. Latest version of the [flow-cli](https://developers.flow.com/tools/flow-cli).
-2. [Gcloud cli](https://cloud.google.com/sdk/docs/install)
-3. Contributor privilege to this repo.
-4. Checkout this repo locally.
-5. Open a terminal and go into the directory `service-account`
 
-## Flow Builds
+## Transaction 5 - Step 1 Vishal generates the Tx
 
+```
 flow transactions build ./transactions/update-contract/2023/july-5-epoch-del/upgrade_epoch_move_admins.cdc \
   --config-path flow-staking.json \
   --network mainnet \
@@ -137,32 +250,25 @@ flow transactions build ./transactions/update-contract/2023/july-5-epoch-del/upg
   --payer 0xe467b9dd11fa00df \
   -x payload \
   --save ./transactions/update-contract/2023/july-5-epoch-del/upgrade-epoch-unsigned.rlp
-
-
-## Staking Account
-
-## Josh Signs
-
-Pull the transaction from git
-```sh
-git pull
 ```
+
+## Transaction 5 - Step 2 Vishal Signs with staking account
 
 Sign the transaction using Google Auth
 ```sh
 flow transactions sign ./transactions/update-contract/2023/july-5-epoch-del/upgrade-epoch-unsigned.rlp \
   --config-path flow-staking.json \
-  --signer josh \
+  --signer vishal \
   --filter payload \
   --save ./transactions/update-contract/2023/july-5-epoch-del/upgrade-epoch-sig-1.rlp
 ```
 
-Push the vote to git
+Push the unsgined RLP and the vote to git
 ```sh
 git add .;git commit -m "upgrade epoch transaction for july-5";git push origin main
 ```
 
-## Dmitrii Signs
+## Transaction 5 - Step 3 Josh Signs with staking account
 
 Pull the transaction from git
 ```sh
@@ -173,7 +279,7 @@ Sign the transaction using Google Auth
 ```sh
 flow transactions sign ./transactions/update-contract/2023/july-5-epoch-del/upgrade-epoch-sig-1.rlp \
   --config-path flow-staking.json \
-  --signer dmitrii \
+  --signer josh \
   --filter payload \
   --save ./transactions/update-contract/2023/july-5-epoch-del/upgrade-epoch-sig-2.rlp
 ```
@@ -183,7 +289,7 @@ Push the vote to git
 git add .;git commit -m "upgrade epoch transaction for july-5";git push origin main
 ```
 
-## Emerson Signs
+## Transaction 5 - Step 4 Find Signs with staking account
 
 Pull the transaction from git
 ```sh
@@ -194,7 +300,7 @@ Sign the transaction using Google Auth
 ```sh
 flow transactions sign ./transactions/update-contract/2023/july-5-epoch-del/upgrade-epoch-sig-2.rlp \
   --config-path flow-staking.json \
-  --signer animoca \
+  --signer find \
   --filter payload \
   --save ./transactions/update-contract/2023/july-5-epoch-del/upgrade-epoch-sig-3.rlp
 ```
@@ -204,7 +310,7 @@ Push the vote to git
 git add .;git commit -m "upgrade epoch transaction for july-5";git push origin main
 ```
 
-## Vishal Signs
+## Transaction 5 - Step 5 Dmitrii Signs with staking account
 
 Pull the transaction from git
 ```sh
@@ -215,7 +321,7 @@ Sign the transaction using Google Auth
 ```sh
 flow transactions sign ./transactions/update-contract/2023/july-5-epoch-del/upgrade-epoch-sig-3.rlp \
   --config-path flow-staking.json \
-  --signer vishal \
+  --signer dmitrii \
   --filter payload \
   --save ./transactions/update-contract/2023/july-5-epoch-del/upgrade-epoch-sig-4.rlp
 ```
@@ -225,11 +331,7 @@ Push the vote to git
 git add .;git commit -m "upgrade epoch transaction for july-5";git push origin main
 ```
 
----
-
-## Service Account
-
-## Josh Signs
+## Transaction 5 - Step 6 Vishal Signs with service account
 
 Pull the transaction from git
 ```sh
@@ -240,7 +342,7 @@ Sign the transaction using Google Auth
 ```sh
 flow transactions sign ./transactions/update-contract/2023/july-5-epoch-del/upgrade-epoch-sig-4.rlp \
   --config-path flow.json \
-  --signer josh \
+  --signer vishal \
   --filter payload \
   --save ./transactions/update-contract/2023/july-5-epoch-del/upgrade-epoch-sig-5.rlp
 ```
@@ -250,7 +352,7 @@ Push the vote to git
 git add .;git commit -m "upgrade epoch transaction for july-5";git push origin main
 ```
 
-## Dmitrii Signs
+## Transaction 5 - Step 7 Josh Signs with service account
 
 Pull the transaction from git
 ```sh
@@ -261,7 +363,7 @@ Sign the transaction using Google Auth
 ```sh
 flow transactions sign ./transactions/update-contract/2023/july-5-epoch-del/upgrade-epoch-sig-5.rlp \
   --config-path flow.json \
-  --signer dmitrii \
+  --signer josh \
   --filter payload \
   --save ./transactions/update-contract/2023/july-5-epoch-del/upgrade-epoch-sig-6.rlp
 ```
@@ -272,12 +374,12 @@ Push the vote to git
 git add .;git commit -m "upgrade epoch transaction for july-5";git push origin main
 ```
 
-## Emerson Signs
+## Transaction 5 - Step 8 Find Signs with service account
 
 ```sh
 flow transactions sign ./transactions/update-contract/2023/july-5-epoch-del/upgrade-epoch-sig-6.rlp \
   --config-path flow.json \
-  --signer animoca \
+  --signer find \
   --filter payload \
   --save ./transactions/update-contract/2023/july-5-epoch-del/upgrade-epoch-sig-7.rlp
 ```
@@ -287,7 +389,7 @@ Push the vote to git
 git add .;git commit -m "upgrade epoch transaction for july-5";git push origin main
 ```
 
-## Vishal Signs
+## Transaction 5 - Step 9 Dmitrii Signs with service account
 
 Pull the transaction from git
 ```sh
@@ -298,12 +400,12 @@ Sign the transaction using Google Auth
 ```sh
 flow transactions sign ./transactions/update-contract/2023/july-5-epoch-del/upgrade-epoch-sig-7.rlp \
   --config-path flow.json \
-  --signer vishal \
+  --signer dmitrii \
   --filter payload \
   --save ./transactions/update-contract/2023/july-5-epoch-del/upgrade-epoch-sig-complete.rlp
 ```
 
-## Vishal Submits
+## Transaction 5 - Step 10 Vishal submits the transaction
 
 ```sh
 flow transactions send-signed --network mainnet ./transactions/update-contract/2023/july-5-epoch-del/upgrade-epoch-sig-complete.rlp
@@ -315,3 +417,9 @@ Successful attempt:
 https://flowscan.org/transaction/
 
 
+## Prerequisites
+1. Latest version of the [flow-cli](https://developers.flow.com/tools/flow-cli).
+2. [Gcloud cli](https://cloud.google.com/sdk/docs/install)
+3. Contributor privilege to this repo.
+4. Checkout this repo locally.
+5. Open a terminal and go into the directory `service-account`
