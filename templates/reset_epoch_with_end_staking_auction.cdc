@@ -11,12 +11,12 @@ transaction(currentEpochCounter: UInt64,
         let stakingAdmin = signer.borrow<&FlowIDTableStaking.Admin>(from: FlowIDTableStaking.StakingAdminStoragePath)
             ?? panic("Could not borrow reference to staking admin")
 
-        let heartbeat = signer.borrow<&FlowEpoch.Heartbeat>(from: FlowEpoch.heartbeatStoragePath)
+        let epochAdmin = signer.borrow<&FlowEpoch.Admin>(from: FlowEpoch.adminStoragePath)
             ?? panic("Could not borrow heartbeat from storage path")
 
         stakingAdmin.endStakingAuction()
 
-        heartbeat.resetEpoch(currentEpochCounter: currentEpochCounter,
+        epochAdmin.resetEpoch(currentEpochCounter: currentEpochCounter,
                             randomSource: randomSource,
                              startView: startView,
                              stakingEndView: stakingEndView,
