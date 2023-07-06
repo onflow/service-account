@@ -68,7 +68,7 @@ For this transaction we have to use the old way of signing because the web tool 
 ## Transaction 1 - Step 1 Vishal generates the Tx
 
 ```
-flow transactions build ./templates/upgrade_contract.cdc \
+flow transactions build ./templates/update_contract.cdc \
   --config-path flow-staking.json \
   --network mainnet \
   --args-json "$(cat "./transactions/update-contract/2023/july-12-epoch-del/arguments-update-Staking.json")" \
@@ -76,7 +76,7 @@ flow transactions build ./templates/upgrade_contract.cdc \
   --proposer-key-index 5 \
   --authorizer 0x8624b52f9ddcd04a \
   --payer 0x8624b52f9ddcd04a \
-  --gas-limit 9999
+  --gas-limit 9999 \
   -x payload \
   --save ./transactions/update-contract/2023/july-12-epoch-del/update-staking-unsigned.rlp
 ```
