@@ -93,7 +93,7 @@ For this transaction we have to use the old way of signing because it is a multi
 ## Transaction 2 - Step 1 Vishal generates the Tx
 
 ```
-flow transactions build ./transactions/update-contract/2023/july-5-epoch-del/set_del_min.cdc \
+flow transactions build ./transactions/update-contract/2023/july-12-epoch-del/set_del_min.cdc \
   --config-path flow-staking.json \
   --network mainnet \
   --proposer 0x8624b52f9ddcd04a \
@@ -102,23 +102,23 @@ flow transactions build ./transactions/update-contract/2023/july-5-epoch-del/set
   --payer 0xe467b9dd11fa00df \
   --gas-limit 999999
   -x payload \
-  --save ./transactions/update-contract/2023/july-5-epoch-del/set-del-min-unsigned.rlp
+  --save ./transactions/update-contract/2023/july-12-epoch-del/set-del-min-unsigned.rlp
 ```
 
 ## Transaction 2 - Step 2 Vishal Signs with staking account
 
 Sign the transaction using Google Auth
 ```sh
-flow transactions sign ./transactions/update-contract/2023/july-5-epoch-del/set-del-min-unsigned.rlp \
+flow transactions sign ./transactions/update-contract/2023/july-12-epoch-del/set-del-min-unsigned.rlp \
   --config-path flow-staking.json \
   --signer vishal \
   --filter payload \
-  --save ./transactions/update-contract/2023/july-5-epoch-del/set-del-min-sig-1.rlp
+  --save ./transactions/update-contract/2023/july-12-epoch-del/set-del-min-sig-1.rlp
 ```
 
 Push the unsgined RLP and the vote to git
 ```sh
-git add .;git commit -m "set del min transaction for july-5";git push origin main
+git add .;git commit -m "set del min transaction for july-12";git push origin main
 ```
 
 ## Transaction 2 - Step 3 Josh Signs with staking account
@@ -130,16 +130,16 @@ git pull
 
 Sign the transaction using Google Auth
 ```sh
-flow transactions sign ./transactions/update-contract/2023/july-5-epoch-del/set-del-min-sig-1.rlp \
+flow transactions sign ./transactions/update-contract/2023/july-12-epoch-del/set-del-min-sig-1.rlp \
   --config-path flow-staking.json \
   --signer josh \
   --filter payload \
-  --save ./transactions/update-contract/2023/july-5-epoch-del/set-del-min-sig-2.rlp
+  --save ./transactions/update-contract/2023/july-12-epoch-del/set-del-min-sig-2.rlp
 ```
 
 Push the vote to git
 ```sh
-git add .;git commit -m "set del min transaction for july-5";git push origin main
+git add .;git commit -m "set del min transaction for july-12";git push origin main
 ```
 
 ## Transaction 2 - Step 4 Find Signs with staking account
@@ -151,16 +151,16 @@ git pull
 
 Sign the transaction using Google Auth
 ```sh
-flow transactions sign ./transactions/update-contract/2023/july-5-epoch-del/set-del-min-sig-2.rlp \
+flow transactions sign ./transactions/update-contract/2023/july-12-epoch-del/set-del-min-sig-2.rlp \
   --config-path flow-staking.json \
   --signer find \
   --filter payload \
-  --save ./transactions/update-contract/2023/july-5-epoch-del/set-del-min-sig-3.rlp
+  --save ./transactions/update-contract/2023/july-12-epoch-del/set-del-min-sig-3.rlp
 ```
 
 Push the vote to git
 ```sh
-git add .;git commit -m "set del min transaction for july-5";git push origin main
+git add .;git commit -m "set del min transaction for july-12";git push origin main
 ```
 
 ## Transaction 2 - Step 5 Dmitrii Signs with staking account
@@ -172,16 +172,16 @@ git pull
 
 Sign the transaction using Google Auth
 ```sh
-flow transactions sign ./transactions/update-contract/2023/july-5-epoch-del/set-del-min-sig-3.rlp \
+flow transactions sign ./transactions/update-contract/2023/july-12-epoch-del/set-del-min-sig-3.rlp \
   --config-path flow-staking.json \
   --signer dmitrii \
   --filter payload \
-  --save ./transactions/update-contract/2023/july-5-epoch-del/set-del-min-sig-4.rlp
+  --save ./transactions/update-contract/2023/july-12-epoch-del/set-del-min-sig-4.rlp
 ```
 
 Push the vote to git
 ```sh
-git add .;git commit -m "set del min transaction for july-5";git push origin main
+git add .;git commit -m "set del min transaction for july-12";git push origin main
 ```
 
 ## Transaction 2 - Step 6 Vishal Signs with service account
@@ -193,16 +193,16 @@ git pull
 
 Sign the transaction using Google Auth
 ```sh
-flow transactions sign ./transactions/update-contract/2023/july-5-epoch-del/set-del-min-sig-4.rlp \
+flow transactions sign ./transactions/update-contract/2023/july-12-epoch-del/set-del-min-sig-4.rlp \
   --config-path flow.json \
   --signer vishal \
   --filter payload \
-  --save ./transactions/update-contract/2023/july-5-epoch-del/set-del-min-sig-5.rlp
+  --save ./transactions/update-contract/2023/july-12-epoch-del/set-del-min-sig-5.rlp
 ```
 
 Push the vote to git
 ```sh
-git add .;git commit -m "set del min transaction for july-5";git push origin main
+git add .;git commit -m "set del min transaction for july-12";git push origin main
 ```
 
 ## Transaction 2 - Step 7 Josh Signs with service account
@@ -214,32 +214,32 @@ git pull
 
 Sign the transaction using Google Auth
 ```sh
-flow transactions sign ./transactions/update-contract/2023/july-5-epoch-del/set-del-min-sig-5.rlp \
+flow transactions sign ./transactions/update-contract/2023/july-12-epoch-del/set-del-min-sig-5.rlp \
   --config-path flow.json \
   --signer josh \
   --filter payload \
-  --save ./transactions/update-contract/2023/july-5-epoch-del/set-del-min-sig-6.rlp
+  --save ./transactions/update-contract/2023/july-12-epoch-del/set-del-min-sig-6.rlp
 ```
 
 
 Push the vote to git
 ```sh
-git add .;git commit -m "set del min transaction for july-5";git push origin main
+git add .;git commit -m "set del min transaction for july-12";git push origin main
 ```
 
 ## Transaction 2 - Step 8 Find Signs with service account
 
 ```sh
-flow transactions sign ./transactions/update-contract/2023/july-5-epoch-del/set-del-min-sig-6.rlp \
+flow transactions sign ./transactions/update-contract/2023/july-12-epoch-del/set-del-min-sig-6.rlp \
   --config-path flow.json \
   --signer find \
   --filter payload \
-  --save ./transactions/update-contract/2023/july-5-epoch-del/set-del-min-sig-7.rlp
+  --save ./transactions/update-contract/2023/july-12-epoch-del/set-del-min-sig-7.rlp
 ```
 
 Push the vote to git
 ```sh
-git add .;git commit -m "set del min transaction for july-5";git push origin main
+git add .;git commit -m "set del min transaction for july-12";git push origin main
 ```
 
 ## Transaction 2 - Step 9 Dmitrii Signs with service account
@@ -251,17 +251,17 @@ git pull
 
 Sign the transaction using Google Auth
 ```sh
-flow transactions sign ./transactions/update-contract/2023/july-5-epoch-del/set-del-min-sig-7.rlp \
+flow transactions sign ./transactions/update-contract/2023/july-12-epoch-del/set-del-min-sig-7.rlp \
   --config-path flow.json \
   --signer dmitrii \
   --filter payload \
-  --save ./transactions/update-contract/2023/july-5-epoch-del/set-del-min-sig-complete.rlp
+  --save ./transactions/update-contract/2023/july-12-epoch-del/set-del-min-sig-complete.rlp
 ```
 
 ## Transaction 2 - Step 10 Vishal submits the transaction
 
 ```sh
-flow transactions send-signed --network mainnet ./transactions/update-contract/2023/july-5-epoch-del/set-del-min-sig-complete.rlp
+flow transactions send-signed --network mainnet ./transactions/update-contract/2023/july-12-epoch-del/set-del-min-sig-complete.rlp
 ```
 
 ## Results
@@ -333,33 +333,33 @@ For this transaction we have to use the old way of signing because it is a multi
 ## Transaction 5 - Step 1 Vishal generates the Tx
 
 ```
-flow transactions build ./transactions/update-contract/2023/july-5-epoch-del/upgrade_epoch_move_admins.cdc \
+flow transactions build ./transactions/update-contract/2023/july-12-epoch-del/upgrade_epoch_move_admins.cdc \
   --config-path flow-staking.json \
   --network mainnet \
-  --args-json "$(cat "./transactions/update-contract/2023/july-5-epoch-del/arguments-update-FlowEpoch.json")" \
+  --args-json "$(cat "./transactions/update-contract/2023/july-12-epoch-del/arguments-update-FlowEpoch.json")" \
   --proposer 0x8624b52f9ddcd04a \
   --proposer-key-index 5 \
   --authorizer 0x8624b52f9ddcd04a \
   --authorizer 0xe467b9dd11fa00df \
   --payer 0xe467b9dd11fa00df \
   -x payload \
-  --save ./transactions/update-contract/2023/july-5-epoch-del/upgrade-epoch-unsigned.rlp
+  --save ./transactions/update-contract/2023/july-12-epoch-del/upgrade-epoch-unsigned.rlp
 ```
 
 ## Transaction 5 - Step 2 Vishal Signs with staking account
 
 Sign the transaction using Google Auth
 ```sh
-flow transactions sign ./transactions/update-contract/2023/july-5-epoch-del/upgrade-epoch-unsigned.rlp \
+flow transactions sign ./transactions/update-contract/2023/july-12-epoch-del/upgrade-epoch-unsigned.rlp \
   --config-path flow-staking.json \
   --signer vishal \
   --filter payload \
-  --save ./transactions/update-contract/2023/july-5-epoch-del/upgrade-epoch-sig-1.rlp
+  --save ./transactions/update-contract/2023/july-12-epoch-del/upgrade-epoch-sig-1.rlp
 ```
 
 Push the unsgined RLP and the vote to git
 ```sh
-git add .;git commit -m "upgrade epoch transaction for july-5";git push origin main
+git add .;git commit -m "upgrade epoch transaction for july-12";git push origin main
 ```
 
 ## Transaction 5 - Step 3 Josh Signs with staking account
@@ -371,16 +371,16 @@ git pull
 
 Sign the transaction using Google Auth
 ```sh
-flow transactions sign ./transactions/update-contract/2023/july-5-epoch-del/upgrade-epoch-sig-1.rlp \
+flow transactions sign ./transactions/update-contract/2023/july-12-epoch-del/upgrade-epoch-sig-1.rlp \
   --config-path flow-staking.json \
   --signer josh \
   --filter payload \
-  --save ./transactions/update-contract/2023/july-5-epoch-del/upgrade-epoch-sig-2.rlp
+  --save ./transactions/update-contract/2023/july-12-epoch-del/upgrade-epoch-sig-2.rlp
 ```
 
 Push the vote to git
 ```sh
-git add .;git commit -m "upgrade epoch transaction for july-5";git push origin main
+git add .;git commit -m "upgrade epoch transaction for july-12";git push origin main
 ```
 
 ## Transaction 5 - Step 4 Find Signs with staking account
@@ -392,16 +392,16 @@ git pull
 
 Sign the transaction using Google Auth
 ```sh
-flow transactions sign ./transactions/update-contract/2023/july-5-epoch-del/upgrade-epoch-sig-2.rlp \
+flow transactions sign ./transactions/update-contract/2023/july-12-epoch-del/upgrade-epoch-sig-2.rlp \
   --config-path flow-staking.json \
   --signer find \
   --filter payload \
-  --save ./transactions/update-contract/2023/july-5-epoch-del/upgrade-epoch-sig-3.rlp
+  --save ./transactions/update-contract/2023/july-12-epoch-del/upgrade-epoch-sig-3.rlp
 ```
 
 Push the vote to git
 ```sh
-git add .;git commit -m "upgrade epoch transaction for july-5";git push origin main
+git add .;git commit -m "upgrade epoch transaction for july-12";git push origin main
 ```
 
 ## Transaction 5 - Step 5 Dmitrii Signs with staking account
@@ -413,16 +413,16 @@ git pull
 
 Sign the transaction using Google Auth
 ```sh
-flow transactions sign ./transactions/update-contract/2023/july-5-epoch-del/upgrade-epoch-sig-3.rlp \
+flow transactions sign ./transactions/update-contract/2023/july-12-epoch-del/upgrade-epoch-sig-3.rlp \
   --config-path flow-staking.json \
   --signer dmitrii \
   --filter payload \
-  --save ./transactions/update-contract/2023/july-5-epoch-del/upgrade-epoch-sig-4.rlp
+  --save ./transactions/update-contract/2023/july-12-epoch-del/upgrade-epoch-sig-4.rlp
 ```
 
 Push the vote to git
 ```sh
-git add .;git commit -m "upgrade epoch transaction for july-5";git push origin main
+git add .;git commit -m "upgrade epoch transaction for july-12";git push origin main
 ```
 
 ## Transaction 5 - Step 6 Vishal Signs with service account
@@ -434,16 +434,16 @@ git pull
 
 Sign the transaction using Google Auth
 ```sh
-flow transactions sign ./transactions/update-contract/2023/july-5-epoch-del/upgrade-epoch-sig-4.rlp \
+flow transactions sign ./transactions/update-contract/2023/july-12-epoch-del/upgrade-epoch-sig-4.rlp \
   --config-path flow.json \
   --signer vishal \
   --filter payload \
-  --save ./transactions/update-contract/2023/july-5-epoch-del/upgrade-epoch-sig-5.rlp
+  --save ./transactions/update-contract/2023/july-12-epoch-del/upgrade-epoch-sig-5.rlp
 ```
 
 Push the vote to git
 ```sh
-git add .;git commit -m "upgrade epoch transaction for july-5";git push origin main
+git add .;git commit -m "upgrade epoch transaction for july-12";git push origin main
 ```
 
 ## Transaction 5 - Step 7 Josh Signs with service account
@@ -455,32 +455,32 @@ git pull
 
 Sign the transaction using Google Auth
 ```sh
-flow transactions sign ./transactions/update-contract/2023/july-5-epoch-del/upgrade-epoch-sig-5.rlp \
+flow transactions sign ./transactions/update-contract/2023/july-12-epoch-del/upgrade-epoch-sig-5.rlp \
   --config-path flow.json \
   --signer josh \
   --filter payload \
-  --save ./transactions/update-contract/2023/july-5-epoch-del/upgrade-epoch-sig-6.rlp
+  --save ./transactions/update-contract/2023/july-12-epoch-del/upgrade-epoch-sig-6.rlp
 ```
 
 
 Push the vote to git
 ```sh
-git add .;git commit -m "upgrade epoch transaction for july-5";git push origin main
+git add .;git commit -m "upgrade epoch transaction for july-12";git push origin main
 ```
 
 ## Transaction 5 - Step 8 Find Signs with service account
 
 ```sh
-flow transactions sign ./transactions/update-contract/2023/july-5-epoch-del/upgrade-epoch-sig-6.rlp \
+flow transactions sign ./transactions/update-contract/2023/july-12-epoch-del/upgrade-epoch-sig-6.rlp \
   --config-path flow.json \
   --signer find \
   --filter payload \
-  --save ./transactions/update-contract/2023/july-5-epoch-del/upgrade-epoch-sig-7.rlp
+  --save ./transactions/update-contract/2023/july-12-epoch-del/upgrade-epoch-sig-7.rlp
 ```
 
 Push the vote to git
 ```sh
-git add .;git commit -m "upgrade epoch transaction for july-5";git push origin main
+git add .;git commit -m "upgrade epoch transaction for july-12";git push origin main
 ```
 
 ## Transaction 5 - Step 9 Dmitrii Signs with service account
@@ -492,17 +492,17 @@ git pull
 
 Sign the transaction using Google Auth
 ```sh
-flow transactions sign ./transactions/update-contract/2023/july-5-epoch-del/upgrade-epoch-sig-7.rlp \
+flow transactions sign ./transactions/update-contract/2023/july-12-epoch-del/upgrade-epoch-sig-7.rlp \
   --config-path flow.json \
   --signer dmitrii \
   --filter payload \
-  --save ./transactions/update-contract/2023/july-5-epoch-del/upgrade-epoch-sig-complete.rlp
+  --save ./transactions/update-contract/2023/july-12-epoch-del/upgrade-epoch-sig-complete.rlp
 ```
 
 ## Transaction 5 - Step 10 Vishal submits the transaction
 
 ```sh
-flow transactions send-signed --network mainnet ./transactions/update-contract/2023/july-5-epoch-del/upgrade-epoch-sig-complete.rlp
+flow transactions send-signed --network mainnet ./transactions/update-contract/2023/july-12-epoch-del/upgrade-epoch-sig-complete.rlp
 ```
 
 ## Results
