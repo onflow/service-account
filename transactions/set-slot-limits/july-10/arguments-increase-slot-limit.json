@@ -1,0 +1,10 @@
+[
+    {
+        "type": "UInt8",
+        "value": "5"
+    },
+    {
+        "type": "UInt16",
+        "value": "3"
+    }
+]
