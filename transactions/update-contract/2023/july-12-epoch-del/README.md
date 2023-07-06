@@ -94,7 +94,7 @@ flow transactions sign ./transactions/update-contract/2023/july-12-epoch-del/upd
 
 Push the unsgined RLP and the vote to git
 ```sh
-git add .;git commit -m "set del min transaction for july-12";git push origin main
+git add .;git commit -m "update staking contract for july-12";git push origin main
 ```
 
 ## Transaction 1 - Step 3 Josh Signs with staking account
@@ -115,7 +115,7 @@ flow transactions sign ./transactions/update-contract/2023/july-12-epoch-del/upd
 
 Push the vote to git
 ```sh
-git add .;git commit -m "set del min transaction for july-12";git push origin main
+git add .;git commit -m "update staking contract for july-12";git push origin main
 ```
 
 ## Transaction 1 - Step 4 Find Signs with staking account
@@ -136,7 +136,7 @@ flow transactions sign ./transactions/update-contract/2023/july-12-epoch-del/upd
 
 Push the vote to git
 ```sh
-git add .;git commit -m "set del min transaction for july-12";git push origin main
+git add .;git commit -m "update staking contract for july-12";git push origin main
 ```
 
 ## Transaction 1 - Step 5 Dmitrii Signs with staking account
@@ -157,7 +157,7 @@ flow transactions sign ./transactions/update-contract/2023/july-12-epoch-del/upd
 
 Push the vote to git
 ```sh
-git add .;git commit -m "set del min transaction for july-12";git push origin main
+git add .;git commit -m "update staking contract for july-12";git push origin main
 ```
 
 ## Transaction 1 - Step 6 Vishal submits the transaction
