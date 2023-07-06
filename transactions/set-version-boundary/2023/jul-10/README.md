@@ -6,7 +6,7 @@ This transaction sets the height at which the height Coordinated upgrade occurs 
 
 ## New method using Flow CLI multi-sign
 
-1. Flow generates the Signature Request ID on the [site](https://flow-multisig-git-service-account-onflow.vercel.app/mainnet) for the `capability_rewards_pay.cdc` transaction with the given args.
+1. Flow generates the Signature Request ID on the [site](https://flow-multisig-git-service-account-onflow.vercel.app/mainnet) for the `set_version_boundary.cdc` transaction with the given args.
 
 2. Signers sign the staking account key using the web tool.
 
