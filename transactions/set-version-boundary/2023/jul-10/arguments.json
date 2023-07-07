@@ -1,19 +1,19 @@
 [
   {
     "type": "UInt8",
-    "value": "1"
+    "value": "0"
   },
   {
     "type": "UInt8",
-    "value": "1"
+    "value": "31"
   },
   {
     "type": "UInt8",
-    "value": "1"
+    "value": "11"
   },
   {
-    "type": "String",
-    "value": ""
+    "type": "Optional",
+    "value": null
   },
   {
     "type": "UInt64",
