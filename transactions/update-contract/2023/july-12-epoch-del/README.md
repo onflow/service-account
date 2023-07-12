@@ -391,13 +391,13 @@ ___
 1. A token admin signer executes the transaction from the command line manually:
 
 ```
-flow transactions send -n mainnet --signer mainnet-locked upgrade_contract.cdc --args-json "$(cat "./arguments-update-LockedTokens.json")"
+flow transactions send -n mainnet --signer mainnet-locked update_contract.cdc --args-json "$(cat "./arguments-update-LockedTokens.json")"
 ```
 
 ## Results
 
 Successful attempt:
-https://flowscan.org/transaction/
+https://flowscan.org/transaction/d83cad471c4b0223ad19dbe67f7eb682b8b72aa1ce3f4ade03585511938a8f98
 
 ___
 # Transaction 4
@@ -406,13 +406,13 @@ ___
 1. A token admin signer executes the transaction from the command line manually:
 
 ```
-flow transactions send -n mainnet --signer mainnet-locked upgrade_contract.cdc --args-json "$(cat "./arguments-update-FlowStakingCollection.json")"
+flow transactions send -n mainnet --signer mainnet-locked update_contract.cdc --args-json "$(cat "./arguments-update-FlowStakingCollection.json")"
 ```
 
 ## Results
 
 Successful attempt:
-https://flowscan.org/transaction/
+https://flowscan.org/transaction/b5e91eafd3c00777b0f5d4e7533abcae0c48c78fe50ffe8ebca5b8d01c152963
 
 ___
 # Transaction 5
