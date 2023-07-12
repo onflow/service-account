@@ -173,7 +173,7 @@ flow transactions send-signed --network mainnet ./transactions/update-contract/2
 ### Results
 
 Successful attempt:
-https://flowscan.org/transaction/
+https://flowscan.org/transaction/eea0aa2167544290998664c2fdf1fc1a1c606b7ef672596c9d8a686d97aaa69c
 
 ___
 
