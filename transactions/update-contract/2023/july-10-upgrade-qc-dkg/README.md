@@ -47,8 +47,9 @@ This transaction can be executed using the web tool.
 
 ### Results
 
+Unsuccessful attempt: 50ef3e5f860f4d617abf493230e31802cc7c22aea1e52d6b25f12f13547fe5cf
 Successful attempt:
-https://flowscan.org/transaction/
+https://flowscan.org/transaction/899acc4d687076cdb6a68c5e0451949ab448495830a984af0fb2bac792291c47
 
 ___
 
@@ -72,6 +73,6 @@ This transaction can be executed using the web tool.
 ### Results
 
 Successful attempt:
-https://flowscan.org/transaction/
+https://flowscan.org/transaction/b7eda2937f717cfabd3a967d4f1d7d6189102d2b9fb7a2e0d4c5c835ae262d21
 
 ___
