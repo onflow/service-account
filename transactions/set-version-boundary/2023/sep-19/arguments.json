@@ -13,7 +13,10 @@
   },
   {
     "type": "Optional",
-    "value": "patch.1"
+    "value": {
+      "type": "String",
+      "value": "patch.1"
+    }
   },
   {
     "type": "UInt64",
