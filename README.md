@@ -1,5 +1,11 @@
 # Service Account Management
 
+## Multi-sig process
+
+Flow employs a robust process for executing protocol-level changes, requiring the collective agreement of multiple parties to sign and authorize transactions that trigger key event such as modification of protocol-level parameters. This is commonly referred to as the “multi-sig process”.
+
+Notably, the multi-sig process on Flow is associated with two principal accounts that oversee critical aspects of the Flow protocol: the service account, responsible for actions related to protocol parameters, and the staking account, which holds resources linked to staked nodes within the network. These accounts are collectively overseen by multiple signatories - representatives from the Flow ecosystem - who participate in meetings where transactions are simultaneously authorized (or rejected) and submitted only if there’s quorum. 
+
 ## Requirements for signers
 - Git
 - Flow CLI
