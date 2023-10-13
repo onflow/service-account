@@ -216,7 +216,10 @@ flow transactions send-signed --network mainnet ./transactions/reset-epoch/2023/
 
 ## Results
 
+Failed:
+https://flowscan.org/transaction/085032855bf77cc70be145ad0ec9332633feb4619dc6c02a2c9c648fb5ed96af
+
 Succeeded:
-https://flowscan.org/transaction/
+https://flowscan.org/transaction/0741f74510060ed77bd38d29982687b9362165e9195f6fada9ee3eef1d919c20
 
 
