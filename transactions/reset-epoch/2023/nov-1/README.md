@@ -7,5 +7,6 @@ Rewards payout using the [ResetEpoch](../../../../templates/reset_epoch_with_end
 
 ## Results
 
-Success
-https://www.flowdiver.io/tx/
+Failure: https://www.flowdiver.io/tx/6eed4bd51fcceb6e3bad8d181113865530470567e730e796b8e0372a4ec9d669
+
+Success: https://www.flowdiver.io/tx/cecc31fc8a31417b4df8e941bfaef5a2060d3f481c4aa09ae8469dc29b332daf
