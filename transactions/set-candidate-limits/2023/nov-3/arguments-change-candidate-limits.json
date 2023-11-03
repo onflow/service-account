@@ -1,0 +1,47 @@
+[
+    {
+        "type": "Dictionary",
+        "value": [
+            {
+                "key": {
+                    "type": "UInt8",
+                    "value": "1"
+                },
+                "value": {
+                    "type": "UInt64",
+                    "value": "200"
+                }
+            },
+            {
+                "key": {
+                    "type": "UInt8",
+                    "value": "2"
+                },
+                "value": {
+                    "type": "UInt64",
+                    "value": "200"
+                }
+            },
+            {
+                "key": {
+                    "type": "UInt8",
+                    "value": "3"
+                },
+                "value": {
+                    "type": "UInt64",
+                    "value": "20"
+                }
+            },
+            {
+                "key": {
+                    "type": "UInt8",
+                    "value": "4"
+                },
+                "value": {
+                    "type": "UInt64",
+                    "value": "200"
+                }
+            }
+        ]
+    }
+]
