@@ -13,7 +13,7 @@ ___
 
 ## Transaction 1 Sequence of signing: 
 
-Signer: flow-staking
+Signer: Service account
 Transaction: `templates/change_candidate_limits.cdc`
 Args: `arguments-change-candidate-limits.json`
 
@@ -29,6 +29,5 @@ This transaction can be executed using the web tool.
 ### Results
 
 Successful attempt:
-https://flowdiver.io/
-
+https://www.flowdiver.io/tx/d2280e5b989aa0884b82d6b43b288c33a581368c6f94426e8ec4fddeb9ee40cb
 ___
