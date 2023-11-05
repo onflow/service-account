@@ -4,7 +4,13 @@
 
 The current nodes run by the Flow team is being split between FF and DL. This transaction is to add the DL nodes to the approved list of nodes.
 
-86 nodes in total
+Node Type | Total nodes
+-------------|------------
+Collection   | 48
+Consensus    | 17
+Execution    | 2
+Verification | 19
+*Total* | 92
 
 Node Type | Node ID                                                         
 --------- |-----------------------------------------------------------------|
