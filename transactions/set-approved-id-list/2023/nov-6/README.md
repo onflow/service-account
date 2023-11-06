@@ -10,7 +10,7 @@ Collection   | 48
 Consensus    | 17
 Execution    | 2
 Verification | 19
-*Total* | 92
+*Total* | 86
 
 Node Type | Node ID                                                         
 --------- |-----------------------------------------------------------------|
