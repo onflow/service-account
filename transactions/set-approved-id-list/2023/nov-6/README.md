@@ -10,7 +10,7 @@ Collection   | 48
 Consensus    | 17
 Execution    | 2
 Verification | 19
-*Total* | 92
+*Total* | 86
 
 Node Type | Node ID                                                         
 --------- |-----------------------------------------------------------------|
@@ -115,4 +115,4 @@ verification| afc2b51cf058bacdd7ce48ce406d99d8d1ad317fef83f18bd948fcce0d567cfd
 ## Results
 
 
-Successful attempt: 
+Successful attempt: https://www.flowdiver.io/tx/c2f8fd7479bf1417724811b10b441f86c04edc536f5521a8e2537d2689fa397e
