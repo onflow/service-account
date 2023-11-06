@@ -102,7 +102,7 @@
       ],
       "chain": "flow-mainnet"
     },
-    "josh": {
+    "layne": {
       "address": "8624b52f9ddcd04a",
       "keys": [
         {
@@ -134,7 +134,7 @@
       ],
       "chain": "flow-mainnet"
     },
-    "layne": {
+    "josh": {
       "address": "8624b52f9ddcd04a",
       "keys": [
         {
