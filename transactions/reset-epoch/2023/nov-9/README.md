@@ -1,6 +1,6 @@
 # Reset Epoch
 
-> June 22nd, 2023
+> Nov 9th, 2023
 
 Any time the network is sporked, the protocol state is manually initialized via the bootstrapping process.
 Therefore, we need to re-synchronize the FlowEpoch smart contract each time the network is sporked, using the [ResetEpoch](../../../../templates/reset_epoch_with_end_staking_auction.cdc) transaction.
