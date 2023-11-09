@@ -10,6 +10,6 @@ Therefore, we need to re-synchronize the FlowEpoch smart contract each time the 
 ## Results
 
 Succeeded:
-https://flowscan.org/transaction/
+https://flowscan.org/transaction/b9af50e28fd0ada1021d9a5f707f848c869f763f8faa543b8b8edd5a379e2d17
 
 
