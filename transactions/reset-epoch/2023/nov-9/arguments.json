@@ -1,0 +1,22 @@
+[
+	{
+		"type":"UInt64",
+		"value":"100"
+	},
+	{
+		"type":"String",
+		"value":"b976876c61579eff5e95af815c78618a"
+	},
+	{
+		"type":"UInt64",
+		"value":"0"
+	},
+	{
+		"type":"UInt64",
+		"value":"459999"
+	},
+	{
+		"type":"UInt64",
+		"value":"482999"
+	}
+]
