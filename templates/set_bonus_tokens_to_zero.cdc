@@ -8,7 +8,6 @@ transaction() {
         let existingBonusAmount = signer.load<UFix64>(from: /storage/FlowBonusTokenAmount)
             ?? panic("Could not load bonus token amount from storage")
 
-        existingBonusAmount = 0
 
         signer.save(existingBonusAmount, to: /storage/FlowBonusTokenAmount)
     }
