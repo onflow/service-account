@@ -19,3 +19,4 @@ Burns the tokens. Must be authorized by the service account.
 
 
 ## Success
+https://www.flowdiver.io/tx/f0b86a764e7d5e923d41b787b31f015ff9c6f1e67a6af0de5b460868273d12f0
