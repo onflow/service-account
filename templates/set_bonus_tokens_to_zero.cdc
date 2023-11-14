@@ -5,7 +5,7 @@
 transaction() {
 
     prepare(signer: AuthAccount) {
-        var existingBonusAmount = signer.load<UFix64>(from: /storage/FlowBonusTokenAmount)
+        signer.load<UFix64>(from: /storage/FlowBonusTokenAmount)
             ?? panic("Could not load bonus token amount from storage")
 
 
