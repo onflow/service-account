@@ -9,6 +9,6 @@ transaction() {
             ?? panic("Could not load bonus token amount from storage")
 
 
-        signer.save(existingBonusAmount, to: /storage/FlowBonusTokenAmount)
+        signer.save(0.0, to: /storage/FlowBonusTokenAmount)
     }
 }
