@@ -29,3 +29,9 @@ Must be signed by the staking account.
 | Template                                                 | Arguments | Multisig Link   | Transaction |
 |---                                                       |---        |---              |---          |
 | [set_bonus_tokens.cdc](../../../../templates/set_bonus_tokens.cdc) | [arguments-burn-flow.json](./arguments-burn-flow.json) | [Set Bonus Tokens Amount]() |
+
+
+
+## Success
+1. Transaction 1 - f46d16feb4a710c07cafb1f947195a210f29a98f60dd5f755f9246e662e9a2d9
+2. Transaction 2 - 9ade257bbc8bd4216d90a140251269c16bb9ad69b256dcce3e89664c5f365560

@@ -16,7 +16,3 @@ During the initial Flow launch two batches of tokens were created by the Gensis 
 |---                                                       |---        |---              |---          |
 | [<br/>burn_flow.cdc](../../../../templates/burn_flow.cdc) | [arguments-burn-flow.json](./arguments-burn-flow.json) | [Burn Tokens](https://flow-multisig-git-service-account-onflow.vercel.app/mainnet?type=serviceAccount&name=burn_flow.cdc&param=%5B%7B%22type%22:%20%22UFix64%22,%20%22value%22:%20%2238357187.00%22%7D%20%5D&acct=0xe467b9dd11fa00df&limit=9999) | [Flowscan](https://flowscan.org/transaction/a0cfe6b5a2b013f536bd9957cd544630e415c95b98c413ef4a5e4f4d4e6b238a) |
 
-
-## Success 
-1. Transaction 1 - f46d16feb4a710c07cafb1f947195a210f29a98f60dd5f755f9246e662e9a2d9
-2. Transaction 2 - 9ade257bbc8bd4216d90a140251269c16bb9ad69b256dcce3e89664c5f365560
