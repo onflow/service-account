@@ -1,5 +1,7 @@
 # Burn Flow - Nov 14th
 
+Setting bonus tokens to zero in the epoch contract.
+
 The bonus tokens should no longer be subtracted from the total supply for rewards calculation.
 
 ## About Bonus Tokens
