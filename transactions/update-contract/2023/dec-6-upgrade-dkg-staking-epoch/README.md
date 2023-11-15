@@ -18,6 +18,8 @@ This upgrade has to be completed in multiple transactions:
 
 3. Upgrade `FlowEpoch`.
 
+4. Set Epoch timing Config
+
 Used this to generate the contract code arguments:
 
 `cat "./{Filename}.cdc" | xxd -p | tr -d '\n'`
@@ -88,6 +90,25 @@ the `FlowIDTableStaking` update as possible.
 | Template                                                             | Arguments | Multisig Link   | Transaction |
 |----------------------------------------------------------------------|---        |---              |---          |
 | [update_contract.cdc](../../../../templates/update_contract.cdc) |  | | |
+
+
+### Results
+
+Successful attempt:
+https://flowscan.org/transaction/
+
+___
+
+# Transaction 4
+
+## Transaction 4 Sequence of signing: 
+
+Signer: flow-staking
+Transaction: `templates/set_epoch_timing_config.cdc`
+
+| Template                                                             | Arguments | Multisig Link   | Transaction |
+|----------------------------------------------------------------------|---        |---              |---          |
+| [set_epoch_timing_config.cdc](../../../../templates/set_epoch_timing_config.cdc) |  | | |
 
 
 ### Results
