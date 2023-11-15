@@ -2,7 +2,7 @@
 
 ## This is implementation of [FLIP 208](https://github.com/onflow/flips/blob/main/governance/20231005-Adding-bluesign-as-multi-sig.md)
 
-Transaction: [remove_key.cdc](../../../../templates/replace_key.cdc)
+Transaction: [replace_key.cdc](../../../../templates/replace_key.cdc)
 
 > Nov 16th, 2023
 
