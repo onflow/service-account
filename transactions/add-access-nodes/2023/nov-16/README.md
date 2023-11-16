@@ -6,7 +6,7 @@ Increases the slot limit for Access nodes by 5
 
 ## Using Multisign tool
 
-1. DapperLabs generates the Signature Request ID on the [site](https://flow-multisig-git-service-account-onflow.vercel.app/mainnet) for the `add_access_limits.cdc` transaction with the given args.
+1. Flow/Vishal generates the Signature Request ID on the [site](https://flow-multisig-git-service-account-onflow.vercel.app/mainnet) for the `add_access_limits.cdc` transaction with the given args.
 
 2. Signers sign with the multisign tool
 
