@@ -33,5 +33,5 @@ Key to be removed from the service account and the staking account:
 ## Results
 
 
-1. https://flowscan.org/transaction/
-2. https://flowscan.org/transaction/
+1. https://flowscan.org/transaction/d565222c819d18a8951624ce65a9b8875879c864bcf27cadb6767ea5a1d669e9
+2. https://flowscan.org/transaction/a9aaf36be4d873a31dbd7e671f13709e6b76e9991bdd5344bb54b6ae592b59b1
