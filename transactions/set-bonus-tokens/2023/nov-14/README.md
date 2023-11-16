@@ -14,7 +14,7 @@ Burns the tokens. Must be authorized by the service account.
 
 | Template                                                             | Arguments | Multisig Link   | Transaction |
 |----------------------------------------------------------------------|---        |---              |---          |
-| [burn_flow.cdc](../../../../templates/set_bonus_tokens_to_zero..cdc) |  | | |
+| [set_bonus_tokens.cdc](../../../../templates/set_bonus_tokens.cdc) |  | | |
 
 
 
