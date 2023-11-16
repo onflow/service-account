@@ -122,14 +122,14 @@
         "resourceID": "projects/bjartek/locations/europe-north1/keyRings/flow/cryptoKeys/flow/cryptoKeyVersions/1"
       }
     },
-    "flowscan": {
+    "bluesign": {
       "address": "e467b9dd11fa00df",
       "key": {
         "type": "google-kms",
-        "index": 17,
+        "index": 18,
         "signatureAlgorithm": "ECDSA_P256",
         "hashAlgorithm": "SHA2_256",
-        "resourceID": "projects/flowscan/locations/global/keyRings/flow/cryptoKeys/flowscan/cryptoKeyVersions/1"
+        "resourceID": "projects/flow-352513/locations/us-east1/keyRings/flow/cryptoKeys/hc/cryptoKeyVersions/1"
       }
     },
     "emulator-account": {

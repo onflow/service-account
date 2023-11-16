@@ -179,15 +179,15 @@
       ],
       "chain": "flow-mainnet"
     },
-    "flowscan": {
+    "bluesign": {
       "address": "8624b52f9ddcd04a",
       "keys": [
         {
           "type": "google-kms",
-          "index": 9,
+          "index": 10,
           "signatureAlgorithm": "ECDSA_P256",
           "hashAlgorithm": "SHA2_256",
-          "resourceID": "projects/flowscan/locations/global/keyRings/flow/cryptoKeys/flowscan/cryptoKeyVersions/1"
+          "resourceID": "projects/flow-352513/locations/us-east1/keyRings/flow/cryptoKeys/hc/cryptoKeyVersions/1"
         }
       ],
       "chain": "flow-mainnet"
