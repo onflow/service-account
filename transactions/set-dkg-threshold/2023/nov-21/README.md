@@ -14,10 +14,10 @@ flow transactions build ./templates/set_safe_threshold.cdc \
   --config-path flow-staking.json \
   --network mainnet \
   --args-json "$(cat "./transactions/set-dkg-threshold/2023/nov-21/arguments.json")" \
-  --proposer 0x8624b52f9ddcd04a \
+  --proposer 0xe467b9dd11fa00df \
   --proposer-key-index 5 \
-  --authorizer 0x8624b52f9ddcd04a \
-  --payer 0x8624b52f9ddcd04a \
+  --authorizer 0xe467b9dd11fa00df \
+  --payer 0xe467b9dd11fa00df \
   -x payload \
   --save ./transactions/set-dkg-threshold/2023/nov-21/set-dkg-threshold-nov-21-unsigned.rlp
 ```
