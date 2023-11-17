@@ -13,63 +13,60 @@ Transaction template: [set_safe_threshold.cdc](../../../../templates/set_safe_th
 flow transactions build ./templates/set_safe_threshold.cdc \
   --config-path flow-staking.json \
   --network mainnet \
-  --args-json "$(cat "./transactions/set-dkg-threshold/2022/feb-10/arguments.json")" \
+  --args-json "$(cat "./transactions/set-dkg-threshold/2023/nov-21/arguments.json")" \
   --proposer 0x8624b52f9ddcd04a \
   --proposer-key-index 5 \
   --authorizer 0x8624b52f9ddcd04a \
   --payer 0x8624b52f9ddcd04a \
   -x payload \
-  --save ./transactions/set-dkg-threshold/2022/feb-10/set-dkg-threshold-feb-10-unsigned.rlp
+  --save ./transactions/set-dkg-threshold/2023/nov-21/set-dkg-threshold-nov-21-unsigned.rlp
 ```
 
-## Blocto Signs
+## Signer 1 Signs
 
 ```sh
-flow transactions sign ./transactions/set-dkg-threshold/2022/feb-10/set-dkg-threshold-feb-10-unsigned.rlp \
+flow transactions sign ./transactions/set-dkg-threshold/2023/nov-21/set-dkg-threshold-nov-21-unsigned.rlp \
   --config-path flow-staking.json \
-  --signer blocto \
+  --signer <signer1> \
   --filter payload \
-  --save ./transactions/set-dkg-threshold/2022/feb-10/set-dkg-threshold-feb-10-sig-1.rlp
+  --save ./transactions/set-dkg-threshold/2023/nov-21/set-dkg-threshold-nov-21-sig-1.rlp
 ```
 
-## Animoca Signs
+## Signer 2 Signs
 
 ```sh
-flow transactions sign ./transactions/set-dkg-threshold/2022/feb-10/set-dkg-threshold-feb-10-sig-1.rlp \
+flow transactions sign ./transactions/set-dkg-threshold/2023/nov-21/set-dkg-threshold-nov-21-sig-1.rlp \
   --config-path flow-staking.json \
-  --signer animoca \
+  --signer <signer1> \
   --filter payload \
-  --save ./transactions/set-dkg-threshold/2022/feb-10/set-dkg-threshold-feb-10-sig-2.rlp
+  --save ./transactions/set-dkg-threshold/2023/nov-21/set-dkg-threshold-nov-21-sig-2.rlp
 ```
 
-## Peter Signs
+## Signer 3 Signs
 
 ```sh
-flow transactions sign ./transactions/set-dkg-threshold/2022/feb-10/set-dkg-threshold-feb-10-sig-2.rlp \
+flow transactions sign ./transactions/set-dkg-threshold/2023/nov-21/set-dkg-threshold-nov-21-sig-2.rlp \
   --config-path flow-staking.json \
-  --signer peter \
+  --signer <signer3> \
   --filter payload \
-  --save ./transactions/set-dkg-threshold/2022/feb-10/set-dkg-threshold-feb-10-sig-3.rlp
+  --save ./transactions/set-dkg-threshold/2023/nov-21/set-dkg-threshold-nov-21-sig-3.rlp
 ```
 
-## Kan Signs
+## Signer 4 Signs
 
 ```sh
-flow transactions sign ./transactions/set-dkg-threshold/2022/feb-10/set-dkg-threshold-feb-10-sig-3.rlp \
+flow transactions sign ./transactions/set-dkg-threshold/2023/nov-21/set-dkg-threshold-nov-21-sig-3.rlp \
   --config-path flow-staking.json \
-  --signer kan \
+  --signer <signer4> \
   --filter payload \
-  --save ./transactions/set-dkg-threshold/2022/feb-10/set-dkg-threshold-feb-10-sig-complete.rlp
+  --save ./transactions/set-dkg-threshold/2023/nov-21/set-dkg-threshold-nov-21-sig-complete.rlp
 ```
 
 
 ## Somebody Submits
 
 ```sh
-flow transactions send-signed --network mainnet --config-path flow-staking.json ./transactions/set-dkg-threshold/2022/feb-10/set-dkg-threshold-feb-10-sig-complete.rlp
+flow transactions send-signed --network mainnet --config-path flow-staking.json ./transactions/set-dkg-threshold/2023/nov-21/set-dkg-threshold-nov-21-sig-complete.rlp
 ```
 
 ## Results
-
-Attempt 1 - Failed - https://flowscan.org/transaction/05b64b8350e028b30ce2432ef555b788cf1c4b192fc7ccad425cdb72cb862d7b
-Attempt 2 - Success - https://flowscan.org/transaction/8aa8049ae72f675309cb74c313d17be79a1c19c637b42367e34fe65f0b389c1d
