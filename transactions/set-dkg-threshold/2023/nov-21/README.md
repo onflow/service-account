@@ -22,5 +22,5 @@ Set the DKG success threshold to 70%.
 
 ## Results
 
-Successful attempt: https://www.flowdiver.io/tx/
+https://www.flowdiver.io/tx/580538214be4e1c692463e15eaaab7dc607b91a59c8ff53237cdd38c9a227eac
 
