@@ -121,6 +121,8 @@ pub contract FlowEpoch {
         DKGPhase2FinalView: UInt64,
         DKGPhase3FinalView: UInt64,
 
+        /// The target duration for the upcoming epoch, in seconds
+        targetDuration: UInt64,
         /// The target end time for the upcoming epoch, specified in second-precision Unix time
         targetEndTime: UInt64
     )
@@ -594,7 +596,7 @@ pub contract FlowEpoch {
         if let previousEpochMetadata = self.getEpochMetadata(self.currentEpochCounter - (1 as UInt64)) {
             if !previousEpochMetadata.rewardsPaid {
                 let summary = FlowIDTableStaking.EpochRewardsSummary(totalRewards: previousEpochMetadata.totalRewards, breakdown: previousEpochMetadata.rewardAmounts)
-                self.borrowStakingAdmin().payRewards(summary)
+                self.borrowStakingAdmin().payRewards(forEpochCounter: previousEpochMetadata.counter, rewardsSummary: summary)
                 previousEpochMetadata.setRewardsPaid(true)
                 self.saveEpochMetadata(previousEpochMetadata)
             }
@@ -613,7 +615,7 @@ pub contract FlowEpoch {
             self.borrowDKGAdmin().endDKG()
         }
 
-        self.borrowStakingAdmin().moveTokens()
+        self.borrowStakingAdmin().moveTokens(newEpochCounter: self.proposedEpochCounter())
 
         self.currentEpochPhase = EpochPhase.STAKINGAUCTION
 
@@ -693,7 +695,9 @@ pub contract FlowEpoch {
                                                 dkgKeys: [])
 
         // Compute the target end time for the next epoch
-        let proposedTargetEndTime = self.getEpochTimingConfig().getTargetEndTimeForEpoch(self.proposedEpochCounter())
+        let timingConfig = self.getEpochTimingConfig()
+        let proposedTargetDuration = timingConfig.duration
+        let proposedTargetEndTime = timingConfig.getTargetEndTimeForEpoch(self.proposedEpochCounter())
 
         self.saveEpochMetadata(proposedEpochMetadata)
 
@@ -708,6 +712,7 @@ pub contract FlowEpoch {
                         DKGPhase1FinalView: proposedEpochMetadata.startView + self.configurableMetadata.numViewsInStakingAuction + self.configurableMetadata.numViewsInDKGPhase - 1 as UInt64,
                         DKGPhase2FinalView: proposedEpochMetadata.startView + self.configurableMetadata.numViewsInStakingAuction + (2 as UInt64 * self.configurableMetadata.numViewsInDKGPhase) - 1 as UInt64,
                         DKGPhase3FinalView: proposedEpochMetadata.startView + self.configurableMetadata.numViewsInStakingAuction + (3 as UInt64 * self.configurableMetadata.numViewsInDKGPhase) - 1 as UInt64,
+                        targetDuration: proposedTargetDuration,
                         targetEndTime: proposedTargetEndTime)
     }
 
@@ -949,7 +954,7 @@ pub contract FlowEpoch {
         let defaultEpochTimingConfig = EpochTimingConfig(
             duration: numViewsInEpoch,
             refCounter: currentEpochCounter,
-            refTimestamp: UInt64(getCurrentBlock().timestamp))
+            refTimestamp: UInt64(getCurrentBlock().timestamp)+numViewsInEpoch)
         FlowEpoch.account.save(defaultEpochTimingConfig, to: /storage/flowEpochTimingConfig)
 
         self.currentEpochCounter = currentEpochCounter
@@ -1012,4 +1017,3 @@ pub contract FlowEpoch {
         self.saveEpochMetadata(firstEpochMetadata)
     }
 }
- 
