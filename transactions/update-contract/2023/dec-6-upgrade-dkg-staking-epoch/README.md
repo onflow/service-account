@@ -50,29 +50,84 @@ This transaction can be executed using the web tool.
 ### Results
 
 Successful attempt:
-https://flowscan.org/transaction/
+https://www.flowdiver.io/tx/
 
 ___
 
 # Transaction 2
 
-## Transaction 2 Sequence of signing: 
+## Transaction 2 Sequence of signing:
 
 Signer: flow-staking
-Transaction: `update_contract_set_access_slots.cdc`
+Transaction: [update_contract_set_access_slots.cdc](update_contract_set_access_slots.cdc)
 Args: `arguments-update-FlowIDTableStaking.json`
 
-This transaction can be executed using the web tool.
+This transaction has to be executed using the old method because the argument payload is too large.
 
-| Template                                                             | Arguments | Multisig Link   | Transaction |
-|----------------------------------------------------------------------|---        |---              |---          |
-| [update_contract_set_access_slots.cdc](update_contract_set_access_slots.cdc) |  | | |
+## Vishal Builds
 
+```sh
+flow transactions build ./transactions/update-contract/2023/dec-6-upgrade-dkg-staking-epoch/update_contract_set_access_slots.cdc \
+  --config-path flow-staking.json \
+  --network mainnet \
+  --args-json "$(cat "./transactions/update-contract/2023/dec-6-upgrade-dkg-staking-epoch/arguments-update-FlowIDTableStaking.json")" \
+  --proposer 0x8624b52f9ddcd04a \
+  --proposer-key-index 5 \
+  --authorizer 0x8624b52f9ddcd04a \
+  --payer 0x8624b52f9ddcd04a \
+  -x payload \
+  --save ./transactions/update-contract/2023/dec-6-upgrade-dkg-staking-epoch/flow-id-table-staking-contract-upgrade-dec-6-unsigned.rlp
+```
 
-### Results
+## Josh Signs
 
-Successful attempt:
-https://flowscan.org/transaction/
+```sh
+flow transactions sign ./transactions/update-contract/2023/dec-6-upgrade-dkg-staking-epoch/flow-id-table-staking-contract-upgrade-dec-6-unsigned.rlp \
+  --config-path flow-staking.json \
+  --signer josh \
+  --filter payload \
+  --save ./transactions/update-contract/2023/dec-6-upgrade-dkg-staking-epoch/flow-id-table-staking-contract-upgrade-dec-6-sig-1.rlp
+```
+
+## Find Signs
+
+```sh
+flow transactions sign ./transactions/update-contract/2023/dec-6-upgrade-dkg-staking-epoch/flow-id-table-staking-contract-upgrade-dec-6-sig-1.rlp \
+  --config-path flow-staking.json \
+  --signer find \
+  --filter payload \
+  --save ./transactions/update-contract/2023/dec-6-upgrade-dkg-staking-epoch/flow-id-table-staking-contract-upgrade-dec-6-sig-2.rlp
+```
+
+## Bluesign Signs
+
+```sh
+flow transactions sign ./transactions/update-contract/2023/dec-6-upgrade-dkg-staking-epoch/flow-id-table-staking-contract-upgrade-dec-6-sig-2.rlp \
+  --config-path flow-staking.json \
+  --signer justin \
+  --filter payload \
+  --save ./transactions/update-contract/2023/dec-6-upgrade-dkg-staking-epoch/flow-id-table-staking-contract-upgrade-dec-6-sig-3.rlp
+```
+
+## Kshitij Signs
+
+```sh
+flow transactions sign ./transactions/update-contract/2023/dec-6-upgrade-dkg-staking-epoch/flow-id-table-staking-contract-upgrade-dec-6-sig-3.rlp \
+  --config-path flow-staking.json \
+  --signer kshitij \
+  --filter payload \
+  --save ./transactions/update-contract/2023/dec-6-upgrade-dkg-staking-epoch/flow-id-table-staking-contract-upgrade-dec-6-sig-4.rlp
+```
+
+## Somebody Submits
+
+```sh
+flow transactions send-signed --config-path flow-staking.json --network mainnet ./transactions/update-contract/2023/dec-6-upgrade-dkg-staking-epoch/flow-id-table-staking-contract-upgrade-dec-6-sig-4.rlp
+```
+
+## Results
+
+https://www.flowdiver.io/tx/
 
 ___
 
@@ -95,7 +150,7 @@ the `FlowIDTableStaking` update as possible.
 ### Results
 
 Successful attempt:
-https://flowscan.org/transaction/
+https://www.flowdiver.io/tx/
 
 ___
 
@@ -114,6 +169,6 @@ Transaction: `templates/set_epoch_timing_config.cdc`
 ### Results
 
 Successful attempt:
-https://flowscan.org/transaction/
+https://www.flowdiver.io/tx/
 
 ___
