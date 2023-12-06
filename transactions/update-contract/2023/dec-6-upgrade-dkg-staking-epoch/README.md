@@ -50,7 +50,7 @@ This transaction can be executed using the web tool.
 ### Results
 
 Successful attempt:
-https://www.flowdiver.io/tx/
+https://www.flowdiver.io/tx/8b25cd913f13c1a93ad60a3ab8788162e17f9b434699b2fe85cd67df173f18c1
 
 ___
 
@@ -109,12 +109,12 @@ flow transactions sign ./transactions/update-contract/2023/dec-6-upgrade-dkg-sta
   --save ./transactions/update-contract/2023/dec-6-upgrade-dkg-staking-epoch/flow-id-table-staking-contract-upgrade-dec-6-sig-3.rlp
 ```
 
-## Kshitij Signs
+## Vishal Signs
 
 ```sh
 flow transactions sign ./transactions/update-contract/2023/dec-6-upgrade-dkg-staking-epoch/flow-id-table-staking-contract-upgrade-dec-6-sig-3.rlp \
   --config-path flow-staking.json \
-  --signer kshitij \
+  --signer vishal \
   --filter payload \
   --save ./transactions/update-contract/2023/dec-6-upgrade-dkg-staking-epoch/flow-id-table-staking-contract-upgrade-dec-6-sig-4.rlp
 ```
