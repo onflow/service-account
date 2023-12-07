@@ -1,12 +1,12 @@
 # Add DapperLab node IDs
 
-> Dec 5th, 2023
+> Dec 7th, 2023
 
 Figment to run 5 Consensus nodes for DapperLabs.
 
 This is the transaction for the first cohort of 2 out of those 5 nodes.
 
-Node Type | Total nodes
+Node Type    | Total nodes
 -------------|------------
 Consensus    | 2
 
