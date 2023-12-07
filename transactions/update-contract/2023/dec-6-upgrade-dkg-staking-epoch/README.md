@@ -14,11 +14,6 @@ This upgrade has to be completed in multiple transactions:
 
 1. Upgrade `FlowDKG`.
 
-2. Upgrade `FlowIDTableStaking` and set access node slots.
-
-3. Upgrade `FlowEpoch`.
-
-4. Set Epoch timing Config
 
 Used this to generate the contract code arguments:
 
@@ -50,70 +45,6 @@ This transaction can be executed using the web tool.
 ### Results
 
 Successful attempt:
-https://flowscan.org/transaction/
-
-___
-
-# Transaction 2
-
-## Transaction 2 Sequence of signing: 
-
-Signer: flow-staking
-Transaction: `update_contract_set_access_slots.cdc`
-Args: `arguments-update-FlowIDTableStaking.json`
-
-This transaction can be executed using the web tool.
-
-| Template                                                             | Arguments | Multisig Link   | Transaction |
-|----------------------------------------------------------------------|---        |---              |---          |
-| [update_contract_set_access_slots.cdc](update_contract_set_access_slots.cdc) |  | | |
-
-
-### Results
-
-Successful attempt:
-https://flowscan.org/transaction/
-
-___
-
-# Transaction 3
-
-## Transaction 3 Sequence of signing: 
-
-Signer: flow-staking
-Transaction: `templates/update_contract.cdc`
-Args: `arguments-update-FlowEpoch.json`
-
-This transaction can be executed using the web tool and should be done as soon after
-the `FlowIDTableStaking` update as possible.
-
-| Template                                                             | Arguments | Multisig Link   | Transaction |
-|----------------------------------------------------------------------|---        |---              |---          |
-| [update_contract.cdc](../../../../templates/update_contract.cdc) |  | | |
-
-
-### Results
-
-Successful attempt:
-https://flowscan.org/transaction/
-
-___
-
-# Transaction 4
-
-## Transaction 4 Sequence of signing: 
-
-Signer: flow-staking
-Transaction: `templates/set_epoch_timing_config.cdc`
-
-| Template                                                             | Arguments | Multisig Link   | Transaction |
-|----------------------------------------------------------------------|---        |---              |---          |
-| [set_epoch_timing_config.cdc](../../../../templates/set_epoch_timing_config.cdc) |  | | |
-
-
-### Results
-
-Successful attempt:
-https://flowscan.org/transaction/
+https://www.flowdiver.io/tx/8b25cd913f13c1a93ad60a3ab8788162e17f9b434699b2fe85cd67df173f18c1
 
 ___
