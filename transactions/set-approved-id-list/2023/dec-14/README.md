@@ -31,4 +31,4 @@ consensus| 6beaa036315896bc9c0552d546ff10e2a637d53b8f847def8f1dba716ec33435
 ## Results
 
 
-Successful attempt: https://www.flowdiver.io/tx/9462da15571539e8a0dd874fae744f346af89bc115be3bb117137744e2aa4514
+Successful attempt: 
