@@ -15,4 +15,4 @@ See [FLIP GOV-247: Removing Verification node a3fac321587b4835966946cf7a13d5feae
 
 ## Results
 
-
+https://www.flowdiver.io/tx/ec8742675590f0154c985c4a8df96dc552ae2e08d792a55525e8d0d96d752659
