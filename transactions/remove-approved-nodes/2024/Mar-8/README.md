@@ -3,7 +3,7 @@
 > March 8th, 2024
 
 Removing CB VN node ID.
-See [FLIP GOV-247: Removing Verification node a3fac321587b4835966946cf7a13d5feaeb7ca91a84c85c2d2f861c2d80513ec](https://forum.flow.com/t/flip-gov-253-removing-the-decommissioned-verification-node/5731)
+See [FLIP GOV-253](https://forum.flow.com/t/flip-gov-253-removing-the-decommissioned-verification-node/5731)
 
 
 ## New method using Multisign tool
