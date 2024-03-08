@@ -15,4 +15,4 @@ See [FLIP GOV-253](https://forum.flow.com/t/flip-gov-253-removing-the-decommissi
 
 ## Results
 
-https://www.flowdiver.io/tx/
+https://www.flowdiver.io/tx/c247f44863c93f1b84988c79c6324191f82164133f5c1fe366e2a8214db9629c
