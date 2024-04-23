@@ -1,6 +1,6 @@
 # Update RandomBeaconHistory Contract
 
-> Feb 24th, 2024
+> Apr 24th, 2024
 
 Upgrade to the `RandomBeaconHistory` contract from this pull request:
 
