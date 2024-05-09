@@ -1,0 +1,25 @@
+[
+  {
+    "type": "UInt8",
+    "value": "0"
+  },
+  {
+    "type": "UInt8",
+    "value": "33"
+  },
+  {
+    "type": "UInt8",
+    "value": "20"
+  },
+  {
+    "type": "Optional",
+    "value": {
+      "type": "String",
+      "value": "patch.1"
+    }
+  },
+  {
+    "type": "UInt64",
+    "value": "77862191"
+  }
+]
