@@ -5,6 +5,10 @@
             {
                 "type": "String",
                 "value": "0b28fa535c88bb35cddbaa697468446b1ad4f85d38f5c8af84b4c1d45b982db4"
+            },
+            {
+                "type": "String",
+                "value": "4bf86d54f88bbe0998ae50b5168468ff7e194f90219dbe380bebe5bcd108192d"
             }
         ]
     }
