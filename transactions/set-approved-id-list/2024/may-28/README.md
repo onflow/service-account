@@ -1,12 +1,11 @@
-# Add three consensus nodes to the approved list of nodes
+# Add one consensus node to the approved list of nodes
 
-> June 3rd, 2024
+> May 28th, 2024
 
-Adds Three Consensus nodes staked by the FlowFoundation:
+Adds Two Consensus nodes:
+1. FlowFoundation node run by Figment `0b28fa535c88bb35cddbaa697468446b1ad4f85d38f5c8af84b4c1d45b982db4`
+2. Flowty node run by  Figment `4bf86d54f88bbe0998ae50b5168468ff7e194f90219dbe380bebe5bcd108192d`
 
-1. "5f9d17a0204dfe65871947dd3f60124e076e7010b5f083d0777c7fa8b6e15489"
-2. "4f9e91a026235ef8e24baca73082f305820ac22f1fdbaf2ea054140606e15ae8"
-3. "b79849492533bdf1485a61edcaed389fe903020b0f0f3319301b2bad87b597e1"
 
 ## Using Multisign tool
 
@@ -21,7 +20,7 @@ Adds Three Consensus nodes staked by the FlowFoundation:
 ## Results
 
 
-Successful attempt: https://flowscan.org/transaction/
+Successful attempt: https://flowscan.org/transaction/88f188771a8727c1887b864c02e7766c31dcecc294e716b209d41c0b1c034607
 
 
 ## Verification
@@ -31,9 +30,9 @@ Successful attempt: https://flowscan.org/transaction/
 #### Candidate nodes for next epoch
 
 ```
-$ flow scripts execute  ./transactions/idTableStaking/scripts/get_candidate_nodes.cdc -n mainnet
+flow scripts execute  ./transactions/idTableStaking/scripts/get_candidate_nodes.cdc -n mainnet
 
-Result: {3: {}, 2: {"4f9e91a026235ef8e24baca73082f305820ac22f1fdbaf2ea054140606e15ae8": true, "b79849492533bdf1485a61edcaed389fe903020b0f0f3319301b2bad87b597e1": true, "5f9d17a0204dfe65871947dd3f60124e076e7010b5f083d0777c7fa8b6e15489": true}, 1: {}, 5: {}, 4: {}}
+Result: {2: {"4bf86d54f88bbe0998ae50b5168468ff7e194f90219dbe380bebe5bcd108192d": true, "0b28fa535c88bb35cddbaa697468446b1ad4f85d38f5c8af84b4c1d45b982db4": true}, 5: {}, 1: {}, 4: {}, 3: {}}
 
 ```
 
@@ -42,7 +41,9 @@ Result: {3: {}, 2: {"4f9e91a026235ef8e24baca73082f305820ac22f1fdbaf2ea054140606e
 ```
 $ flow scripts execute  ./transactions/idTableStaking/scripts/get_proposed_table.cdc -n mainnet -o json | jq '.value[] | .value' | sort > /tmp/proposed_table.txt
 $ cat /tmp/proposed_table.txt | wc -l
-     440
+     438
+$ cat /tmp/proposed_table.txt | grep "0b28fa535c88bb35cddbaa697468446b1ad4f85d38f5c8af84b4c1d45b982db4"
+$ cat /tmp/proposed_table.txt | grep "4bf86d54f88bbe0998ae50b5168468ff7e194f90219dbe380bebe5bcd108192d"
 ```
 
 #### Approved nodes
@@ -50,24 +51,21 @@ $ cat /tmp/proposed_table.txt | wc -l
 ```
 $ flow scripts execute  ./transactions/idTableStaking/scripts/get_approved_nodes.cdc -n mainnet -o json | jq '.value[] | .value' | sort > /tmp/approved_nodes.txt
 $ cat /tmp/approved_nodes.txt | wc -l
-     391
+     389
+$ cat /tmp/approved_nodes.txt  | grep "0b28fa535c88bb35cddbaa697468446b1ad4f85d38f5c8af84b4c1d45b982db4"
+$ cat /tmp/approved_nodes.txt  | grep "4bf86d54f88bbe0998ae50b5168468ff7e194f90219dbe380bebe5bcd108192d"
 ```
 
 #### Node info
 
 ```
-$ flow scripts execute  ./transactions/idTableStaking/scripts/get_node_info.cdc --args-json  '[{ "type":"String", "value":"5f9d17a0204dfe65871947dd3f60124e076e7010b5f083d0777c7fa8b6e15489"}]' -n mainnet -o inline
-A.8624b52f9ddcd04a.FlowIDTableStaking.NodeInfo(id: "5f9d17a0204dfe65871947dd3f60124e076e7010b5f083d0777c7fa8b6e15489", role: 2, networkingAddress: "flow--mainnet--consensus--ff-2.staking.production.figment.io:3569", networkingKey: "8ea51f7bbb633d11d9bc3d5225428e1bd9e5d6724433a057bb1f765cd290ac566da80c742e70343153c56c8270d3bed1ea92ac3d943f7aaf812e1eb921af8c61", stakingKey: "998db3392fe35d227fee1ab5b98c3cac30fdf06029b63b1c52d832fa6bfc62b296eba31baf0c40421666a15dd4ce750b0873ed60f563d72f38be8639cf2241f5088368a95916e6dc6911b359ee5647fbb1c330e19d87a02b9d642945e9dc9e14", tokensStaked: 0.00000000, tokensCommitted: 500000.00000000, tokensUnstaking: 0.00000000, tokensUnstaked: 0.00000000, tokensRewarded: 0.00000000, delegators: [], delegatorIDCounter: 0, tokensRequestedToUnstake: 0.00000000, initialWeight: 0)
+$ flow scripts execute  ./transactions/idTableStaking/scripts/get_node_info.cdc --args-json  '[{ "type":"String", "value":"0b28fa535c88bb35cddbaa697468446b1ad4f85d38f5c8af84b4c1d45b982db4"}]' -n mainnet -o inline
+A.8624b52f9ddcd04a.FlowIDTableStaking.NodeInfo(id: "0b28fa535c88bb35cddbaa697468446b1ad4f85d38f5c8af84b4c1d45b982db4", role: 2, networkingAddress: "flow--mainnet--consensus--ff-1.staking.production.figment.io:3569", networkingKey: "3aadf137af728b0272892217ed54df3f4302a311df63db688bc6825ee7d82586702f6637879f6755d60b8fac8f2afd1f789dcceb61bacc8b82d1b33ba4a1a7c6", stakingKey: "8cbf2ae716f28a07bd631c4c92ee3d576f1ef62eb6262711d3fbdd6212ccec7457b70c9971e11e0d07bdbf35a187416212a44236f7f30298c92199fc6256a59da3cfe1f7cbafc574d85e1f96e98ee15d739d549212be9ba9724dc670d1a33021", tokensStaked: 0.00000000, tokensCommitted: 500000.00000000, tokensUnstaking: 0.00000000, tokensUnstaked: 0.00000000, tokensRewarded: 0.00000000, delegators: [], delegatorIDCounter: 0, tokensRequestedToUnstake: 0.00000000, initialWeight: 0
 ```
 
 ```
-$ flow scripts execute  ./transactions/idTableStaking/scripts/get_node_info.cdc --args-json  '[{ "type":"String", "value":"4f9e91a026235ef8e24baca73082f305820ac22f1fdbaf2ea054140606e15ae8"}]' -n mainnet -o inline
-A.8624b52f9ddcd04a.FlowIDTableStaking.NodeInfo(id: "4f9e91a026235ef8e24baca73082f305820ac22f1fdbaf2ea054140606e15ae8", role: 2, networkingAddress: "flow--mainnet--consensus--ff-3.staking.production.figment.io:3569", networkingKey: "c6a43e368c29b86fb6639cdf7f719dfc18418501bc2caa1f48fb4166131f87161b5a42ceb0beb3a43e2b9b800ecbd5029311e862e924c336a106fc183f95821c", stakingKey: "96c47c50dd69d2c45b5312c7a4c23f609ae7c176f6a997d89b8b1bb80f4882b42d2104b0b8f5541c1c063f375e9ecb1d12689329a58dcaf5aa41d074aa5d65d5781a365593bd5cbca522b71ef31d1751266213ef3318a709a523d095d4038655", tokensStaked: 0.00000000, tokensCommitted: 500000.00000000, tokensUnstaking: 0.00000000, tokensUnstaked: 0.00000000, tokensRewarded: 0.00000000, delegators: [], delegatorIDCounter: 0, tokensRequestedToUnstake: 0.00000000, initialWeight: 0)
-```
-
-```
-$ flow scripts execute  ./transactions/idTableStaking/scripts/get_node_info.cdc --args-json  '[{ "type":"String", "value":"b79849492533bdf1485a61edcaed389fe903020b0f0f3319301b2bad87b597e1"}]' -n mainnet -o inline
-A.8624b52f9ddcd04a.FlowIDTableStaking.NodeInfo(id: "b79849492533bdf1485a61edcaed389fe903020b0f0f3319301b2bad87b597e1", role: 2, networkingAddress: "flow--mainnet--consensus--ff-4.staking.production.figment.io:3569", networkingKey: "bb77810842c9d85e7b843456af6d7fb23d5b345908eaade3c00b131297c487fe1e42a67020acb54a94e36eadc1fcd25b0f162c5899825f7ea280e124cbf7bcb5", stakingKey: "b1b04caa514cb6d02db0b1c496507f38cef302e55100188a8dbbb2cb8aa1328189200a58d05e6d260fa5b12dfa93f1270ee1e583d3cc1653ae3e5a4b25caed1cdd3cd83f2b6e56eee0178deacff6d8d39b658cd660d1582f8efe219bdc9105bc", tokensStaked: 0.00000000, tokensCommitted: 500000.00000000, tokensUnstaking: 0.00000000, tokensUnstaked: 0.00000000, tokensRewarded: 0.00000000, delegators: [], delegatorIDCounter: 0, tokensRequestedToUnstake: 0.00000000, initialWeight: 0)
+$ flow scripts execute  ./transactions/idTableStaking/scripts/get_node_info.cdc --args-json  '[{ "type":"String", "value":"4bf86d54f88bbe0998ae50b5168468ff7e194f90219dbe380bebe5bcd108192d"}]' -n mainnet -o inline
+A.8624b52f9ddcd04a.FlowIDTableStaking.NodeInfo(id: "4bf86d54f88bbe0998ae50b5168468ff7e194f90219dbe380bebe5bcd108192d", role: 2, networkingAddress: "flow--mainnet--consensus--fl-1.staking.production.figment.io:3569", networkingKey: "012d916da0fe76e4dd8e079ba63ee3061ad9cf6cda003f3fb97b6990b1d0dce1f9d27ab26641901d624b74ee6f96653d904d1c0eddaa853832274481a04fc183", stakingKey: "b3bb1f8ce82ca86be000f2b0b6c004dd2f5035b10df32898f63222a30f2418308c0a4612acb13fc16f9817a51ba9da200d5b8d736b9ac93388f988415d91087341c748d1c0ae0ba9178a8e4dca433b471aff3bc97214594c2e3c8802a9a65bfd", tokensStaked: 0.00000000, tokensCommitted: 500000.00000000, tokensUnstaking: 0.00000000, tokensUnstaked: 0.00000000, tokensRewarded: 0.00000000, delegators: [], delegatorIDCounter: 0, tokensRequestedToUnstake: 0.00000000, initialWeight: 0
 ```
 
 ### After transaction
@@ -77,7 +75,7 @@ A.8624b52f9ddcd04a.FlowIDTableStaking.NodeInfo(id: "b79849492533bdf1485a61edcaed
 ```
 $ flow scripts execute  ./transactions/idTableStaking/scripts/get_candidate_nodes.cdc -n mainnet
 
-
+Result: {2: {"4bf86d54f88bbe0998ae50b5168468ff7e194f90219dbe380bebe5bcd108192d": true, "0b28fa535c88bb35cddbaa697468446b1ad4f85d38f5c8af84b4c1d45b982db4": true}, 5: {}, 1: {}, 4: {}, 3: {}}
 ```
 
 #### Proposed table - updated
@@ -85,7 +83,11 @@ $ flow scripts execute  ./transactions/idTableStaking/scripts/get_candidate_node
 ```
 $ flow scripts execute  ./transactions/idTableStaking/scripts/get_proposed_table.cdc -n mainnet -o json | jq '.value[] | .value' | sort > /tmp/proposed_table.txt
 $ cat /tmp/proposed_table.txt | wc -l
-
+440
+$ cat /tmp/proposed_table.txt | grep "0b28fa535c88bb35cddbaa697468446b1ad4f85d38f5c8af84b4c1d45b982db4"
+"0b28fa535c88bb35cddbaa697468446b1ad4f85d38f5c8af84b4c1d45b982db4"
+$ cat /tmp/proposed_table.txt | grep "4bf86d54f88bbe0998ae50b5168468ff7e194f90219dbe380bebe5bcd108192d"
+"4bf86d54f88bbe0998ae50b5168468ff7e194f90219dbe380bebe5bcd108192d"
 ```
 
 #### Approved nodes - updated
@@ -93,6 +95,19 @@ $ cat /tmp/proposed_table.txt | wc -l
 ```
 $ flow scripts execute  ./transactions/idTableStaking/scripts/get_approved_nodes.cdc -n mainnet -o json | jq '.value[] | .value' | sort > /tmp/approved_nodes.txt
 $ cat /tmp/approved_nodes.txt | wc -l
-should be 394
+391
+$  cat /tmp/approved_nodes.txt  | grep "0b28fa535c88bb35cddbaa697468446b1ad4f85d38f5c8af84b4c1d45b982db4"
+"0b28fa535c88bb35cddbaa697468446b1ad4f85d38f5c8af84b4c1d45b982db4"
+$ cat /tmp/approved_nodes.txt  | grep "4bf86d54f88bbe0998ae50b5168468ff7e194f90219dbe380bebe5bcd108192d"
+"4bf86d54f88bbe0998ae50b5168468ff7e194f90219dbe380bebe5bcd108192d"
 ```
 
+#### Node Info - no change
+
+```
+$ flow scripts execute  ./transactions/idTableStaking/scripts/get_node_info.cdc --args-json  '[{ "type":"String", "value":"0b28fa535c88bb35cddbaa697468446b1ad4f85d38f5c8af84b4c1d45b982db4"}]' -n mainnet -o inline
+A.8624b52f9ddcd04a.FlowIDTableStaking.NodeInfo(id: "0b28fa535c88bb35cddbaa697468446b1ad4f85d38f5c8af84b4c1d45b982db4", role: 2, networkingAddress: "flow--mainnet--consensus--ff-1.staking.production.figment.io:3569", networkingKey: "3aadf137af728b0272892217ed54df3f4302a311df63db688bc6825ee7d82586702f6637879f6755d60b8fac8f2afd1f789dcceb61bacc8b82d1b33ba4a1a7c6", stakingKey: "8cbf2ae716f28a07bd631c4c92ee3d576f1ef62eb6262711d3fbdd6212ccec7457b70c9971e11e0d07bdbf35a187416212a44236f7f30298c92199fc6256a59da3cfe1f7cbafc574d85e1f96e98ee15d739d549212be9ba9724dc670d1a33021", tokensStaked: 0.00000000, tokensCommitted: 500000.00000000, tokensUnstaking: 0.00000000, tokensUnstaked: 0.00000000, tokensRewarded: 0.00000000, delegators: [], delegatorIDCounter: 0, tokensRequestedToUnstake: 0.00000000, initialWeight: 0)
+
+$ flow scripts execute  ./transactions/idTableStaking/scripts/get_node_info.cdc --args-json  '[{ "type":"String", "value":"4bf86d54f88bbe0998ae50b5168468ff7e194f90219dbe380bebe5bcd108192d"}]' -n mainnet -o inline
+A.8624b52f9ddcd04a.FlowIDTableStaking.NodeInfo(id: "4bf86d54f88bbe0998ae50b5168468ff7e194f90219dbe380bebe5bcd108192d", role: 2, networkingAddress: "flow--mainnet--consensus--fl-1.staking.production.figment.io:3569", networkingKey: "012d916da0fe76e4dd8e079ba63ee3061ad9cf6cda003f3fb97b6990b1d0dce1f9d27ab26641901d624b74ee6f96653d904d1c0eddaa853832274481a04fc183", stakingKey: "b3bb1f8ce82ca86be000f2b0b6c004dd2f5035b10df32898f63222a30f2418308c0a4612acb13fc16f9817a51ba9da200d5b8d736b9ac93388f988415d91087341c748d1c0ae0ba9178a8e4dca433b471aff3bc97214594c2e3c8802a9a65bfd", tokensStaked: 0.00000000, tokensCommitted: 500000.00000000, tokensUnstaking: 0.00000000, tokensUnstaked: 0.00000000, tokensRewarded: 0.00000000, delegators: [], delegatorIDCounter: 0, tokensRequestedToUnstake: 0.00000000, initialWeight: 0)
+```
