@@ -21,7 +21,7 @@ Adds Three Consensus nodes staked by the FlowFoundation:
 ## Results
 
 
-Successful attempt: https://flowscan.org/transaction/
+Successful attempt: https://flowscan.org/transaction/4f46a0f467aa6687c0d360c7fddac24a4a898778b93395e2424bbc36e41b70f1
 
 
 ## Verification
@@ -77,7 +77,7 @@ A.8624b52f9ddcd04a.FlowIDTableStaking.NodeInfo(id: "b79849492533bdf1485a61edcaed
 ```
 $ flow scripts execute  ./transactions/idTableStaking/scripts/get_candidate_nodes.cdc -n mainnet
 
-
+Result: {3: {}, 2: {"4f9e91a026235ef8e24baca73082f305820ac22f1fdbaf2ea054140606e15ae8": true, "b79849492533bdf1485a61edcaed389fe903020b0f0f3319301b2bad87b597e1": true, "5f9d17a0204dfe65871947dd3f60124e076e7010b5f083d0777c7fa8b6e15489": true}, 1: {}, 5: {}, 4: {}}
 ```
 
 #### Proposed table - updated
@@ -85,7 +85,7 @@ $ flow scripts execute  ./transactions/idTableStaking/scripts/get_candidate_node
 ```
 $ flow scripts execute  ./transactions/idTableStaking/scripts/get_proposed_table.cdc -n mainnet -o json | jq '.value[] | .value' | sort > /tmp/proposed_table.txt
 $ cat /tmp/proposed_table.txt | wc -l
-
+  443
 ```
 
 #### Approved nodes - updated
@@ -93,6 +93,6 @@ $ cat /tmp/proposed_table.txt | wc -l
 ```
 $ flow scripts execute  ./transactions/idTableStaking/scripts/get_approved_nodes.cdc -n mainnet -o json | jq '.value[] | .value' | sort > /tmp/approved_nodes.txt
 $ cat /tmp/approved_nodes.txt | wc -l
-should be 394
+394
 ```
 
