@@ -1,4 +1,4 @@
-import "MigrationContractStaging"
+import MigrationContractStaging from 0x56100d46aa9b0212
 
 // This contract is is used by the FVM calling the `checkDependencies` function from a function of the same name and singnature in the FlowServiceAccount contract,
 // at the end of every transaction.
