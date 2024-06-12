@@ -1,8 +1,8 @@
-import FungibleToken from "FungibleToken"
-import FlowToken from 0xFLOWTOKENADDRESS
-import FlowFees from 0xFLOWFEESADDRESS
-import FlowStorageFees from 0xFLOWSTORAGEFEESADDRESS
-import DependencyAudit from "DependencyAudit"
+import FungibleToken from 0xf233dcee88fe0abe
+import FlowToken from 0x1654653399040a61
+import FlowFees from 0xf919ee77447b7497
+import FlowStorageFees from 0xe467b9dd11fa00df
+import DependencyAudit from 0xe467b9dd11fa00df
 
 pub contract FlowServiceAccount {
 
