@@ -9,17 +9,17 @@
   },
   {
     "type": "UInt8",
-    "value": ""
+    "value": "29"
   },
   {
     "type": "Optional",
     "value": {
       "type": "String",
-      "value": ""
+      "value": "patch.1"
     }
   },
   {
     "type": "UInt64",
-    "value": ""
+    "value": "80271445"
   }
 ]
