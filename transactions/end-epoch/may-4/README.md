@@ -4,7 +4,7 @@
 ## Build (Kan)
 
 ```sh
-flow transactions build ./templates/capability_end_epoch.cdc \
+flow transactions build ./../capability_end_epoch_v1.cdc \
   --network mainnet \
   --args-json "$(cat "./transactions/end-epoch/may-4/arguments.json")" \
   --proposer 0xe467b9dd11fa00df \

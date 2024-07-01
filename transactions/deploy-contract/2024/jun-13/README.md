@@ -10,7 +10,7 @@ See [issue](https://github.com/onflow/service-account/issues/294)
 
 ## Transaction template
 
-../../../../templates/deploy_contract_dependency_audit.cdc
+`deploy_contract_dependency_audit.cdc`
 
 ## 
 

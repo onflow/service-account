@@ -10,7 +10,7 @@
 ## Dapper Labs Builds
 
 ```sh
-flow transactions build ./templates/add_contract_auditor_hard_coded.cdc \
+flow transactions build ./add_contract_auditor_hard_coded.cdc \
   --network mainnet \
   --proposer 0xe467b9dd11fa00df \
   --proposer-key-index 11 \
