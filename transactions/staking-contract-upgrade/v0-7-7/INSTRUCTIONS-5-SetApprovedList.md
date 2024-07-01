@@ -9,7 +9,7 @@ https://github.com/onflow/flow-core-contracts/tree/lib/go/templates/v0.7.7/contr
 ## Dapper Labs Builds
 
 ```sh
-flow transactions build ./templates/set_approved_id_list.cdc \
+flow transactions build ./set_approved_id_list.cdc \
   --config-path flow-staking.json \
   --network mainnet \
   --proposer 0x8624b52f9ddcd04a \

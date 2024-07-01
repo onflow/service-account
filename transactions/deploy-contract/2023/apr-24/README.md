@@ -9,7 +9,7 @@
 
 | Contract                                                                                           | Arguments                                                                                      | Multisig Link   | Transaction |
 |----------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|-----------------|-------------|
-| [deploy_contract_node_version_beacon.cdc](../../../../templates/deploy_contract_node_version_beacon.cdc) | [arguments.json](./arguments.json) | [Update Contract](https://flow-multisig-git-service-account-onflow.vercel.app/mainnet) | [Sealed Transaction](https://flowscan.org/transaction/) |
+| [deploy_contract_node_version_beacon.cdc](deploy_contract_node_version_beacon.cdc) | [arguments.json](./arguments.json) | [Update Contract](https://flow-multisig-git-service-account-onflow.vercel.app/mainnet) | [Sealed Transaction](https://flowscan.org/transaction/) |
 
 
 
