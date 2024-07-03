@@ -1,4 +1,4 @@
-import FlowIDTableStaking from "FlowIDTableStaking"
+import FlowIDTableStaking from 0x8624b52f9ddcd04a
 
 // This transaction sets the list of nodes who are non operational
 // and whose rewards will be withheld
