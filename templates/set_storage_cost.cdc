@@ -3,12 +3,14 @@ import FlowStorageFees from 0xe467b9dd11fa00df
 transaction(storageMegaBytesPerReservedFLOW: UFix64) {
     
     let adminRef: &FlowStorageFees.Administrator
-    prepare(acct: AuthAccount) {
+    prepare(acct: auth(BorrowValue) &Account) {
         // borrow a reference to the admin object
-        self.adminRef = acct.borrow<&FlowStorageFees.Administrator>(from: /storage/storageFeesAdmin)
+        self.adminRef = acct.storage.borrow<&FlowStorageFees.Administrator>(from: /storage/storageFeesAdmin)
             ?? panic("Could not borrow reference to storage fees admin")
     }
     execute {
-        self.adminRef.setStorageMegaBytesPerReservedFLOW(storageMegaBytesPerReservedFLOW)
+        if storageMegaBytesPerReservedFLOW != nil {
+            self.adminRef.setStorageMegaBytesPerReservedFLOW(storageMegaBytesPerReservedFLOW!)
+        }
     }
 }

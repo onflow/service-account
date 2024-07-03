@@ -13,7 +13,7 @@
 ## Dapper Labs Builds
 
 ```sh
-flow transactions build ./templates/add_account_creator.cdc \
+flow transactions build ./../add_account_creator.cdc \
   --network mainnet \
   --args-json "$(cat "./transactions/add-account-creator/june-1/arguments.json")" \
   --proposer 0xe467b9dd11fa00df \

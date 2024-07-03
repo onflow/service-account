@@ -6,7 +6,7 @@ Set reward rate for automatic rewards as per [FLIP](https://github.com/onflow/fl
 
 ## New method using Multisign tool
 
-1. DapperLabs generates the Signature Request ID on the [site](https://flow-multisig-git-service-account-onflow.vercel.app/mainnet) for the `set_reward.cdc` transaction with the given args.
+1. DapperLabs generates the Signature Request ID on the [site](https://flow-multisig-git-service-account-onflow.vercel.app/mainnet) for the `set_annual_flow_supply_increase.cdc` transaction with the given args.
 
 2. Signers sign with the multisign tool specifying the Signature Request ID
 `bash multisig.sh -f flow.json <Signature Request ID>`
@@ -19,7 +19,7 @@ Set reward rate for automatic rewards as per [FLIP](https://github.com/onflow/fl
 
 
 ```sh
-flow transactions build ./templates/set_reward.cdc \
+flow transactions build ./templates/set_annual_flow_supply_increase.cdc \
   --network mainnet \
   --args-json "$(cat "./transactions/set-rewards/2022/jul-20/arguments.json")" \
   --proposer 0xe467b9dd11fa00df \

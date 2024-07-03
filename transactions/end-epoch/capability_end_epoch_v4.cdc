@@ -1,8 +1,14 @@
 import FlowIDTableStaking from 0x8624b52f9ddcd04a
 
+// This transaction used Cadence 0.42 and is no longer compatible
+// with the current version of Cadence on testnet and mainnet
+
 // This transaction uses a staking admin capability
-// to pay rewards.
+// to pay rewards, end the staking auction, and end the epoch.
 //
+// It combines the pay_rewards, end_staking and move_tokens transactions
+// which ends the staking auction, which refunds nodes with insufficient stake
+// and moves tokens between buckets
 // It also sets a new token payout for the next epoch
 
 transaction(newPayout: UFix64, nodeList: {String: UFix64}) {
@@ -27,5 +33,9 @@ transaction(newPayout: UFix64, nodeList: {String: UFix64}) {
         self.adminRef.payRewards(rewardsArray)
 
         self.adminRef.setEpochTokenPayout(newPayout)
+
+        self.adminRef.endStakingAuction()
+
+        self.adminRef.moveTokens()
     }
 }
