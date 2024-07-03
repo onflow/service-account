@@ -18,7 +18,7 @@ Burns the tokens. Must be authorized by the service account.
 
 | Template                                                 | Arguments | Multisig Link   | Transaction |
 |---                                                       |---        |---              |---          |
-| [burn_flow.cdc](./burn_flow.cdc) | [arguments-burn-flow.json](./arguments-burn-flow.json) | [Burn Tokens](https://flow-multisig-git-service-account-onflow.vercel.app/mainnet?type=serviceAccount&name=burn_flow.cdc&param=%5B%20%20%20%20%20%7B%20%20%20%20%20%20%20%20%20%22type%22:%20%22UFix64%22,%20%20%20%20%20%20%20%20%20%22value%22:%20%229792568.00%22%20%20%20%20%20%7D%20%5D&acct=0xe467b9dd11fa00df&limit=9999) |
+| [burn_flow.cdc](../../../../templates/burn_flow.cdc) | [arguments-burn-flow.json](./arguments-burn-flow.json) | [Burn Tokens](https://flow-multisig-git-service-account-onflow.vercel.app/mainnet?type=serviceAccount&name=burn_flow.cdc&param=%5B%20%20%20%20%20%7B%20%20%20%20%20%20%20%20%20%22type%22:%20%22UFix64%22,%20%20%20%20%20%20%20%20%20%22value%22:%20%229792568.00%22%20%20%20%20%20%7D%20%5D&acct=0xe467b9dd11fa00df&limit=9999) |
 
 
 ## Transaction 2

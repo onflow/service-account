@@ -13,9 +13,9 @@ transaction(newApprovedIDs: [String]) {
     // Local variable for a reference to the ID Table Admin object
     let adminRef: &FlowIDTableStaking.Admin
 
-    prepare(acct: auth(BorrowValue) &Account) {
+    prepare(acct: AuthAccount) {
         // borrow a reference to the admin object
-        self.adminRef = acct.storage.borrow<&FlowIDTableStaking.Admin>(from: FlowIDTableStaking.StakingAdminStoragePath)
+        self.adminRef = acct.borrow<&FlowIDTableStaking.Admin>(from: FlowIDTableStaking.StakingAdminStoragePath)
             ?? panic("Could not borrow reference to staking admin")
     }
 
@@ -33,7 +33,7 @@ transaction(newApprovedIDs: [String]) {
     			continue
 			}
 
-			let nodeInfo = FlowIDTableStaking.NodeInfo(nodeID: newNodeID)
+			let nodeInfo = FlowIDTableStaking.NodeInfo(newNodeID)
 
 			slotLimits[nodeInfo.role] = slotLimits[nodeInfo.role]! + 1
 

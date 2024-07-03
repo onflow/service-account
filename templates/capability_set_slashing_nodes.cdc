@@ -1,11 +1,10 @@
 import FlowIDTableStaking from 0x8624b52f9ddcd04a
 
-// This transaction uses a staking admin capability
-// to pay rewards.
-//
-// It also sets a new token payout for the next epoch
+/// This transaction uses a staking admin capability
+/// to set a list of nodes whose rewards will be decreased
+/// during the next rewards payout
 
-transaction(newPayout: UFix64, nodeList: {String: UFix64}) {
+transaction(nodesToSlash: {String: UFix64}) {
 
     // Local variable for a reference to the ID Table Admin object
     let adminRef: &FlowIDTableStaking.Admin
@@ -20,12 +19,6 @@ transaction(newPayout: UFix64, nodeList: {String: UFix64}) {
     }
 
     execute {
-
-        self.adminRef.setNonOperationalNodesList(nodeList)
-
-        let rewardsArray = self.adminRef.calculateRewards()
-        self.adminRef.payRewards(rewardsArray)
-
-        self.adminRef.setEpochTokenPayout(newPayout)
+        self.adminRef.setNonOperationalNodesList(nodesToSlash)
     }
 }

@@ -10,7 +10,7 @@
 ## Dapper Labs Builds
 
 ```sh
-flow transactions build ./../set_deployment_allow_list.cdc \
+flow transactions build ./templates/set_deployment_allow_list.cdc \
   --network mainnet \
   --args-json "$(cat "./transactions/deployment-allow-list/2022/jan-19/arguments.json")" \
   --proposer 0xe467b9dd11fa00df \

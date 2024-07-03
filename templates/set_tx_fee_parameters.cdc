@@ -4,8 +4,8 @@ import FlowFees from 0xf919ee77447b7497
 transaction(surgeFactor: UFix64, inclusionEffortCost: UFix64, executionEffortCost: UFix64) {
 	let flowFeesAccountAdmin: &FlowFees.Administrator
 
-	prepare(signer: auth(BorrowValue) &Account) {
-		self.flowFeesAccountAdmin = signer.storage.borrow<&FlowFees.Administrator>(from: /storage/flowFeesAdmin)
+	prepare(signer: AuthAccount) {
+		self.flowFeesAccountAdmin = signer.borrow<&FlowFees.Administrator>(from: /storage/flowFeesAdmin)
 			?? panic("Unable to borrow reference to administrator resource")
 	}
 	execute {

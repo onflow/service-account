@@ -5,7 +5,7 @@
 ## Dapper Labs Builds
 
 ```sh
-flow transactions build ./move_fees_admin.cdc \
+flow transactions build ./templates/move_fees_admin.cdc \
   --config-path flow-staking.json \
   --network mainnet \
   --proposer 0xe467b9dd11fa00df \

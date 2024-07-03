@@ -59,36 +59,3 @@ gcloud auth application-default login
 
 This should pop up a tab in your browser asking you to authorize the SDK. If you're able to, then you're all set!
 
-## How to Prepare a Transaction for the Service Account
-
-If you have a proposal for a service account transaction, please follow these steps:
-
-1. Almost all service account transactions require a FLIP or a discussion
-   with the community and/or service account committee first 
-   before being approved. Please open a FLIP or an issue
-   in the repo first before creating the transaction.
-2. If your FLIP or issue has been approved and a date
-   has already be chosen for the multisig, create a new branch to propose
-   your transaction. The transaction will likely be similar
-   to an existing transaction, so first check if the operation
-   you are proposing is already somewhere in the `transactions/` directory.
-   If it is, create a new folder in that directory for the year and date
-   that will be used for the transaction.
-3. If your operation doesn't already exist, create a new folder
-   in `transactions/` for your operation.
-4. You can copy an existing directory for your transaction to use as a template,
-   regardless of whether it is new or old.
-5. If your transaction is one that will be used multiple times,
-   put the Cadence code in the `templates/` directory. If you are sure
-   it will only be executed once, put the Cadence code in your operation directory.
-6. Fill out the `README.md` in your directory with all the instructions required
-   for your operation. Make sure you create an arguments file for your transaction if your transaction requires arguments. Do not hard-code.
-7. Ensure that your transaction has proper pre and post-conditions to verify
-   that it executes properly. We have to be extremely careful to make sure
-   that everything we do with the service account is done safely and properly.
-8. If your transaction is new, test your transaction by putting it in a script
-   and running the script. Scripts can access authorized account objects
-   so can be used to test administrative transactions without requiring a multisig.
-8. Open a PR with your transaction, arguments, and instructions and add Vishal,
-   Kshitij, and any other Flow team or community members that are needed to review the transaction.
-

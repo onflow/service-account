@@ -10,17 +10,18 @@ transaction(ids: [String]) {
     // Local variable for a reference to the ID Table Admin object
     let adminRef: &FlowIDTableStaking.Admin
 
-    prepare(acct: auth(BorrowValue) &Account) {
+    prepare(acct: AuthAccount) {
         // borrow a reference to the admin object
-        self.adminRef = acct.storage.borrow<&FlowIDTableStaking.Admin>(from: FlowIDTableStaking.StakingAdminStoragePath)
+        self.adminRef = acct.borrow<&FlowIDTableStaking.Admin>(from: FlowIDTableStaking.StakingAdminStoragePath)
             ?? panic("Could not borrow reference to staking admin")
     }
 
     execute {
-	    let nodeIDs = FlowIDTableStaking.getApprovedList()
-            ?? panic("Could not read approve list from storage")
 
-	    // remove each node 
+        let nodeIDs = FlowIDTableStaking.getApprovedList()
+                ?? panic("Could not read approve list from storage")
+
+		// remove each node 
 		for nodeIDToRemove in ids {
 			if nodeIDs[nodeIDToRemove] != nil {
 				nodeIDs[nodeIDToRemove] = nil

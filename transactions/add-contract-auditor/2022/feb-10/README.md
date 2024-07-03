@@ -9,7 +9,7 @@
 ## Dapper Labs Builds
 
 ```sh
-flow transactions build ./../add_contract_auditor.cdc \
+flow transactions build ./templates/add_contract_auditor.cdc \
   --network mainnet \
   --args-json "$(cat "./transactions/add-contract-auditor/2022/feb-10/arguments.json")" \
   --proposer 0xe467b9dd11fa00df \
