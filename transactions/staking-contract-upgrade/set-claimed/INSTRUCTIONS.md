@@ -4,7 +4,7 @@
 ## Dapper Labs Builds
 
 ```sh
-flow transactions build ./set_claimed.cdc \
+flow transactions build ./templates/set_claimed.cdc \
   --config-path flow-staking.json \
   --network mainnet \
   --proposer 0x8624b52f9ddcd04a \

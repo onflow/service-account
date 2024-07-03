@@ -1,5 +1,5 @@
 transaction(name: String, code: String) {
-	prepare(signer: auth(Contracts) &Account) {
+	prepare(signer: AuthAccount) {
 		signer.contracts.add(name: name, code: code.decodeHex())
 	}
 }

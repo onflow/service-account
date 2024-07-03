@@ -8,7 +8,7 @@
 ### Dapper Labs Builds
 
 ```sh
-flow transactions build ./templates/adjust_epoch_length.cdc \
+flow transactions build ./templates/adjust_epoch_length_v2.cdc \
   --config-path flow-staking.json \
   --network mainnet \
   --args-json "$(cat "./transactions/adjust-epoch-length/2023/mar-30/arguments.json")" \

@@ -7,7 +7,7 @@ Setting to `false`
 ## Dapper Labs Builds
 
 ```sh
-flow transactions build ./../set_is_account_creation_restricted.cdc \
+flow transactions build ./templates/set_is_account_creation_restricted.cdc \
   --network mainnet \
   --args-json "$(cat "./transactions/set-account-creation-restriction/aug-24/arguments.json")" \
   --proposer 0xe467b9dd11fa00df \

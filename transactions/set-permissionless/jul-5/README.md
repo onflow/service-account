@@ -4,7 +4,7 @@
 ## Dapper Labs Builds
 
 ```sh
-flow transactions build ./set_contract_deployment_restricted.cdc \
+flow transactions build ./templates/set_contract_deployment_restricted.cdc \
   --network mainnet \
   --args-json "$(cat "./transactions/set-permissionless/jul-5/arguments.json")" \
   --proposer 0xe467b9dd11fa00df \

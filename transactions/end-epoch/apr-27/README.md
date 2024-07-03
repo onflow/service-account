@@ -4,7 +4,7 @@
 ## Build (Kan)
 
 ```sh
-flow transactions build ./end_epoch_change_payout.cdc \
+flow transactions build ./templates/end_epoch_change_payout.cdc \
   --network mainnet \
   --args-json "$(cat "./transactions/end-epoch-apr-27/arguments.json")" \
   --proposer 0xe467b9dd11fa00df \

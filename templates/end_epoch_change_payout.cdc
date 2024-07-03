@@ -1,8 +1,5 @@
 import FlowIDTableStaking from 0x8624b52f9ddcd04a
 
-// This transaction used Cadence 0.42 and is no longer compatible
-// with the current version of Cadence on testnet and mainnet
-
 // This transaction effectively ends the epoch and starts a new one.
 //
 // It combines the end_staking and move_tokens transactions
