@@ -10,7 +10,7 @@ Removing 1 Verification Node Operator:
 ## Dapper Labs Builds
 
 ```sh
-flow transactions build ./templates/capability_end_epoch.cdc \
+flow transactions build ./../capability_end_epoch_v1.cdc \
   --network mainnet \
   --args-json "$(cat "./transactions/end-epoch/july-20/arguments.json")" \
   --proposer 0xe467b9dd11fa00df \
