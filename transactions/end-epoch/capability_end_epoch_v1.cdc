@@ -1,5 +1,8 @@
 import FlowIDTableStaking from 0x8624b52f9ddcd04a
 
+// This transaction used Cadence 0.42 and is no longer compatible
+// with the current version of Cadence on testnet and mainnet
+
 // This transaction uses a staking admin capability
 // to pay rewards, end the staking auction, and end the epoch.
 //
