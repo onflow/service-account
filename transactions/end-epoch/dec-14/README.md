@@ -5,7 +5,7 @@
 ## Dapper Labs Builds
 
 ```sh
-flow transactions build ./templates/capability_end_epoch_v5.cdc \
+flow transactions build ./../capability_end_epoch_v5.cdc \
   --network mainnet \
   --args-json "$(cat "./transactions/end-epoch/dec-14/arguments.json")" \
   --proposer 0xe467b9dd11fa00df \

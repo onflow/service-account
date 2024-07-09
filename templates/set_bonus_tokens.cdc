@@ -11,8 +11,8 @@
 
 transaction(bonusTokensBurned: UFix64) {
 
-    prepare(signer: AuthAccount) {
-        let existingBonusAmount = signer.load<UFix64>(from: /storage/FlowBonusTokenAmount)
+    prepare(signer: auth(Storage) &Account) {
+        let existingBonusAmount = signer.storage.load<UFix64>(from: /storage/FlowBonusTokenAmount)
             ?? panic("Could not load bonus token amount from storage")
 
         assert(
@@ -20,6 +20,6 @@ transaction(bonusTokensBurned: UFix64) {
             message: "Tokens burned cannot be greater than the existing amount!"
         )
 
-        signer.save(existingBonusAmount - bonusTokensBurned, to: /storage/FlowBonusTokenAmount)
+        signer.storage.save(existingBonusAmount - bonusTokensBurned, to: /storage/FlowBonusTokenAmount)
     }
 }

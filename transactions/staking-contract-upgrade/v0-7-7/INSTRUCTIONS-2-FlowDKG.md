@@ -9,7 +9,7 @@ https://github.com/onflow/flow-core-contracts/tree/lib/go/templates/v0.7.7/contr
 ## Dapper Labs Builds
 
 ```sh
-flow transactions build ./templates/deploy_contract_admin.cdc \
+flow transactions build ./deploy_contract_admin.cdc \
   --config-path flow-staking.json \
   --network mainnet \
   --args-json "$(cat "./transactions/staking-contract-upgrade/v0-7-7/flow-dkg-arguments.json")" \

@@ -11,7 +11,8 @@
 
 ## Using Multisign tool
 
-1. DapperLabs generates the Signature Request ID on the [site]() for the `add_approved_id_list_and_access_limits.cdc` transaction with the given args.
+1. DapperLabs generates the Signature Request ID on the [site]()
+   for the `./../add_approved_id_list_and_access_limits.cdc` transaction with the given args.
 
 2. Signers sign with the multisign tool specifying the Signature Request ID
    `bash multisig.sh -f flow-staking.json <Signature Request ID>`

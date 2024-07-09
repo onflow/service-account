@@ -13,7 +13,7 @@ Link to node IDs here: https://github.com/onflow/flow/blob/master/nodeoperators/
 ## Dapper Labs Builds
 
 ```sh
-flow transactions build ./templates/capability_end_epoch_v4.cdc \
+flow transactions build ./../capability_end_epoch_v4.cdc \
   --network mainnet \
   --args-json "$(cat "./transactions/end-epoch/nov-16/arguments.json")" \
   --proposer 0xe467b9dd11fa00df \

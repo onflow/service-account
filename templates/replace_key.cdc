@@ -1,6 +1,19 @@
-transaction(oldKeyIndex: Int, publicKey: String) {
-	prepare(signer: AuthAccount) {
-		signer.removePublicKey(oldKeyIndex)
-		signer.addPublicKey(publicKey.decodeHex())
+import Crypto
+
+transaction(oldKeyIndexToRemove: Int, key: String, signatureAlgorithm: UInt8, hashAlgorithm: UInt8, weight: UFix64) {
+
+	prepare(signer: auth(RevokeKey, AddKey) &Account) {
+		pre {
+			signatureAlgorithm >= 1 && signatureAlgorithm <= 3: "Must provide a signature algorithm raw value that is 1, 2, or 3"
+			hashAlgorithm >= 1 && hashAlgorithm <= 6: "Must provide a hash algorithm raw value that is between 1 and 6"
+			weight <= 1000.0: "The key weight must be between 0 and 1000"
+		}
+		let publicKey = PublicKey(
+			publicKey: key.decodeHex(),
+			signatureAlgorithm: SignatureAlgorithm(rawValue: signatureAlgorithm)!
+		)
+
+        signer.keys.revoke(keyIndex: oldKeyIndexToRemove)
+		signer.keys.add(publicKey: publicKey, hashAlgorithm: HashAlgorithm(rawValue: hashAlgorithm)!, weight: weight)
 	}
 }
