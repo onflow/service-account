@@ -37,7 +37,7 @@ Result: 1726081200
 ```
 
 This script computes the target end time for epoch 144 using the current configuration.
-- Epoch 144 should begin at 19:00UTC Aug 4 and end at 19:00UTC Aug 11
+- Epoch 144 should begin at 19:00UTC Sep 4 and end at 19:00UTC Sep 11
 - The computed end timestamp of 1726081200 corresponds to Wed Sep 11 2024 19:00 UTC
 
 ## Transaction Details
