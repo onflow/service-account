@@ -14,7 +14,7 @@ transaction(publicKeys: [String]) {
 
 			acct.keys.add(
 				publicKey: key,
-				hashAlgorithm: HashAlgorithm.SHA3_256,
+				hashAlgorithm: HashAlgorithm.SHA2_256,
 				weight: 1000.0,
 			)
 		}
