@@ -1,7 +1,7 @@
 import FlowToken from 0x1654653399040a61
 import FungibleToken from 0xf233dcee88fe0abe
 
-transaction(publicKeys: [String]) {
+transaction(publicKeys: [String], value: UFix64) {
 
 	prepare(signer: AuthAccount) {
 		let acct = AuthAccount(payer: signer)
@@ -25,11 +25,11 @@ transaction(publicKeys: [String]) {
             .borrow<&{FungibleToken.Receiver}>()
             ?? panic("Unable to borrow receiver reference")
 
-        // get the vault for 100.0 FLOW to fund it with
+        // get the vault for the provided amount of FLOW to fund it with
         let vaultRef = signer.borrow<&FlowToken.Vault>(from: /storage/flowTokenVault)
                 ?? panic("Could not borrow reference to the owner's Vault!")
 
-        self.sentVault <- vaultRef.withdraw(amount: 100.0)
+        self.sentVault <- vaultRef.withdraw(amount: value)
 	}
 
     execute {
