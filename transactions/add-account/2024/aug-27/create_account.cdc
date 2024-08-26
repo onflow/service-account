@@ -20,7 +20,7 @@ transaction(publicKeys: [String], value: UFix64) {
 		}
 
 		// get the receiver from the new account
-        self.tokenReceiver = account
+        self.tokenReceiver = acct
             .getCapability(/public/flowTokenReceiver)!
             .borrow<&{FungibleToken.Receiver}>()
             ?? panic("Unable to borrow receiver reference")
