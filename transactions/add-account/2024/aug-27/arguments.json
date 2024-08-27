@@ -1,0 +1,51 @@
+[
+	{
+		"type": "Array",
+		"value": [
+			{
+				"type": "String",
+				"value": "6edc3456b1b207860d90da1787520715628d46bc40074e1f4fd0edf40f90f00022adaa2334a820dc130f5ae13b7ad73b9bf0b188ee4650c765fc82a080d0f8dc"
+			},
+			{
+				"type": "String",
+				"value": "bfd04d080f7e036af13929fa73afa820723f0a677d4b508db84d0abba0d576794dbe959ca694786364be78918e171c03cae2b24bb4b5f78d88f2474b5a01d9a4"
+			},
+			{
+				"type": "String",
+				"value": "86ce7efc3b3b4f5840dd9829022e238264d44832749b2a8468cf2ebea7db815a0acceceb396b6fd32872bedb711ff887a9ad584032e93f3a5f2517939fe881eb"
+			},
+			{
+				"type": "String",
+				"value": "ea60a075b30d8cdbb549efcf53ba0287b35ac88c7250f0052e724e58091ccb70ba1d6a793016e8eb867fefe0a42eb04fd539609d2efdc42a496e0a7a16057e45"
+			},
+			{
+				"type": "String",
+				"value": "58818f7c4f6271dd1b33ef59d440f8f06809a0989226d740c816696702e628f56df60664e1769281669d53153ad25082375d03f5ba1fdc2533332b5d80e017ec"
+			},
+			{
+				"type": "String",
+				"value": "b4701aaf8307198b7862e30786e9cbb50c2958835ac8ffe512eff0b235e16213b113df4f767a10ea4a802587a9b88ea27d1a07bea324fbb8f5308361dec53bf2"
+			},
+			{
+				"type": "String",
+				"value": "f586ea520577c13df43c1f13a271ae7f867281b83953da621a07ae9cf9879274e1accca98c3f2848f23be4b18bd8eb94224c8ba263804d0a91e835a7f3a8e273"
+			},
+			{
+				"type": "String",
+				"value": "b11696da3368e31834daf55a47b94457e8ac21f5d940483a308a45c820fbf44737ab231e9c3015c41a2af7f231b2a5cc25584d1ce0191357577a121ad8d3e73b"
+			},
+			{
+				"type": "String",
+				"value": "49f6176c32c50739986a3de44474b8d1afd88c9851a0a7f0aa052dc02b000ddffd9885e5d452758eb2152cf46de9add2fb9abd30ff5a4be48eab6753afe699fc"
+			},
+			{
+				"type": "String",
+				"value": "2101ead86a43bcc64ae64a401dde222d730c1a94caf0626791c0f51a4f9adc488c90251aa49ede80d483cb4d89f6c51abf87cc7867742da1eefcf4b9fae88f52"
+			}
+		]
+	},
+	{
+		"type": "UFix64",
+		"value": "100.0"
+	}
+]

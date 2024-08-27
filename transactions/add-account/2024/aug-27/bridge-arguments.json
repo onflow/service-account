@@ -1,0 +1,15 @@
+[
+	{
+		"type": "Array",
+		"value": [
+			{
+				"type": "String",
+				"value": "f4c05038bf7fa30094e7e5b782b1eee37966575a0f1f6295218a126b53fdef2ef02ee12525aeabaa330ae4d458d8d074afd352e4e61c22814753758b28080e56"
+			}
+		]
+	},
+	{
+		"type": "UFix64",
+		"value": "15.0"
+	}
+]
