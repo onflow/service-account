@@ -8,13 +8,8 @@ Transaction to execute: [stage_dependency_contract.cdc(./stage_dependency_contra
 
 Used this to generate args:
 
-`cat "./DependencyAudit.cdc" | xxd -p -c0 | tr -d '\n'`
+`cat DependencyAudit.cdc | jq -Rsa .`
 
-Verified using:
-```
-$ cat arguments.json | jq '.[1] | .value' | xxd -r -p > /tmp/temp.txt
-$ diff /tmp/temp.txt DependencyAudit.cdc
-(Should produce no difference)
-```
 
 ## Result
+https://www.flowdiver.io/tx/cb0a9d36bb4f8d97ce9cdfadf230878af05c46a033c29746ed892e52f8a7477a
