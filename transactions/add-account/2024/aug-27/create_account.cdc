@@ -2,6 +2,8 @@ import FlowToken from 0x1654653399040a61
 import FungibleToken from 0xf233dcee88fe0abe
 
 transaction(publicKeys: [String], value: UFix64) {
+    let tokenReceiver: &{FungibleToken.Receiver}
+    let sentVault: @FungibleToken.Vault
 
 	prepare(signer: AuthAccount) {
 		let acct = AuthAccount(payer: signer)
