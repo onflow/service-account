@@ -52,5 +52,5 @@ This script computes the target end time for epoch 144 using the current configu
 - The computed end timestamp of 1726081200 corresponds to Wed Sep 11 2024 19:00 UTC
 
 ## Transaction Details
-- The script to use is [here](./../../../../templates/adjust_epoch_length_v2.cdc)
+- The script to use is [here](./../../../../templates/adjust_epoch_length.cdc)
 - The arguments are [here](./arguments.json) in this directory
