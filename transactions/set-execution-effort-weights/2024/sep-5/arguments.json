@@ -1,0 +1,77 @@
+[
+  {
+    "type": "Dictionary",
+    "value": [
+      {
+        "key": {
+          "type": "UInt64",
+          "value": "1001"
+        },
+        "value": {
+          "type": "UInt64",
+          "value": "314"
+        }
+      },
+      {
+        "key": {
+          "type": "UInt64",
+          "value": "1002"
+        },
+        "value": {
+          "type": "UInt64",
+          "value": "314"
+        }
+      },
+      {
+        "key": {
+          "type": "UInt64",
+          "value": "1003"
+        },
+        "value": {
+          "type": "UInt64",
+          "value": "314"
+        }
+      },
+      {
+        "key": {
+          "type": "UInt64",
+          "value": "2006"
+        },
+        "value": {
+          "type": "UInt64",
+          "value": "567534"
+        }
+      },
+      {
+        "key": {
+          "type": "UInt64",
+          "value": "2020"
+        },
+        "value": {
+          "type": "UInt64",
+          "value": "162"
+        }
+      },
+      {
+        "key": {
+          "type": "UInt64",
+          "value": "2026"
+        },
+        "value": {
+          "type": "UInt64",
+          "value": "153"
+        }
+      },
+      {
+        "key": {
+          "type": "UInt64",
+          "value": "2037"
+        },
+        "value": {
+          "type": "UInt64",
+          "value": "13"
+        }
+      }
+    ]
+  }
+]
