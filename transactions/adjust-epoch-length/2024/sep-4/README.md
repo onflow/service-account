@@ -54,3 +54,6 @@ This script computes the target end time for epoch 144 using the current configu
 ## Transaction Details
 - The script to use is [here](./../../../../templates/adjust_epoch_length.cdc)
 - The arguments are [here](./arguments.json) in this directory
+
+## Result
+https://www.flowdiver.io/tx/6ff10d1fa1a2bbb94af354e60e01339fcaac65ed66070e4edecac81c0f40556d
