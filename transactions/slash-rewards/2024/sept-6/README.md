@@ -9,4 +9,9 @@ Node ID `2b396b7fab0102f104a2af7e095b145cc14da28f863564802e158afc3e07e638` has b
 
 ## Result
 
-https://www.flowdiver.io/tx/
+Failures:
+https://www.flowdiver.io/tx/74362f6539362e96994d7a60fb4bececc851e3da70620d1d6b84bca71c79a8c5 - Used the old transaction format.
+https://www.flowdiver.io/tx/34ca3503cc878c13aafa0e2176724a8db2d2672e6629a6d84105fcd1a3405e87 - Incorrect import
+
+Success:
+https://www.flowdiver.io/tx/af67ecb39306c5d20e61d3a42d69c5a205e10af39a7854d5b431e9457c78fab2
