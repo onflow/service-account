@@ -1,6 +1,6 @@
 # Add one verification node to the approved list of nodes
 
-> Sept 5th, 2024
+> Sept 6th, 2024
 
 Adds One Verification node staked by Firstset:
 
