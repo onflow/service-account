@@ -18,3 +18,6 @@ Transaction to execute: [set_execution_effort_weights.cdc](../../../../templates
 Sign with service account
 
 ## Result
+
+Txn ID - 619c04de9f97b6e65c24cba91931ea7a1db723caf59bf4312f6250d3cfa4a0c2
+
