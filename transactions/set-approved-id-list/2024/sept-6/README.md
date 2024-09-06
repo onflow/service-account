@@ -20,5 +20,5 @@ Adds One Verification node staked by Firstset:
 ## Results
 
 
-Successful attempt: https://www.flowdiver.io/tx/af67ecb39306c5d20e61d3a42d69c5a205e10af39a7854d5b431e9457c78fab2
+Successful attempt: https://www.flowdiver.io/tx/3aa69e2be723860560eb9ec7baaa6bd18fab7ef27ac556717e6b75730fdb0891
 
