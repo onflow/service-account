@@ -14,3 +14,5 @@ Transaction to execute: [set_execution_effort_weights.cdc](../../../../templates
 Sign with epoch account
 
 ## Result
+
+Txn ID - 3c28ae5c49c24245fc8cab8ea0f00b60563957717f362e18780a7d393bf589e7
