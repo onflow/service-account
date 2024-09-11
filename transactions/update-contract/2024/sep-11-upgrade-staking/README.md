@@ -100,8 +100,10 @@ flow transactions send-signed --config-path flow-staking.json --network mainnet 
 
 ### Results
 
-Successful attempt:
+Unsuccessful attempt: b55ea28980a69dc6fc3d9c6f45c86bd980e421f6c5f4843429b62fd269823b45
+Reason: ❌ Invalid argument: invalid transaction: transaction is expired: ref_height=86717550 final_height=86718372
 
+Successful attempt: 21e0ff861ffea4544488b527b9df116487afeda5ffcd0592d16b147001de12a3
 
 ___
 
