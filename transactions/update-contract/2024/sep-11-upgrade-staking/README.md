@@ -10,6 +10,8 @@ This includes a bug fix for the staking contract.
 
 ## Transactions
 
+This upgrade has to be completed in multiple transactions:
+
 1. Upgrade `FlowIDTableStaking`.
 
 Used this to generate the contract code arguments:
@@ -19,7 +21,7 @@ Used this to generate the contract code arguments:
 Verified using:
 ```
 $ cat arguments-update-contract-FlowIDTableStaking-mainnet.json | jq '.[1] | .value' | xxd -r -p > /tmp/temp.txt
-$ diff /tmp/temp.txt {Filename}.cdc
+$ diff /tmp/temp.txt FlowIDTableStaking.cdc
 (Should produce no difference)
 ```
 ___
@@ -27,18 +29,74 @@ ___
 
 # Transaction 1
 
-## Transaction 1 Sequence of signing: 
+## Transaction 1 Sequence of signing:
 
 Signer: flow-staking
-Transaction: `templates/update_contract.cdc`
-Args: `arguments-update-FlowIDTableStaking.json`
+Transaction: [update_contract.cdc](../../../../update_contract.cdc)
+Args: `arguments-update-contract-FlowIDTableStaking.json`
 
-This transaction can be executed using the web tool.
+This transaction has to be executed using the old method because the argument payload is too large.
 
-| Template                                                             | Arguments | Multisig Link   | Transaction |
-|----------------------------------------------------------------------|---        |---              |---          |
-| [update_contract.cdc](../../../../templates/update_contract.cdc) |  | | |
+## Vishal Builds
 
+```sh
+flow transactions build ./templates/update_contract.cdc \
+  --config-path flow-staking.json \
+  --network mainnet \
+  --args-json "$(cat "./transactions/update-contract/2024/sep-11-upgrade-staking/arguments-update-FlowIDTableStaking.json")" \
+  --proposer 0x8624b52f9ddcd04a \
+  --proposer-key-index 5 \
+  --authorizer 0x8624b52f9ddcd04a \
+  --payer 0x8624b52f9ddcd04a \
+  -x payload \
+  --save ./transactions/update-contract/2024/sep-11-upgrade-staking/flow-id-table-staking-contract-upgrade-sep-11-unsigned.rlp
+```
+
+## Josh Signs
+
+```sh
+flow transactions sign ./transactions/update-contract/2024/sep-11-upgrade-staking/flow-id-table-staking-contract-upgrade-sep-11-unsigned.rlp \
+  --config-path flow-staking.json \
+  --signer josh \
+  --filter payload \
+  --save ./transactions/update-contract/2024/sep-11-upgrade-staking/flow-id-table-staking-contract-upgrade-sep-11-sig-1.rlp
+```
+
+## Find Signs
+
+```sh
+flow transactions sign ./transactions/update-contract/2024/sep-11-upgrade-staking/flow-id-table-staking-contract-upgrade-sep-11-sig-1.rlp \
+  --config-path flow-staking.json \
+  --signer find \
+  --filter payload \
+  --save ./transactions/update-contract/2024/sep-11-upgrade-staking/flow-id-table-staking-contract-upgrade-sep-11-sig-2.rlp
+```
+
+## Kshitij Signs
+
+```sh
+flow transactions sign ./transactions/update-contract/2024/sep-11-upgrade-staking/flow-id-table-staking-contract-upgrade-sep-11-sig-2.rlp \
+  --config-path flow-staking.json \
+  --signer kshitij \
+  --filter payload \
+  --save ./transactions/update-contract/2024/sep-11-upgrade-staking/flow-id-table-staking-contract-upgrade-sep-11-sig-3.rlp
+```
+
+## Vishal Signs
+
+```sh
+flow transactions sign ./transactions/update-contract/2024/sep-11-upgrade-staking/flow-id-table-staking-contract-upgrade-sep-11-sig-3.rlp \
+  --config-path flow-staking.json \
+  --signer vishal \
+  --filter payload \
+  --save ./transactions/update-contract/2024/sep-11-upgrade-staking/flow-id-table-staking-contract-upgrade-sep-11-sig-4.rlp
+```
+
+## Somebody Submits
+
+```sh
+flow transactions send-signed --config-path flow-staking.json --network mainnet ./transactions/update-contract/2024/sep-11-upgrade-staking/flow-id-table-staking-contract-upgrade-sep-11-sig-4.rlp
+```
 
 ### Results
 
