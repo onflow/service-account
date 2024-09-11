@@ -18,7 +18,7 @@ Used this to generate the contract code arguments:
 
 Verified using:
 ```
-$ cat arguments-update-contract-{Filename}-mainnet.json | jq '.[1] | .value' | xxd -r -p > /tmp/temp.txt
+$ cat arguments-update-contract-FlowIDTableStaking-mainnet.json | jq '.[1] | .value' | xxd -r -p > /tmp/temp.txt
 $ diff /tmp/temp.txt {Filename}.cdc
 (Should produce no difference)
 ```
