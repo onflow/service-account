@@ -2,7 +2,7 @@
 
 > Sept 18th, 2024 
 
-Increases the slot limit for Access nodes by 30
+Increases the slot limit for Access nodes by 6
 
 ## Using Multisign tool
 
@@ -15,5 +15,5 @@ Increases the slot limit for Access nodes by 30
 
 ## Results
 
-Successful attempt: https://www.flowdiver.io/tx/c9bfbde5d3353a54291243da5244d16b54f06e5f96d7bd445d114bcb6eebe755
+Successful attempt: https://www.flowdiver.io/tx/
 
