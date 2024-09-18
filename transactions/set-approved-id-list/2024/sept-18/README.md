@@ -20,5 +20,5 @@ Adds One Verification node staked by Ankr:
 ## Results
 
 
-Successful attempt: https://www.flowdiver.io/tx/
+Successful attempt: https://www.flowdiver.io/tx/3b6be9871f8f727e859a45c712b6ddf28f43f6f9296f7cf8110ff452ab6ef1d2?tab=script
 
