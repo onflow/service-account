@@ -15,5 +15,5 @@ Increases the slot limit for Access nodes by 10
 
 ## Results
 
-Successful attempt: https://www.flowdiver.io/tx/
+Successful attempt: https://www.flowdiver.io/tx/39ccff02588684ac4dd4a23c1143a4cd8bb8d24e25709167d6a36a5d92dca458
 
