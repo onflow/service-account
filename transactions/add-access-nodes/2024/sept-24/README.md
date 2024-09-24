@@ -2,7 +2,7 @@
 
 > Sept 24th, 2024 
 
-Increases the slot limit for Access nodes by 6
+Increases the slot limit for Access nodes by 10
 
 ## Using Multisign tool
 
