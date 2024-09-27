@@ -10,4 +10,4 @@ using the [ResetEpoch](../../../../templates/reset_epoch.cdc) transaction.
 
 ## Results
 
-https://www.flowdiver.io/tx/
+https://www.flowdiver.io/tx/dda674349e4d7eed1994abd6a77fa19f76830d0ee01f4f0a385d23286e030093
