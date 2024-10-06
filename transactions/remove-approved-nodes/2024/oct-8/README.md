@@ -1,8 +1,10 @@
 # Remove nodes from the Approved Node Operators ID List
 
-> Oct 1st, 2024
+> Oct 8th, 2024
 
 See [FLIP GOV-291](https://github.com/onflow/flips/pull/292)
+
+Transaction: [remove_approved_nodes.cdc](../../../../templates/remove_approved_nodes.cdc)
 
 
 ## New method using Multisign tool
