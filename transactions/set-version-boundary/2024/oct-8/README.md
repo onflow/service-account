@@ -15,6 +15,6 @@ Version to set: `v0.37.17-rc.2`
 
 ## Result
 
-Transaction ID: https://www.flowdiver.io/tx/
+Transaction ID: https://www.flowdiver.io/tx/5a571c68f85cc0e312c468d9ff394523c567d7c7426da00fe9aea6ade64384ec
 
 Unsuccessfull Transaction IDs  (if any):
