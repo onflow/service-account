@@ -12,11 +12,8 @@
     "value": "17"
   },
   {
-    "type": "Optional",
-    "value": {
-      "type": "String",
-      "value": "rc.2"
-    }
+    "type": "String",
+    "value": "rc.2"
   },
   {
     "type": "UInt64",
