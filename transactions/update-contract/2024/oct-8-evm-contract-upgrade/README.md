@@ -10,6 +10,8 @@ Upgrade to the EVM contract as per this [issue](https://github.com/onflow/servic
 
 Used this to generate the contract code arguments:
 
+`wget https://raw.githubusercontent.com/onflow/flow-go/refs/heads/v0.37/fvm/evm/stdlib/contract.cdc`
+
 `cat "./contract.cdc" | xxd -p | tr -d '\n'`
 
 Verified using:
