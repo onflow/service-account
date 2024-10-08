@@ -16,4 +16,4 @@ Transaction: [remove_approved_nodes.cdc](../../../../templates/remove_approved_n
 
 ## Results
 
-https://www.flowdiver.io/tx/
+[https://www.flowdiver.io/tx/](https://www.flowdiver.io/tx/c692a70d2b314e9ad99c834c64052e38cdc1ce90f773899cf9f94b1c3755cba6) 
