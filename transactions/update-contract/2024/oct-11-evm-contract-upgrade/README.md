@@ -1,4 +1,4 @@
-# Update Epoch Contract
+# Update EVM Contract
 
 > Oct 11th, 2024
 
