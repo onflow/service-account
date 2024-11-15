@@ -2,11 +2,19 @@
 
 ## Multi-sig process
 
-Flow employs a robust process for executing protocol-level changes, requiring the collective agreement of multiple parties to sign and authorize transactions that trigger key event such as modification of protocol-level parameters. This is commonly referred to as the “multi-sig process”.
+Flow employs a community-driven, multi-signature process to execute essential protocol-level changes. This “multi-sig” process, essential to Flow's decentralized governance model, ensures that any modifications to key protocol state and parameters are only made through community consensus and collective agreement of multiple parties, providing an additional layer of security, trust and decentralization on the network.
 
 Notably, the multi-sig process on Flow is associated with two principal accounts that oversee critical aspects of the Flow protocol: the service account, responsible for actions related to protocol parameters, and the staking account, which holds resources linked to staked nodes within the network. These accounts are collectively overseen by multiple signatories - representatives from the Flow ecosystem - who participate in meetings where transactions are simultaneously authorized (or rejected) and submitted only if there’s quorum. 
 
-At present, representatives from Animoca, Blocto, Flow Foundation, Find, FlowScan, Ichi.org, etc. collectively hold multi-sig authority over the service account. Each signer is allocated a weight of 250 units, and to validate a transaction, a cumulative total of 1000 units is necessary. Therefore, a minimum of four signers must jointly provide their signatures to authorize the transaction. The transactions deliberated by these signatories may be related to minting tokens, setting fees, slashing rewards, updating network-level contracts, etc; see [account page](https://developers.flow.com/build/basics/accounts#service-accounts) for more details on the powers and abilities of the Flow service account.
+At present, representatives from Blocto, Equilibrium, Ichi, Find, Flow Foundation, and an individual member (@bluesign) collectively hold multi-sig authority over the service account. Each signer is allocated a weight of 250 units, and to validate a transaction, a cumulative total of 1000 units is necessary. Therefore, a minimum of four signers must jointly provide their signatures to authorize the transaction. The transactions deliberated by these signatories may be related to setting transaction fees, managing/ slashing rewards, updating network-level contracts, adding new nodes, driving height coordinated and other node software upgrades, etc; see [account page](https://developers.flow.com/build/basics/accounts#service-accounts) for more details on the powers and abilities of the Flow service account.
+
+**Role of a multi-signer**
+
+Multi-signers on Flow have a direct hand in shaping Flow’s future. They represent the community, oversee protocol changes, and ensure decisions align with the interests of all Flow participants. They regularly join meetings, some scheduled and others on short notice. On average and under normal circumstances, signers are expected to attend 1-2 meetings per month, each lasting about 10-15 minutes. During busier periods, such as major protocol updates, there may be more frequent and short-notice meetings.
+
+**How to nominate?**
+
+If you are currently a multi-signer, you may nominate someone to join as a multi-signer. To do so, submit a governance FLIP titled “*Addition of [Name/Handle] as a multi-sig signer*.” Ensure you follow the FLIP format and provide a clear motivation with thorough nomination details to enable full community deliberation. Find more information on creating a FLIP [here](https://github.com/onflow/flips/tree/main), and check out a sample nomination [here](https://github.com/onflow/flips/blob/main/governance/20231005-Adding-bluesign-as-multi-sig.md).
 
 ## Requirements for signers
 - Git
