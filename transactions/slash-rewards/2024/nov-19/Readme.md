@@ -12,4 +12,4 @@
 ### Failures (if any):
 
 ### Success:
-https://www.flowdiver.io/tx/
+https://www.flowscan.io/tx/bf0a3a3809041a2905f23730191150732030c67c68e616e5a6c49f1b228f41a8
