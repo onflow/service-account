@@ -15,6 +15,6 @@ Version to set: `v0.37.22-rc.1`
 
 ## Result
 
-Transaction ID: 
+Transaction ID: https://www.flowscan.io/tx/c6f594093bb66aa8aecc102873568b59cf23b0cf2ad6d4a05bfb3c0203cdcd59
 
-Unsuccessfull Transaction IDs  (if any):
+Unsuccessfull Transaction IDs  (if any): https://www.flowscan.io/tx/a0521a985ad6f813aa189ffc2b209d9e7d53e34c41bbb6ba273922a5ded7d1a8
