@@ -1,12 +1,12 @@
-# FLIP 310: Removing Equilibrium as multi-signer
+# Implementation of FLIP 310 and FLIP 311
 
-This transaction is to implement the [FLIP 310](https://github.com/onflow/flips/pull/311)
+This transaction is to implement [FLIP 310](https://github.com/onflow/flips/pull/311) and [FLIP 311](https://github.com/onflow/flips/pull/312)
 
 ##  Transaction to execute
 
 Key to remove: 
-1. Service account Index 8
-2. Staking account Index 2
+1. Service account Index 8 and 10
+2. Staking account Index 2 and 4
 
 ### Transaction for service account
 
@@ -14,6 +14,7 @@ Key to remove:
 transaction {
     prepare(signer: auth(RevokeKey) &Account) {
         signer.keys.revoke(keyIndex: 8)
+        signer.keys.revoke(keyIndex: 10)
     }
 }
 ```
@@ -24,6 +25,7 @@ transaction {
 transaction {
     prepare(signer: auth(RevokeKey) &Account) {
         signer.keys.revoke(keyIndex: 2)
+        signer.keys.revoke(keyIndex: 4)
     }
 }
 ```
