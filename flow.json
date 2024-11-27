@@ -22,16 +22,6 @@
         "resourceID": "projects/portto-prod/locations/global/keyRings/flow-keys/cryptoKeys/flow-admin-committee/cryptoKeyVersions/1"
       }
     },
-    "equilibrium": {
-      "address": "e467b9dd11fa00df",
-      "key": {
-        "type": "google-kms",
-        "index": 8,
-        "signatureAlgorithm": "ECDSA_secp256k1",
-        "hashAlgorithm": "SHA2_256",
-        "resourceID": "projects/flow-service-account-mgt/locations/global/keyRings/flow/cryptoKeys/service-account/cryptoKeyVersions/1"
-      }
-    },
     "ichi": {
       "address": "e467b9dd11fa00df",
       "key": {
@@ -40,16 +30,6 @@
         "signatureAlgorithm": "ECDSA_P256",
         "hashAlgorithm": "SHA2_256",
         "resourceID": "projects/dappersig/locations/global/keyRings/flow/cryptoKeys/service-account/cryptoKeyVersions/1"
-      }
-    },
-    "animoca": {
-      "address": "e467b9dd11fa00df",
-      "key": {
-        "type": "google-kms",
-        "index": 10,
-        "signatureAlgorithm": "ECDSA_secp256k1",
-        "hashAlgorithm": "SHA2_256",
-        "resourceID": "projects/ab1-flow-service-account/locations/global/keyRings/flow/cryptoKeys/service-account/cryptoKeyVersions/1"
       }
     },
     "kan": {

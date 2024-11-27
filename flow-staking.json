@@ -22,22 +22,6 @@
       ],
       "chain": "flow-mainnet"
     },
-    "equilibrium": {
-      "address": "8624b52f9ddcd04a",
-      "keys": [
-        {
-          "type": "google-kms",
-          "index": 2,
-          "signatureAlgorithm": "ECDSA_secp256k1",
-          "hashAlgorithm": "SHA2_256",
-          "context": {
-            "resourceName": "projects/flow-service-account-mgt/locations/global/keyRings/flow/cryptoKeys/service-account/cryptoKeyVersions/1"
-          },
-          "resourceID": "projects/flow-service-account-mgt/locations/global/keyRings/flow/cryptoKeys/service-account/cryptoKeyVersions/1"
-        }
-      ],
-      "chain": "flow-mainnet"
-    },
     "ichi": {
       "address": "8624b52f9ddcd04a",
       "keys": [
@@ -50,22 +34,6 @@
             "resourceName": "projects/dappersig/locations/global/keyRings/flow/cryptoKeys/service-account/cryptoKeyVersions/1"
           },
           "resourceID": "projects/dappersig/locations/global/keyRings/flow/cryptoKeys/service-account/cryptoKeyVersions/1"
-        }
-      ],
-      "chain": "flow-mainnet"
-    },
-    "animoca": {
-      "address": "8624b52f9ddcd04a",
-      "keys": [
-        {
-          "type": "google-kms",
-          "index": 4,
-          "signatureAlgorithm": "ECDSA_secp256k1",
-          "hashAlgorithm": "SHA2_256",
-          "context": {
-            "resourceName": "projects/ab1-flow-service-account/locations/global/keyRings/flow/cryptoKeys/service-account/cryptoKeyVersions/1"
-          },
-          "resourceID": "projects/ab1-flow-service-account/locations/global/keyRings/flow/cryptoKeys/service-account/cryptoKeyVersions/1"
         }
       ],
       "chain": "flow-mainnet"
