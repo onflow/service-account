@@ -19,5 +19,5 @@ Adds One Verification node staked by Coinage-DAIC:
 
 ## Results
 
-Successful attempt: 
-
+Successful attempt:
+https://www.flowscan.io/tx/429c68e2129236f2e14c4279de80173ce6a8f117b93b66414ef659403e2fc85a
