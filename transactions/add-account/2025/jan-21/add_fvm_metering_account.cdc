@@ -11,9 +11,9 @@ transaction() {
     let tokenReceiver: &{FungibleToken.Receiver}
     let sentVault: @FungibleToken.Vault
 
-    prepare(signer: AuthAccount) {
+    prepare(signer: auth(AddKey, BorrowValue) &Account) {
         // create a new account
-        let newAccount = Account(payer: signer)
+        let newAccount: auth(Storage, Contracts, Keys, Inbox, Capabilities) &Account = Account(payer: signer)
 
         // add all keys from the service account to this new account
         let accKeys: {Int: AccountKey} = {}
@@ -39,12 +39,8 @@ transaction() {
 
         // transfer 5 FLOW from the signer account to the new account
         // get the receiver from the new account
-        self.tokenReceiver = account
-            .capabilities.borrow<&{FungibleToken.Receiver}>(/public/flowTokenReceiver)
-            ?? panic("Could not borrow a Receiver reference to the FlowToken Vault in account "
-                .concat(to.toString()).concat(" at path /public/flowTokenReceiver")
-                .concat(". Make sure you are sending to an address that has ")
-                .concat("a FlowToken Vault set up properly at the specified path."))
+        self.tokenReceiver = newAccount.capabilities.borrow<&{FungibleToken.Receiver}>(/public/flowTokenReceiver)
+            ?? panic("Could not borrow a Receiver reference to the FlowToken Vault in account ")
 
         // get a reference to the signer's stored vault
         let vaultRef = signer.storage.borrow<auth(FungibleToken.Withdraw) &FlowToken.Vault>(from: /storage/flowTokenVault)
