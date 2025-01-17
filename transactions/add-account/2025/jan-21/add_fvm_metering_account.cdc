@@ -56,15 +56,15 @@ transaction() {
         self.sentVault <- vaultRef.withdraw(amount: 5.0)
 
         // move metering settings
-        account.storage.load<{UInt64: UInt64}>(from: /storage/executionEffortWeights)
-        account.storage.save(FlowServiceAccount.getExecutionEffortWeights(), to: /storage/executionEffortWeights)
+        newAccount.storage.load<{UInt64: UInt64}>(from: /storage/executionEffortWeights)
+        newAccount.storage.save(FlowServiceAccount.getExecutionEffortWeights(), to: /storage/executionEffortWeights)
 
-        account.storage.load<UInt64>(from: /storage/executionMemoryLimit)
-        account.storage.save(FlowServiceAccount.getExecutionMemoryLimit(), to: /storage/executionMemoryLimit)
+        newAccount.storage.load<UInt64>(from: /storage/executionMemoryLimit)
+        newAccount.storage.save(FlowServiceAccount.getExecutionMemoryLimit(), to: /storage/executionMemoryLimit)
 
         // there are no memory weights to copy
-        // account.storage.load<{UInt64: UInt64}>(from: /storage/executionMemoryWeights)
-        // account.storage.save(FlowServiceAccount.getExecutionMemoryWeights(), to: /storage/executionMemoryWeights)
+        // newAccount.storage.load<{UInt64: UInt64}>(from: /storage/executionMemoryWeights)
+        // newAccount.storage.save(FlowServiceAccount.getExecutionMemoryWeights(), to: /storage/executionMemoryWeights)
     }
 
     execute {
