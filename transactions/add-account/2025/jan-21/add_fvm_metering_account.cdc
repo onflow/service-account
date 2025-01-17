@@ -7,7 +7,7 @@ import FlowServiceAccount from 0xe467b9dd11fa00df
 // 3. Transfers 5 FLOW to the new account from the signer account
 // 4. Moves metering settings over to this new account
 
-transaction() {
+transaction(name: String, code: String) {
     let tokenReceiver: &{FungibleToken.Receiver}
     let sentVault: @{FungibleToken.Vault}
 
@@ -47,6 +47,8 @@ transaction() {
         // there are no memory weights to copy
         // newAccount.storage.load<{UInt64: UInt64}>(from: /storage/executionMemoryWeights)
         // newAccount.storage.save(FlowServiceAccount.getExecutionMemoryWeights(), to: /storage/executionMemoryWeights)
+
+        newAccount.contracts.add(name: name, code: code.decodeHex())
     }
 
     execute {
