@@ -9,7 +9,7 @@ import FlowServiceAccount from 0xe467b9dd11fa00df
 
 transaction() {
     let tokenReceiver: &{FungibleToken.Receiver}
-    let sentVault: @FungibleToken.Vault
+    let sentVault: @{FungibleToken.Vault}
 
     prepare(signer: auth(AddKey, BorrowValue) &Account) {
         // create a new account
