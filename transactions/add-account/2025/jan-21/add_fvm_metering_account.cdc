@@ -13,7 +13,7 @@ transaction() {
 
     prepare(signer: AuthAccount) {
         // create a new account
-		let newAccount = Account(payer: signer)
+        let newAccount = Account(payer: signer)
 
         // add all keys from the service account to this new account
         let accKeys: {Int: AccountKey} = {}
@@ -21,7 +21,7 @@ transaction() {
         fun addKey(_ key: AccountKey): Bool {
               accKeys[key.keyIndex] = key
               return true
-            }
+        }
 
         // iterates over all keys
         serviceAccount.keys.forEach(addKey)
