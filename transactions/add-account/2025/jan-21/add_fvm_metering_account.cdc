@@ -3,7 +3,7 @@ import FungibleToken from 0xf233dcee88fe0abe
 import FlowServiceAccount from 0xe467b9dd11fa00df
 
 // 1. Creates a new account
-// 2. Adds all unrevoked keys from the service account to this new account
+// 2. Creates an account capability for the new account and stores it in the service account
 // 3. Transfers 5 FLOW to the new account from the signer account
 // 4. Moves metering settings over to this new account
 
@@ -15,27 +15,13 @@ transaction() {
         // create a new account
         let newAccount: auth(Storage, Contracts, Keys, Inbox, Capabilities) &Account = Account(payer: signer)
 
-        // add all keys from the service account to this new account
-        let accKeys: {Int: AccountKey} = {}
-        let serviceAccount: &Account = getAccount(0xe467b9dd11fa00df)
-        fun addKey(_ key: AccountKey): Bool {
-              accKeys[key.keyIndex] = key
-              return true
-        }
+        // Create a fully-entitled account capability
+        let capability = newAccount.capabilities
+            .account
+            .issue<auth(Storage, Contracts, Keys, Inbox, Capabilities) &Account>()
 
-        // iterates over all keys
-        serviceAccount.keys.forEach(addKey)
-
-        var i: Int = 0
-        // add keys in the same order as the source account
-        while i < accKeys.length {
-           var key: AccountKey = accKeys[i] ?? panic("key dictionary is incorrect")
-           // only add non-revoked keys
-           if !key.isRevoked {
-             newAccount.keys.add(publicKey: key.publicKey, hashAlgorithm: key.hashAlgorithm, weight: key.weight)
-            }
-              i = i + 1
-        }
+        // Store the account capability in the service account
+        signer.storage.save(capability, to: /storage/meteringSettingsAccount)
 
         // transfer 5 FLOW from the signer account to the new account
         // get the receiver from the new account
