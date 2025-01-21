@@ -6,6 +6,7 @@ import FlowServiceAccount from 0xe467b9dd11fa00df
 // 2. Creates an account capability for the new account and stores it in the service account
 // 3. Transfers 5 FLOW to the new account from the signer account
 // 4. Moves metering settings over to this new account
+// 5. Deploys the new FlowExecutionParameters contract on this new account
 
 transaction(name: String, code: String) {
     let tokenReceiver: &{FungibleToken.Receiver}

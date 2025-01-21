@@ -31,5 +31,5 @@ $ diff /tmp/temp.txt ./FlowExecutionParameters.cdc
 ```
 
 
-Tx ID:
-New Account ID:
+Tx ID: https://www.flowscan.io/tx/947369bab4a6bdd038ef0823be8bd941ef3c8ba188a9897c68a85885c63729ca
+New Account ID: 0xf426ff57ee8f6110
