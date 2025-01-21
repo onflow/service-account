@@ -11,7 +11,7 @@ transaction(name: String, code: String) {
     let tokenReceiver: &{FungibleToken.Receiver}
     let sentVault: @{FungibleToken.Vault}
 
-    prepare(signer: auth(AddKey, BorrowValue) &Account) {
+    prepare(signer: auth(Storage, SaveValue, BorrowValue) &Account) {
         // create a new account
         let newAccount: auth(Storage, Contracts, Keys, Inbox, Capabilities) &Account = Account(payer: signer)
 
