@@ -1,6 +1,6 @@
 # Update FlowServiceAccount Contract
 
-> Jan 28th, 2025
+> Feb 3rd, 2025
 
 Upgrade to the FlowServiceAccount contract as per this [issue](https://github.com/onflow/flow-go/issues/6894)
 
@@ -24,7 +24,7 @@ ___
 
 Unsuccessful attempt (if any): NA
 
-Successful attempt: 
+Successful attempt: https://www.flowscan.io/tx/a39b473868f4f6a80440499cc3afefa02a77a2b81e7c85918076dffce93691e4
 
 
 ___
