@@ -6,7 +6,7 @@ Deploy new Migration contract stub to the service account as per this [issue](ht
 
 ## Transactions
 
-[update contract](../../../../transactions/update-contract)
+[deploy contract](../../../../templates/deploy_contract.cdc)
 
 Used this to generate the contract code arguments:
 
@@ -14,7 +14,7 @@ Used this to generate the contract code arguments:
 
 Verified using:
 ```
-$ cat arguments-update-contract.json | jq '.[1] | .value' | xxd -r -p > /tmp/temp.txt
+$ cat arguments-deploy-contract.json | jq '.[1] | .value' | xxd -r -p > /tmp/temp.txt
 $ diff /tmp/temp.txt migration.cdc
 (Should produce no difference)
 ```
