@@ -1,7 +1,7 @@
 [
   {
     "type": "String",
-    "value": "Migration"
+    "value": "AccountV2Migration"
   },
   {
     "type": "String",
