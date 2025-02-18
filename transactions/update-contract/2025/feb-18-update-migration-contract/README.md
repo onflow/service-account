@@ -24,7 +24,7 @@ ___
 
 Unsuccessful attempt (if any): NA
 
-Successful attempt: 
+Successful attempt: https://www.flowscan.io/tx/e82215a3cd5edde90ae6ea8d5bd21d375e8deed339576d19b5be6acb3534ba3e
 
 ___
 
