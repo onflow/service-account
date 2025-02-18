@@ -3,7 +3,7 @@
 
 This transaction sets the height at which the height coordinated upgrade occurs on mainnet.
 
-Version to set: `v0.38.2-rc.2`
+Version to set: `v0.38.2-rc.3`
 
 ## New method using Flow CLI multi-sign
 
