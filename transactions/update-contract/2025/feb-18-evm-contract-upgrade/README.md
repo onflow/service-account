@@ -1,6 +1,6 @@
 # Update EVM Contract
 
-> Feb 17th, 2025
+> Feb 18th, 2025
 
 Upgrade the EVM contract as per this [issue](https://github.com/onflow/service-account/issues/361)
 
@@ -26,7 +26,7 @@ ___
 
 Unsuccessful attempt (if any): 
 
-Successful attempt: 
+Successful attempt: a8f81d7de1598f3698051660c18c7b489e11735e1c8812f61a504c86552211fc
 
 ___
 
