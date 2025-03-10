@@ -2,7 +2,7 @@
 
 ## Multi-sig process
 
-Flow employs a community-driven, multi-signature process to execute essential protocol-level changes. This “multi-sig” process, essential to Flow's decentralized governance model, ensures that any modifications to key protocol state and parameters are only made through community consensus and collective agreement of multiple parties, providing an additional layer of security, trust and decentralization on the network.
+Flow employs a **community-driven**, multi-signature process to execute essential protocol-level changes. This “multi-sig” process, essential to Flow's decentralized governance model, ensures that any modifications to key protocol state and parameters are only made through community consensus and collective agreement of multiple parties, providing an additional layer of security, trust and decentralization on the network.
 
 Notably, the multi-sig process on Flow is associated with two principal accounts that oversee critical aspects of the Flow protocol: the service account, responsible for actions related to protocol parameters, and the staking account, which holds resources linked to staked nodes within the network. These accounts are collectively overseen by multiple signatories - representatives from the Flow ecosystem - who participate in meetings where transactions are simultaneously authorized (or rejected) and submitted only if there’s quorum. 
 
