@@ -6,7 +6,7 @@ Transaction: [add_approved_id_list.cdc](../../../../templates/add_approved_id_li
 
 ## Results
 
-Successful attempt: https://www.flowscan.io/tx/
+Successful attempt: https://www.flowscan.io/tx/66c83166d544c1270908f320734a9a074753f5bead7eadff85a1b8505888bff6
 
 ## Verification
 
