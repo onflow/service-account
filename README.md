@@ -8,11 +8,26 @@ Notably, the multi-sig process on Flow is associated with two principal accounts
 
 At present, representatives from Blocto, Ichi, FindLabs, Flow Foundation, and an individual member (`@bluesign`) collectively hold multi-sig authority over the service account. Each signer is allocated a weight of 250 units, and to validate a transaction, a cumulative total of 1000 units is necessary. Therefore, a minimum of four signers must jointly provide their signatures to authorize the transaction. The transactions deliberated by these signatories may be related to setting transaction fees, managing/ slashing rewards, updating network-level contracts, adding new nodes, driving height coordinated and other node software upgrades, etc; see [account page](https://developers.flow.com/build/basics/accounts#service-accounts) for more details on the powers and abilities of the Flow service account.
 
-**Role of a multi-signer**
+## Role of a multi-signer**
 
 Multi-signers on Flow have a direct hand in shaping Flow’s future. They represent the community, oversee protocol changes, and ensure decisions align with the interests of all Flow participants. They regularly join meetings, some scheduled and others on short notice. On average and under normal circumstances, signers are expected to attend 1-2 meetings per month, each lasting about 10-15 minutes. During busier periods, such as major protocol updates, there may be more frequent and short-notice meetings.
 
-**How to nominate?**
+## 🛠️ Service Committee
+The group of multi-signers are effectively referred to as the service committee.
+
+## 📋 Policy for Multi-signers
+An efficient and smooth multi-sign process is essential to ensure upgrades on Flow are rolled out in a timely manner. Reviewing, approving, and signing transactions requires a time commitment from each member of the service committee.
+
+To avoid bottlenecks and ensure a balanced workload across signers, the following policy applies:
+
+1. Monthly Participation:
+Each signer is expected to attend at least one multi-signing meeting per month.
+
+2. Inactive Signer Removal:
+If a signer does not attend any meeting for three consecutive months, the rest of the committee may decide to propose their removal. This will be initiated via a governance FLIP.
+
+
+## How to nominate?
 
 If you are currently a multi-signer, you may nominate someone to join as a multi-signer. To do so, submit a governance FLIP titled “*Addition of [Name/Handle] as a multi-sig signer*.” Ensure you follow the FLIP format and provide a clear motivation with thorough nomination details to enable full community deliberation. Find more information on creating a FLIP [here](https://github.com/onflow/flips/tree/main), and check out a sample nomination [here](https://github.com/onflow/flips/blob/main/governance/20231005-Adding-bluesign-as-multi-sig.md).
 
