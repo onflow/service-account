@@ -22,13 +22,11 @@ Equally important is preserving the decentralized nature of the multi-sign proce
 
 To that end, the following policy applies:
 
-1. Monthly Participation
-Each signer is expected to attend at least one multi-signing meeting per month.
-
+1. Meeting Participation
+Each signer is expected to not miss more than 10 consecutive multi-signing meetings.
 
 2. Inactive Signer Removal
-If a signer does not attend any meeting for three consecutive months, the rest of the committee may propose their removal. This will be done via a governance FLIP.
-
+If a signer exceeds this threshold, the rest of the committee may propose their removal through a governance FLIP.
 
 3. Decentralization Requirement
 The multi-sign process must remain decentralized, and no single entity including the Flow Foundation, should be capable of unilaterally signing and submitting a transaction.
