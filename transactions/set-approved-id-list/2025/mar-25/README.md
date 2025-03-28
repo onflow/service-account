@@ -1,4 +1,4 @@
-# Add Flipsde Consenus nodes to the approved list of node
+# Add Maksim's Consensus node to the approved list of node
 
 > Mar 25th, 2025
 
