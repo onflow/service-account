@@ -2,7 +2,7 @@
 
 Upgrade all 3 epoch contracts in exactly the following order. Before doing this step:
 - Must have upgraded NodeVersionBeacon to v1.6.0
-- Must have scheduled Protocol State Upgrade to v2
+- Must have scheduled Protocol State Upgrade to v2 (and waited for activation view to successfully pass)
 
 ## 1. Upgrade FlowClusterQC
 
