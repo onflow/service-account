@@ -3,7 +3,7 @@
 This is Step 2 in the Apr 3 2025 Protocol State Upgrade Process. Before doing this step:
 - Must have upgraded NodeVersionBeacon to v1.6.0
 
-[set protocol state version](../../../../transactions/set-protocol-state-version)
+[set protocol state version](../../../../templates/set_protocol_state_version.cdc)
 
 To produce arguments:
 ```
