@@ -26,7 +26,7 @@ ___
 
 Unsuccessful attempt (if any): NA
 
-Successful attempt: 
+Successful attempt: https://www.flowscan.io/tx/b0c15c5c39f2c39f6f2790206034e79f6c25dfc2d1f44ab0fd2462159d81af4c
 
 
 ## 2. Upgrade FlowDKG
@@ -51,7 +51,7 @@ ___
 
 Unsuccessful attempt (if any): NA
 
-Successful attempt: 
+Successful attempt: https://www.flowscan.io/tx/caa8865bb164f8b6e4a69a7f2d393fc6543ad730b5aec3660b8021d813aab4df
 
 ## 3. Upgrade FlowEpoch
 
@@ -75,4 +75,4 @@ ___
 
 Unsuccessful attempt (if any): NA
 
-Successful attempt: 
+Successful attempt: https://www.flowscan.io/tx/1e9d61e8bcbf1270e3ff1d243048e3b38b7472e0550b4f808c005aa2c753d3fd
