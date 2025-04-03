@@ -27,6 +27,7 @@ Each signer is expected to not miss more than 10 consecutive multi-signing meeti
 
 2. Inactive Signer Removal
 If a signer exceeds this threshold, the rest of the committee may propose their removal through a governance FLIP.
+The inactive key will be notified and have a grace period of two weeks to resolve any issue that may prevent them from signing
 
 3. Decentralization Requirement
 The multi-sign process must remain decentralized, and no single entity including the Flow Foundation, should be capable of unilaterally signing and submitting a transaction.
