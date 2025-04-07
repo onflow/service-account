@@ -30,7 +30,7 @@ If a signer exceeds this threshold, the rest of the committee may propose their 
 The inactive key will be notified and have a grace period of two weeks to resolve any issue that may prevent them from signing
 
 3. Decentralization Requirement
-The multi-sign process must remain decentralized, and no single entity including the Flow Foundation, should be capable of unilaterally signing and submitting a transaction.
+The multi-sign process must remain decentralized, and no single entity including the Flow Foundation and Dapper Labs, should be capable of unilaterally signing and submitting a transaction.
 
 ## How to nominate?
 
