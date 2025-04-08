@@ -1,4 +1,4 @@
-# Add Edgevana and Alchemy nodes to the approved list of node
+# Add BlockDaemon and Alchemy nodes to the approved list of node
 
 > April 8th, 2025
 
