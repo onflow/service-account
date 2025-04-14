@@ -185,9 +185,9 @@
           "signatureAlgorithm": "ECDSA_P256",
           "hashAlgorithm": "SHA2_256",
           "context": {
-            "resourceName": "??"
+            "resourceName": "projects/flow-service-account-key/locations/global/keyRings/flow-service-account-signer-LL/cryptoKeys/flow-service-account-signer-LL/cryptoKeyVersions/1"
           },
-          "resourceID": "??"
+          "resourceID": "projects/flow-service-account-key/locations/global/keyRings/flow-service-account-signer-LL/cryptoKeys/flow-service-account-signer-LL/cryptoKeyVersions/1"
         }
       ],
       "chain": "flow-mainnet"
