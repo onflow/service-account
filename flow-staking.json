@@ -38,22 +38,6 @@
       ],
       "chain": "flow-mainnet"
     },
-    "kan": {
-      "address": "8624b52f9ddcd04a",
-      "keys": [
-        {
-          "type": "google-kms",
-          "index": 5,
-          "signatureAlgorithm": "ECDSA_P256",
-          "hashAlgorithm": "SHA2_256",
-          "context": {
-            "resourceName": "projects/dl-flow-admin/locations/us/keyRings/flow-service-account/cryptoKeys/dapperlabs_1/cryptoKeyVersions/1"
-          },
-          "resourceID": "projects/dl-flow-admin/locations/us/keyRings/flow-service-account/cryptoKeys/dapperlabs_1/cryptoKeyVersions/1"
-        }
-      ],
-      "chain": "flow-mainnet"
-    },
     "jan": {
       "address": "8624b52f9ddcd04a",
       "keys": [
@@ -86,7 +70,7 @@
       ],
       "chain": "flow-mainnet"
     },
-    "layne": {
+    "kan": {
       "address": "8624b52f9ddcd04a",
       "keys": [
         {
@@ -150,6 +134,22 @@
       ],
       "chain": "flow-mainnet"
     },
+    "gio": {
+      "address": "8624b52f9ddcd04a",
+      "keys": [
+        {
+          "type": "google-kms",
+          "index": 7,
+          "signatureAlgorithm": "ECDSA_P256",
+          "hashAlgorithm": "SHA2_256",
+          "context": {
+            "resourceName": "projects/dl-flow-admin/locations/us/keyRings/flow-service-account/cryptoKeys/dapperlabs_3/cryptoKeyVersions/1"
+          },
+          "resourceID": "projects/dl-flow-admin/locations/us/keyRings/flow-service-account/cryptoKeys/dapperlabs_3/cryptoKeyVersions/1"
+        }
+      ],
+      "chain": "flow-mainnet"
+    },
     "find": {
 			"address": "8624b52f9ddcd04a",
       "keys": [
@@ -172,6 +172,22 @@
           "signatureAlgorithm": "ECDSA_P256",
           "hashAlgorithm": "SHA2_256",
           "resourceID": "projects/flow-352513/locations/us-east1/keyRings/flow/cryptoKeys/hc/cryptoKeyVersions/1"
+        }
+      ],
+      "chain": "flow-mainnet"
+    },
+    "layne": {
+      "address": "8624b52f9ddcd04a",
+      "keys": [
+        {
+          "type": "google-kms",
+          "index": 11,
+          "signatureAlgorithm": "ECDSA_P256",
+          "hashAlgorithm": "SHA2_256",
+          "context": {
+            "resourceName": "??"
+          },
+          "resourceID": "??"
         }
       ],
       "chain": "flow-mainnet"

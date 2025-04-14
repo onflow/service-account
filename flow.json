@@ -32,16 +32,6 @@
         "resourceID": "projects/dappersig/locations/global/keyRings/flow/cryptoKeys/service-account/cryptoKeyVersions/1"
       }
     },
-    "kan": {
-      "address": "e467b9dd11fa00df",
-      "key": {
-        "type": "google-kms",
-        "index": 11,
-        "signatureAlgorithm": "ECDSA_P256",
-        "hashAlgorithm": "SHA2_256",
-        "resourceID": "projects/dl-flow-admin/locations/us/keyRings/flow-service-account/cryptoKeys/dapperlabs_1/cryptoKeyVersions/1"
-      }
-    },
     "jan": {
       "address": "e467b9dd11fa00df",
       "key": {
@@ -62,7 +52,7 @@
         "resourceID": "projects/dl-flow-admin/locations/us/keyRings/flow-service-account/cryptoKeys/dapperlabs_1/cryptoKeyVersions/1"
       }
     },
-    "layne": {
+    "kan": {
       "address": "e467b9dd11fa00df",
       "key": {
         "type": "google-kms",
@@ -102,6 +92,16 @@
         "resourceID": "projects/dl-flow-admin/locations/us/keyRings/flow-service-account/cryptoKeys/dapperlabs_3/cryptoKeyVersions/1"
       }
     },
+    "gio": {
+      "address": "e467b9dd11fa00df",
+      "key": {
+        "type": "google-kms",
+        "index": 13,
+        "signatureAlgorithm": "ECDSA_P256",
+        "hashAlgorithm": "SHA2_256",
+        "resourceID": "projects/dl-flow-admin/locations/us/keyRings/flow-service-account/cryptoKeys/dapperlabs_3/cryptoKeyVersions/1"
+      }
+    },
     "find": {
       "address": "e467b9dd11fa00df",
       "key": {
@@ -120,6 +120,16 @@
         "signatureAlgorithm": "ECDSA_P256",
         "hashAlgorithm": "SHA2_256",
         "resourceID": "projects/flow-352513/locations/us-east1/keyRings/flow/cryptoKeys/hc/cryptoKeyVersions/1"
+      }
+    },
+    "layne": {
+      "address": "e467b9dd11fa00df",
+      "key": {
+        "type": "google-kms",
+        "index": 19,
+        "signatureAlgorithm": "ECDSA_P256",
+        "hashAlgorithm": "SHA2_256",
+        "resourceID": "??"
       }
     },
     "emulator-account": {
