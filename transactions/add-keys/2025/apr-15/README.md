@@ -25,5 +25,5 @@ Key to be removed from the service account and the staking account for FLIP 326:
 ## Results
 
 
-1. https://flowscan.org/transaction/
-2. https://flowscan.org/transaction/
+1. https://www.flowscan.io/tx/02841acc58dd74fb57ee4eb89ef14ccce19bc120684f64df15bcc806b978eddd
+2. https://www.flowscan.io/tx/5fc1215ed2d8be18c46de837d64999b5f85898b8845bdcce271e382d49f99020

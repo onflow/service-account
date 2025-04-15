@@ -27,7 +27,7 @@ Result: A.8624b52f9ddcd04a.FlowIDTableStaking.NodeInfo(id: "79eb460b86d7249713ab
 
 ## Results
 
-Successful attempt:
+Successful attempt:https://www.flowscan.io/tx/64515537934e7659838dda6bcde86be2c9141942cad68948573cb5459a890070
 
 ## Verification
 
