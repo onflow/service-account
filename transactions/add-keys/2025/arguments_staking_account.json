@@ -1,0 +1,23 @@
+
+[
+    {
+        "type": "Int",
+        "value": "3"
+    },
+    {
+        "type": "String",
+        "value": "9a9b21fd1a3bba399fc88289da202d14fd3dc03498f06d77af15f2c30a30f4138118410d7ade3a21a103752b385b15abbeca50d271583de0eb5bb0465310baa3"
+    },
+    {
+        "type": "UInt8",
+        "value": "1"
+    },
+    {
+        "type": "UInt8",
+        "value": "1"
+    },
+    {
+        "type": "UFix64",
+        "value": "250.0"
+    }
+]
