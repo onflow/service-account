@@ -1,5 +1,3 @@
-
-
 access(all)
 contract Migration {
 
