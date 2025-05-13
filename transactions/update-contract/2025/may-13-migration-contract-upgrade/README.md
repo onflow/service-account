@@ -24,7 +24,7 @@ ___
 
 Unsuccessful attempt (if any): 
 
-Successful attempt: 
+Successful attempt: Tx ID: bcbe9d730b21faf629d92b0a19238a76ca5ad225cdb125907ad8d81ae65c6339
 
 ___
 
