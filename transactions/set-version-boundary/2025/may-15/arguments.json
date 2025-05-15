@@ -13,7 +13,7 @@
   },
   {
     "type": "String",
-    "value": ""
+    "value": null
   },
   {
     "type": "UInt64",
