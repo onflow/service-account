@@ -16,3 +16,6 @@ Version to set: ``
 ## Result
 
 Transaction ID:
+
+Failure: https://www.flowscan.io/tx/b0795d45615d0fbe2351efa92e25d756b22f4805c1794bee6c01ddbd11a0ebea Wrong arguments
+Success: https://www.flowscan.io/tx/a114978e5f67b17b4340200997d65c23e12e55e5ffbb4fb1d8b5d2e1a6983286
