@@ -18,7 +18,7 @@ Result: A.8624b52f9ddcd04a.FlowIDTableStaking.NodeInfo(id: "319faff4818d68f88a08
 
 ## Results
 
-Successful attempt:
+Successful attempt:https://www.flowscan.io/tx/f4949ec2bbc2986318006572f900005ace981b8a6d0326505c55e82c635de7c1
 
 ## Verification
 
@@ -28,7 +28,7 @@ wget https://raw.githubusercontent.com/onflow/flow-core-contracts/refs/heads/mas
 flow scripts execute get_approved_nodes.cdc -n mainnet | grep df209488245c39063f48d3642d9691f78daf3e35985bd2f348efe4d33a63e344 | grep 26d6142ae2bb58b5c174dd22c0fd4345c1b5f379d7e07fc1b65ad71ba547aede | grep 319faff4818d68f88a084ceb77f93bcf2e31bd6eba774f5b3e210db9661dce5c
 ```
 
-Total count should be 383
+Total count should be 384
 ```shell
 flow scripts execute get_approved_nodes.cdc -n mainnet -o json | jq '.value| length'
 ```
