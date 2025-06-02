@@ -25,11 +25,11 @@
 
  */
 
-import "FlowToken"
-import "FungibleToken"
-import "FlowIDTableStaking"
-import "FlowStorageFees"
-import "StakingProxy"
+import FlowToken from 0x1654653399040a61
+import FungibleToken from 0xf233dcee88fe0abe
+import FlowIDTableStaking from 0x8624b52f9ddcd04a
+import FlowStorageFees from 0xe467b9dd11fa00df
+import StakingProxy from 0x62430cf28c26d095
 
 access(all) contract LockedTokens {
 
