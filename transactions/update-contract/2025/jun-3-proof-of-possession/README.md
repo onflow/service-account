@@ -1,4 +1,4 @@
-# Update EVM Contract
+# Proof of Possession Rollout
 
 > June 3rd, 2025
 
