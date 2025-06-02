@@ -3,15 +3,15 @@
 > June 3rd, 2025
 
 As part of the Proof of Possession roll out, 3 core contracts need to be upgraded.
-1. FlowIDTableStaking (addNodeRecord function)
-2. LockedTokens (registerNode function)
-3. FlowStakingCollection (registerNode function)
+1. FlowIDTableStaking (addNodeRecord function) using the Staking account `0x8624b52f9ddcd04a` (multi-sign)
+2. LockedTokens (registerNode function) using the account `0x8d0e87b65159ae63` (not a multi-sign)
+3. FlowStakingCollection (registerNode function) using the account `0x8d0e87b65159ae63` (not a multi-sign)
 
 ## Transactions
 
 [update contract](../../../../transactions/update-contract)
 
-### Transaction 1 - FlowIDTableStaking Upgrade
+### Transaction 1 - FlowIDTableStaking Upgrade using the Staking account `0x8624b52f9ddcd04a`
 
 Used this to generate the contract code arguments:
 
