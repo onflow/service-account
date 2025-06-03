@@ -24,6 +24,8 @@ $ diff /tmp/temp.txt FlowIDTableStaking.cdc
 (Should produce no difference)
 ```
 
+### Resylt: https://www.flowscan.io/tx/dc33db70318cd9c27d974fd490b972e77a24ea5b767896a2eda390d93ecfe229
+
 ### Transaction 2 - LockedTokens Upgrade
 
 jq -n --arg name "LockedTokens" --arg value "$(xxd -p ./LockedTokens.cdc  | tr -d '\n')" '[{"type":"String","value":$name},{"type":"String","value":$value}]' > arguments-LockedTokens.json
@@ -34,6 +36,7 @@ $ cat arguments-LockedTokens.json | jq '.[1] | .value' | xxd -r -p > /tmp/temp.t
 $ diff /tmp/temp.txt LockedTokens.cdc
 (Should produce no difference)
 ```
+### Result: https://www.flowscan.io/tx/329603b401b413ea4fbf9bf734712e24ad5ffd264ca48c91e6c99efc42ab9f67
 
 ### Transaction 3 - FlowStakingCollection Upgrade
 
@@ -46,13 +49,7 @@ $ diff /tmp/temp.txt FlowStakingCollection.cdc
 (Should produce no difference)
 ```
 
+### Result: https://www.flowscan.io/tx/2401a6985edb50376515094c750aa0404be9d30297ac470e7a598090b49bda66
 ___
 
-### Results
-
-Unsuccessful attempt (if any): 
-
-Successful attempt: Tx ID:
-
-___
 
