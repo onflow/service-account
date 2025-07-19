@@ -1,9 +1,8 @@
 # FLIP 321 Implementation
 
-> July ??, 2025
+> July 22nd, 2025
 
 Implementation of [FLIP 321: Enforcing Domain-Based Networking Addresses for Nodes](https://github.com/onflow/flips/blob/main/protocol/20250619-network-address-validation.md)
-
 
 Updating the `FlowIDTableStaking` contract by submitting the [update contract](../../../../transactions/update-contract) transaction with the Staking account (`0x8624b52f9ddcd04a`) as the payer and signed by the service committee.
 
