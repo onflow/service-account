@@ -20,4 +20,13 @@ $ diff /tmp/temp.txt FlowIDTableStaking.cdc
 (Should produce no difference)
 ```
 
+## Testnet
+```
+flow transactions send ./templates/update_contract.cdc \
+    --network testnet \
+    --args-json "$(cat "./transactions/update-contract/2025/jul-14-staking-contract-upgrade/arguments-FlowIDTableStaking.json")" \
+    --gas-limit 9999 \
+    --signer flow_id_table_staking \
+    -f /Users/vishal/testnet_spork_key/flow.json
+```
 ### Resylt:
