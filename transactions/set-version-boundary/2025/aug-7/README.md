@@ -15,4 +15,8 @@ Version to set: `v0.42.1-rc.3`
 
 ## Result
 
-Transaction ID: https://www.flowscan.io/tx/
+Failed:
+https://www.flowscan.io/tx/9d4e621c459f426bff8a19e1e575f086996cbb2780ab39044579d549539b45d2
+
+Successful:
+Transaction ID: https://www.flowscan.io/tx/704607304087d3492db45759363112daf923e96cd76158955ea8f6d1eff51b10
