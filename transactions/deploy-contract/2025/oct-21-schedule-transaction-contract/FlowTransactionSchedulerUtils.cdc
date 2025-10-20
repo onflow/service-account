@@ -1,5 +1,5 @@
-import "FlowTransactionScheduler"
-import "FlowToken"
+import FlowTransactionScheduler from 0xe467b9dd11fa00df
+import FlowToken from 0x1654653399040a61
 
 /// FlowTransactionSchedulerUtils provides utility functionality for working with scheduled transactions
 /// on the Flow blockchain. Currently, it only includes a Manager resource for managing scheduled transactions.

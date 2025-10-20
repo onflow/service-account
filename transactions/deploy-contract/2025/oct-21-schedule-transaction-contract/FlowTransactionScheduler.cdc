@@ -1,8 +1,8 @@
-import "FungibleToken"
-import "FlowToken"
-import "FlowFees"
-import "FlowStorageFees"
-import "ViewResolver"
+import FungibleToken from 0xf233dcee88fe0abe
+import FlowToken from 0x1654653399040a61
+import FlowFees from 0xf919ee77447b7497
+import FlowStorageFees from 0xe467b9dd11fa00df
+import ViewResolver from 0x1d7e57aa55817448
 
 /// FlowTransactionScheduler enables smart contracts to schedule autonomous execution in the future.
 ///
