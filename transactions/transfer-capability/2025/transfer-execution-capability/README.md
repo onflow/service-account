@@ -15,4 +15,9 @@ The Service account (`e467b9dd11fa00df`) will be the payer and authorizer, signe
 5. Stores the Account object in the storage of the service account.
 
 ### Result:
+
+- Failed attempt due to incorect import: https://www.flowscan.io/tx/3f58a81135d2fc32f48163af9a73de7e2de79804183dd477babb909d7ae0a728
+
+- Successful: https://www.flowscan.io/tx/757fce40103242e9935bc02086b0214ec5da7dfd19a57f38d4f03c4f74aa2100
 https://www.flowscan.io/tx/
+  - Account created: 0x45df3724e7c13957
