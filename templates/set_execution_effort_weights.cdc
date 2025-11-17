@@ -1,7 +1,7 @@
 // This transactions sets new execution effort weights
 // The maximum execution effort limit for transactions is always 99999.
 // The weight names/ids can be seen here:
-// 
+//
 // - [Cadence ComputationKind](https://github.com/onflow/cadence/blob/6075ef48c7c2a061d27e36b095ae7ec5e2045ca7/runtime/common/computationkind.go#L30)
 // - [FVM ComputationKind](https://github.com/onflow/flow-go/blob/1df43de85c5b75618511a8fe99e9998ab2e4cd59/fvm/meter/meter.go#L9)
 //
@@ -10,7 +10,7 @@
 // The default weights are:
 //
 // - ComputationKindLoop: 1
-// - ComputationKindStatement: 1 
+// - ComputationKindStatement: 1
 // - ComputationKindFunctionInvocation: 1
 //
 // or in parameter form:
@@ -38,8 +38,14 @@
 // ]
 // ```
 transaction(newWeights: {UInt64: UInt64}) {
-    prepare(signer: auth(Storage) &Account) {
-        signer.storage.load<{UInt64: UInt64}>(from: /storage/executionEffortWeights)
-        signer.storage.save(newWeights, to: /storage/executionEffortWeights)
+    prepare(signer: auth(BorrowValue, Storage, CopyValue) &Account) {
+        let childAccount = signer.storage.copy<Capability<auth(Storage, Contracts, Keys, Inbox, Capabilities) &Account>>(from: /storage/meteringSettingsAccount)
+            ?? panic("Could not find Metering Settings Account in storage")
+
+        let childAccountRef = childAccount.borrow()
+            ?? panic("Could not borrow Metering Settings Account reference")
+
+        childAccountRef.storage.load<{UInt64: UInt64}>(from: /storage/executionEffortWeights)
+        childAccountRef.storage.save(newWeights, to: /storage/executionEffortWeights)
     }
 }

@@ -1,0 +1,437 @@
+[
+  {
+    "type": "Dictionary",
+    "value": [
+      {
+        "key": {
+          "type": "UInt64",
+          "value": "1001"
+        },
+        "value": {
+          "type": "UInt64",
+          "value": "1770"
+        }
+      },
+      {
+        "key": {
+          "type": "UInt64",
+          "value": "1002"
+        },
+        "value": {
+          "type": "UInt64",
+          "value": "179"
+        }
+      },
+      {
+        "key": {
+          "type": "UInt64",
+          "value": "1003"
+        },
+        "value": {
+          "type": "UInt64",
+          "value": "1399"
+        }
+      },
+      {
+        "key": {
+          "type": "UInt64",
+          "value": "1011"
+        },
+        "value": {
+          "type": "UInt64",
+          "value": "2358"
+        }
+      },
+      {
+        "key": {
+          "type": "UInt64",
+          "value": "1025"
+        },
+        "value": {
+          "type": "UInt64",
+          "value": "4364"
+        }
+      },
+      {
+        "key": {
+          "type": "UInt64",
+          "value": "1026"
+        },
+        "value": {
+          "type": "UInt64",
+          "value": "48"
+        }
+      },
+      {
+        "key": {
+          "type": "UInt64",
+          "value": "1040"
+        },
+        "value": {
+          "type": "UInt64",
+          "value": "3818"
+        }
+      },
+      {
+        "key": {
+          "type": "UInt64",
+          "value": "1041"
+        },
+        "value": {
+          "type": "UInt64",
+          "value": "125"
+        }
+      },
+      {
+        "key": {
+          "type": "UInt64",
+          "value": "1055"
+        },
+        "value": {
+          "type": "UInt64",
+          "value": "5"
+        }
+      },
+      {
+        "key": {
+          "type": "UInt64",
+          "value": "1057"
+        },
+        "value": {
+          "type": "UInt64",
+          "value": "278"
+        }
+      },
+      {
+        "key": {
+          "type": "UInt64",
+          "value": "1082"
+        },
+        "value": {
+          "type": "UInt64",
+          "value": "31"
+        }
+      },
+      {
+        "key": {
+          "type": "UInt64",
+          "value": "1083"
+        },
+        "value": {
+          "type": "UInt64",
+          "value": "28"
+        }
+      },
+      {
+        "key": {
+          "type": "UInt64",
+          "value": "1084"
+        },
+        "value": {
+          "type": "UInt64",
+          "value": "69"
+        }
+      },
+      {
+        "key": {
+          "type": "UInt64",
+          "value": "1085"
+        },
+        "value": {
+          "type": "UInt64",
+          "value": "257"
+        }
+      },
+      {
+        "key": {
+          "type": "UInt64",
+          "value": "1086"
+        },
+        "value": {
+          "type": "UInt64",
+          "value": "223"
+        }
+      },
+      {
+        "key": {
+          "type": "UInt64",
+          "value": "1201"
+        },
+        "value": {
+          "type": "UInt64",
+          "value": "177"
+        }
+      },
+      {
+        "key": {
+          "type": "UInt64",
+          "value": "1203"
+        },
+        "value": {
+          "type": "UInt64",
+          "value": "1737"
+        }
+      },
+      {
+        "key": {
+          "type": "UInt64",
+          "value": "1204"
+        },
+        "value": {
+          "type": "UInt64",
+          "value": "1907"
+        }
+      },
+      {
+        "key": {
+          "type": "UInt64",
+          "value": "1205"
+        },
+        "value": {
+          "type": "UInt64",
+          "value": "3652"
+        }
+      },
+      {
+        "key": {
+          "type": "UInt64",
+          "value": "1208"
+        },
+        "value": {
+          "type": "UInt64",
+          "value": "736"
+        }
+      },
+      {
+        "key": {
+          "type": "UInt64",
+          "value": "1223"
+        },
+        "value": {
+          "type": "UInt64",
+          "value": "8837"
+        }
+      },
+      {
+        "key": {
+          "type": "UInt64",
+          "value": "1224"
+        },
+        "value": {
+          "type": "UInt64",
+          "value": "3656"
+        }
+      },
+      {
+        "key": {
+          "type": "UInt64",
+          "value": "1225"
+        },
+        "value": {
+          "type": "UInt64",
+          "value": "7373"
+        }
+      },
+      {
+        "key": {
+          "type": "UInt64",
+          "value": "1226"
+        },
+        "value": {
+          "type": "UInt64",
+          "value": "3325"
+        }
+      },
+      {
+        "key": {
+          "type": "UInt64",
+          "value": "1227"
+        },
+        "value": {
+          "type": "UInt64",
+          "value": "1210"
+        }
+      },
+      {
+        "key": {
+          "type": "UInt64",
+          "value": "2005"
+        },
+        "value": {
+          "type": "UInt64",
+          "value": "15372"
+        }
+      },
+      {
+        "key": {
+          "type": "UInt64",
+          "value": "2006"
+        },
+        "value": {
+          "type": "UInt64",
+          "value": "2143437"
+        }
+      },
+      {
+        "key": {
+          "type": "UInt64",
+          "value": "2009"
+        },
+        "value": {
+          "type": "UInt64",
+          "value": "375235"
+        }
+      },
+      {
+        "key": {
+          "type": "UInt64",
+          "value": "2010"
+        },
+        "value": {
+          "type": "UInt64",
+          "value": "485476"
+        }
+      },
+      {
+        "key": {
+          "type": "UInt64",
+          "value": "2012"
+        },
+        "value": {
+          "type": "UInt64",
+          "value": "32771"
+        }
+      },
+      {
+        "key": {
+          "type": "UInt64",
+          "value": "2018"
+        },
+        "value": {
+          "type": "UInt64",
+          "value": "397087"
+        }
+      },
+      {
+        "key": {
+          "type": "UInt64",
+          "value": "2019"
+        },
+        "value": {
+          "type": "UInt64",
+          "value": "25416"
+        }
+      },
+      {
+        "key": {
+          "type": "UInt64",
+          "value": "2020"
+        },
+        "value": {
+          "type": "UInt64",
+          "value": "23"
+        }
+      },
+      {
+        "key": {
+          "type": "UInt64",
+          "value": "2026"
+        },
+        "value": {
+          "type": "UInt64",
+          "value": "48"
+        }
+      },
+      {
+        "key": {
+          "type": "UInt64",
+          "value": "2027"
+        },
+        "value": {
+          "type": "UInt64",
+          "value": "369407"
+        }
+      },
+      {
+        "key": {
+          "type": "UInt64",
+          "value": "2030"
+        },
+        "value": {
+          "type": "UInt64",
+          "value": "24709"
+        }
+      },
+      {
+        "key": {
+          "type": "UInt64",
+          "value": "2031"
+        },
+        "value": {
+          "type": "UInt64",
+          "value": "1538600"
+        }
+      },
+      {
+        "key": {
+          "type": "UInt64",
+          "value": "2032"
+        },
+        "value": {
+          "type": "UInt64",
+          "value": "325309"
+        }
+      },
+      {
+        "key": {
+          "type": "UInt64",
+          "value": "2033"
+        },
+        "value": {
+          "type": "UInt64",
+          "value": "402728"
+        }
+      },
+      {
+        "key": {
+          "type": "UInt64",
+          "value": "2035"
+        },
+        "value": {
+          "type": "UInt64",
+          "value": "75507"
+        }
+      },
+      {
+        "key": {
+          "type": "UInt64",
+          "value": "2037"
+        },
+        "value": {
+          "type": "UInt64",
+          "value": "3"
+        }
+      },
+      {
+        "key": {
+          "type": "UInt64",
+          "value": "2039"
+        },
+        "value": {
+          "type": "UInt64",
+          "value": "516"
+        }
+      },
+      {
+        "key": {
+          "type": "UInt64",
+          "value": "2040"
+        },
+        "value": {
+          "type": "UInt64",
+          "value": "2911"
+        }
+      }
+    ]
+  }
+]
