@@ -2,7 +2,7 @@
 
 > Nov 20th, 2025
 
-Et the new execution effort weights in accordance of [FLIP 346: Variable Transaction Fees - Execution Effort II.](https://github.com/onflow/flips/pull/347)
+Set the new execution effort weights in accordance of [FLIP 346: Variable Transaction Fees - Execution Effort II.](https://github.com/onflow/flips/pull/347)
 
 Should be signed with the service account.
 
