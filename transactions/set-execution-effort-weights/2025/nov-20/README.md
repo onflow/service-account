@@ -60,3 +60,5 @@ weight is experessesd in units of  1/(2^16) computaion (a full transaction is 99
 Transaction to execute: [set_execution_effort_weights.cdc](../../../../templates/set_execution_effort_weights.cdc)
 
 ## Result
+
+https://www.flowscan.io/tx/9ce1451e018d5fd4d9763ba26cedd9e8193dda9204f65e1ef208126eb9a6f0bf
