@@ -1,5 +1,5 @@
 # Set version boundary
-> Dec 3rd, 2025 - Set height for Height Coordinated Upgrade (HCU) on Nov 20th.
+> Dec 3rd, 2025 - Set height for Height Coordinated Upgrade (HCU) on Dec 4th.
 
 This transaction sets the height at which the height coordinated upgrade occurs on mainnet.
 
