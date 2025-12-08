@@ -12,4 +12,14 @@ Sign with service account
 
 ## Result
 
-Txn ID:
+## Failed attempts
+
+1. https://www.flowscan.io/tx/74d5eea750d19dd8ddeb9d20ace218065463619772ca287d88371fb06cab86de
+    Reason: Incorrect argument format (`4000` instead of `4000.0`)
+
+2. https://www.flowscan.io/tx/403ce52dc71e1b4b20a4e5d3d6d7b48676633f00840cf8d53aacc503f0109783
+   Reason: signed using service account but should have used staking account.
+
+## Successful attempt
+
+3. https://www.flowscan.io/tx/ff47d71a1af25457d3f6fd4ca065c7cc7e9aa072dbf1068e869541bfe82fef89
