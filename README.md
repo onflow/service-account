@@ -6,7 +6,7 @@ Flow employs a **community-driven**, multi-signature process to execute essentia
 
 Notably, the multi-sig process on Flow is associated with two principal accounts that oversee critical aspects of the Flow protocol: the service account, responsible for actions related to protocol parameters, and the staking account, which holds resources linked to staked nodes within the network. These accounts are collectively overseen by multiple signatories - representatives from the Flow ecosystem - who participate in meetings where transactions are simultaneously authorized (or rejected) and submitted only if there’s quorum. 
 
-At present, representatives from Blocto, FindLabs, Flow Foundation, and individual members (`@bluesign` and Layne) collectively hold multi-sig authority over the service account. Each signer is allocated a weight of 250 units, and to validate a transaction, a cumulative total of 1000 units is necessary. Therefore, a minimum of four signers must jointly provide their signatures to authorize the transaction. The transactions deliberated by these signatories may be related to setting transaction fees, managing/ slashing rewards, updating network-level contracts, adding new nodes, driving height coordinated and other node software upgrades, etc; see [account page](https://developers.flow.com/build/basics/accounts#service-accounts) for more details on the powers and abilities of the Flow service account.
+At present, representatives from FindLabs, Flow Foundation, and individual members (`@bluesign` and Layne) collectively hold multi-sig authority over the service account. Each signer is allocated a weight of 250 units, and to validate a transaction, a cumulative total of 1000 units is necessary. Therefore, a minimum of four signers must jointly provide their signatures to authorize the transaction. The transactions deliberated by these signatories may be related to setting transaction fees, managing/ slashing rewards, updating network-level contracts, adding new nodes, driving height coordinated and other node software upgrades, etc; see [account page](https://developers.flow.com/build/basics/accounts#service-accounts) for more details on the powers and abilities of the Flow service account.
 
 ## Role of a multi-signer
 
@@ -69,5 +69,7 @@ If you have a proposal for a service account transaction, please follow these st
 8. If your transaction is new, test your transaction by putting it in a script
    and running the script. Scripts can access authorized account objects
    so can be used to test administrative transactions without requiring a multisig.
+   A test script template is provided at `./templates/test_script.cdc` for you
+   to fill in with your transactions specific logic.
 9. Open a pull request (PR) with your transaction, arguments, and instructions and add other signers as reviewers.
 10. Once the PR is approved, schedule a multisign call.
