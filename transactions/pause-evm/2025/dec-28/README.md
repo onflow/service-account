@@ -28,3 +28,6 @@ $ diff /tmp/temp.txt EVM.cdc
 [Site](https://flow-multisig-git-service-account-onflow.vercel.app/)
 
 ## Results
+
+Bridge Pause Tx ID: a87b38d17bffa188ca797bf0f3378f6d3fe365957b228f5aa778efe12a471c11
+EVM Upgrade Tx ID: b9705eec5308e5f9c562d0afa9455515fdd6ec73b32183a038e50b768bd36eb1
