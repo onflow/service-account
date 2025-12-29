@@ -4,9 +4,15 @@
 
 For the Flow network upgrade to rectify the accounts after the Dec 27th hack, all EVM operations need to be completely disabled until the fraudulent tokens have been dealt with.
 
-Running this transaction will pause the [`FlowEVMBridge`](httpss://github.com/onflow/flow-evm-bridge) contracts, blocking all bridging operations until the contract is unpaused. It will also upgrade the `EVM` contract to block all state-changing operations with Flow-EVM.
+## Transaction 1 - Pause Bridge
 
-Uses the [pause_evm.cdc transaction](./pause_evm.cdc)
+Running this transaction will pause the [`FlowEVMBridge`](httpss://github.com/onflow/flow-evm-bridge) contracts, blocking all bridging operations until the contract is unpaused.
+
+Uses the [pause_evm.cdc transaction](./pause_evm.cdc), signed by the EVM bridge account.
+
+## Transaction 2 - Upgrade EVM contract
+
+Using [update-contract](./../../../../templates/update_contract.cdc), we will upgrade the `EVM` contract to block all state-changing operations with Flow-EVM.
 
 Used this to generate the contract code arguments:
 
