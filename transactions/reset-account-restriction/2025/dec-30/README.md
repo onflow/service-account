@@ -8,7 +8,7 @@ python3 remove_restricted.py ../dec-29/arguments.json to_remove.txt -o arguments
 $ python3 remove_restricted.py ../dec-29/arguments.json to_remove.txt -o arguments.json
 Scanned 1 top-level arguments.
 Scanned 1055 entries inside Array arguments.
-Removed 126 Address entries.
+Removed 138 Address entries.
 Wrote: arguments.json
 ```
 
@@ -28,9 +28,9 @@ jq -r '.[]
   | .value' arguments.json \
 | sort > /tmp/new_addresses.csv
 
-comm -23 /tmp/old_addresses.csv /tmp/new_addresses.csv
+comm -23 /tmp/old_addresses.csv /tmp/new_addresses.csv | wc -l
 
-Should only have 126 entires
+Should only have 138 entires
 
 0x00d2f4e1f075ba37
 0x02aaac9a9241e163
@@ -70,11 +70,14 @@ Should only have 126 entires
 0x46bedd9a1c1aa174
 0x4755823856c71241
 0x488fefbe45950454
+0x49a69aa51088cfc7
 0x49d6133593870380
 0x4a038bc8fe9be6ca
 0x4d264c2a4c506bbc
 0x4fecc08c3f74af10
+0x5104d51582a7c26c
 0x513d5dd320472552
+0x514c383624fe67d9
 0x52d47ff6a2dffd6a
 0x53f7d1755363e1fe
 0x574166ba449eaff0
@@ -82,6 +85,8 @@ Should only have 126 entires
 0x5b722919d55461dd
 0x5c6b5423881bd1d9
 0x5e2989fda2e0530f
+0x5e4025b3506cea96
+0x5eaa6c0b37002bbd
 0x5ee7305533153347
 0x62d6cf118318678e
 0x6347c2bbee6bcffb
@@ -95,9 +100,11 @@ Should only have 126 entires
 0x6ea36862daf88f91
 0x6ffa94e90cea8845
 0x7072f53dc5cb05d3
+0x707adbad1428c624
 0x727088ba0d8e6ede
 0x7284c343596bfc0d
 0x7492e2f9b4acea9a
+0x79ee34d56ebedb09
 0x7d62141da5bdd76a
 0x8289d8f2f654a0cc
 0x82f2bac1fd2e3b8d
@@ -117,6 +124,7 @@ Should only have 126 entires
 0xa0db19c0c5a5caa6
 0xa26bc76e912f154a
 0xa30e813da8b92fec
+0xa3fd6884dd94c375
 0xa45114d73ddcb9da
 0xa5073f04ab0c27c3
 0xa5345284044a837c
@@ -138,6 +146,9 @@ Should only have 126 entires
 0xbf1590c4c4ae6102
 0xbf6fc2cce3007a42
 0xc0a70dbf59236752
+0xc353b9d685ec427d
+0xc62683804969427d
+0xc6c77b9f5c7a378f
 0xc85b95980d64d06c
 0xcb8d3f2695a6197b
 0xcc6009e59c0c3bac
@@ -153,6 +164,7 @@ Should only have 126 entires
 0xe910178a40cde877
 0xebdcb3a842c6981d
 0xee48ed2b058c619f
+0xeecd37a03727fddd
 0xef2c035e86a45b3e
 0xf1fb596cf30dcea5
 0xf33712a7eab315d0
