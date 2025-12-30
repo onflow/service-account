@@ -3,7 +3,6 @@ import argparse
 import json
 from pathlib import Path
 
-
 def load_remove_set(path: Path) -> set[str]:
     remove = set()
     for line in path.read_text(encoding="utf-8").splitlines():
@@ -16,6 +15,7 @@ def load_remove_set(path: Path) -> set[str]:
 
 def is_address_entry(x) -> bool:
     return isinstance(x, dict) and x.get("type") == "Address" and "value" in x
+
 
 
 def main() -> None:
@@ -73,7 +73,6 @@ def main() -> None:
     print(f"Scanned {total_before} entries inside Array arguments.")
     print(f"Removed {total_removed} Address entries.")
     print(f"Wrote: {out_path}")
-
 
 if __name__ == "__main__":
     main()
