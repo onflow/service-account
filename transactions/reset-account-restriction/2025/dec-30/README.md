@@ -30,7 +30,7 @@ jq -r '.[]
 
 comm -23 /tmp/old_addresses.csv /tmp/new_addresses.csv
 
-Should should only 126 entires
+Should only have 126 entires
 
 0x00d2f4e1f075ba37
 0x02aaac9a9241e163
