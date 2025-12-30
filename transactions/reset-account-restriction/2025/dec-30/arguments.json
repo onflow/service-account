@@ -52,10 +52,6 @@
       },
       {
         "type": "Address",
-        "value": "0x03c885827bf3c41b"
-      },
-      {
-        "type": "Address",
         "value": "0x03d791bf7a5490d7"
       },
       {
@@ -160,10 +156,6 @@
       },
       {
         "type": "Address",
-        "value": "0x065d9cce9db29681"
-      },
-      {
-        "type": "Address",
         "value": "0x06a0eb7ede398d2f"
       },
       {
@@ -208,10 +200,6 @@
       },
       {
         "type": "Address",
-        "value": "0x085014322bb90ed3"
-      },
-      {
-        "type": "Address",
         "value": "0x08dd120226ec2213"
       },
       {
@@ -225,10 +213,6 @@
       {
         "type": "Address",
         "value": "0x0a1bb74aa7ceb4dc"
-      },
-      {
-        "type": "Address",
-        "value": "0x0a283bbdc4527e9e"
       },
       {
         "type": "Address",
@@ -309,10 +293,6 @@
       {
         "type": "Address",
         "value": "0x0db335891f4422a9"
-      },
-      {
-        "type": "Address",
-        "value": "0x0dc50d7ecdf85c49"
       },
       {
         "type": "Address",
@@ -696,10 +676,6 @@
       },
       {
         "type": "Address",
-        "value": "0x1b91684d54fc5628"
-      },
-      {
-        "type": "Address",
         "value": "0x1bd9ab0bb7da8e25"
       },
       {
@@ -717,10 +693,6 @@
       {
         "type": "Address",
         "value": "0x1c7b31c58d726b21"
-      },
-      {
-        "type": "Address",
-        "value": "0x1c7c5e8e5d5674ff"
       },
       {
         "type": "Address",
@@ -753,10 +725,6 @@
       {
         "type": "Address",
         "value": "0x1ffd16501b28ab94"
-      },
-      {
-        "type": "Address",
-        "value": "0x200b491a25710604"
       },
       {
         "type": "Address",
@@ -1185,10 +1153,6 @@
       {
         "type": "Address",
         "value": "0x3ce29eba9d7e8ec9"
-      },
-      {
-        "type": "Address",
-        "value": "0x3cf4a32e259a719f"
       },
       {
         "type": "Address",
@@ -1868,10 +1832,6 @@
       },
       {
         "type": "Address",
-        "value": "0x69c2a4a0eeb1318e"
-      },
-      {
-        "type": "Address",
         "value": "0x69c61d7b1ebc70d3"
       },
       {
@@ -1933,10 +1893,6 @@
       {
         "type": "Address",
         "value": "0x6d979b2a5db2d0dc"
-      },
-      {
-        "type": "Address",
-        "value": "0x6d9daa00a0f3671d"
       },
       {
         "type": "Address",
@@ -2432,10 +2388,6 @@
       },
       {
         "type": "Address",
-        "value": "0x8da51d7dff4b3151"
-      },
-      {
-        "type": "Address",
         "value": "0x8da7fe8db1e3240a"
       },
       {
@@ -2753,10 +2705,6 @@
       {
         "type": "Address",
         "value": "0xa466abbbf76efed6"
-      },
-      {
-        "type": "Address",
-        "value": "0xa5073f04ab0c27c3"
       },
       {
         "type": "Address",
@@ -3408,10 +3356,6 @@
       },
       {
         "type": "Address",
-        "value": "0xc85b95980d64d06c"
-      },
-      {
-        "type": "Address",
         "value": "0xc8c846620de0afa2"
       },
       {
@@ -3537,10 +3481,6 @@
       {
         "type": "Address",
         "value": "0xcf53e2ed1dc587dc"
-      },
-      {
-        "type": "Address",
-        "value": "0xcffbbdeab1395be5"
       },
       {
         "type": "Address",
@@ -3820,10 +3760,6 @@
       },
       {
         "type": "Address",
-        "value": "0xe301f5bdee220a01"
-      },
-      {
-        "type": "Address",
         "value": "0xe3111fffd02403b0"
       },
       {
@@ -3880,10 +3816,6 @@
       },
       {
         "type": "Address",
-        "value": "0xe7af3c5f6a09c4c4"
-      },
-      {
-        "type": "Address",
         "value": "0xe7f659518318b05b"
       },
       {
@@ -3897,10 +3829,6 @@
       {
         "type": "Address",
         "value": "0xe8f909be8f761727"
-      },
-      {
-        "type": "Address",
-        "value": "0xe910178a40cde877"
       },
       {
         "type": "Address",
@@ -4025,10 +3953,6 @@
       {
         "type": "Address",
         "value": "0xf1d56c3ec15a43e7"
-      },
-      {
-        "type": "Address",
-        "value": "0xf1fb596cf30dcea5"
       },
       {
         "type": "Address",

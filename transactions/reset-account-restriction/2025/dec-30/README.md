@@ -8,7 +8,7 @@ python3 remove_restricted.py ../dec-29/arguments.json to_remove.txt -o arguments
 $ python3 remove_restricted.py ../dec-29/arguments.json to_remove.txt -o arguments.json
 Scanned 1 top-level arguments.
 Scanned 1055 entries inside Array arguments.
-Removed 6 Address entries.
+Removed 25 Address entries.
 Wrote: arguments.json
 ```
 
