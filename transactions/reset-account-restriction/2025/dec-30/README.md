@@ -8,7 +8,7 @@ python3 remove_restricted.py ../dec-29/arguments.json to_remove.txt -o arguments
 $ python3 remove_restricted.py ../dec-29/arguments.json to_remove.txt -o arguments.json
 Scanned 1 top-level arguments.
 Scanned 1055 entries inside Array arguments.
-Removed 5 Address entries.
+Removed 6 Address entries.
 Wrote: arguments.json
 ```
 
@@ -30,8 +30,9 @@ jq -r '.[]
 
 comm -23 /tmp/old_addresses.csv /tmp/new_addresses.csv
 
-Should should only 5 entires
+Should should only 6 entires
 
+0x0ebf23858d5497f6
 0x1113980ca45d1d37
 0x1e4aa0b87d10b141
 0x44fe3d9157770b2d
