@@ -49,3 +49,60 @@ git add ./transactions/withdraw-fraudulent-tokens/cadence-tokens/tx-signed-fake4
 git commit -m "adding built transaction"
 git push
 ```
+
+## Signer 1 
+```
+git pull
+flow transactions sign ./transactions/withdraw-fraudulent-tokens/cadence-tokens/tx-signed-fake4.rlp \
+  --config-path flow-staking.json \
+  --signer XXXXXX \
+  --filter payload \
+  --save ./transactions/withdraw-fraudulent-tokens/cadence-tokens/tx-signed-sa1.rlp
+git add .
+git commit -m 'add service account sig 1'
+git push
+```
+
+## Signer 2
+```
+git pull
+flow transactions sign ./transactions/withdraw-fraudulent-tokens/cadence-tokens/tx-signed-sa1.rlp \
+  --config-path flow-staking.json \
+  --signer XXXXXX \
+  --filter payload \
+  --save ./transactions/withdraw-fraudulent-tokens/cadence-tokens/tx-signed-sa2.rlp
+git add .
+git commit -m 'add service account sig 2'
+git push
+```
+
+## Signer 3
+```
+git pull
+flow transactions sign ./transactions/withdraw-fraudulent-tokens/cadence-tokens/tx-signed-sa2.rlp \
+  --config-path flow-staking.json \
+  --signer XXXXXX \
+  --filter payload \
+  --save ./transactions/withdraw-fraudulent-tokens/cadence-tokens/tx-signed-sa3.rlp
+git add .
+git commit -m 'add service account sig 3'
+git push
+```
+
+## Signer 4
+```
+git pull
+flow transactions sign ./transactions/withdraw-fraudulent-tokens/cadence-tokens/tx-signed-sa3.rlp \
+  --config-path flow-staking.json \
+  --signer XXXXXX \
+  --filter payload \
+  --save ./transactions/withdraw-fraudulent-tokens/cadence-tokens/tx-signed-sa4.rlp
+git add .
+git commit -m 'add service account sig 4'
+git push
+```
+
+## Send
+```
+flow transactions send-signed -y -n mainnet ./transactions/withdraw-fraudulent-tokens/cadence-tokens/tx-signed-sa4.rlp
+```
