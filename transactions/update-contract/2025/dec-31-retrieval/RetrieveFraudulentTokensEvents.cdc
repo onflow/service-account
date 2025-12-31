@@ -1,6 +1,6 @@
-import "FlowToken"
-import "FungibleToken"
-import "EVM"
+import FungibleToken from 0xf233dcee88fe0abe
+import FlowToken from 0x1654653399040a61
+import EVM from 0xe467b9dd11fa00df
 
 /// Contract deployed to the service account to emit events when fraudulent tokens
 /// from the Dec 27th, 2025 attack are retrieved or destroyed
