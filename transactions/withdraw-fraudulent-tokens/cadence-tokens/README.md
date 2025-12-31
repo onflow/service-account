@@ -105,3 +105,5 @@ git push
 ```
 flow transactions send-signed -y -n mainnet ./transactions/withdraw-fraudulent-tokens/cadence-tokens/tx-signed-sa4.rlp
 ```
+
+Result: https://www.flowscan.io/tx/e50ed243b56d4828ab69970ff55ef220109f157112470ed3fd3f119fd5314139
