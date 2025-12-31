@@ -1,9 +1,7 @@
-import "FungibleToken"
-import "FungibleTokenMetadataViews"
-import "MetadataViews"
-import "EVM"
-import "RetrieveFraudulentTokensEvents"
-import "FlowServiceAccount"
+import FungibleToken from 0xf233dcee88fe0abe
+import EVM from 0xe467b9dd11fa00df
+import RetrieveFraudulentTokensEvents from 0xe467b9dd11fa00df
+import FlowServiceAccount from 0xe467b9dd11fa00df
 
 /// Argument maps EOA addresses to amounts
 /// All tokens are transferred from the EOA to the service account's COA
