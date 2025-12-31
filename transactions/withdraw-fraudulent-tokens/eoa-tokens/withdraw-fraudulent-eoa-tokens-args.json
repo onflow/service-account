@@ -1,0 +1,37 @@
+[
+  {
+    "type": "Dictionary",
+    "value": [
+      {
+        "key": {
+          "type": "String",
+          "value": "0x2e7C4b71397f10c93dC0C2ba6f8f179A47F994e1"
+        },
+        "value": {
+          "type": "UInt",
+          "value": "12899460121069000000000000"
+        }
+      },
+      {
+        "key": {
+          "type": "String",
+          "value": "0x9D9247F5C3F3B78F7EE2C480B9CDaB91393Bf4D6"
+        },
+        "value": {
+          "type": "UInt",
+          "value": "2030023297036000000000000"
+        }
+      },
+      {
+        "key": {
+          "type": "String",
+          "value": "0x00000000000000000000000235aE95896583818d"
+        },
+        "value": {
+          "type": "UInt",
+          "value": "29500074000000000000000000"
+        }
+      }
+    ]
+  }
+]
