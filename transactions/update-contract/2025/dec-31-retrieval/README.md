@@ -55,4 +55,4 @@ $ diff /tmp/temp.txt RetrieveFraudulentTokensEvents.cdc
 
 Failed: https://www.flowscan.io/tx/5fe79b7a11650c8eb21161d24f707e91fe88e5490d510365cb52061f6df8de23?tab=script
 
-https://www.flowscan.io/tx/
+https://www.flowscan.io/tx/9cc90b203d564ea182f2cb7480b287a282b3fef15c7b98c661e88015fbff42a8
