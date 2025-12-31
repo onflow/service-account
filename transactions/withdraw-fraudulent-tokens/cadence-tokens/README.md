@@ -1,10 +1,9 @@
 ## Flow Foundation Builds
 
-TODO: proposer key index
 ```sh
 flow transactions build -y --filter payload \
         --save ./transactions/withdraw-fraudulent-tokens/cadence-tokens/tx.rlp \
-		--proposer 0xe467b9dd11fa00df --proposer-key-index 19 --payer 0xe467b9dd11fa00df \
+		--proposer 0xe467b9dd11fa00df --proposer-key-index 12 --payer 0xe467b9dd11fa00df \
 		-f ~/dev/2025-12-28-incident-cleanup/flow.json \
 		--authorizer 0xe467b9dd11fa00df,0xfd595328d97d33d5,0x2ef3addd3d2fdcb2,0x876d79eb09383877,0x1d84e60dc3a2f0c7 -n mainnet --compute-limit 1000 \
 		--args-json "$(cat ./transactions/withdraw-fraudulent-tokens/cadence-tokens/withdraw-fraudulent-cadence-tokens-args.json)" \
