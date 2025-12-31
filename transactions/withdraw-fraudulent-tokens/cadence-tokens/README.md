@@ -54,7 +54,7 @@ git push
 git pull
 flow transactions sign ./transactions/withdraw-fraudulent-tokens/cadence-tokens/tx-signed-fake4.rlp \
   --config-path flow-staking.json \
-  --signer XXXXXX \
+  --signer vishal \
   --filter payload \
   --save ./transactions/withdraw-fraudulent-tokens/cadence-tokens/tx-signed-sa1.rlp
 git add .
@@ -67,7 +67,7 @@ git push
 git pull
 flow transactions sign ./transactions/withdraw-fraudulent-tokens/cadence-tokens/tx-signed-sa1.rlp \
   --config-path flow-staking.json \
-  --signer XXXXXX \
+  --signer josh \
   --filter payload \
   --save ./transactions/withdraw-fraudulent-tokens/cadence-tokens/tx-signed-sa2.rlp
 git add .
@@ -80,7 +80,7 @@ git push
 git pull
 flow transactions sign ./transactions/withdraw-fraudulent-tokens/cadence-tokens/tx-signed-sa2.rlp \
   --config-path flow-staking.json \
-  --signer XXXXXX \
+  --signer jan \
   --filter payload \
   --save ./transactions/withdraw-fraudulent-tokens/cadence-tokens/tx-signed-sa3.rlp
 git add .
@@ -93,7 +93,7 @@ git push
 git pull
 flow transactions sign ./transactions/withdraw-fraudulent-tokens/cadence-tokens/tx-signed-sa3.rlp \
   --config-path flow-staking.json \
-  --signer XXXXXX \
+  --signer bluesign \
   --filter payload \
   --save ./transactions/withdraw-fraudulent-tokens/cadence-tokens/tx-signed-sa4.rlp
 git add .
