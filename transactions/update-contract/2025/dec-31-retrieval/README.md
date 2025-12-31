@@ -18,7 +18,7 @@ $ diff /tmp/temp.txt EVM.cdc
 ```
 
 ### Result:
-https://www.flowscan.io/tx/
+https://www.flowscan.io/tx/49904bf75cbf5f96f925b8d3d81d89a9af778afe378f7e586d19c45b6d6aa714
 
 ### Transaction - `FlowServiceAccount` Upgrade using the Service account `e467b9dd11fa00df`
 
@@ -34,8 +34,8 @@ $ diff /tmp/temp.txt FlowServiceAccount.cdc
 ```
 
 ### Result:
-https://www.flowscan.io/tx/
 
+https://www.flowscan.io/tx/83a8df8d43b519e598ac9b0b1df2cb57164b5e6f14e9e66ed188d27aeff0276e
 
 ### Transaction - `RetrieveFraudulentTokensEvents` Deployment using the Service account `e467b9dd11fa00df`
 and the [deploy contract transaction](../../../../templates/deploy_contract.cdc).
@@ -52,4 +52,7 @@ $ diff /tmp/temp.txt RetrieveFraudulentTokensEvents.cdc
 ```
 
 ### Result:
+
+Failed: https://www.flowscan.io/tx/5fe79b7a11650c8eb21161d24f707e91fe88e5490d510365cb52061f6df8de23?tab=script
+
 https://www.flowscan.io/tx/
