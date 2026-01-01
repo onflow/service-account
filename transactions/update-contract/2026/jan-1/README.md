@@ -12,6 +12,8 @@ Used this to generate the contract code arguments:
 
 ` wget https://raw.githubusercontent.com/onflow/flow-go/299856f874e5db684f2b85801c399031a50cd777/fvm/evm/stdlib/contract.cdc` 
 
+- Update imports
+
 `cat "./contract.cdc" | xxd -p | tr -d '\n'`
 
 Verified using:
