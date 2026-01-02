@@ -1,0 +1,231 @@
+[
+  {
+    "type": "Dictionary",
+    "value": [
+      {
+        "key": {
+          "type": "Address",
+          "value": "0x1d84e60dc3a2f0c7"
+        },
+        "value": {
+          "type": "Dictionary",
+          "value": [
+            {
+              "key": {
+                "type": "String",
+                "value": "A.1654653399040a61.FlowToken.Vault"
+              },
+              "value": {
+                "type": "UFix64",
+                "value": "200300.0"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "key": {
+          "type": "Address",
+          "value": "0x2ef3addd3d2fdcb2"
+        },
+        "value": {
+          "type": "Dictionary",
+          "value": [
+            {
+              "key": {
+                "type": "String",
+                "value": "A.1654653399040a61.FlowToken.Vault"
+              },
+              "value": {
+                "type": "UFix64",
+                "value": "42887363475.9644"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "key": {
+          "type": "Address",
+          "value": "0x876d79eb09383877"
+        },
+        "value": {
+          "type": "Dictionary",
+          "value": [
+            {
+              "key": {
+                "type": "String",
+                "value": "A.1654653399040a61.FlowToken.Vault"
+              },
+              "value": {
+                "type": "UFix64",
+                "value": "20069969.88672"
+              }
+            },
+            {
+              "key": {
+                "type": "String",
+                "value": "A.1e4aa0b87d10b141.EVMVMBridgedToken_2aabea2058b5ac2d339b163c6ab6f2b6d53aabed.Vault"
+              },
+              "value": {
+                "type": "UFix64",
+                "value": "29659995.0"
+              }
+            },
+            {
+              "key": {
+                "type": "String",
+                "value": "A.1e4aa0b87d10b141.EVMVMBridgedToken_717dae2baf7656be9a9b01dee31d571a9d4c9579.Vault"
+              },
+              "value": {
+                "type": "UFix64",
+                "value": "2000.0"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "key": {
+          "type": "Address",
+          "value": "0xfd595328d97d33d5"
+        },
+        "value": {
+          "type": "Dictionary",
+          "value": [
+            {
+              "key": {
+                "type": "String",
+                "value": "A.1654653399040a61.FlowToken.Vault"
+              },
+              "value": {
+                "type": "UFix64",
+                "value": "43866737791.5107"
+              }
+            },
+            {
+              "key": {
+                "type": "String",
+                "value": "A.1e4aa0b87d10b141.EVMVMBridgedToken_2aabea2058b5ac2d339b163c6ab6f2b6d53aabed.Vault"
+              },
+              "value": {
+                "type": "UFix64",
+                "value": "87930957081.01493053"
+              }
+            },
+            {
+              "key": {
+                "type": "String",
+                "value": "A.1e4aa0b87d10b141.EVMVMBridgedToken_2f6f07cdcf3588944bf4c42ac74ff24bf56e7590"
+              },
+              "value": {
+                "type": "UFix64",
+                "value": "879609302.221247"
+              }
+            },
+            {
+              "key": {
+                "type": "String",
+                "value": "A.1e4aa0b87d10b141.EVMVMBridgedToken_717dae2baf7656be9a9b01dee31d571a9d4c9579.Vault"
+              },
+              "value": {
+                "type": "UFix64",
+                "value": "8794093.02223287"
+              }
+            },
+            {
+              "key": {
+                "type": "String",
+                "value": "A.1e4aa0b87d10b141.EVMVMBridgedToken_d3378b419feae4e3a4bb4f3349dba43a1b511760"
+              },
+              "value": {
+                "type": "UFix64",
+                "value": "87960930222.1705"
+              }
+            },
+            {
+              "key": {
+                "type": "String",
+                "value": "A.1e4aa0b87d10b141.EVMVMBridgedToken_f1815bd50389c46847f0bda824ec8da914045d14.Vault"
+              },
+              "value": {
+                "type": "UFix64",
+                "value": "87961440414.53438215"
+              }
+            },
+            {
+              "key": {
+                "type": "String",
+                "value": "A.231cc0dbbcffc4b7.ceBNB.Vault"
+              },
+              "value": {
+                "type": "UFix64",
+                "value": "879608303.235091"
+              }
+            },
+            {
+              "key": {
+                "type": "String",
+                "value": "A.231cc0dbbcffc4b7.ceBUSD.Vault"
+              },
+              "value": {
+                "type": "UFix64",
+                "value": "87954949980.7595"
+              }
+            },
+            {
+              "key": {
+                "type": "String",
+                "value": "A.231cc0dbbcffc4b7.ceDAI.Vault"
+              },
+              "value": {
+                "type": "UFix64",
+                "value": "87954949558.2172"
+              }
+            },
+            {
+              "key": {
+                "type": "String",
+                "value": "A.231cc0dbbcffc4b7.ceUSDT.Vault"
+              },
+              "value": {
+                "type": "UFix64",
+                "value": "87954757400.053"
+              }
+            },
+            {
+              "key": {
+                "type": "String",
+                "value": "A.231cc0dbbcffc4b7.ceWBTC.Vault"
+              },
+              "value": {
+                "type": "UFix64",
+                "value": "87960773.3121788"
+              }
+            },
+            {
+              "key": {
+                "type": "String",
+                "value": "A.231cc0dbbcffc4b7.ceWETH.Vault"
+              },
+              "value": {
+                "type": "UFix64",
+                "value": "879606918.32142744"
+              }
+            },
+            {
+              "key": {
+                "type": "String",
+                "value": "A.f1ab99c82dee3526.USDCFlow.Vault"
+              },
+              "value": {
+                "type": "UFix64",
+                "value": "87955380719.61159618"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+]
