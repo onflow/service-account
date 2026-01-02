@@ -15,4 +15,4 @@ Version to set: `v0.44.10-rc.1`
 
 ## Result
 
-Transaction ID:
+Transaction ID: https://www.flowscan.io/tx/0a8298202c7e121ae6b608c597141f0f9bc404e2acde6ea01a1f50206641a2b3
