@@ -9,11 +9,11 @@
   },
   {
     "type": "UInt8",
-    "value": "??"
+    "value": "15"
   },
   {
     "type": "String",
-    "value": "??"
+    "value": "rc.1"
   },
   {
     "type": "UInt64",
