@@ -1,0 +1,22 @@
+[
+  {
+    "type": "UInt8",
+    "value": "0"
+  },
+  {
+    "type": "UInt8",
+    "value": "44"
+  },
+  {
+    "type": "UInt8",
+    "value": "??"
+  },
+  {
+    "type": "String",
+    "value": "??"
+  },
+  {
+    "type": "UInt64",
+    "value": "???"
+  }
+]
