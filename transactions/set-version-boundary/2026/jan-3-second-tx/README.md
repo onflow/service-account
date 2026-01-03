@@ -3,7 +3,7 @@
 
 This transaction sets the height at which the height coordinated upgrade occurs on mainnet.
 
-Version to set: `v0.44.15-rc.1`
+Version to set: `v0.44.???`
 
 ## Steps to multi-sign
 
@@ -15,4 +15,4 @@ Version to set: `v0.44.15-rc.1`
 
 ## Result
 
-Transaction ID:https://www.flowscan.io/tx/2730b0eac371202a91aa9443d392da5057abf4166ac686f3c4ce4a1aecf593ec
+Transaction ID:
