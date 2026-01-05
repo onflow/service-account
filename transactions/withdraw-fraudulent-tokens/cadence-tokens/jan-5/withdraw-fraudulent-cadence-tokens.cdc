@@ -42,28 +42,6 @@ transaction(accounts: {Address: {String: UFix64}}) {
                 ) as? FungibleTokenMetadataViews.FTVaultData
                     ?? panic("Could not construct valid FT type and view from identifier \(ftTypeIdentifier)")
 
-                let serviceStoragePath = ftTypeIdentifier == "A.1654653399040a61.FlowToken.Vault" ? /storage/fraudulentFlowTokenVault : vaultData.storagePath
-
-                // Check if the service account has a vault for this token type at the correct storage path
-                if ftTypeIdentifier != "A.1654653399040a61.FlowToken.Vault" && serviceAccount.storage.borrow<auth(FungibleToken.Withdraw) &{FungibleToken.Vault}>(from: serviceStoragePath) == nil {
-                    // Create a new vault of this type for the service account and save it in storage
-                    let emptyVault <-vaultData.createEmptyVault()
-                    serviceAccount.storage.save(<-emptyVault, to: serviceStoragePath)
-
-                    // Create a public capability for the vault for metadata
-                    let vaultCap = serviceAccount.capabilities.storage.issue<&{FungibleToken.Vault}>(serviceStoragePath)
-                    serviceAccount.capabilities.publish(vaultCap, at: vaultData.metadataPath)
-
-                    // Create a public capability for the vault for deposits
-                    let receiverCap = serviceAccount.capabilities.storage.issue<&{FungibleToken.Vault}>(serviceStoragePath)
-                    serviceAccount.capabilities.publish(receiverCap, at: vaultData.receiverPath)
-                }
-
-                // Get a reference to the service account's stored vault
-                let serviceAccountVaultRef = serviceAccount.storage.borrow<&{FungibleToken.Vault}>(from: serviceStoragePath)
-                    ?? panic("The serviceAccount does not store a FungibleToken.Vault object at the path "
-                        .concat(" \(serviceStoragePath.toString())."))
-
                 // Get a reference to the other account's stored vault
                 let otherAccountVaultRef = accountToRetrieveFrom.storage.borrow<auth(FungibleToken.Withdraw) &{FungibleToken.Vault}>(from: vaultData.storagePath)
                     ?? panic("The account to retrieve from does not store a FungibleToken.Vault object at the path "
@@ -73,9 +51,10 @@ transaction(accounts: {Address: {String: UFix64}}) {
                 let vault <- otherAccountVaultRef.withdraw(amount: amount)
 
                 eventAdmin.emitRetrieveTokensEvent(typeIdentifier: ftTypeIdentifier, amount: amount, fromAddress: accountToRetrieveFrom.address.toString())
+                eventAdmin.emitDestroyTokensEvent(typeIdentifier: ftTypeIdentifier, amount: amount)
 
-                // Deposit the tokens into the service account's vault
-                serviceAccountVaultRef.deposit(from: <-vault)
+                // Destroy the tokens
+                destroy <-vault
             }
         }
     }
