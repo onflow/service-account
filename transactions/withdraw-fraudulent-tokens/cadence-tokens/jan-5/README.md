@@ -1,3 +1,18 @@
+# Withdrawing fraudulent tokens from Exchange accounts
+
+```
+Gate:
+0xb65cb9286d8eab6c: 160383532.66935754
+0xdaab59a2823a4eed: 3401000.00000326
+0xdbae64c84d4de3c6: 1280307.73063920
+
+OKx
+0x4c3e45954dc6b544: 161843947.23
+
+MEXC
+0xf45bc3eaaff3e3e9: 157526135.78241959
+```
+
 ## Flow Foundation Builds
 
 ```sh
@@ -5,7 +20,7 @@ flow transactions build -y --filter payload \
         --save ./transactions/withdraw-fraudulent-tokens/jan-5/cadence-tokens/tx.rlp \
 		--proposer 0xe467b9dd11fa00df --proposer-key-index 12 --payer 0xe467b9dd11fa00df \
 		-f ~/dev/2025-12-28-incident-cleanup/flow.json \
-		--authorizer 0xe467b9dd11fa00df,0xfd595328d97d33d5,0x2ef3addd3d2fdcb2,0x876d79eb09383877,0x1d84e60dc3a2f0c7 -n mainnet --compute-limit 100000 \
+		--authorizer 0xe467b9dd11fa00df,0xb65cb9286d8eab6c,0xdaab59a2823a4eed,0xdbae64c84d4de3c6,0x4c3e45954dc6b544,0xf45bc3eaaff3e3e9 -n mainnet --compute-limit 100000 \
 		--args-json "$(cat ./transactions/withdraw-fraudulent-tokens/cadence-tokens/jan-5/withdraw-fraudulent-cadence-tokens-args.json)" \
 		./transactions/withdraw-fraudulent-tokens/cadence-tokens/jan-5/withdraw-fraudulent-cadence-tokens.cdc
 ```
@@ -47,12 +62,12 @@ flow transactions sign -y --signer fake4 -n forkmain \
 flow transactions sign -y --signer fake5 -n forkmain \
 	-f ~/dev/2025-12-28-incident-cleanup/flow.json \
     --filter payload \
-    --save ./transactions/withdraw-fraudulent-tokens/cadence-tokens/jan-5/tx-signed-fake4.rlp \
-    ./transactions/withdraw-fraudulent-tokens/cadence-tokens/jan-5/tx-signed-fake3.rlp
+    --save ./transactions/withdraw-fraudulent-tokens/cadence-tokens/jan-5/tx-signed-fake5.rlp \
+    ./transactions/withdraw-fraudulent-tokens/cadence-tokens/jan-5/tx-signed-fake4.rlp
 ```
 
 ```
-git add ./transactions/withdraw-fraudulent-tokens/cadence-tokens/jan-5/tx-signed-fake4.rlp
+git add ./transactions/withdraw-fraudulent-tokens/cadence-tokens/jan-5/tx-signed-fake5.rlp
 git commit -m "adding built transaction"
 git push
 ```
@@ -60,7 +75,7 @@ git push
 ## Signer 1 
 ```
 git pull
-flow transactions sign ./transactions/withdraw-fraudulent-tokens/cadence-tokens/jan-5/tx-signed-fake4.rlp \
+flow transactions sign ./transactions/withdraw-fraudulent-tokens/cadence-tokens/jan-5/tx-signed-fake5.rlp \
   --config-path flow.json \
   --signer vishal \
   --filter payload \
