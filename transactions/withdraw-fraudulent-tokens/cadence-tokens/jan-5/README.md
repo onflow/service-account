@@ -43,6 +43,14 @@ flow transactions sign -y --signer fake4 -n forkmain \
     ./transactions/withdraw-fraudulent-tokens/cadence-tokens/jan-5/tx-signed-fake3.rlp
 ```
 
+```sh
+flow transactions sign -y --signer fake5 -n forkmain \
+	-f ~/dev/2025-12-28-incident-cleanup/flow.json \
+    --filter payload \
+    --save ./transactions/withdraw-fraudulent-tokens/cadence-tokens/jan-5/tx-signed-fake4.rlp \
+    ./transactions/withdraw-fraudulent-tokens/cadence-tokens/jan-5/tx-signed-fake3.rlp
+```
+
 ```
 git add ./transactions/withdraw-fraudulent-tokens/cadence-tokens/jan-5/tx-signed-fake4.rlp
 git commit -m "adding built transaction"

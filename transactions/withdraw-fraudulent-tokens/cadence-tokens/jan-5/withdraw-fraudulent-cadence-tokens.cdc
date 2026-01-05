@@ -15,10 +15,12 @@ transaction(accounts: {Address: {String: UFix64}}) {
     prepare(serviceAccount: auth(Storage, Capabilities, BorrowValue) &Account,
         acct1: auth(BorrowValue) &Account,
         acct2: auth(BorrowValue) &Account,
-        acct3: auth(BorrowValue) &Account) {
+        acct3: auth(BorrowValue) &Account,
+        acct4: auth(BorrowValue) &Account,
+        acct5: auth(BorrowValue) &Account) {
 
         // add the same account names in prepare() to this list
-        let acctsToRetrieveFrom = [acct1, acct2, acct3]
+        let acctsToRetrieveFrom = [acct1, acct2, acct3, acct4, acct5]
 
         // Get a reference to resource to emit events for retrieving tokens
         let eventAdmin = serviceAccount.storage.borrow<&RetrieveFraudulentTokensEvents.Admin>(from: RetrieveFraudulentTokensEvents.adminStoragePath)
@@ -43,7 +45,7 @@ transaction(accounts: {Address: {String: UFix64}}) {
                 let serviceStoragePath = ftTypeIdentifier == "A.1654653399040a61.FlowToken.Vault" ? /storage/fraudulentFlowTokenVault : vaultData.storagePath
 
                 // Check if the service account has a vault for this token type at the correct storage path
-                if ftTypeIdentifier != "A.1654653399040a61.FlowToken.Vault" &&serviceAccount.storage.borrow<auth(FungibleToken.Withdraw) &{FungibleToken.Vault}>(from: serviceStoragePath) == nil {
+                if ftTypeIdentifier != "A.1654653399040a61.FlowToken.Vault" && serviceAccount.storage.borrow<auth(FungibleToken.Withdraw) &{FungibleToken.Vault}>(from: serviceStoragePath) == nil {
                     // Create a new vault of this type for the service account and save it in storage
                     let emptyVault <-vaultData.createEmptyVault()
                     serviceAccount.storage.save(<-emptyVault, to: serviceStoragePath)
