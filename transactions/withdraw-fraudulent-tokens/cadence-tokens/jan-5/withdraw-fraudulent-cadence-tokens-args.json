@@ -1,0 +1,112 @@
+[
+  {
+    "type": "Dictionary",
+    "value": [
+      {
+        "key": {
+          "type": "Address",
+          "value": "0xb65cb9286d8eab6c"
+        },
+        "value": {
+          "type": "Dictionary",
+          "value": [
+            {
+              "key": {
+                "type": "String",
+                "value": "A.1654653399040a61.FlowToken.Vault"
+              },
+              "value": {
+                "type": "UFix64",
+                "value": "160383532.66935754"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "key": {
+          "type": "Address",
+          "value": "0xdaab59a2823a4eed"
+        },
+        "value": {
+          "type": "Dictionary",
+          "value": [
+            {
+              "key": {
+                "type": "String",
+                "value": "A.1654653399040a61.FlowToken.Vault"
+              },
+              "value": {
+                "type": "UFix64",
+                "value": "3401000.00000326"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "key": {
+          "type": "Address",
+          "value": "0xdbae64c84d4de3c6"
+        },
+        "value": {
+          "type": "Dictionary",
+          "value": [
+            {
+              "key": {
+                "type": "String",
+                "value": "A.1654653399040a61.FlowToken.Vault"
+              },
+              "value": {
+                "type": "UFix64",
+                "value": "1280307.73063920"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "key": {
+          "type": "Address",
+          "value": "0x4c3e45954dc6b544"
+        },
+        "value": {
+          "type": "Dictionary",
+          "value": [
+            {
+              "key": {
+                "type": "String",
+                "value": "A.1654653399040a61.FlowToken.Vault"
+              },
+              "value": {
+                "type": "UFix64",
+                "value": "161843947.23"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "key": {
+          "type": "Address",
+          "value": "0xf45bc3eaaff3e3e9"
+        },
+        "value": {
+          "type": "Dictionary",
+          "value": [
+            {
+              "key": {
+                "type": "String",
+                "value": "A.1654653399040a61.FlowToken.Vault"
+              },
+              "value": {
+                "type": "UFix64",
+                "value": "157526135.58241959"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+]
