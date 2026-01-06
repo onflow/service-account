@@ -14,7 +14,7 @@ transaction() {
         let from: String = "0x00000000000000000000000235aE95896583818d"
         let serviceAccount: String = "0x0000000000000000000000028026AC0CC5FFD21a"
         let ffAccount: String = "0xb4f50fABC613d83d626eA1c411205c7876b8D4b3"
-        let amount: UInt256 = 6_301_000_000_000_000_000_000
+        let amount: UInt256 = 6_300_900_538_346_371_647_630
         let trumpContractAddress: String = "0xD3378b419feae4e3A4Bb4f3349DBa43a1B511760"
         let saAddress: EVM.EVMAddress = EVM.addressFromString(serviceAccount)
         let transferToSACallData: [UInt8] = EVM.encodeABIWithSignature(
