@@ -103,7 +103,7 @@ git push
 git pull
 flow transactions sign ./transactions/withdraw-fraudulent-tokens/cadence-tokens/jan-5/tx-signed-sa2.rlp \
   --config-path flow.json \
-  --signer jan \
+  --signer layne \
   --filter payload \
   --save ./transactions/withdraw-fraudulent-tokens/cadence-tokens/jan-5/tx-signed-sa3.rlp
 git add .
@@ -116,7 +116,7 @@ git push
 git pull
 flow transactions sign ./transactions/withdraw-fraudulent-tokens/cadence-tokens/jan-5/tx-signed-sa3.rlp \
   --config-path flow.json \
-  --signer bluesign \
+  --signer jan \
   --filter payload \
   --save ./transactions/withdraw-fraudulent-tokens/cadence-tokens/jan-5/tx-signed-sa4.rlp
 git add .
