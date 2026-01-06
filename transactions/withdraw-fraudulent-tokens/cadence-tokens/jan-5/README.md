@@ -17,7 +17,7 @@ MEXC
 
 ```sh
 flow transactions build -y --filter payload \
-        --save ./transactions/withdraw-fraudulent-tokens/jan-5/cadence-tokens/tx.rlp \
+        --save ./transactions/withdraw-fraudulent-tokens/cadence-tokens/jan-5/tx.rlp \
 		--proposer 0xe467b9dd11fa00df --proposer-key-index 12 --payer 0xe467b9dd11fa00df \
 		-f ~/dev/2025-12-28-incident-cleanup/flow.json \
 		--authorizer 0xe467b9dd11fa00df,0xb65cb9286d8eab6c,0xdaab59a2823a4eed,0xdbae64c84d4de3c6,0x4c3e45954dc6b544,0xf45bc3eaaff3e3e9 -n mainnet --compute-limit 100000 \
@@ -103,7 +103,7 @@ git push
 git pull
 flow transactions sign ./transactions/withdraw-fraudulent-tokens/cadence-tokens/jan-5/tx-signed-sa2.rlp \
   --config-path flow.json \
-  --signer jan \
+  --signer layne \
   --filter payload \
   --save ./transactions/withdraw-fraudulent-tokens/cadence-tokens/jan-5/tx-signed-sa3.rlp
 git add .
@@ -116,7 +116,7 @@ git push
 git pull
 flow transactions sign ./transactions/withdraw-fraudulent-tokens/cadence-tokens/jan-5/tx-signed-sa3.rlp \
   --config-path flow.json \
-  --signer bluesign \
+  --signer jan \
   --filter payload \
   --save ./transactions/withdraw-fraudulent-tokens/cadence-tokens/jan-5/tx-signed-sa4.rlp
 git add .
@@ -129,4 +129,4 @@ git push
 flow transactions send-signed -y -n mainnet ./transactions/withdraw-fraudulent-tokens/cadence-tokens/jan-5/tx-signed-sa4.rlp
 ```
 
-Result: https://www.flowscan.io/tx/
+Result: https://www.flowscan.io/tx/88782f3fa88ff1054b9047c007bf3e3ffbaa015eceb3f32c472c4ec595ead215
