@@ -13,8 +13,7 @@ transaction(amount: UFix64) {
             .concat("Ensure the signer account has a COA stored in the canonical /storage/evm path"))
 
         // We must create a `EVM.Balance` struct to represent the amount of Flow tokens to withdraw
-        let withdrawBalance = EVM.Balance(attoflow: 0)
-        withdrawBalance.setFLOW(flow: amount)
+        let withdrawBalance = coa.balance()
 
         // Withdraw the balance from the COA, we will use this later to deposit into the receiving account
         self.sentVault <- coa.withdraw(balance: withdrawBalance) as! @FlowToken.Vault
