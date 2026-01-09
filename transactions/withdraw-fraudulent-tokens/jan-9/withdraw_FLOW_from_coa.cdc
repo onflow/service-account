@@ -1,7 +1,7 @@
 import EVM from 0xe467b9dd11fa00df
 import FungibleToken from 0xf233dcee88fe0abe
 
-transaction(amount: UFix64) {
+transaction() {
     let sentVault: @FlowToken.Vault
     let receiver: &{FungibleToken.Receiver}
 
