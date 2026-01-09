@@ -1,0 +1,5 @@
+[
+    {"type":"String","value":"A.1e4aa0b87d10b141.EVMVMBridgedToken_f1815bd50389c46847f0bda824ec8da914045d14"},
+    {"type":"Address","value":"0x56dfc6b70135c5cd"},
+    {"type":"UFix64","value":"510192.45438215"}
+]
