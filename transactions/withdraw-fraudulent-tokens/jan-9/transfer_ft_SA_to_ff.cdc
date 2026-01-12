@@ -1,5 +1,4 @@
 import FungibleToken from 0xf233dcee88fe0abe
-import StorageRent from 0x707adbad1428c624
 import ViewResolver from 0x1d7e57aa55817448
 import FungibleTokenMetadataViews from 0xf233dcee88fe0abe
 
@@ -33,6 +32,5 @@ transaction(recipient: Address, vaultIdentifier:String, amount: UFix64) {
 
         // Deposit the withdrawn tokens in the recipient's receiver
         receiverRef.deposit(from: <- vaultRef.withdraw(amount: amount))
-        StorageRent.tryRefill(recipient)
     }
 }
