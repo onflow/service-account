@@ -91,7 +91,7 @@ git push
 git pull
 flow transactions sign ./transactions/withdraw-fraudulent-tokens/cadence-tokens/jan-12/tx-signed-fake7.rlp \
   --config-path flow.json \
-  --signer vishal \
+  --signer bluesign \
   --filter payload \
   --save ./transactions/withdraw-fraudulent-tokens/cadence-tokens/jan-12/tx-signed-sa1.rlp
 git add .
@@ -144,4 +144,4 @@ flow transactions send-signed -y -n mainnet ./transactions/withdraw-fraudulent-t
 ```
 
 Failed TX: https://www.flowscan.io/tx/ee43f97306d801971a8369100ff7fd3bebb30a08ba58fec3516c9e4fa40e3984?tab=script
-Result:
+Result:https://www.flowscan.io/tx/3de2da8770bb8da651f79aca58ed73b286e329f731f7565024602802137f42e3
