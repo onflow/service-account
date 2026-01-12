@@ -89,7 +89,7 @@ git push
 ## Signer 1 
 ```
 git pull
-flow transactions sign ./transactions/withdraw-fraudulent-tokens/cadence-tokens/jan-12/tx-signed-fake5.rlp \
+flow transactions sign ./transactions/withdraw-fraudulent-tokens/cadence-tokens/jan-12/tx-signed-fake7.rlp \
   --config-path flow.json \
   --signer vishal \
   --filter payload \
