@@ -15,7 +15,7 @@
 ```sh
 flow transactions build -y --filter payload \
         --save ./transactions/withdraw-fraudulent-tokens/cadence-tokens/jan-12/tx.rlp \
-		--proposer 0xe467b9dd11fa00df --proposer-key-index 12 --payer 0xe467b9dd11fa00df \
+		--proposer 0xe467b9dd11fa00df --proposer-key-index 18 --payer 0xe467b9dd11fa00df \
 		-f ~/dev/2025-12-28-incident-cleanup/flow.json \
 		--authorizer 0xe467b9dd11fa00df,0xb6e77d3f0dbe657a,0x3ce29eba9d7e8ec9,0x57629229aca26459,0x4b7042a0a44ad2f2,0x4f8a2ce77ac94cc7,0x04646a843f86a6bb,0x08dd120226ec2213 \
 		-n mainnet --compute-limit 100000 \
@@ -143,4 +143,5 @@ git push
 flow transactions send-signed -y -n mainnet ./transactions/withdraw-fraudulent-tokens/cadence-tokens/jan-12/tx-signed-sa4.rlp
 ```
 
-Result: https://www.flowscan.io/tx/88782f3fa88ff1054b9047c007bf3e3ffbaa015eceb3f32c472c4ec595ead215
+Failed TX: https://www.flowscan.io/tx/ee43f97306d801971a8369100ff7fd3bebb30a08ba58fec3516c9e4fa40e3984?tab=script
+Result:
