@@ -1,0 +1,154 @@
+[
+  {
+    "type": "Dictionary",
+    "value": [
+      {
+        "key": {
+          "type": "Address",
+          "value": "0xb6e77d3f0dbe657a"
+        },
+        "value": {
+          "type": "Dictionary",
+          "value": [
+            {
+              "key": {
+                "type": "String",
+                "value": "A.1654653399040a61.FlowToken.Vault"
+              },
+              "value": {
+                "type": "UFix64",
+                "value": "218154147.14"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "key": {
+          "type": "Address",
+          "value": "0x3ce29eba9d7e8ec9"
+        },
+        "value": {
+          "type": "Dictionary",
+          "value": [
+            {
+              "key": {
+                "type": "String",
+                "value": "A.1654653399040a61.FlowToken.Vault"
+              },
+              "value": {
+                "type": "UFix64",
+                "value": "55829072.15"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "key": {
+          "type": "Address",
+          "value": "0x57629229aca26459"
+        },
+        "value": {
+          "type": "Dictionary",
+          "value": [
+            {
+              "key": {
+                "type": "String",
+                "value": "A.1654653399040a61.FlowToken.Vault"
+              },
+              "value": {
+                "type": "UFix64",
+                "value": "167047146.97"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "key": {
+          "type": "Address",
+          "value": "0x4b7042a0a44ad2f2"
+        },
+        "value": {
+          "type": "Dictionary",
+          "value": [
+            {
+              "key": {
+                "type": "String",
+                "value": "A.1654653399040a61.FlowToken.Vault"
+              },
+              "value": {
+                "type": "UFix64",
+                "value": "53750104.35"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "key": {
+          "type": "Address",
+          "value": "0x4f8a2ce77ac94cc7"
+        },
+        "value": {
+          "type": "Dictionary",
+          "value": [
+            {
+              "key": {
+                "type": "String",
+                "value": "A.1654653399040a61.FlowToken.Vault"
+              },
+              "value": {
+                "type": "UFix64",
+                "value": "52681024.03"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "key": {
+          "type": "Address",
+          "value": "0x04646a843f86a6bb"
+        },
+        "value": {
+          "type": "Dictionary",
+          "value": [
+            {
+              "key": {
+                "type": "String",
+                "value": "A.1654653399040a61.FlowToken.Vault"
+              },
+              "value": {
+                "type": "UFix64",
+                "value": "53862904.17"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "key": {
+          "type": "Address",
+          "value": "0x08dd120226ec2213"
+        },
+        "value": {
+          "type": "Dictionary",
+          "value": [
+            {
+              "key": {
+                "type": "String",
+                "value": "A.f1ab99c82dee3526.USDCFlow"
+              },
+              "value": {
+                "type": "UFix64",
+                "value": "5571106.10"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+]
