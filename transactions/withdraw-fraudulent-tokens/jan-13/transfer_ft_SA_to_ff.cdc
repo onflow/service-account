@@ -30,7 +30,11 @@ transaction(vaultIdentifier:String, recipient: Address, amount: UFix64) {
         // Get a reference to the recipient's Receiver
         let receiverRef = recipientAccount.capabilities.borrow<&{FungibleToken.Vault}>(vaultData.receiverPath)!
 
+        // withdraw everything from the account minus the amount passed in
+        let amountToWithdraw = vaultRef.balance - amount
+
         // Deposit the withdrawn tokens in the recipient's receiver
-        receiverRef.deposit(from: <- vaultRef.withdraw(amount: amount))
+        // 87,961,440,414.53438 - 87,960,930,222.07999785 = 510192.45438215
+        receiverRef.deposit(from: <- vaultRef.withdraw(amount: amountToWithdraw))
     }
 }
