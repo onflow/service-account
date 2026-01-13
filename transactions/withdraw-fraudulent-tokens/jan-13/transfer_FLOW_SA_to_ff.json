@@ -1,0 +1,14 @@
+[
+    {
+        "type": "String",
+        "value": "A.1654653399040a61.FlowToken.Vault"
+    },
+    {
+        "type": "Address",
+        "value": "0x56dfc6b70135c5cd"
+    },
+    {
+        "type": "UFix64",
+        "value": "1.0"
+    }
+]
