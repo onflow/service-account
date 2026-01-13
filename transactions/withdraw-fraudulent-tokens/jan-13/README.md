@@ -2,6 +2,10 @@
 
 ## TX 1: to move all FLOW from the Service Account COA to its cadence vault
 
+Result:
+Failure: https://www.flowscan.io/tx/8d43284d6b3dc9e5096e137ad37824e1f643997fc06964f9d8d56c136e4cc3b6
+Success: https://www.flowscan.io/tx/a34b3fb9aa93a0a75a7b5da380f17118c114d992941d8465cf5eace263d50029
+
 ## TX 2: to move all USDF from the Service Account COA to its cadence vault
 
 Tested using
