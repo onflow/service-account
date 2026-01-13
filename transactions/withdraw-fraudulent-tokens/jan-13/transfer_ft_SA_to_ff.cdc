@@ -3,7 +3,7 @@ import ViewResolver from 0x1d7e57aa55817448
 import FungibleTokenMetadataViews from 0xf233dcee88fe0abe
 
 
-transaction(recipient: Address, vaultIdentifier:String, amount: UFix64) {
+transaction(vaultIdentifier:String, recipient: Address, amount: UFix64) {
 
     prepare(signer: auth(Storage, BorrowValue) &Account) {
 
@@ -19,12 +19,12 @@ transaction(recipient: Address, vaultIdentifier:String, amount: UFix64) {
                 viewType: Type<FungibleTokenMetadataViews.FTVaultData>()
             ) as! FungibleTokenMetadataViews.FTVaultData? ?? panic("Could not resolve FTVaultData view")
 
-         // Get a reference to the signer's stored vault
+        // Get a reference to the signer's stored vault
         let vaultRef = signer.storage.borrow<auth(FungibleToken.Withdraw) &{FungibleToken.Vault}>(from: vaultData.storagePath)
             ?? panic("Could not borrow reference to the owner's Vault!")
 
 
-           // Get the recipient's public account object
+        // Get the recipient's public account object
         let recipientAccount = getAccount(recipient)
 
         // Get a reference to the recipient's Receiver
