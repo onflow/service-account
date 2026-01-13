@@ -65,7 +65,7 @@ git push
 git pull
 flow transactions sign ./transactions/close-attacker-account/jan-13/tx-signed-fake4.rlp \
   --config-path flow.json \
-  --signer vishal \
+  --signer bluesign \
   --filter payload \
   --save ./transactions/close-attacker-account/jan-13/tx-signed-sa1.rlp
 git add .
@@ -78,7 +78,7 @@ git push
 git pull
 flow transactions sign ./transactions/close-attacker-account/jan-13/tx-signed-sa1.rlp \
   --config-path flow.json \
-  --signer josh \
+  --signer bjarte \
   --filter payload \
   --save ./transactions/close-attacker-account/jan-13/tx-signed-sa2.rlp
 git add .
@@ -91,7 +91,7 @@ git push
 git pull
 flow transactions sign ./transactions/close-attacker-account/jan-13/tx-signed-sa2.rlp \
   --config-path flow.json \
-  --signer layne \
+  --signer jan \
   --filter payload \
   --save ./transactions/close-attacker-account/jan-13/tx-signed-sa3.rlp
 git add .
@@ -104,7 +104,7 @@ git push
 git pull
 flow transactions sign ./transactions/close-attacker-account/jan-13/tx-signed-sa3.rlp \
   --config-path flow.json \
-  --signer jan \
+  --signer vishal \
   --filter payload \
   --save ./transactions/close-attacker-account/jan-13/tx-signed-sa4.rlp
 git add .
