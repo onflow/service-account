@@ -13,9 +13,9 @@ import "FlowToken"
 transaction() {
 
     prepare(serviceAccount: auth(Storage, BorrowValue) &Account,
-        attackerAccount1: auth(RevokeKey, Storage, BorrowValue) &Account, //0xfd595328d97d33d5
-        attackerAccount2: auth(RevokeKey, Storage, BorrowValue) &Account, //0x2ef3addd3d2fdcb2
-        attackerAccount3: auth(RevokeKey) &Account, //0x876d79eb09383877
+        attackerAccount1: auth(RevokeKey, Capabilities, Storage, BorrowValue) &Account, //0xfd595328d97d33d5
+        attackerAccount2: auth(RevokeKey, Capabilities, Storage, BorrowValue) &Account, //0x2ef3addd3d2fdcb2
+        attackerAccount3: auth(RevokeKey, Capabilities) &Account, //0x876d79eb09383877
         attackerAccount4: auth(RevokeKey, Capabilities, BorrowValue) &Account  //0x1d84e60dc3a2f0c7
         ) {
 
@@ -47,6 +47,12 @@ transaction() {
         // Deposit excess balance into service account's REGULAR vault (not the special vault for fraudulent tokens).
         saVaultRef.deposit(from: <-attacker1VaultRef.withdraw(amount: attacker1VaultRef.balance-0.001))
         saVaultRef.deposit(from: <-attacker2VaultRef.withdraw(amount: attacker2VaultRef.balance-0.001))
+
+        // Unpublish the receiver so no further funds can be deposited
+        attackerAccount1.capabilities.unpublish(/public/flowTokenReceiver)
+        attackerAccount2.capabilities.unpublish(/public/flowTokenReceiver)
+        attackerAccount3.capabilities.unpublish(/public/flowTokenReceiver)
+        attackerAccount4.capabilities.unpublish(/public/flowTokenReceiver)
 
         // Finally, revoke all keys on all attacker accounts, rendering them permanently inoperable
         attackerAccount1.keys.revoke(keyIndex: 0)
