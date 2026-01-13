@@ -4,7 +4,7 @@
     "value": "A.1e4aa0b87d10b141.EVMVMBridgedToken_2aabea2058b5ac2d339b163c6ab6f2b6d53aabed.Vault"
   },
   {
-    "type": "UFix64",
-    "value": "1005.0"
+    "type": "UInt256",
+    "value": "1005000000"
   }
 ]

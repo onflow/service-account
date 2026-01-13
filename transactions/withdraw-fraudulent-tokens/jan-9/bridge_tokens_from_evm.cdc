@@ -4,7 +4,7 @@ import ViewResolver from 0x1d7e57aa55817448
 import MetadataViews from 0x1d7e57aa55817448
 import FlowToken from 0x1654653399040a61
 
-import ScopedFTProviders  from 0x1654653399040a61
+import ScopedFTProviders  from 0x1e4aa0b87d10b141
 
 import EVM from 0xe467b9dd11fa00df
 
