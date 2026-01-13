@@ -21,5 +21,16 @@ flow scripts execute ./test_script_for_bridge_tokens_from_evm.cdc  --args-json "
  flow scripts execute ./test_script_for_transfer_ft_SA_to_ff.cdc  --args-json "$(cat "./transfer_TRUMP_SA_to_ff.json")" -n mainnet
  flow scripts execute ./test_script_for_transfer_ft_SA_to_ff.cdc  --args-json "$(cat "./transfer_USDF_SA_to_ff.json")" -n mainnet
 ```
+1 FLOW Token transfer: https://www.flowscan.io/tx/aa0a23cbda225e4f528982ba2785d1a4f5151d30c2ea5c45bc938ca1bb45c066
+
+TRUMP transfer: https://www.flowscan.io/tx/aa0a23cbda225e4f528982ba2785d1a4f5151d30c2ea5c45bc938ca1bb45c066
+
+USDC failed: https://www.flowscan.io/tx/a29cc1ce9df006ac80e0d9861ea70f71019f000943e6755a7dbf2fbc90324d54
+USDC success: https://www.flowscan.io/tx/ef180bdc1579701602e7f19812d046a97ed10aa6132f78a4f00a90a6dee9c461
+
+stgUSDC https://www.flowscan.io/tx/29ac7393cc1ba6177243cb09322a67efc2244eb8cdfccc8e7ed49c778e59cc89
+
+USDF: https://www.flowscan.io/tx/b336fa2dc35890b884bc1615fc19e85d3957970f21f6c397567ed1d5efc59a14
+
 
 
