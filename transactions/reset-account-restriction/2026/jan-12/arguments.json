@@ -1,0 +1,23 @@
+[
+  {
+    "type": "Array",
+    "value": [
+      {
+        "type": "Address",
+        "value": "0xfd595328d97d33d5"
+      },
+      {
+        "type": "Address",
+        "value": "0x2ef3addd3d2fdcb2"
+      },
+      {
+        "type": "Address",
+        "value": "0x876d79eb09383877"
+      },
+      {
+        "type": "Address",
+        "value": "0x1d84e60dc3a2f0c7"
+      }
+    ]
+  }
+]
