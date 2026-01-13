@@ -117,4 +117,4 @@ git push
 flow transactions send-signed -y -n mainnet ./transactions/close-attacker-account/jan-13/tx-signed-sa4.rlp
 ```
 
-Result:
+Result: 10e071dc2b02c8c8d30e145ca93a971ca5860c2b54cf28def6aa160a4d631a14
