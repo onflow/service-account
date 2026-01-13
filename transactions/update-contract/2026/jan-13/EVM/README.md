@@ -22,7 +22,7 @@ ___
 
 Unsuccessful attempt (if any): 
 
-Successful attempt:https://www.flowscan.io/tx/
+Successful attempt:https://www.flowscan.io/tx/146aaa2620bc1e003a241e8200939c1f96f39e99e4e1d276e8a7b15cc9cadcca?tab=events
 
 ___
 
