@@ -7,6 +7,7 @@ Failure: https://www.flowscan.io/tx/8d43284d6b3dc9e5096e137ad37824e1f643997fc069
 Success: https://www.flowscan.io/tx/a34b3fb9aa93a0a75a7b5da380f17118c114d992941d8465cf5eace263d50029
 
 ## TX 2: to move all USDF from the Service Account COA to its cadence vault
+Result: https://www.flowscan.io/tx/e4523fe6615193a164c6175ff7d626b46b92e73606d2c69829e5898053fd1caa
 
 Tested using
 ```
