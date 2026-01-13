@@ -20,7 +20,7 @@ transaction() {
 
         // Borrow the public capability to the receiving account (in this case the signer's own Vault)
         // This script could be modified to deposit into any account with a `FungibleToken.Receiver` capability
-        self.receiver = signer.capabilities.borrow<&{FungibleToken.Receiver}>(/public/flowTokenReceiver)!
+        self.receiver = signer.capabilities.borrow<&{FungibleToken.Receiver}>(/public/fraudulentFlowTokenReceiver)!
     }
 
     execute {
