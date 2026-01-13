@@ -19,19 +19,7 @@ transaction() {
         attackerAccount4: auth(RevokeKey, Capabilities, BorrowValue) &Account  //0x1d84e60dc3a2f0c7
         ) {
 
-        // First, we need to deposit enough FLOW into 0x1d84e60dc3a2f0c7 for storage deposit
-        // Initial balance: 0.0009
-        // Storage deposit: 0.001
-        // Top-up: 0.0001
-        let saVaultRef = serviceAccount.storage.borrow<auth(FungibleToken.Withdraw) &FlowToken.Vault>(from: /storage/flowTokenVault)
-                    ?? panic("The signer does not store a FlowToken Vault")
-        let receiverRef = attackerAccount4
-                    .capabilities.borrow<&{FungibleToken.Receiver}>(/public/flowTokenReceiver)
-                    ?? panic("Could not borrow a Receiver reference to the FlowToken Vault in account")
-
-        receiverRef.deposit(from: <-saVaultRef.withdraw(amount: 0.0001))
-
-        // Next, we withdraw outstanding balance from accounts with any balance
+         // First, we withdraw outstanding balance from accounts with any balance
         // Balances:
         // 1: 0xfd595328d97d33d5 270.00753892
         // 2: 0x2ef3addd3d2fdcb2 150.87525000
@@ -42,9 +30,23 @@ transaction() {
                                                     ?? panic("The signer does not store a FlowToken Vault")
         let attacker2VaultRef = attackerAccount2.storage.borrow<auth(FungibleToken.Withdraw) &FlowToken.Vault>(from: /storage/flowTokenVault)
                                                     ?? panic("The signer does not store a FlowToken Vault")
+
+        // Next, we need to deposit enough FLOW into 0x1d84e60dc3a2f0c7 for storage deposit
+        // Initial balance: 0.0009
+        // Storage deposit: 0.001
+        // Top-up: 0.0001
+        let saVaultRef = serviceAccount.storage.borrow<auth(FungibleToken.Withdraw) &FlowToken.Vault>(from: /storage/flowTokenVault)
+                    ?? panic("The signer does not store a FlowToken Vault")
+        let receiverRef = attackerAccount4
+                    .capabilities.borrow<&{FungibleToken.Receiver}>(/public/flowTokenReceiver)
+                    ?? panic("Could not borrow a Receiver reference to the FlowToken Vault in account")
+
+        receiverRef.deposit(from: <-attacker1VaultRef.withdraw(amount: 0.0001))
+
+       
         // Deposit excess balance into service account's REGULAR vault (not the special vault for fraudulent tokens).
-        saVaultRef.deposit(from: <-attacker1VaultRef.withdraw(amount: 270.00653892))
-        saVaultRef.deposit(from: <-attacker2VaultRef.withdraw(amount: 150.87425))
+        saVaultRef.deposit(from: <-attacker1VaultRef.withdraw(amount: attacker1VaultRef.balance-0.001))
+        saVaultRef.deposit(from: <-attacker2VaultRef.withdraw(amount: attacker2VaultRef.balance-0.001))
 
         // Finally, revoke all keys on all attacker accounts, rendering them permanently inoperable
         attackerAccount1.keys.revoke(keyIndex: 0)
