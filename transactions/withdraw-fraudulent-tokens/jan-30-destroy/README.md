@@ -17,4 +17,4 @@ Tested successfully with `templates/test_script.cdc`.
 
 ## Result
 
-https://www.flowscan.io/tx/
+Transaction 1: WETH - https://www.flowscan.io/tx/d6c36b3ffeec306e4526170a3b9d5816d92f0aeafbcef77500b578f50457949e
