@@ -14,7 +14,6 @@ transaction {
             "EVMVMBridgedToken_2aabea2058b5ac2d339b163c6ab6f2b6d53aabedVault",
             "EVMVMBridgedToken_717dae2baf7656be9a9b01dee31d571a9d4c9579Vault",
             "EVMVMBridgedToken_f1815bd50389c46847f0bda824ec8da914045d14Vault",
-            "EVMVMBridgedToken_2f6f07cdcf3588944bf4c42ac74ff24bf56e7590Vault",
             "EVMVMBridgedToken_d3378b419feae4e3a4bb4f3349dba43a1b511760Vault",
             "ceBNBVault",
             "ceBUSDVault",
