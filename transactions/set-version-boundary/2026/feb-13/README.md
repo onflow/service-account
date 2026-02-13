@@ -15,4 +15,5 @@ Version to set: `v0.46.1-rc.1`
 
 ## Result
 
-Transaction ID:https://www.stakeandeggs.wtf/tx/
+Failed Transaction: https://www.stakeandeggs.wtf/tx/d5a7b9d2874e1a09a32869aa3481f71aaceea7a47e583d0822325775281b71ab - failed since block height was less than 1000 blocks in the future.
+Succeeded Transaction ID:https://www.stakeandeggs.wtf/tx/b9ae8536512e2b3b2c264ddd1887f348a30d06515c38f83b568edf777e957373
