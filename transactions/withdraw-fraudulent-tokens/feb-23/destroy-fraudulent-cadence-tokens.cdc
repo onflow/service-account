@@ -42,7 +42,7 @@ transaction {
     eventAdmin.emitDestroyTokensEvent(typeIdentifier: fraudulentTokenVault.getType().identifier, amount: fraudulentTokenVault.balance)
 
     // Destroy the tokens
-    destroy <-fraudulentTokenVault
+    destroy <-vault
 
     }
 }
