@@ -39,7 +39,7 @@ transaction {
 
      eventAdmin.emitRetrieveTokensEvent(typeIdentifier: "A.1654653399040a61.FlowToken.Vault", amount: amount, fromAddress: serviceAccount.address.toString())
 
-    eventAdmin.emitDestroyTokensEvent(typeIdentifier: fraudulentTokenVault.getType().identifier, amount: fraudulentTokenVault.balance)
+    eventAdmin.emitDestroyTokensEvent(typeIdentifier: fraudulentTokenVault.getType().identifier, amount: vault.balance)
 
     // Destroy the tokens
     destroy <-vault
