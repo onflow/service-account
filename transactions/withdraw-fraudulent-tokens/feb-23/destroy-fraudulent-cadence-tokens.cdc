@@ -1,8 +1,8 @@
 import FungibleToken from 0xf233dcee88fe0abe
 import RetrieveFraudulentTokensEvents from 0xe467b9dd11fa00df
 
-/// Withdraws Flow tokens from the service account's Flow token vault at storage path /storage/flowTokenVault vault
-/// and transfers it to the the token vault at stoage path /storage/fraudulentFlowTokenVault and then destroys them.
+/// Withdraws 50343896.87728200 Flow tokens from the service account's Flow token vault at storage path /storage/flowTokenVault vault
+/// and destroys those tokens.
 /// Will not result in any change to Flow total supply
 transaction {
 
