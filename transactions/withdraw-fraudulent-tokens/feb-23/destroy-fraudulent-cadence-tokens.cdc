@@ -9,7 +9,7 @@ transaction {
     prepare(serviceAccount: auth(Storage, Capabilities, BorrowValue) &Account) {
 
     // the amount to burn
-    let amount = 50344317.76
+    let amount = 50343896.87728200
 
     let defaultFlowTokenVaultPath = /storage/flowTokenVault
 
