@@ -5,7 +5,7 @@
   },
   {
     "type": "UInt8",
-    "value": "??"
+    "value": "47"
   },
   {
     "type": "UInt8",
@@ -13,7 +13,7 @@
   },
   {
     "type": "String",
-    "value": "rc.2"
+    "value": "rc.1"
   },
   {
     "type": "UInt64",
