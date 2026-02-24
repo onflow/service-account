@@ -15,4 +15,4 @@ Version to set: `v0.47.0-rc.1`
 
 ## Result
 
-Transaction ID:
+Transaction ID:https://www.stakeandeggs.wtf/tx/eed3b4e1a608b1c4b2a0cd82accaa41d9fe85f2bed76daed5ca3df2b483ccccf
