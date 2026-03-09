@@ -1,0 +1,14 @@
+[
+  {"type": "Optional", "value": null},
+  {"type": "Optional", "value": null},
+  {"type": "Optional", "value": {"type": "UInt64", "value": "15000"}},
+  {"type": "Optional", "value": {"type": "UInt64", "value": "7500"}},
+  {"type": "Optional", "value": {"type": "UInt64", "value": "2500"}},
+  {"type": "Optional", "value": null},
+  {"type": "Optional", "value": null},
+  {"type": "Optional", "value": null},
+  {"type": "Optional", "value": null},
+  {"type": "Optional", "value": null},
+  {"type": "Optional", "value": null},
+  {"type": "Optional", "value": null}
+]
