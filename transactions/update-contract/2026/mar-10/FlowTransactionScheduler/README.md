@@ -44,4 +44,6 @@ Unsuccessful attempt (if any):
 
 Successful attempt:
 
+1. Contract upgrade: https://www.flowscan.io/tx/56986c9278516d93f4d58ba51c18708ac27fbaaf31189fce95bbec52b1084150
+2. Update args: https://www.flowscan.io/tx/a0df09188290b035d4dba8b78859090b5723d02dd75f3f409b6e94840a3c16ce
 ___
