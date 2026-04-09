@@ -16,3 +16,7 @@ Version to set: `v0.48.0-rc.1`
 ## Result
 
 Transaction ID:
+
+Failed transaction: https://www.flowscan.io/tx/1c3ecb3e059c62fa89044bdbffe172849e6701e7ad9089a3cf55b39f59c9d103
+Failure reason: block height was less than threshold
+Successful transaction: https://www.flowscan.io/tx/769f9a2b88f13efabca57c4adee93d529afdbf76dfb4c61962d462dba95d5397
