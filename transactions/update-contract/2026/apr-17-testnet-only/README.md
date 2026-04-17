@@ -48,9 +48,15 @@
 [update contract](../../..)
 
 1. Sign using staking account (`0x7aad92e5a0715d21`) for StakingProxy
+```shell
+flow transactions send update_contract.cdc  --signer staking_proxy --args-json "$(cat "./args_for_staking_proxy_update_contract.json")" -n testnet -f testnet_keys.json  --compute-limit 9999
+```
+
 2. Sign using fungible token account (`0x9a0766d93b6608b7`) for FungibleTokenSwitchboard
 
-
+```shell
+flow transactions send update_contract.cdc  --signer fungible_token --args-json "$(cat "./args_for_fungible_token_switchboard_update_contract.json")" -n testnet -f testnet_keys.json  --compute-limit 9999
+```
 ## Args
 
 1. StakingProxy
@@ -77,5 +83,5 @@ $ diff /tmp/temp.txt FungibleTokenSwitchboard.cdc
 
 ## Result
 
-1. StakingProxy.cdc
-2. FungibleTokenSwitchboard.cdc
+1. StakingProxy.cdc: https://testnet.flowscan.io/tx/3017a080805257e21019735161fddcf2ea3e011024c6146c9a4b6be6d5ef5d11
+2. FungibleTokenSwitchboard.cdc: https://testnet.flowscan.io/tx/a771f6a8247452da18bd6ae14f1cbf3b917e1fd269a6361da4a8031f8ae7ad3d
