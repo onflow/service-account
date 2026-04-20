@@ -32,7 +32,5 @@ transaction {
 
 ## Result:
 
-1. Transaction for service account
-
-
-2. Transaction for staking account
+1. Transaction for service account - https://www.flowscan.io/tx/42b9c46973536d3ed63ccae0a5db7787a8606935bdf149e912999203f4a779ad
+2. Transaction for staking account - https://www.flowscan.io/tx/fdbb81f16bbb4ee05e72a9dec40ddb24d5ce0d332078302b76b7e726e9f6bdeb
