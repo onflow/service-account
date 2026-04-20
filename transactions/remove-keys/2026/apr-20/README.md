@@ -1,6 +1,6 @@
-# Implementation of FLIP 315
+# Implementation of FLIP 365
 
-This transaction is to implement [FLIP 315](https://github.com/onflow/flips/pull/315)
+This transaction is to implement [FLIP 365](https://github.com/onflow/flips/pull/366)
 
 ##  Transaction to execute
 
