@@ -27,3 +27,5 @@ diff <(jq -r '.[0].value[] | "\(.key.value)\t\(.value.value)"' transactions/set-
 Transaction to execute: [set_execution_effort_weights.cdc](../../../../templates/set_execution_effort_weights.cdc)
 
 ## Result
+
+Transaction ID: https://www.flowscan.io/tx/f025b177539041c242f212a0eddda2915e2faeb0abddce5ff2ddff94f33b92cf
