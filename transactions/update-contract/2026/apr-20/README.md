@@ -45,3 +45,6 @@ $ diff /tmp/temp.txt FlowDKG.cdc
 ___
 
 ### Results
+
+1. FlowClusterQC:https://www.flowscan.io/tx/75ae14666248a3d1abb161d9e791ba02d0bc0be10ce3145d305eccb6fe250191
+2. FlowDKG: https://www.flowscan.io/tx/c1d689c69ac80e9aec4e22889c220ea679811e4ed28ca22773389451229b1406
