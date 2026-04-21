@@ -47,11 +47,12 @@ $ diff /tmp/temp.txt StakingProxy.cdc
 
 ## Steps to upgrade
 
-1. `flow transactions send ./templates/update_contract.cdc  --signer fungible_token --args-json "$(cat "./arguments-fungibletoken-contract.json")" -n mainnet --compute-limit 9999`
-2. `flow transactions send ./templates/update_contract.cdc  --signer staking_proxy --args-json "$(cat "./arguments-stakingproxy-contract.json")" -n mainnet --compute-limit 9999`
+1. `flow transactions send ./templates/update_contract.cdc  --signer fungible_token --args-json "$(cat "./transactions/update-contract/2026/apr-20-part-2/arguments-fungibletoken-contract.json")" -n mainnet --compute-limit 9999`
+2. `flow transactions send ./templates/update_contract.cdc  --signer staking_proxy --args-json "$(cat "./transactions/update-contract/2026/apr-20-part-2/arguments-stakingproxy-contract.json")" -n mainnet --compute-limit 9999`
 ___
 
 ### Results
 
 1. FungibleToken:
 2. StakingProxy:
+   i. Failure: https://www.flowscan.io/tx/fcdb2001f42293f475be3465b8c5fa1ecc8d9890430ca2524b5678e1382350f4?tab=script - invalid signature
