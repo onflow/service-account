@@ -54,5 +54,8 @@ ___
 ### Results
 
 1. FungibleToken:
+   i. Success: https://www.flowscan.io/tx/26aec575a7aae0cc2676e2615ebe496642b25c4bb1e1548ad83a3da31ead24e2
 2. StakingProxy:
    i. Failure: https://www.flowscan.io/tx/fcdb2001f42293f475be3465b8c5fa1ecc8d9890430ca2524b5678e1382350f4?tab=script - invalid signature
+   ii. Success: https://www.flowscan.io/tx/da7471dbe45ade9e737d65e55a057aaa821c0624533bac3d987f44e1b103cd1e
+   

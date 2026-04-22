@@ -109,7 +109,7 @@
         "index": 0,
         "signatureAlgorithm": "ECDSA_P256",
         "hashAlgorithm": "SHA2_256",
-        "resourceID": "projects/dl-flow/locations/global/keyRings/mainnet/cryptoKeys/token-admin/cryptoKeyVersions/1"
+        "resourceID": "projects/dl-flow/locations/global/keyRings/mainnet/cryptoKeys/service-account/cryptoKeyVersions/1"
       }
     },
     "staking_proxy": {
@@ -119,7 +119,7 @@
         "index": 0,
         "signatureAlgorithm": "ECDSA_P256",
         "hashAlgorithm": "SHA2_256",
-        "resourceID": "projects/dl-flow/locations/global/keyRings/mainnet/cryptoKeys/service-account/cryptoKeyVersions/1"
+        "resourceID": "projects/dl-flow/locations/global/keyRings/mainnet/cryptoKeys/token-admin/cryptoKeyVersions/1"
       }
     },
     "emulator-account": {
