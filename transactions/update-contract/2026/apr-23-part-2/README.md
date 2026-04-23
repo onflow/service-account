@@ -48,5 +48,5 @@ ___
 
 ### Results
 
-1. EVM
-2. FlowIDTableStaking
+1. EVM: https://www.flowscan.io/tx/de3ef94060f931f46ac065054ed43ee3644b2f7698f14e3e91385b143bfd9ad5
+2. FlowIDTableStaking: https://www.flowscan.io/tx/3074d8af08394fe09b3865d1a91395792eb3fb2c9f9c222b108fa7a2f2e0dd2c

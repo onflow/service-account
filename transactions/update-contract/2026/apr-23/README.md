@@ -46,5 +46,5 @@ ___
 
 ### Results
 
-1. NodeVersionBeacon
-2. RandomBeaconHistory
+1. NodeVersionBeacon: https://www.flowscan.io/tx/28bdbb988b045af888ec133724462bc9287a01f42d820198777aede6db7790dc
+2. RandomBeaconHistory: https://www.flowscan.io/tx/ca2bef34e4cfbcc7b1e8ce5a2f76dc977fce3312869f431ab69272eb4fafd38d
