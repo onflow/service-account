@@ -5,6 +5,7 @@
 ## Contracts to be upgraded:
 1. FlowTransactionScheduler.cdc
 2. FlowServiceAccount.cdc
+3. FlowIDTableStaking.cdc
 
 ## Transaction
 
@@ -42,6 +43,22 @@ $ diff /tmp/temp.txt FlowServiceAccount.cdc
 (Should produce no difference)
 ```
 
+3. FlowIDTableStaking
+
+Used this to generate the contract code arguments:
+
+- Update imports
+
+`cat "./FlowIDTableStaking.cdc" | xxd -p | tr -d '\n'`
+
+Verified using:
+```
+$ cat args_for_staking_contract.json | jq '.[1] | .value' | xxd -r -p > /tmp/temp.txt
+$ diff /tmp/temp.txt FlowIDTableStaking.cdc
+(Should produce no difference)
+```
 
 ## Result
-https://testnet.flowscan.io/tx/
+1. FlowTransactionScheduler.cdc
+2. FlowServiceAccount.cdc
+3. FlowIDTableStaking.cdc
