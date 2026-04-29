@@ -1,5 +1,4 @@
 {
-  "contracts": {},
   "networks": {
     "emulator": "127.0.0.1:3569",
     "mainnet": "access.mainnet.nodes.onflow.org:9000",
@@ -194,5 +193,153 @@
     }
   },
   "contracts": {},
-  "deployments": {}
+  "deployments": {},
+  "dependencies": {
+    "Burner": {
+      "source": "mainnet://f233dcee88fe0abe.Burner",
+      "hash": "71af18e227984cd434a3ad00bb2f3618b76482842bae920ee55662c37c8bf331",
+      "block_height": 149991980,
+      "aliases": {
+        "emulator": "f8d6e0586b0a20c7",
+        "mainnet": "f233dcee88fe0abe",
+        "testnet": "9a0766d93b6608b7"
+      }
+    },
+    "FlowClusterQC": {
+      "source": "mainnet://8624b52f9ddcd04a.FlowClusterQC",
+      "hash": "acbff1781e59dfb1026966565bbc999e4acfc72c50e8418f6e66380c7c37dd98",
+      "block_height": 149991980,
+      "aliases": {
+        "emulator": "f8d6e0586b0a20c7",
+        "mainnet": "8624b52f9ddcd04a",
+        "testnet": "9eca2b38b18b5dfe"
+      }
+    },
+    "FlowDKG": {
+      "source": "mainnet://8624b52f9ddcd04a.FlowDKG",
+      "hash": "31fd468d54da652e5b1a94addb2101a16ee6ee35d46828fb035b9a96d91962d8",
+      "block_height": 149991980,
+      "aliases": {
+        "emulator": "f8d6e0586b0a20c7",
+        "mainnet": "8624b52f9ddcd04a",
+        "testnet": "9eca2b38b18b5dfe"
+      }
+    },
+    "FlowEpoch": {
+      "source": "mainnet://8624b52f9ddcd04a.FlowEpoch",
+      "hash": "edde990109372365dcb48fbba0cfdab7b68d403f44c2708bc159352003754b8b",
+      "block_height": 149991980,
+      "aliases": {
+        "emulator": "f8d6e0586b0a20c7",
+        "mainnet": "8624b52f9ddcd04a",
+        "testnet": "9eca2b38b18b5dfe"
+      }
+    },
+    "FlowFees": {
+      "source": "mainnet://f919ee77447b7497.FlowFees",
+      "hash": "341cc0f3cc847d6b787c390133f6a5e6c867c111784f09c5c0083c47f2f1df64",
+      "block_height": 149991980,
+      "aliases": {
+        "emulator": "e5a8b7f23e8b548f",
+        "mainnet": "f919ee77447b7497",
+        "testnet": "912d5440f7e3769e"
+      }
+    },
+    "FlowIDTableStaking": {
+      "source": "mainnet://8624b52f9ddcd04a.FlowIDTableStaking",
+      "hash": "ffc626220f7f057b94d22df2f4f2acb3df71ea7e4ed4918dfe634aaecbff6407",
+      "block_height": 149991980,
+      "aliases": {
+        "emulator": "f8d6e0586b0a20c7",
+        "mainnet": "8624b52f9ddcd04a",
+        "testnet": "9eca2b38b18b5dfe"
+      }
+    },
+    "FlowStorageFees": {
+      "source": "mainnet://e467b9dd11fa00df.FlowStorageFees",
+      "hash": "a92c26fb2ea59725441fa703aa4cd811e0fc56ac73d649a8e12c1e72b67a8473",
+      "block_height": 149991980,
+      "aliases": {
+        "emulator": "f8d6e0586b0a20c7",
+        "mainnet": "e467b9dd11fa00df",
+        "testnet": "8c5303eaa26202d6"
+      }
+    },
+    "FlowToken": {
+      "source": "mainnet://1654653399040a61.FlowToken",
+      "hash": "f82389e2412624ffa439836b00b42e6605b0c00802a4e485bc95b8930a7eac38",
+      "block_height": 149991980,
+      "aliases": {
+        "emulator": "0ae53cb6e3f42a79",
+        "mainnet": "1654653399040a61",
+        "testnet": "7e60df042a9c0868"
+      }
+    },
+    "FungibleToken": {
+      "source": "mainnet://f233dcee88fe0abe.FungibleToken",
+      "hash": "3b04b3191e0c5d4d9ee3ce9c671b11985d29bf2732a5721b526cc8523c536f8f",
+      "block_height": 149991980,
+      "aliases": {
+        "emulator": "ee82856bf20e2aa6",
+        "mainnet": "f233dcee88fe0abe",
+        "testnet": "9a0766d93b6608b7"
+      }
+    },
+    "FungibleTokenMetadataViews": {
+      "source": "mainnet://f233dcee88fe0abe.FungibleTokenMetadataViews",
+      "hash": "70477f80fd7678466c224507e9689f68f72a9e697128d5ea54d19961ec856b3c",
+      "block_height": 149991980,
+      "aliases": {
+        "emulator": "ee82856bf20e2aa6",
+        "mainnet": "f233dcee88fe0abe",
+        "testnet": "9a0766d93b6608b7"
+      }
+    },
+    "LockedTokens": {
+      "source": "mainnet://8d0e87b65159ae63.LockedTokens",
+      "hash": "868d9b11e9fdeb6ecd4d14c2815fa59b5de18a43fac6697a6c8b52711716b25f",
+      "block_height": 149991980,
+      "aliases": {
+        "mainnet": "8d0e87b65159ae63"
+      }
+    },
+    "MetadataViews": {
+      "source": "mainnet://1d7e57aa55817448.MetadataViews",
+      "hash": "b290b7906d901882b4b62e596225fb2f10defb5eaaab4a09368f3aee0e9c18b1",
+      "block_height": 149991980,
+      "aliases": {
+        "emulator": "f8d6e0586b0a20c7",
+        "mainnet": "1d7e57aa55817448",
+        "testnet": "631e88ae7f1d7c20"
+      }
+    },
+    "NonFungibleToken": {
+      "source": "mainnet://1d7e57aa55817448.NonFungibleToken",
+      "hash": "a258de1abddcdb50afc929e74aca87161d0083588f6abf2b369672e64cf4a403",
+      "block_height": 149991980,
+      "aliases": {
+        "emulator": "f8d6e0586b0a20c7",
+        "mainnet": "1d7e57aa55817448",
+        "testnet": "631e88ae7f1d7c20"
+      }
+    },
+    "StakingProxy": {
+      "source": "mainnet://62430cf28c26d095.StakingProxy",
+      "hash": "114b6812c90a9f615c37b3e1384472b256ae179d7ed50dadd0e71ae85e11363d",
+      "block_height": 149991980,
+      "aliases": {
+        "mainnet": "62430cf28c26d095"
+      }
+    },
+    "ViewResolver": {
+      "source": "mainnet://1d7e57aa55817448.ViewResolver",
+      "hash": "374a1994046bac9f6228b4843cb32393ef40554df9bd9907a702d098a2987bde",
+      "block_height": 149991980,
+      "aliases": {
+        "emulator": "f8d6e0586b0a20c7",
+        "mainnet": "1d7e57aa55817448",
+        "testnet": "631e88ae7f1d7c20"
+      }
+    }
+  }
 }
