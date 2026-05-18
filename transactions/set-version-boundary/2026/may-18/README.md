@@ -14,3 +14,9 @@ Version to set: `v0.49.0-rc.1`
 3. [Site](https://flow-multisig.vercel.app/mainnet) submits the transaction
 
 ## Result
+
+
+Failed Transaction: https://www.flowscan.io/tx/b38aa43bdbd898c98428a8e675b2f559a818882712f05ed710654b5cc0251ee0?tab=script
+Failed because block height was less than 1000 blocks out in the future.
+
+Successful Transaction: https://www.flowscan.io/tx/d9bdcf844677787488acea3a0940e63b3b9d1c6cdaa49f389d9b6319845ca5ff
