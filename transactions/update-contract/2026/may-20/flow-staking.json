@@ -1,0 +1,509 @@
+{
+  "networks": {
+    "emulator": "127.0.0.1:3569",
+    "mainnet": "access.mainnet.nodes.onflow.org:9000",
+    "testnet": "access.devnet.nodes.onflow.org:9000"
+  },
+  "accounts": {
+    "jan": {
+      "address": "8624b52f9ddcd04a",
+      "keys": [
+        {
+          "type": "google-kms",
+          "index": 5,
+          "signatureAlgorithm": "ECDSA_P256",
+          "hashAlgorithm": "SHA2_256",
+          "context": {
+            "resourceName": "projects/dl-flow-admin/locations/us/keyRings/flow-service-account/cryptoKeys/dapperlabs_1/cryptoKeyVersions/1"
+          },
+          "resourceID": "projects/dl-flow-admin/locations/us/keyRings/flow-service-account/cryptoKeys/dapperlabs_1/cryptoKeyVersions/1"
+        }
+      ],
+      "chain": "flow-mainnet"
+    },
+    "janez": {
+      "address": "8624b52f9ddcd04a",
+      "keys": [
+        {
+          "type": "google-kms",
+          "index": 5,
+          "signatureAlgorithm": "ECDSA_P256",
+          "hashAlgorithm": "SHA2_256",
+          "context": {
+            "resourceName": "projects/dl-flow-admin/locations/us/keyRings/flow-service-account/cryptoKeys/dapperlabs_1/cryptoKeyVersions/1"
+          },
+          "resourceID": "projects/dl-flow-admin/locations/us/keyRings/flow-service-account/cryptoKeys/dapperlabs_1/cryptoKeyVersions/1"
+        }
+      ],
+      "chain": "flow-mainnet"
+    },
+    "alex": {
+      "address": "8624b52f9ddcd04a",
+      "keys": [
+        {
+          "type": "google-kms",
+          "index": 5,
+          "signatureAlgorithm": "ECDSA_P256",
+          "hashAlgorithm": "SHA2_256",
+          "context": {
+            "resourceName": "projects/dl-flow-admin/locations/us/keyRings/flow-service-account/cryptoKeys/dapperlabs_1/cryptoKeyVersions/1"
+          },
+          "resourceID": "projects/dl-flow-admin/locations/us/keyRings/flow-service-account/cryptoKeys/dapperlabs_1/cryptoKeyVersions/1"
+        }
+      ],
+      "chain": "flow-mainnet"
+    },
+    "kan": {
+      "address": "8624b52f9ddcd04a",
+      "keys": [
+        {
+          "type": "google-kms",
+          "index": 6,
+          "signatureAlgorithm": "ECDSA_P256",
+          "hashAlgorithm": "SHA2_256",
+          "context": {
+            "resourceName": "projects/dl-flow-admin/locations/us/keyRings/flow-service-account/cryptoKeys/dapperlabs_2/cryptoKeyVersions/1"
+          },
+          "resourceID": "projects/dl-flow-admin/locations/us/keyRings/flow-service-account/cryptoKeys/dapperlabs_2/cryptoKeyVersions/1"
+        }
+      ],
+      "chain": "flow-mainnet"
+    },
+    "vishal": {
+      "address": "8624b52f9ddcd04a",
+      "keys": [
+        {
+          "type": "google-kms",
+          "index": 6,
+          "signatureAlgorithm": "ECDSA_P256",
+          "hashAlgorithm": "SHA2_256",
+          "context": {
+            "resourceName": "projects/dl-flow-admin/locations/us/keyRings/flow-service-account/cryptoKeys/dapperlabs_2/cryptoKeyVersions/1"
+          },
+          "resourceID": "projects/dl-flow-admin/locations/us/keyRings/flow-service-account/cryptoKeys/dapperlabs_2/cryptoKeyVersions/1"
+        }
+      ],
+      "chain": "flow-mainnet"
+    },
+    "peter": {
+      "address": "8624b52f9ddcd04a",
+      "keys": [
+        {
+          "type": "google-kms",
+          "index": 7,
+          "signatureAlgorithm": "ECDSA_P256",
+          "hashAlgorithm": "SHA2_256",
+          "context": {
+            "resourceName": "projects/dl-flow-admin/locations/us/keyRings/flow-service-account/cryptoKeys/dapperlabs_3/cryptoKeyVersions/1"
+          },
+          "resourceID": "projects/dl-flow-admin/locations/us/keyRings/flow-service-account/cryptoKeys/dapperlabs_3/cryptoKeyVersions/1"
+        }
+      ],
+      "chain": "flow-mainnet"
+    },
+    "find": {
+      "address": "8624b52f9ddcd04a",
+      "keys": [
+        {
+          "type": "google-kms",
+          "index": 8,
+          "signatureAlgorithm": "ECDSA_P256",
+          "hashAlgorithm": "SHA2_256",
+          "resourceID": "projects/bjartek/locations/europe-north1/keyRings/flow/cryptoKeys/flow/cryptoKeyVersions/1"
+        }
+      ],
+      "chain": "flow-mainnet"
+    },
+    "bluesign": {
+      "address": "8624b52f9ddcd04a",
+      "keys": [
+        {
+          "type": "google-kms",
+          "index": 10,
+          "signatureAlgorithm": "ECDSA_P256",
+          "hashAlgorithm": "SHA2_256",
+          "resourceID": "projects/flow-352513/locations/us-east1/keyRings/flow/cryptoKeys/hc/cryptoKeyVersions/1"
+        }
+      ],
+      "chain": "flow-mainnet"
+    },
+    "layne": {
+      "address": "8624b52f9ddcd04a",
+      "keys": [
+        {
+          "type": "google-kms",
+          "index": 11,
+          "signatureAlgorithm": "ECDSA_P256",
+          "hashAlgorithm": "SHA2_256",
+          "context": {
+            "resourceName": "projects/flow-service-account-key/locations/global/keyRings/flow-service-account-signer-LL/cryptoKeys/flow-service-account-signer-LL/cryptoKeyVersions/1"
+          },
+          "resourceID": "projects/flow-service-account-key/locations/global/keyRings/flow-service-account-signer-LL/cryptoKeys/flow-service-account-signer-LL/cryptoKeyVersions/1"
+        }
+      ],
+      "chain": "flow-mainnet"
+    },
+    "contract-admin": {
+      "address": "8d0f8df62029f75a",
+      "keys": [
+        {
+          "type": "google-kms",
+          "index": 0,
+          "signatureAlgorithm": "ECDSA_P256",
+          "hashAlgorithm": "SHA2_256",
+          "context": {
+            "resourceName": "projects/dl-flow/locations/global/keyRings/mainnet/cryptoKeys/contract-admin/cryptoKeyVersions/1"
+          },
+          "resourceID": "projects/dl-flow/locations/global/keyRings/mainnet/cryptoKeys/contract-admin/cryptoKeyVersions/1"
+        }
+      ],
+      "chain": "flow-mainnet"
+    },
+    "flow-fees": {
+      "address": "f919ee77447b7497",
+      "keys": [
+        {
+          "type": "google-kms",
+          "index": 0,
+          "signatureAlgorithm": "ECDSA_P256",
+          "hashAlgorithm": "SHA2_256",
+          "context": {
+            "resourceName": "projects/dl-flow/locations/global/keyRings/mainnet/cryptoKeys/service-account/cryptoKeyVersions/1"
+          },
+          "resourceID": "projects/dl-flow/locations/global/keyRings/mainnet/cryptoKeys/service-account/cryptoKeyVersions/1"
+        }
+      ],
+      "chain": "flow-mainnet"
+    },
+    "locked-token": {
+      "address": "8d0e87b65159ae63",
+      "keys": [
+        {
+          "type": "google-kms",
+          "index": 0,
+          "signatureAlgorithm": "ECDSA_P256",
+          "hashAlgorithm": "SHA2_256",
+          "context": {
+            "resourceName": "projects/dl-flow/locations/global/keyRings/mainnet/cryptoKeys/token-admin/cryptoKeyVersions/1"
+          },
+          "resourceID": "projects/dl-flow/locations/global/keyRings/mainnet/cryptoKeys/token-admin/cryptoKeyVersions/1"
+        }
+      ],
+      "chain": "flow-mainnet"
+    }
+  },
+  "contracts": {},
+  "deployments": {},
+  "dependencies": {
+    "Burner": {
+      "source": "mainnet://f233dcee88fe0abe.Burner",
+      "hash": "71af18e227984cd434a3ad00bb2f3618b76482842bae920ee55662c37c8bf331",
+      "block_height": 149991980,
+      "aliases": {
+        "emulator": "f8d6e0586b0a20c7",
+        "mainnet": "f233dcee88fe0abe",
+        "testnet": "9a0766d93b6608b7"
+      }
+    },
+    "FlowClusterQC": {
+      "source": "mainnet://8624b52f9ddcd04a.FlowClusterQC",
+      "hash": "acbff1781e59dfb1026966565bbc999e4acfc72c50e8418f6e66380c7c37dd98",
+      "block_height": 149991980,
+      "aliases": {
+        "emulator": "f8d6e0586b0a20c7",
+        "mainnet": "8624b52f9ddcd04a",
+        "testnet": "9eca2b38b18b5dfe"
+      }
+    },
+    "FlowDKG": {
+      "source": "mainnet://8624b52f9ddcd04a.FlowDKG",
+      "hash": "31fd468d54da652e5b1a94addb2101a16ee6ee35d46828fb035b9a96d91962d8",
+      "block_height": 149991980,
+      "aliases": {
+        "emulator": "f8d6e0586b0a20c7",
+        "mainnet": "8624b52f9ddcd04a",
+        "testnet": "9eca2b38b18b5dfe"
+      }
+    },
+    "FlowEpoch": {
+      "source": "mainnet://8624b52f9ddcd04a.FlowEpoch",
+      "hash": "edde990109372365dcb48fbba0cfdab7b68d403f44c2708bc159352003754b8b",
+      "block_height": 149991980,
+      "aliases": {
+        "emulator": "f8d6e0586b0a20c7",
+        "mainnet": "8624b52f9ddcd04a",
+        "testnet": "9eca2b38b18b5dfe"
+      }
+    },
+    "FlowFees": {
+      "source": "mainnet://f919ee77447b7497.FlowFees",
+      "hash": "341cc0f3cc847d6b787c390133f6a5e6c867c111784f09c5c0083c47f2f1df64",
+      "block_height": 149991980,
+      "aliases": {
+        "emulator": "e5a8b7f23e8b548f",
+        "mainnet": "f919ee77447b7497",
+        "testnet": "912d5440f7e3769e"
+      }
+    },
+    "FlowIDTableStaking": {
+      "source": "mainnet://8624b52f9ddcd04a.FlowIDTableStaking",
+      "hash": "ffc626220f7f057b94d22df2f4f2acb3df71ea7e4ed4918dfe634aaecbff6407",
+      "block_height": 149991980,
+      "aliases": {
+        "emulator": "f8d6e0586b0a20c7",
+        "mainnet": "8624b52f9ddcd04a",
+        "testnet": "9eca2b38b18b5dfe"
+      }
+    },
+    "FlowStorageFees": {
+      "source": "mainnet://e467b9dd11fa00df.FlowStorageFees",
+      "hash": "a92c26fb2ea59725441fa703aa4cd811e0fc56ac73d649a8e12c1e72b67a8473",
+      "block_height": 149991980,
+      "aliases": {
+        "emulator": "f8d6e0586b0a20c7",
+        "mainnet": "e467b9dd11fa00df",
+        "testnet": "8c5303eaa26202d6"
+      }
+    },
+    "FlowToken": {
+      "source": "mainnet://1654653399040a61.FlowToken",
+      "hash": "f82389e2412624ffa439836b00b42e6605b0c00802a4e485bc95b8930a7eac38",
+      "block_height": 149991980,
+      "aliases": {
+        "emulator": "0ae53cb6e3f42a79",
+        "mainnet": "1654653399040a61",
+        "testnet": "7e60df042a9c0868"
+      }
+    },
+    "FungibleToken": {
+      "source": "mainnet://f233dcee88fe0abe.FungibleToken",
+      "hash": "3b04b3191e0c5d4d9ee3ce9c671b11985d29bf2732a5721b526cc8523c536f8f",
+      "block_height": 149991980,
+      "aliases": {
+        "emulator": "ee82856bf20e2aa6",
+        "mainnet": "f233dcee88fe0abe",
+        "testnet": "9a0766d93b6608b7"
+      }
+    },
+    "FungibleTokenMetadataViews": {
+      "source": "mainnet://f233dcee88fe0abe.FungibleTokenMetadataViews",
+      "hash": "70477f80fd7678466c224507e9689f68f72a9e697128d5ea54d19961ec856b3c",
+      "block_height": 149991980,
+      "aliases": {
+        "emulator": "ee82856bf20e2aa6",
+        "mainnet": "f233dcee88fe0abe",
+        "testnet": "9a0766d93b6608b7"
+      }
+    },
+    "LockedTokens": {
+      "source": "mainnet://8d0e87b65159ae63.LockedTokens",
+      "hash": "868d9b11e9fdeb6ecd4d14c2815fa59b5de18a43fac6697a6c8b52711716b25f",
+      "block_height": 149991980,
+      "aliases": {
+        "mainnet": "8d0e87b65159ae63"
+      }
+    },
+    "MetadataViews": {
+      "source": "mainnet://1d7e57aa55817448.MetadataViews",
+      "hash": "b290b7906d901882b4b62e596225fb2f10defb5eaaab4a09368f3aee0e9c18b1",
+      "block_height": 149991980,
+      "aliases": {
+        "emulator": "f8d6e0586b0a20c7",
+        "mainnet": "1d7e57aa55817448",
+        "testnet": "631e88ae7f1d7c20"
+      }
+    },
+    "NonFungibleToken": {
+      "source": "mainnet://1d7e57aa55817448.NonFungibleToken",
+      "hash": "a258de1abddcdb50afc929e74aca87161d0083588f6abf2b369672e64cf4a403",
+      "block_height": 149991980,
+      "aliases": {
+        "emulator": "f8d6e0586b0a20c7",
+        "mainnet": "1d7e57aa55817448",
+        "testnet": "631e88ae7f1d7c20"
+      }
+    },
+    "StakingProxy": {
+      "source": "mainnet://62430cf28c26d095.StakingProxy",
+      "hash": "114b6812c90a9f615c37b3e1384472b256ae179d7ed50dadd0e71ae85e11363d",
+      "block_height": 149991980,
+      "aliases": {
+        "mainnet": "62430cf28c26d095"
+      }
+    },
+    "ViewResolver": {
+      "source": "mainnet://1d7e57aa55817448.ViewResolver",
+      "hash": "374a1994046bac9f6228b4843cb32393ef40554df9bd9907a702d098a2987bde",
+      "block_height": 149991980,
+      "aliases": {
+        "emulator": "f8d6e0586b0a20c7",
+        "mainnet": "1d7e57aa55817448",
+        "testnet": "631e88ae7f1d7c20"
+      }
+    },
+    "EVM": {
+      "source": "mainnet://e467b9dd11fa00df.EVM",
+      "hash": "02fdf06350d1aa9eaff70bb355968e46160a226ded80daf229330e7a1d8d8c2c",
+      "block_height": 150642343,
+      "aliases": {
+        "emulator": "f8d6e0586b0a20c7",
+        "mainnet": "e467b9dd11fa00df",
+        "testnet": "8c5303eaa26202d6"
+      }
+    },
+    "FlowEVMBridgeCustomAssociationTypes": {
+      "source": "mainnet://1e4aa0b87d10b141.FlowEVMBridgeCustomAssociationTypes",
+      "hash": "4651183c3f04f8c5faaa35106b3ab66060ce9868590adb33f3be1900c12ea196",
+      "block_height": 150641918,
+      "aliases": {
+        "mainnet": "1e4aa0b87d10b141"
+      }
+    },
+    "CrossVMMetadataViews": {
+      "source": "mainnet://1d7e57aa55817448.CrossVMMetadataViews",
+      "hash": "7e79b77b87c750de5b126ebd6fca517c2b905ac7f01c0428e9f3f82838c7f524",
+      "block_height": 150642229,
+      "aliases": {
+        "emulator": "f8d6e0586b0a20c7",
+        "mainnet": "1d7e57aa55817448",
+        "testnet": "631e88ae7f1d7c20"
+      }
+    },
+    "FlowEVMBridgeNFTEscrow": {
+      "source": "mainnet://1e4aa0b87d10b141.FlowEVMBridgeNFTEscrow",
+      "hash": "30257592838edfd4b72700f43bf0326f6903e879f82ac5ca549561d9863c6fe6",
+      "block_height": 152146087,
+      "aliases": {
+        "mainnet": "1e4aa0b87d10b141"
+      }
+    },
+    "FlowEVMBridgeConfig": {
+      "source": "mainnet://1e4aa0b87d10b141.FlowEVMBridgeConfig",
+      "hash": "3c09f74467f22dac7bc02b2fdf462213b2f8ddfb513cd890ad0c2a7016507be3",
+      "block_height": 152146087,
+      "aliases": {
+        "mainnet": "1e4aa0b87d10b141"
+      }
+    },
+    "FlowEVMBridgeHandlerInterfaces": {
+      "source": "mainnet://1e4aa0b87d10b141.FlowEVMBridgeHandlerInterfaces",
+      "hash": "e32154f2a556e53328a0fce75f1e98b57eefd2a8cb626e803b7d39d452691444",
+      "block_height": 152146087,
+      "aliases": {
+        "mainnet": "1e4aa0b87d10b141"
+      }
+    },
+    "IEVMBridgeNFTMinter": {
+      "source": "mainnet://1e4aa0b87d10b141.IEVMBridgeNFTMinter",
+      "hash": "e2ad15c495ad7fbf4ab744bccaf8c4334dfb843b50f09e9681ce9a5067dbf049",
+      "block_height": 152146087,
+      "aliases": {
+        "mainnet": "1e4aa0b87d10b141"
+      }
+    },
+    "SerializeMetadata": {
+      "source": "mainnet://1e4aa0b87d10b141.SerializeMetadata",
+      "hash": "e9f84ea07e29cae05ee0d9264596eb281c291fc1090a10ce3de1a042b4d671da",
+      "block_height": 152146087,
+      "aliases": {
+        "mainnet": "1e4aa0b87d10b141"
+      }
+    },
+    "IEVMBridgeTokenMinter": {
+      "source": "mainnet://1e4aa0b87d10b141.IEVMBridgeTokenMinter",
+      "hash": "0ef39c6cb476f0eea2c835900b6a5a83c1ed5f4dbaaeb29cb68ad52c355a40e6",
+      "block_height": 152146087,
+      "aliases": {
+        "mainnet": "1e4aa0b87d10b141"
+      }
+    },
+    "FlowEVMBridgeTemplates": {
+      "source": "mainnet://1e4aa0b87d10b141.FlowEVMBridgeTemplates",
+      "hash": "78b8115eb0ef2be4583acbe655f0c5128c39712084ec23ce47820ea154141898",
+      "block_height": 152146087,
+      "aliases": {
+        "mainnet": "1e4aa0b87d10b141"
+      }
+    },
+    "FlowEVMBridgeTokenEscrow": {
+      "source": "mainnet://1e4aa0b87d10b141.FlowEVMBridgeTokenEscrow",
+      "hash": "49df9c8e5d0dd45abd5bf94376d3b9045299b3c2a5ba6caf48092c916362358d",
+      "block_height": 152146087,
+      "aliases": {
+        "mainnet": "1e4aa0b87d10b141"
+      }
+    },
+    "CrossVMToken": {
+      "source": "mainnet://1e4aa0b87d10b141.CrossVMToken",
+      "hash": "9f055ad902e7de5619a2b0f2dc91826ac9c4f007afcd6df9f5b8229c0ca94531",
+      "block_height": 152146087,
+      "aliases": {
+        "mainnet": "1e4aa0b87d10b141"
+      }
+    },
+    "ICrossVM": {
+      "source": "mainnet://1e4aa0b87d10b141.ICrossVM",
+      "hash": "b95c36eef516da7cd4d2f507cd48288cc16b1d6605ff03b6fcd18161ff2d82e7",
+      "block_height": 152146087,
+      "aliases": {
+        "mainnet": "1e4aa0b87d10b141"
+      }
+    },
+    "IFlowEVMTokenBridge": {
+      "source": "mainnet://1e4aa0b87d10b141.IFlowEVMTokenBridge",
+      "hash": "87f7d752da8446e73acd3bf4aa17fe5c279d9641b7976c56561af01bc5240ea4",
+      "block_height": 152146087,
+      "aliases": {
+        "mainnet": "1e4aa0b87d10b141"
+      }
+    },
+    "IBridgePermissions": {
+      "source": "mainnet://1e4aa0b87d10b141.IBridgePermissions",
+      "hash": "431a51a6cca87773596f79832520b19499fe614297eaef347e49383f2ae809af",
+      "block_height": 152146087,
+      "aliases": {
+        "mainnet": "1e4aa0b87d10b141"
+      }
+    },
+    "CrossVMNFT": {
+      "source": "mainnet://1e4aa0b87d10b141.CrossVMNFT",
+      "hash": "8fe69f487164caffedab68b52a584fa7aa4d54a0061f4f211998c73a619fbea5",
+      "block_height": 152146087,
+      "aliases": {
+        "mainnet": "1e4aa0b87d10b141"
+      }
+    },
+    "IFlowEVMNFTBridge": {
+      "source": "mainnet://1e4aa0b87d10b141.IFlowEVMNFTBridge",
+      "hash": "2d495e896510a10bbc7307739aca9341633cac4c7fe7dad32488a81f90a39dd9",
+      "block_height": 152146087,
+      "aliases": {
+        "mainnet": "1e4aa0b87d10b141"
+      }
+    },
+    "FlowEVMBridge": {
+      "source": "mainnet://1e4aa0b87d10b141.FlowEVMBridge",
+      "hash": "9cd0f897b19c0394e9042225e5758d6ae529a0cce19b19ae05bde8e0f14aa10b",
+      "block_height": 152146087,
+      "aliases": {
+        "mainnet": "1e4aa0b87d10b141"
+      }
+    },
+    "FlowEVMBridgeUtils": {
+      "source": "mainnet://1e4aa0b87d10b141.FlowEVMBridgeUtils",
+      "hash": "634ed6dde03eb8f027368aa7861889ce1f5099160903493a7a39a86c9afea14b",
+      "block_height": 152146087,
+      "aliases": {
+        "mainnet": "1e4aa0b87d10b141"
+      }
+    },
+    "FlowEVMBridgeCustomAssociations": {
+      "source": "mainnet://1e4aa0b87d10b141.FlowEVMBridgeCustomAssociations",
+      "hash": "8f999d65c8f584eab06eb26a10f1f41a31c2bbf1db1bb152988e9d9313c97fe7",
+      "block_height": 152146087,
+      "aliases": {
+        "mainnet": "1e4aa0b87d10b141"
+      }
+    }
+  }
+}

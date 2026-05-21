@@ -1,4 +1,4 @@
-# Upgrade EVM Bridge related contracts and the LockedTokens contract.
+# Upgrade EVM Bridge related contracts, the LockedTokens contract and the FlowFees contract.
 
 Transactions to upgrade the following contracts:
 
@@ -10,16 +10,19 @@ Transactions to upgrade the following contracts:
 6. FlowEVMBridgeHandlers
 7. FlowEVMBridgeAccessor
 8. LockedTokens
+9. FlowFees
 
 ## Signer:
 
 1. For all FlowEVMBridge* contract, the signer is the EVM Bridge Account - `0x1e4aa0b87d10b141`.
-2. For LockedToken contract, the signer is the `0x8d0e87b65159ae63`
+2. For LockedToken contract, the signer is the `0x8d0e87b65159ae63` account.
+3. For FlowFees contract, the signer is `0xf919ee77447b7497` account.
 
 
 ## Diffs
 1. For FlowEVMBridge* contracts see this PR: https://github.com/onflow/flow-evm-bridge/pull/211
 2. For LockedToken contract, see this PR: https://github.com/onflow/flow-core-contracts/pull/604/changes#diff-5dd4307bc3add5274c52ffe0077c3c220c556da949b8b40e7d497e202e4f6966
+3. For FlowFees, see this PR: https://github.com/onflow/flow-core-contracts/pull/604/changes#diff-ad5b2b291a63223cdfb86944755cf77a8aa83134d4d5bfc500fe6061b63b2c54
 
 ## Steps to update
 
@@ -55,6 +58,10 @@ Transactions to upgrade the following contracts:
     i. `wget https://raw.githubusercontent.com/onflow/flow-core-contracts/refs/heads/master/contracts/LockedTokens.cdc`
     ii. `flow accounts update-contract ./LockedTokens.cdc -n mainnet -f flow-staking.json --signer 0x8d0e87b65159ae63`
 
+9. FlowFees
+   i. `wget https://raw.githubusercontent.com/onflow/flow-core-contracts/refs/heads/master/contracts/FlowFees.cdc`
+   ii. `flow accounts update-contract ./FlowFees.cdc -n mainnet -f flow-staking.json --signer 0xf919ee77447b7497`
+
 ___
 
 ## Results
@@ -75,6 +82,8 @@ ___
     - https://www.flowscan.io/tx/809506950cbf5b0f1ae01310f67ae99f6e15a97b3825b838c2c8fb7db8630f9a
 8. LockedTokens:
     - https://www.flowscan.io/tx/fd2b696227d97feaa30daaf37ae3b48f1d61d59445ae95cb183e591e7efc5757
+9. FlowFees:
+    -
 
 
 
