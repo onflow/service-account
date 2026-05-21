@@ -102,7 +102,7 @@
       "chain": "flow-mainnet"
     },
     "find": {
-			"address": "8624b52f9ddcd04a",
+      "address": "8624b52f9ddcd04a",
       "keys": [
         {
           "type": "google-kms",
@@ -146,48 +146,48 @@
     "contract-admin": {
       "address": "8d0f8df62029f75a",
       "keys": [
-          {
-              "type": "google-kms",
-              "index": 0,
-              "signatureAlgorithm": "ECDSA_P256",
-              "hashAlgorithm": "SHA2_256",
-              "context": {
-                "resourceName": "projects/dl-flow/locations/global/keyRings/mainnet/cryptoKeys/contract-admin/cryptoKeyVersions/1"
-              },
-              "resourceID": "projects/dl-flow/locations/global/keyRings/mainnet/cryptoKeys/contract-admin/cryptoKeyVersions/1"
-          }
+        {
+          "type": "google-kms",
+          "index": 0,
+          "signatureAlgorithm": "ECDSA_P256",
+          "hashAlgorithm": "SHA2_256",
+          "context": {
+            "resourceName": "projects/dl-flow/locations/global/keyRings/mainnet/cryptoKeys/contract-admin/cryptoKeyVersions/1"
+          },
+          "resourceID": "projects/dl-flow/locations/global/keyRings/mainnet/cryptoKeys/contract-admin/cryptoKeyVersions/1"
+        }
       ],
       "chain": "flow-mainnet"
     },
     "flow-fees": {
       "address": "f919ee77447b7497",
       "keys": [
-          {
-              "type": "google-kms",
-              "index": 0,
-              "signatureAlgorithm": "ECDSA_P256",
-              "hashAlgorithm": "SHA2_256",
-              "context": {
-                "resourceName": "projects/dl-flow/locations/global/keyRings/mainnet/cryptoKeys/service-account/cryptoKeyVersions/1"
-              },
-              "resourceID": "projects/dl-flow/locations/global/keyRings/mainnet/cryptoKeys/service-account/cryptoKeyVersions/1"
-          }
+        {
+          "type": "google-kms",
+          "index": 0,
+          "signatureAlgorithm": "ECDSA_P256",
+          "hashAlgorithm": "SHA2_256",
+          "context": {
+            "resourceName": "projects/dl-flow/locations/global/keyRings/mainnet/cryptoKeys/service-account/cryptoKeyVersions/1"
+          },
+          "resourceID": "projects/dl-flow/locations/global/keyRings/mainnet/cryptoKeys/service-account/cryptoKeyVersions/1"
+        }
       ],
       "chain": "flow-mainnet"
     },
     "locked-token": {
       "address": "8d0e87b65159ae63",
       "keys": [
-          {
-              "type": "google-kms",
-              "index": 0,
-              "signatureAlgorithm": "ECDSA_P256",
-              "hashAlgorithm": "SHA2_256",
-              "context": {
-                "resourceName": "projects/dl-flow/locations/global/keyRings/mainnet/cryptoKeys/token-admin/cryptoKeyVersions/1"
-              },
-              "resourceID": "projects/dl-flow/locations/global/keyRings/mainnet/cryptoKeys/token-admin/cryptoKeyVersions/1"
-          }
+        {
+          "type": "google-kms",
+          "index": 0,
+          "signatureAlgorithm": "ECDSA_P256",
+          "hashAlgorithm": "SHA2_256",
+          "context": {
+            "resourceName": "projects/dl-flow/locations/global/keyRings/mainnet/cryptoKeys/token-admin/cryptoKeyVersions/1"
+          },
+          "resourceID": "projects/dl-flow/locations/global/keyRings/mainnet/cryptoKeys/token-admin/cryptoKeyVersions/1"
+        }
       ],
       "chain": "flow-mainnet"
     }
@@ -367,6 +367,142 @@
         "emulator": "f8d6e0586b0a20c7",
         "mainnet": "1d7e57aa55817448",
         "testnet": "631e88ae7f1d7c20"
+      }
+    },
+    "FlowEVMBridgeNFTEscrow": {
+      "source": "mainnet://1e4aa0b87d10b141.FlowEVMBridgeNFTEscrow",
+      "hash": "30257592838edfd4b72700f43bf0326f6903e879f82ac5ca549561d9863c6fe6",
+      "block_height": 152146087,
+      "aliases": {
+        "mainnet": "1e4aa0b87d10b141"
+      }
+    },
+    "FlowEVMBridgeConfig": {
+      "source": "mainnet://1e4aa0b87d10b141.FlowEVMBridgeConfig",
+      "hash": "3c09f74467f22dac7bc02b2fdf462213b2f8ddfb513cd890ad0c2a7016507be3",
+      "block_height": 152146087,
+      "aliases": {
+        "mainnet": "1e4aa0b87d10b141"
+      }
+    },
+    "FlowEVMBridgeHandlerInterfaces": {
+      "source": "mainnet://1e4aa0b87d10b141.FlowEVMBridgeHandlerInterfaces",
+      "hash": "e32154f2a556e53328a0fce75f1e98b57eefd2a8cb626e803b7d39d452691444",
+      "block_height": 152146087,
+      "aliases": {
+        "mainnet": "1e4aa0b87d10b141"
+      }
+    },
+    "IEVMBridgeNFTMinter": {
+      "source": "mainnet://1e4aa0b87d10b141.IEVMBridgeNFTMinter",
+      "hash": "e2ad15c495ad7fbf4ab744bccaf8c4334dfb843b50f09e9681ce9a5067dbf049",
+      "block_height": 152146087,
+      "aliases": {
+        "mainnet": "1e4aa0b87d10b141"
+      }
+    },
+    "SerializeMetadata": {
+      "source": "mainnet://1e4aa0b87d10b141.SerializeMetadata",
+      "hash": "e9f84ea07e29cae05ee0d9264596eb281c291fc1090a10ce3de1a042b4d671da",
+      "block_height": 152146087,
+      "aliases": {
+        "mainnet": "1e4aa0b87d10b141"
+      }
+    },
+    "IEVMBridgeTokenMinter": {
+      "source": "mainnet://1e4aa0b87d10b141.IEVMBridgeTokenMinter",
+      "hash": "0ef39c6cb476f0eea2c835900b6a5a83c1ed5f4dbaaeb29cb68ad52c355a40e6",
+      "block_height": 152146087,
+      "aliases": {
+        "mainnet": "1e4aa0b87d10b141"
+      }
+    },
+    "FlowEVMBridgeTemplates": {
+      "source": "mainnet://1e4aa0b87d10b141.FlowEVMBridgeTemplates",
+      "hash": "78b8115eb0ef2be4583acbe655f0c5128c39712084ec23ce47820ea154141898",
+      "block_height": 152146087,
+      "aliases": {
+        "mainnet": "1e4aa0b87d10b141"
+      }
+    },
+    "FlowEVMBridgeTokenEscrow": {
+      "source": "mainnet://1e4aa0b87d10b141.FlowEVMBridgeTokenEscrow",
+      "hash": "49df9c8e5d0dd45abd5bf94376d3b9045299b3c2a5ba6caf48092c916362358d",
+      "block_height": 152146087,
+      "aliases": {
+        "mainnet": "1e4aa0b87d10b141"
+      }
+    },
+    "CrossVMToken": {
+      "source": "mainnet://1e4aa0b87d10b141.CrossVMToken",
+      "hash": "9f055ad902e7de5619a2b0f2dc91826ac9c4f007afcd6df9f5b8229c0ca94531",
+      "block_height": 152146087,
+      "aliases": {
+        "mainnet": "1e4aa0b87d10b141"
+      }
+    },
+    "ICrossVM": {
+      "source": "mainnet://1e4aa0b87d10b141.ICrossVM",
+      "hash": "b95c36eef516da7cd4d2f507cd48288cc16b1d6605ff03b6fcd18161ff2d82e7",
+      "block_height": 152146087,
+      "aliases": {
+        "mainnet": "1e4aa0b87d10b141"
+      }
+    },
+    "IFlowEVMTokenBridge": {
+      "source": "mainnet://1e4aa0b87d10b141.IFlowEVMTokenBridge",
+      "hash": "87f7d752da8446e73acd3bf4aa17fe5c279d9641b7976c56561af01bc5240ea4",
+      "block_height": 152146087,
+      "aliases": {
+        "mainnet": "1e4aa0b87d10b141"
+      }
+    },
+    "IBridgePermissions": {
+      "source": "mainnet://1e4aa0b87d10b141.IBridgePermissions",
+      "hash": "431a51a6cca87773596f79832520b19499fe614297eaef347e49383f2ae809af",
+      "block_height": 152146087,
+      "aliases": {
+        "mainnet": "1e4aa0b87d10b141"
+      }
+    },
+    "CrossVMNFT": {
+      "source": "mainnet://1e4aa0b87d10b141.CrossVMNFT",
+      "hash": "8fe69f487164caffedab68b52a584fa7aa4d54a0061f4f211998c73a619fbea5",
+      "block_height": 152146087,
+      "aliases": {
+        "mainnet": "1e4aa0b87d10b141"
+      }
+    },
+    "IFlowEVMNFTBridge": {
+      "source": "mainnet://1e4aa0b87d10b141.IFlowEVMNFTBridge",
+      "hash": "2d495e896510a10bbc7307739aca9341633cac4c7fe7dad32488a81f90a39dd9",
+      "block_height": 152146087,
+      "aliases": {
+        "mainnet": "1e4aa0b87d10b141"
+      }
+    },
+    "FlowEVMBridge": {
+      "source": "mainnet://1e4aa0b87d10b141.FlowEVMBridge",
+      "hash": "9cd0f897b19c0394e9042225e5758d6ae529a0cce19b19ae05bde8e0f14aa10b",
+      "block_height": 152146087,
+      "aliases": {
+        "mainnet": "1e4aa0b87d10b141"
+      }
+    },
+    "FlowEVMBridgeUtils": {
+      "source": "mainnet://1e4aa0b87d10b141.FlowEVMBridgeUtils",
+      "hash": "634ed6dde03eb8f027368aa7861889ce1f5099160903493a7a39a86c9afea14b",
+      "block_height": 152146087,
+      "aliases": {
+        "mainnet": "1e4aa0b87d10b141"
+      }
+    },
+    "FlowEVMBridgeCustomAssociations": {
+      "source": "mainnet://1e4aa0b87d10b141.FlowEVMBridgeCustomAssociations",
+      "hash": "8f999d65c8f584eab06eb26a10f1f41a31c2bbf1db1bb152988e9d9313c97fe7",
+      "block_height": 152146087,
+      "aliases": {
+        "mainnet": "1e4aa0b87d10b141"
       }
     }
   }
