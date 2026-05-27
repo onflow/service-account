@@ -83,8 +83,4 @@ ___
 8. LockedTokens:
     - https://www.flowscan.io/tx/fd2b696227d97feaa30daaf37ae3b48f1d61d59445ae95cb183e591e7efc5757
 9. FlowFees:
-    -
-
-
-
-
+    - https://www.flowscan.io/tx/1fe387d45a0ade030a4cee5043835a8dfb45e65037ff44ca33266dc68bb30cef
