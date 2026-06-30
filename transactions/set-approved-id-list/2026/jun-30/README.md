@@ -16,7 +16,7 @@ Result: A.8624b52f9ddcd04a.FlowIDTableStaking.NodeInfo(id: "d6a3a5c528bbb598672e
 
 ## Results
 
-
+https://www.flowscan.io/tx/9f1217b7a0d46e8522df16d59297cc462a4ab6613244e230bac504dea299cf7e
 
 ## Verification
 
@@ -26,7 +26,7 @@ wget https://raw.githubusercontent.com/onflow/flow-core-contracts/refs/heads/mas
 flow scripts execute get_approved_nodes.cdc -n mainnet | grep d6a3a5c528bbb598672e0d57308bc1ad1999f8bc82ee037a9bc6875890d986ea
 ```
 
-Total count should be 336
+Total count should be 235
 ```shell
 flow scripts execute get_approved_nodes.cdc -n mainnet -o json | jq '.value| length'
 ```
