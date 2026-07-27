@@ -72,4 +72,4 @@ Transaction to execute: [set_execution_effort_weights.cdc](../../../../templates
 
 ## Result
 
-TBD
+Success: https://www.flowscan.io/tx/4af17c348f11923ef5cecf829138e1f234f63f95f3711f46a0eb4b014fbcbe9d?tab=script
