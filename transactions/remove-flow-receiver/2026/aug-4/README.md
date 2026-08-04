@@ -1,6 +1,6 @@
 # Remove Public FlowToken Receiver from the Metering Settings Account
 
-> Date: TBD
+> Date: August 4th 2026
 
 Removes the public FlowToken receiver capability (`/public/flowTokenReceiver`)
 from the metering settings account (`0xf426ff57ee8f6110`) and deletes its
@@ -55,7 +55,7 @@ The transaction logic can be tested against live mainnet state with
 multisig is needed):
 
 ```bash
-flow scripts execute transactions/remove-flow-receiver/2026/tbd/test_script.cdc --network mainnet
+flow scripts execute transactions/remove-flow-receiver/2026/aug-4/test_script.cdc --network mainnet
 ```
 
 ## Verification
