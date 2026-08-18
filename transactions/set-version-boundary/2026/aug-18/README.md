@@ -14,3 +14,5 @@ Version to set: `v0.51.0-rc.1`
 3. [Site](https://flow-multisig.vercel.app/mainnet) submits the transaction
 
 ## Result
+
+Transaction: https://www.flowscan.io/tx/c6da218dd05b23282412280151b18bef23c6ba18ebea8e5443220ef3c5bec7f1
