@@ -12,16 +12,6 @@
     "testnet": "access.devnet.nodes.onflow.org:9000"
   },
   "accounts": {
-    "jan": {
-      "address": "e467b9dd11fa00df",
-      "key": {
-        "type": "google-kms",
-        "index": 11,
-        "signatureAlgorithm": "ECDSA_P256",
-        "hashAlgorithm": "SHA2_256",
-        "resourceID": "projects/dl-flow-admin/locations/us/keyRings/flow-service-account/cryptoKeys/dapperlabs_1/cryptoKeyVersions/1"
-      }
-    },
     "janez": {
       "address": "e467b9dd11fa00df",
       "key": {
@@ -63,6 +53,16 @@
       }
     },
     "peter": {
+      "address": "e467b9dd11fa00df",
+      "key": {
+        "type": "google-kms",
+        "index": 13,
+        "signatureAlgorithm": "ECDSA_P256",
+        "hashAlgorithm": "SHA2_256",
+        "resourceID": "projects/dl-flow-admin/locations/us/keyRings/flow-service-account/cryptoKeys/dapperlabs_3/cryptoKeyVersions/1"
+      }
+    },
+    "jan": {
       "address": "e467b9dd11fa00df",
       "key": {
         "type": "google-kms",
