@@ -69,5 +69,5 @@ PR #8 diff (verified against on-chain code).
 
 ## Results
 
-1. FlowStorageFees: TBD
-2. FlowServiceAccount: TBD
+1. FlowStorageFees: https://www.flowscan.io/tx/c9d2c236a8cc11d5c82e1ba93a3e5421c7034ace495d68bda9c24956b09ce650
+2. FlowServiceAccount: https://www.flowscan.io/tx/bd89af78ac2d12da2b0ff0b07f64439c8e3c0dba38aa1f20d365400ca7abb5af
