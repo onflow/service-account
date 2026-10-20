@@ -3,7 +3,7 @@
 
 This transaction sets the height at which the height coordinated upgrade occurs on mainnet.
 
-Version to set: `v0.46.0-rc.1`
+Version to set: `v0.46.0-rc.2`
 
 ## Steps to multi-sign
 
