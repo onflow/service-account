@@ -340,6 +340,34 @@
         "mainnet": "1d7e57aa55817448",
         "testnet": "631e88ae7f1d7c20"
       }
+    },
+    "EVM": {
+      "source": "mainnet://e467b9dd11fa00df.EVM",
+      "hash": "02fdf06350d1aa9eaff70bb355968e46160a226ded80daf229330e7a1d8d8c2c",
+      "block_height": 150642343,
+      "aliases": {
+        "emulator": "f8d6e0586b0a20c7",
+        "mainnet": "e467b9dd11fa00df",
+        "testnet": "8c5303eaa26202d6"
+      }
+    },
+    "FlowEVMBridgeCustomAssociationTypes": {
+      "source": "mainnet://1e4aa0b87d10b141.FlowEVMBridgeCustomAssociationTypes",
+      "hash": "4651183c3f04f8c5faaa35106b3ab66060ce9868590adb33f3be1900c12ea196",
+      "block_height": 150641918,
+      "aliases": {
+        "mainnet": "1e4aa0b87d10b141"
+      }
+    },
+    "CrossVMMetadataViews": {
+      "source": "mainnet://1d7e57aa55817448.CrossVMMetadataViews",
+      "hash": "7e79b77b87c750de5b126ebd6fca517c2b905ac7f01c0428e9f3f82838c7f524",
+      "block_height": 150642229,
+      "aliases": {
+        "emulator": "f8d6e0586b0a20c7",
+        "mainnet": "1d7e57aa55817448",
+        "testnet": "631e88ae7f1d7c20"
+      }
     }
   }
 }
