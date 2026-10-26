@@ -399,4 +399,4 @@ Step 1 (service AddKey) transaction: 5d73b5d58cd563dc4c0242a30370a26815ba61827dd
 Step 2 (service smoke test) transaction: Skipped
 Step 3 (staking AddKey) transaction: 349be0469eab6b135055a6be2a79e2efec1cc789ff0d90b9c14be0af5efac578
 Step 4 (service GCP key revoke, idx 12) transaction: a24b2e3930085be55371943776718fc7329991f5576edadcb88174431f71302a
-Step 5 (staking GCP key revoke, idx 6) transaction: TBD
+Step 5 (staking GCP key revoke, idx 6) transaction: e0b9d4bb8ba2ad15467df3841406f97c453e0b7ec289652ee6108d36ea375b6a
