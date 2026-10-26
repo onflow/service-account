@@ -395,8 +395,8 @@ After seal, confirm staking idx 6 shows `Revoked: true` on FlowScan.
 
 ## Results
 
-Step 1 (service AddKey) transaction: TBD
-Step 2 (service smoke test) transaction: TBD
+Step 1 (service AddKey) transaction: 5d73b5d58cd563dc4c0242a30370a26815ba61827dd815ddfed5a05169cce8cf
+Step 2 (service smoke test) transaction: Skipped
 Step 3 (staking AddKey) transaction: TBD
-Step 4 (service GCP key revoke, idx 12) transaction: TBD
+Step 4 (service GCP key revoke, idx 12) transaction: a24b2e3930085be55371943776718fc7329991f5576edadcb88174431f71302a
 Step 5 (staking GCP key revoke, idx 6) transaction: TBD
