@@ -4,7 +4,7 @@
 
 ## Context
 
-Flow Foundation is migrating its three multisig signing keys from Google Cloud KMS to AWS KMS. The AWS-side infrastructure (three asymmetric KMS keys with per-slot IAM roles, admin-vs-signer separation, cross-slot isolation, CloudTrail-based `kms:Sign` alarm) is stood up in a separate internal infra repo.
+Flow Foundation is migrating its three multisig signing keys from Google Cloud KMS to AWS KMS.
 
 This ceremony is **slot 1 of three** — it adds Foundation key 1's new AWS KMS pubkey to the service account and staking account. The existing GCP-backed on-chain key currently held by this slot's signer stays live. We do not revoke anything in this ceremony.
 
