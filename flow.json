@@ -25,11 +25,11 @@
     "vishal": {
       "address": "e467b9dd11fa00df",
       "key": {
-        "type": "google-kms",
-        "index": 12,
+        "type": "aws-kms",
+        "index": 20,
         "signatureAlgorithm": "ECDSA_P256",
         "hashAlgorithm": "SHA2_256",
-        "resourceID": "projects/dl-flow-admin/locations/us/keyRings/flow-service-account/cryptoKeys/dapperlabs_2/cryptoKeyVersions/1"
+        "resourceID": "arn:aws:kms:us-east-2:200591809096:key/mrk-214252e743b743a296fdbb3b9f917392"
       }
     },
     "peter": {
