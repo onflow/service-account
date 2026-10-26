@@ -23,7 +23,9 @@ Transaction template: [add_keys.cdc](../../../../templates/add_keys.cdc)
 - Weight: `250.0`
 - Backing KMS key: `arn:aws:kms:us-east-2:200591809096:key/mrk-214252e743b743a296fdbb3b9f917392` (alias `alias/flow-foundation-key-1`)
 
-The pubkey will land at the next free index on each account. The actual indices are determined at transaction time.
+The pubkey will land at the next free index on each account:
+- **Service account**: index **20** (current highest active key is 19)
+- **Staking account**: index **12** (current highest active key is 11)
 
 ## Step 1 — AddKey on the service account
 
@@ -34,7 +36,7 @@ flow transactions build ./templates/add_keys.cdc \
   --network mainnet \
   --args-json "$(cat ./transactions/add-keys/2026/oct-26/arguments_service_account.json)" \
   --proposer 0xe467b9dd11fa00df \
-  --proposer-key-index 11 \
+  --proposer-key-index 12 \
   --authorizer 0xe467b9dd11fa00df \
   --payer 0xe467b9dd11fa00df \
   --gas-limit 500000 \
@@ -42,35 +44,35 @@ flow transactions build ./templates/add_keys.cdc \
   --save ./transactions/add-keys/2026/oct-26/service-oct-26-unsigned.rlp
 ```
 
-### Collect signatures (any combination totaling 1000 weight)
+### Collect signatures (vishal + peter + bluesign + layne = 4 × 250w = 1000w)
 
 ```sh
-# Signer 1
+# Signer 1 — vishal (GCP key, service idx 12; also proposer)
 flow transactions sign ./transactions/add-keys/2026/oct-26/service-oct-26-unsigned.rlp \
-  --signer <name> \
+  --signer vishal \
   --filter payload \
   --save ./transactions/add-keys/2026/oct-26/service-oct-26-sig-1.rlp
 
-# Signer 2
+# Signer 2 — peter (GCP key, service idx 13)
 flow transactions sign ./transactions/add-keys/2026/oct-26/service-oct-26-sig-1.rlp \
-  --signer <name> \
+  --signer peter \
   --filter payload \
   --save ./transactions/add-keys/2026/oct-26/service-oct-26-sig-2.rlp
 
-# Signer 3
+# Signer 3 — bluesign/Denniz (GCP key, service idx 18)
 flow transactions sign ./transactions/add-keys/2026/oct-26/service-oct-26-sig-2.rlp \
-  --signer <name> \
+  --signer bluesign \
   --filter payload \
   --save ./transactions/add-keys/2026/oct-26/service-oct-26-sig-3.rlp
 
-# Signer 4 (fourth signature closes the envelope)
+# Signer 4 — layne (GCP key, service idx 19; closes the envelope)
 flow transactions sign ./transactions/add-keys/2026/oct-26/service-oct-26-sig-3.rlp \
-  --signer <name> \
+  --signer layne \
   --filter payload \
   --save ./transactions/add-keys/2026/oct-26/service-oct-26-sig-complete.rlp
 ```
 
-The signing names come from `flow.json`. For this ceremony the signers are still using their existing GCP KMS keys (Foundation key 1's AWS entity doesn't exist on-chain yet, so can't sign for itself).
+All four signers use their existing GCP KMS keys — Foundation key 1's AWS entity doesn't exist on-chain yet, so can't sign for itself.
 
 ### Submit
 
@@ -82,7 +84,7 @@ flow transactions send-signed \
 
 ### Record the new index
 
-From the FlowScan transaction result, record the key index assigned to the new pubkey on the service account. That index is used in Step 2 as `--proposer-key-index` and in the `flow.json` update.
+The new pubkey will land at **index 20** on the service account. Confirm this from the FlowScan transaction result before proceeding to Step 2.
 
 ## Step 2 — Smoke-test sign on the service account (`hello.cdc`)
 
@@ -90,14 +92,14 @@ From the FlowScan transaction result, record the key index assigned to the new p
 
 ### Flip Foundation key 1's `flow.json` entry to AWS KMS
 
-Foundation key 1's holder updates their `flow.json` entry for the service account:
+Foundation key 1's holder (Vishal) updates their `flow.json` entry for the service account:
 
 ```json
-"<name>": {
+"vishal": {
   "address": "e467b9dd11fa00df",
   "key": {
     "type": "aws-kms",
-    "index": <new-service-index>,
+    "index": 20,
     "signatureAlgorithm": "ECDSA_P256",
     "hashAlgorithm": "SHA2_256",
     "resourceID": "arn:aws:kms:us-east-2:200591809096:key/mrk-214252e743b743a296fdbb3b9f917392"
@@ -113,7 +115,7 @@ The GCP KMS entry at old index 12 stays in the file but is no longer used by thi
 flow transactions build ./transactions/add-keys/2026/oct-26/hello.cdc \
   --network mainnet \
   --proposer 0xe467b9dd11fa00df \
-  --proposer-key-index <new-service-index> \
+  --proposer-key-index 20 \
   --authorizer 0xe467b9dd11fa00df \
   --payer 0xe467b9dd11fa00df \
   --gas-limit 500000 \
@@ -127,28 +129,40 @@ Before running this, the signer exports their signer-1 AWS profile:
 
 ```sh
 export AWS_PROFILE=signer-1
-aws sts get-caller-identity   # expect assumed-role/signer-1/<handle>; MFA prompt
+aws sts get-caller-identity   # expect assumed-role/signer-1/vishal; MFA prompt
 ```
 
 Then:
 
 ```sh
 flow transactions sign ./transactions/add-keys/2026/oct-26/hello-oct-26-unsigned.rlp \
-  --signer <name> \
+  --signer vishal \
   --filter payload \
   --save ./transactions/add-keys/2026/oct-26/hello-oct-26-sig-1-aws.rlp
 ```
 
 `flow-cli` reads the AWS-KMS entry in `flow.json`, calls `kms:Sign` via the signer-1 role, and writes the signature into the RLP file. **This is the signing step we're validating** — if `flow-cli` returns an error, AWS integration is broken and we **stop here**: do not proceed to Step 3.
 
-### Collect three more signatures (any combination totaling 750+ weight)
+### Collect three more signatures (peter + bluesign + layne = 3 × 250w = 750w)
 
 ```sh
+# Signer 2 — peter (GCP key, service idx 13)
 flow transactions sign ./transactions/add-keys/2026/oct-26/hello-oct-26-sig-1-aws.rlp \
-  --signer <name> --filter payload \
+  --signer peter \
+  --filter payload \
   --save ./transactions/add-keys/2026/oct-26/hello-oct-26-sig-2.rlp
 
-# ...two more signers, same pattern
+# Signer 3 — bluesign/Denniz (GCP key, service idx 18)
+flow transactions sign ./transactions/add-keys/2026/oct-26/hello-oct-26-sig-2.rlp \
+  --signer bluesign \
+  --filter payload \
+  --save ./transactions/add-keys/2026/oct-26/hello-oct-26-sig-3.rlp
+
+# Signer 4 — layne (GCP key, service idx 19)
+flow transactions sign ./transactions/add-keys/2026/oct-26/hello-oct-26-sig-3.rlp \
+  --signer layne \
+  --filter payload \
+  --save ./transactions/add-keys/2026/oct-26/hello-oct-26-sig-complete.rlp
 ```
 
 ### Submit
@@ -179,7 +193,7 @@ flow transactions build ./templates/add_keys.cdc \
   --network mainnet \
   --args-json "$(cat ./transactions/add-keys/2026/oct-26/arguments_staking_account.json)" \
   --proposer 0x8624b52f9ddcd04a \
-  --proposer-key-index 5 \
+  --proposer-key-index 6 \
   --authorizer 0x8624b52f9ddcd04a \
   --payer 0x8624b52f9ddcd04a \
   --gas-limit 500000 \
@@ -187,9 +201,61 @@ flow transactions build ./templates/add_keys.cdc \
   --save ./transactions/add-keys/2026/oct-26/staking-oct-26-unsigned.rlp
 ```
 
-Same signature-collection + send-signed pattern as the service account transaction in Step 1.
+Same signature-collection + send-signed pattern as Step 1, with staking account signer names:
 
-After seal, Foundation key 1's holder flips their `flow-staking.json` entry to `aws-kms` with the new staking index (same shape as the Step 2 service account JSON).
+```sh
+# Signer 1 — vishal (GCP key, staking idx 6; also proposer)
+flow transactions sign ./transactions/add-keys/2026/oct-26/staking-oct-26-unsigned.rlp \
+  -f flow-staking.json \
+  --signer vishal \
+  --filter payload \
+  --save ./transactions/add-keys/2026/oct-26/staking-oct-26-sig-1.rlp
+
+# Signer 2 — peter (GCP key, staking idx 7)
+flow transactions sign ./transactions/add-keys/2026/oct-26/staking-oct-26-sig-1.rlp \
+  -f flow-staking.json \
+  --signer peter \
+  --filter payload \
+  --save ./transactions/add-keys/2026/oct-26/staking-oct-26-sig-2.rlp
+
+# Signer 3 — bluesign/Denniz (GCP key, staking idx 10)
+flow transactions sign ./transactions/add-keys/2026/oct-26/staking-oct-26-sig-2.rlp \
+  -f flow-staking.json \
+  --signer bluesign \
+  --filter payload \
+  --save ./transactions/add-keys/2026/oct-26/staking-oct-26-sig-3.rlp
+
+# Signer 4 — layne (GCP key, staking idx 11)
+flow transactions sign ./transactions/add-keys/2026/oct-26/staking-oct-26-sig-3.rlp \
+  -f flow-staking.json \
+  --signer layne \
+  --filter payload \
+  --save ./transactions/add-keys/2026/oct-26/staking-oct-26-sig-complete.rlp
+```
+
+```sh
+flow transactions send-signed \
+  --network mainnet \
+  ./transactions/add-keys/2026/oct-26/staking-oct-26-sig-complete.rlp
+```
+
+After seal, Foundation key 1's holder (Vishal) flips their `flow-staking.json` entry to `aws-kms` at staking index **12**:
+
+```json
+"vishal": {
+  "address": "8624b52f9ddcd04a",
+  "keys": [
+    {
+      "type": "aws-kms",
+      "index": 12,
+      "signatureAlgorithm": "ECDSA_P256",
+      "hashAlgorithm": "SHA2_256",
+      "resourceID": "arn:aws:kms:us-east-2:200591809096:key/mrk-214252e743b743a296fdbb3b9f917392"
+    }
+  ],
+  "chain": "flow-mainnet"
+}
+```
 
 A separate staking-side smoke test is not run — the AWS → flow-cli → on-chain verifier chain is already proven end-to-end by Step 2 against the same KMS key material; the pubkey is identical on staking, only the chain-side index differs.
 
