@@ -44,7 +44,7 @@ flow transactions build ./templates/add_keys.cdc \
   --save ./transactions/add-keys/2026/oct-26/service-oct-26-unsigned.rlp
 ```
 
-### Collect signatures (vishal + peter + bluesign + layne = 4 × 250w = 1000w)
+### Collect signatures (vishal + peter + bluesign + kan = 4 × 250w = 1000w)
 
 ```sh
 # Signer 1 — vishal (GCP key, service idx 12; also proposer)
@@ -65,9 +65,9 @@ flow transactions sign ./transactions/add-keys/2026/oct-26/service-oct-26-sig-2.
   --filter payload \
   --save ./transactions/add-keys/2026/oct-26/service-oct-26-sig-3.rlp
 
-# Signer 4 — layne (GCP key, service idx 19; closes the envelope)
+# Signer 4 — kan (GCP key, service idx 19; closes the envelope)
 flow transactions sign ./transactions/add-keys/2026/oct-26/service-oct-26-sig-3.rlp \
-  --signer layne \
+  --signer kan \
   --filter payload \
   --save ./transactions/add-keys/2026/oct-26/service-oct-26-sig-complete.rlp
 ```
@@ -143,7 +143,7 @@ flow transactions sign ./transactions/add-keys/2026/oct-26/hello-oct-26-unsigned
 
 `flow-cli` reads the AWS-KMS entry in `flow.json`, calls `kms:Sign` via the signer-1 role, and writes the signature into the RLP file. **This is the signing step we're validating** — if `flow-cli` returns an error, AWS integration is broken and we **stop here**: do not proceed to Step 3.
 
-### Collect three more signatures (peter + bluesign + layne = 3 × 250w = 750w)
+### Collect three more signatures (peter + bluesign + kan = 3 × 250w = 750w)
 
 ```sh
 # Signer 2 — peter (GCP key, service idx 13)
@@ -158,9 +158,9 @@ flow transactions sign ./transactions/add-keys/2026/oct-26/hello-oct-26-sig-2.rl
   --filter payload \
   --save ./transactions/add-keys/2026/oct-26/hello-oct-26-sig-3.rlp
 
-# Signer 4 — layne (GCP key, service idx 19)
+# Signer 4 — kan (GCP key, service idx 19)
 flow transactions sign ./transactions/add-keys/2026/oct-26/hello-oct-26-sig-3.rlp \
-  --signer layne \
+  --signer kan \
   --filter payload \
   --save ./transactions/add-keys/2026/oct-26/hello-oct-26-sig-complete.rlp
 ```
@@ -225,10 +225,10 @@ flow transactions sign ./transactions/add-keys/2026/oct-26/staking-oct-26-sig-2.
   --filter payload \
   --save ./transactions/add-keys/2026/oct-26/staking-oct-26-sig-3.rlp
 
-# Signer 4 — layne (GCP key, staking idx 11)
+# Signer 4 — kan (GCP key, staking idx 11)
 flow transactions sign ./transactions/add-keys/2026/oct-26/staking-oct-26-sig-3.rlp \
   -f flow-staking.json \
-  --signer layne \
+  --signer kan \
   --filter payload \
   --save ./transactions/add-keys/2026/oct-26/staking-oct-26-sig-complete.rlp
 ```
@@ -272,7 +272,7 @@ flow transactions build ./transactions/add-keys/2026/oct-26/revoke_key.cdc \
   --network mainnet \
   --args-json "$(cat ./transactions/add-keys/2026/oct-26/arguments_revoke_service.json)" \
   --proposer 0xe467b9dd11fa00df \
-  --proposer-key-index 13 \
+  --proposer-key-index 20 \
   --authorizer 0xe467b9dd11fa00df \
   --payer 0xe467b9dd11fa00df \
   --gas-limit 500000 \
@@ -280,7 +280,7 @@ flow transactions build ./transactions/add-keys/2026/oct-26/revoke_key.cdc \
   --save ./transactions/add-keys/2026/oct-26/service-revoke-unsigned.rlp
 ```
 
-### Collect signatures (vishal AWS + peter + bluesign + layne = 4 × 250w = 1000w)
+### Collect signatures (vishal AWS + peter + bluesign + kan = 4 × 250w = 1000w)
 
 Vishal signs with his new AWS key (flow.json is already flipped to `aws-kms` at idx 20 from Step 2). `AWS_PROFILE=signer-1` must be active.
 
@@ -304,9 +304,9 @@ flow transactions sign ./transactions/add-keys/2026/oct-26/service-revoke-sig-2.
   --filter payload \
   --save ./transactions/add-keys/2026/oct-26/service-revoke-sig-3.rlp
 
-# Signer 4 — layne (GCP key, service idx 19)
+# Signer 4 — kan (GCP key, service idx 19)
 flow transactions sign ./transactions/add-keys/2026/oct-26/service-revoke-sig-3.rlp \
-  --signer layne \
+  --signer kan \
   --filter payload \
   --save ./transactions/add-keys/2026/oct-26/service-revoke-sig-complete.rlp
 ```
@@ -342,7 +342,7 @@ flow transactions build ./transactions/add-keys/2026/oct-26/revoke_key.cdc \
   --save ./transactions/add-keys/2026/oct-26/staking-revoke-unsigned.rlp
 ```
 
-### Collect signatures (vishal AWS + peter + bluesign + layne = 4 × 250w = 1000w)
+### Collect signatures (vishal AWS + peter + bluesign + kan = 4 × 250w = 1000w)
 
 Vishal signs with his AWS key via `flow-staking.json` (already flipped to `aws-kms` at staking idx 12 after Step 3). `AWS_PROFILE=signer-1` must be active.
 
@@ -369,10 +369,10 @@ flow transactions sign ./transactions/add-keys/2026/oct-26/staking-revoke-sig-2.
   --filter payload \
   --save ./transactions/add-keys/2026/oct-26/staking-revoke-sig-3.rlp
 
-# Signer 4 — layne (GCP key, staking idx 11)
+# Signer 4 — kan (GCP key, staking idx 11)
 flow transactions sign ./transactions/add-keys/2026/oct-26/staking-revoke-sig-3.rlp \
   -f flow-staking.json \
-  --signer layne \
+  --signer kan \
   --filter payload \
   --save ./transactions/add-keys/2026/oct-26/staking-revoke-sig-complete.rlp
 ```
