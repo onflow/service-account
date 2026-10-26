@@ -259,6 +259,134 @@ After seal, Foundation key 1's holder (Vishal) flips their `flow-staking.json` e
 
 A separate staking-side smoke test is not run — the AWS → flow-cli → on-chain verifier chain is already proven end-to-end by Step 2 against the same KMS key material; the pubkey is identical on staking, only the chain-side index differs.
 
+## Step 4 — Revoke the old GCP key on the service account
+
+**Gate**: only run after Step 2 (smoke test) has sealed. AWS signing is proven; the GCP key at service idx 12 is no longer needed.
+
+**Why it's safe now**: Kan has been moved to `dapperlabs_1` (service idx 11). Service idx 12 (`dapperlabs_2`) is exclusively Vishal's — revoking it affects no one else.
+
+### Build
+
+```sh
+flow transactions build ./transactions/add-keys/2026/oct-26/revoke_key.cdc \
+  --network mainnet \
+  --args-json "$(cat ./transactions/add-keys/2026/oct-26/arguments_revoke_service.json)" \
+  --proposer 0xe467b9dd11fa00df \
+  --proposer-key-index 13 \
+  --authorizer 0xe467b9dd11fa00df \
+  --payer 0xe467b9dd11fa00df \
+  --gas-limit 500000 \
+  -x payload \
+  --save ./transactions/add-keys/2026/oct-26/service-revoke-unsigned.rlp
+```
+
+### Collect signatures (vishal AWS + peter + bluesign + layne = 4 × 250w = 1000w)
+
+Vishal signs with his new AWS key (flow.json is already flipped to `aws-kms` at idx 20 from Step 2). `AWS_PROFILE=signer-1` must be active.
+
+```sh
+# Signer 1 — vishal (AWS KMS key, service idx 20)
+export AWS_PROFILE=signer-1
+flow transactions sign ./transactions/add-keys/2026/oct-26/service-revoke-unsigned.rlp \
+  --signer vishal \
+  --filter payload \
+  --save ./transactions/add-keys/2026/oct-26/service-revoke-sig-1.rlp
+
+# Signer 2 — peter (GCP key, service idx 13; also proposer)
+flow transactions sign ./transactions/add-keys/2026/oct-26/service-revoke-sig-1.rlp \
+  --signer peter \
+  --filter payload \
+  --save ./transactions/add-keys/2026/oct-26/service-revoke-sig-2.rlp
+
+# Signer 3 — bluesign/Denniz (GCP key, service idx 18)
+flow transactions sign ./transactions/add-keys/2026/oct-26/service-revoke-sig-2.rlp \
+  --signer bluesign \
+  --filter payload \
+  --save ./transactions/add-keys/2026/oct-26/service-revoke-sig-3.rlp
+
+# Signer 4 — layne (GCP key, service idx 19)
+flow transactions sign ./transactions/add-keys/2026/oct-26/service-revoke-sig-3.rlp \
+  --signer layne \
+  --filter payload \
+  --save ./transactions/add-keys/2026/oct-26/service-revoke-sig-complete.rlp
+```
+
+### Submit
+
+```sh
+flow transactions send-signed \
+  --network mainnet \
+  ./transactions/add-keys/2026/oct-26/service-revoke-sig-complete.rlp
+```
+
+After seal, confirm service idx 12 shows `Revoked: true` on FlowScan.
+
+## Step 5 — Revoke the old GCP key on the staking account
+
+**Gate**: only run after Step 3 (staking AddKey) has sealed and `flow-staking.json` has been flipped to `aws-kms` at staking idx 12.
+
+**Why it's safe now**: same reason as Step 4 — staking idx 6 (`dapperlabs_2`) is exclusively Vishal's now that Kan is on `dapperlabs_1`.
+
+### Build
+
+```sh
+flow transactions build ./transactions/add-keys/2026/oct-26/revoke_key.cdc \
+  --network mainnet \
+  --args-json "$(cat ./transactions/add-keys/2026/oct-26/arguments_revoke_staking.json)" \
+  --proposer 0x8624b52f9ddcd04a \
+  --proposer-key-index 7 \
+  --authorizer 0x8624b52f9ddcd04a \
+  --payer 0x8624b52f9ddcd04a \
+  --gas-limit 500000 \
+  -x payload \
+  --save ./transactions/add-keys/2026/oct-26/staking-revoke-unsigned.rlp
+```
+
+### Collect signatures (vishal AWS + peter + bluesign + layne = 4 × 250w = 1000w)
+
+Vishal signs with his AWS key via `flow-staking.json` (already flipped to `aws-kms` at staking idx 12 after Step 3). `AWS_PROFILE=signer-1` must be active.
+
+```sh
+# Signer 1 — vishal (AWS KMS key, staking idx 12)
+export AWS_PROFILE=signer-1
+flow transactions sign ./transactions/add-keys/2026/oct-26/staking-revoke-unsigned.rlp \
+  -f flow-staking.json \
+  --signer vishal \
+  --filter payload \
+  --save ./transactions/add-keys/2026/oct-26/staking-revoke-sig-1.rlp
+
+# Signer 2 — peter (GCP key, staking idx 7; also proposer)
+flow transactions sign ./transactions/add-keys/2026/oct-26/staking-revoke-sig-1.rlp \
+  -f flow-staking.json \
+  --signer peter \
+  --filter payload \
+  --save ./transactions/add-keys/2026/oct-26/staking-revoke-sig-2.rlp
+
+# Signer 3 — bluesign/Denniz (GCP key, staking idx 10)
+flow transactions sign ./transactions/add-keys/2026/oct-26/staking-revoke-sig-2.rlp \
+  -f flow-staking.json \
+  --signer bluesign \
+  --filter payload \
+  --save ./transactions/add-keys/2026/oct-26/staking-revoke-sig-3.rlp
+
+# Signer 4 — layne (GCP key, staking idx 11)
+flow transactions sign ./transactions/add-keys/2026/oct-26/staking-revoke-sig-3.rlp \
+  -f flow-staking.json \
+  --signer layne \
+  --filter payload \
+  --save ./transactions/add-keys/2026/oct-26/staking-revoke-sig-complete.rlp
+```
+
+### Submit
+
+```sh
+flow transactions send-signed \
+  --network mainnet \
+  ./transactions/add-keys/2026/oct-26/staking-revoke-sig-complete.rlp
+```
+
+After seal, confirm staking idx 6 shows `Revoked: true` on FlowScan.
+
 ## Follow-up ceremonies (NOT in this PR)
 
 1. Add Foundation key 2's AWS pubkey (`a5acfad4...`) to both chain accounts, smoke-test, revoke the current GCP key at service idx 13 / staking idx 7 (not shared — safe to revoke immediately after smoke test).
@@ -270,3 +398,5 @@ A separate staking-side smoke test is not run — the AWS → flow-cli → on-ch
 Step 1 (service AddKey) transaction: TBD
 Step 2 (service smoke test) transaction: TBD
 Step 3 (staking AddKey) transaction: TBD
+Step 4 (service GCP key revoke, idx 12) transaction: TBD
+Step 5 (staking GCP key revoke, idx 6) transaction: TBD
