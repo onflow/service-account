@@ -50,6 +50,32 @@
       ],
       "chain": "flow-mainnet"
     },
+    "peter-aws": {
+      "address": "8624b52f9ddcd04a",
+      "keys": [
+        {
+          "type": "aws-kms",
+          "index": 13,
+          "signatureAlgorithm": "ECDSA_P256",
+          "hashAlgorithm": "SHA2_256",
+          "resourceID": "arn:aws:kms:us-east-2:200591809096:key/mrk-d29d0506790e4a78b270b9e16c511afe"
+        }
+      ],
+      "chain": "flow-mainnet"
+    },
+    "kan-aws": {
+      "address": "8624b52f9ddcd04a",
+      "keys": [
+        {
+          "type": "aws-kms",
+          "index": 14,
+          "signatureAlgorithm": "ECDSA_P256",
+          "hashAlgorithm": "SHA2_256",
+          "resourceID": "arn:aws:kms:us-east-2:200591809096:key/mrk-eea5923d079e44e0b8d6415af5655f12"
+        }
+      ],
+      "chain": "flow-mainnet"
+    },
     "find": {
 			"address": "8624b52f9ddcd04a",
       "keys": [

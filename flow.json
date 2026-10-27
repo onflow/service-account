@@ -42,6 +42,26 @@
         "resourceID": "projects/dl-flow-admin/locations/us/keyRings/flow-service-account/cryptoKeys/dapperlabs_3/cryptoKeyVersions/1"
       }
     },
+    "peter-aws": {
+      "address": "e467b9dd11fa00df",
+      "key": {
+        "type": "aws-kms",
+        "index": 21,
+        "signatureAlgorithm": "ECDSA_P256",
+        "hashAlgorithm": "SHA2_256",
+        "resourceID": "arn:aws:kms:us-east-2:200591809096:key/mrk-d29d0506790e4a78b270b9e16c511afe"
+      }
+    },
+    "kan-aws": {
+      "address": "e467b9dd11fa00df",
+      "key": {
+        "type": "aws-kms",
+        "index": 22,
+        "signatureAlgorithm": "ECDSA_P256",
+        "hashAlgorithm": "SHA2_256",
+        "resourceID": "arn:aws:kms:us-east-2:200591809096:key/mrk-eea5923d079e44e0b8d6415af5655f12"
+      }
+    },
     "find": {
       "address": "e467b9dd11fa00df",
       "key": {
