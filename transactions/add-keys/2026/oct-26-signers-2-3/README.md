@@ -25,14 +25,12 @@ Templates:
 - Signature algorithm: `ECDSA_P256` (1)
 - Hash algorithm: `SHA2_256` (1)
 - Weight: `250.0`
-- Backing KMS key: `arn:aws:kms:us-east-2:200591809096:key/mrk-d29d0506790e4a78b270b9e16c511afe` (alias `alias/flow-foundation-key-2`)
 
 **Foundation key 3 — AWS KMS (Kan)**:
 - Pubkey hex: `3abfe3bc37865735ff2a701adcd960a73371814ab1f79ce9837a80dcb61f61d8cdfd4fd529fcc381a600d05e653047d2ad136478f8536024585850c0cff39044`
 - Signature algorithm: `ECDSA_P256` (1)
 - Hash algorithm: `SHA2_256` (1)
 - Weight: `250.0`
-- Backing KMS key: `arn:aws:kms:us-east-2:200591809096:key/mrk-eea5923d079e44e0b8d6415af5655f12` (alias `alias/flow-foundation-key-3`)
 
 ### Indices
 
