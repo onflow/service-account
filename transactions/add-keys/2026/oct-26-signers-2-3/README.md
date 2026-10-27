@@ -444,6 +444,6 @@ After seal, confirm staking idx 7 (Peter old GCP) and idx 5 (Kan old GCP) both s
 ## Results
 
 Step 1 (service AddKey both pubkeys) transaction: 9d3c1cba2859b1f5051476ad2960b10ce0882c8a97d39b90178a83dd23f648c2
-Step 2 (service revoke old GCP + AWS smoke test) transaction: TBD
+Step 2 (service revoke old GCP + AWS smoke test) transaction: 70a82056c4d521edb427c6603676c12c2a66998609639e47ffa3c55041225013
 Step 3 (staking AddKey both pubkeys) transaction: TBD
 Step 4 (staking revoke old GCP) transaction: TBD
