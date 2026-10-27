@@ -16,6 +16,8 @@ Templates:
 - Add: [`templates/add_two_keys.cdc`](../../../../templates/add_two_keys.cdc)
 - Revoke: [`revoke_two_keys.cdc`](./revoke_two_keys.cdc)
 
+> **Signer workflow note**: every code block below is a complete copy-paste for one signer. The `git pull` at the top syncs the previous signer's RLP into your clone; the `git add` / `git commit` / `git push` at the bottom publishes your signed RLP for the next signer. All work happens on branch `vishal/aws-foundation-signers-2-3-oct-26`.
+
 ## Public keys being added
 
 **Foundation key 2 — AWS KMS (Peter)**:
@@ -61,9 +63,10 @@ The existing `peter` and `kan` entries (GCP KMS, at their old indices) stay in p
 
 ## Step 1 — AddKey (both keys) on the service account
 
-### Build
+### Build (Vishal)
 
 ```sh
+git pull
 flow transactions build ./templates/add_two_keys.cdc \
   --network mainnet \
   --args-json "$(cat ./transactions/add-keys/2026/oct-26-signers-2-3/arguments_add_service.json)" \
@@ -74,6 +77,9 @@ flow transactions build ./templates/add_two_keys.cdc \
   --gas-limit 500000 \
   -x payload \
   --save ./transactions/add-keys/2026/oct-26-signers-2-3/service-add-unsigned.rlp
+git add ./transactions/add-keys/2026/oct-26-signers-2-3/service-add-unsigned.rlp
+git commit -m "service add: unsigned rlp"
+git push
 ```
 
 ### Collect signatures (vishal AWS + peter GCP + bluesign GCP + kan GCP = 4 × 250w = 1000w)
@@ -82,40 +88,66 @@ Vishal signs from AWS (`AWS_PROFILE=signer-1` must be active). Peter and Kan sig
 
 ```sh
 # Signer 1 — vishal (AWS KMS key, service idx 20; also proposer)
+git pull
 export AWS_PROFILE=signer-1
 flow transactions sign ./transactions/add-keys/2026/oct-26-signers-2-3/service-add-unsigned.rlp \
   --signer vishal \
   --filter payload \
   --save ./transactions/add-keys/2026/oct-26-signers-2-3/service-add-sig-1.rlp
+git add ./transactions/add-keys/2026/oct-26-signers-2-3/service-add-sig-1.rlp
+git commit -m "service add: vishal sign"
+git push
+```
 
+```sh
 # Signer 2 — peter (GCP key, service idx 13)
+git pull
 flow transactions sign ./transactions/add-keys/2026/oct-26-signers-2-3/service-add-sig-1.rlp \
   --signer peter \
   --filter payload \
   --save ./transactions/add-keys/2026/oct-26-signers-2-3/service-add-sig-2.rlp
+git add ./transactions/add-keys/2026/oct-26-signers-2-3/service-add-sig-2.rlp
+git commit -m "service add: peter sign"
+git push
+```
 
+```sh
 # Signer 3 — bluesign/Denniz (GCP key, service idx 18)
+git pull
 flow transactions sign ./transactions/add-keys/2026/oct-26-signers-2-3/service-add-sig-2.rlp \
   --signer bluesign \
   --filter payload \
   --save ./transactions/add-keys/2026/oct-26-signers-2-3/service-add-sig-3.rlp
+git add ./transactions/add-keys/2026/oct-26-signers-2-3/service-add-sig-3.rlp
+git commit -m "service add: bluesign sign"
+git push
+```
 
+```sh
 # Signer 4 — kan (GCP key, service idx 11; closes the envelope)
+git pull
 flow transactions sign ./transactions/add-keys/2026/oct-26-signers-2-3/service-add-sig-3.rlp \
   --signer kan \
   --filter payload \
   --save ./transactions/add-keys/2026/oct-26-signers-2-3/service-add-sig-complete.rlp
+git add ./transactions/add-keys/2026/oct-26-signers-2-3/service-add-sig-complete.rlp
+git commit -m "service add: kan sign"
+git push
 ```
 
-### Submit
+### Submit (Vishal)
 
 ```sh
+git pull
 flow transactions send-signed \
   --network mainnet \
   ./transactions/add-keys/2026/oct-26-signers-2-3/service-add-sig-complete.rlp
+# Record the sealed tx id in the "Results" section at the bottom of this README,
+# then:
+git add transactions/add-keys/2026/oct-26-signers-2-3/README.md
+git commit -m "service add: record tx id"
+git push
 ```
-
-### Record the new indices
 
 Confirm from the FlowScan transaction result that Peter's pubkey landed at **service idx 21** and Kan's at **service idx 22** before proceeding to Step 2. These values match the pre-committed `peter-aws` / `kan-aws` entries in `flow.json`.
 
@@ -125,9 +157,10 @@ Confirm from the FlowScan transaction result that Peter's pubkey landed at **ser
 
 **Why this doubles as the smoke test**: this transaction is co-signed by both Peter and Kan with their new AWS keys (via the `peter-aws` and `kan-aws` entries). If either AWS signer path is broken, the tx can't accumulate enough weight to seal, nothing on-chain changes, and the old GCP keys stay fully live. If the tx seals, we've proven on mainnet that both AWS KMS sign paths work end-to-end — same guarantee as a `hello.cdc` smoke test, with the state effect of revoking the old GCP identities as a bonus.
 
-### Build
+### Build (Vishal)
 
 ```sh
+git pull
 flow transactions build ./transactions/add-keys/2026/oct-26-signers-2-3/revoke_two_keys.cdc \
   --network mainnet \
   --args-json "$(cat ./transactions/add-keys/2026/oct-26-signers-2-3/arguments_revoke_service.json)" \
@@ -138,6 +171,9 @@ flow transactions build ./transactions/add-keys/2026/oct-26-signers-2-3/revoke_t
   --gas-limit 500000 \
   -x payload \
   --save ./transactions/add-keys/2026/oct-26-signers-2-3/service-revoke-unsigned.rlp
+git add ./transactions/add-keys/2026/oct-26-signers-2-3/service-revoke-unsigned.rlp
+git commit -m "service revoke: unsigned rlp"
+git push
 ```
 
 ### Collect signatures (vishal AWS + peter AWS + bluesign GCP + kan AWS = 4 × 250w = 1000w)
@@ -146,39 +182,67 @@ Each AWS signer must have the right profile exported — `signer-1` (Vishal), `s
 
 ```sh
 # Signer 1 — vishal (AWS KMS key, service idx 20; also proposer)
+git pull
 export AWS_PROFILE=signer-1
 flow transactions sign ./transactions/add-keys/2026/oct-26-signers-2-3/service-revoke-unsigned.rlp \
   --signer vishal \
   --filter payload \
   --save ./transactions/add-keys/2026/oct-26-signers-2-3/service-revoke-sig-1.rlp
+git add ./transactions/add-keys/2026/oct-26-signers-2-3/service-revoke-sig-1.rlp
+git commit -m "service revoke: vishal sign"
+git push
+```
 
+```sh
 # Signer 2 — peter (AWS KMS key, service idx 21 — brand new; uses the peter-aws flow.json entry)
+git pull
 export AWS_PROFILE=signer-2
 flow transactions sign ./transactions/add-keys/2026/oct-26-signers-2-3/service-revoke-sig-1.rlp \
   --signer peter-aws \
   --filter payload \
   --save ./transactions/add-keys/2026/oct-26-signers-2-3/service-revoke-sig-2.rlp
+git add ./transactions/add-keys/2026/oct-26-signers-2-3/service-revoke-sig-2.rlp
+git commit -m "service revoke: peter sign (aws)"
+git push
+```
 
+```sh
 # Signer 3 — bluesign/Denniz (GCP key, service idx 18)
+git pull
 flow transactions sign ./transactions/add-keys/2026/oct-26-signers-2-3/service-revoke-sig-2.rlp \
   --signer bluesign \
   --filter payload \
   --save ./transactions/add-keys/2026/oct-26-signers-2-3/service-revoke-sig-3.rlp
+git add ./transactions/add-keys/2026/oct-26-signers-2-3/service-revoke-sig-3.rlp
+git commit -m "service revoke: bluesign sign"
+git push
+```
 
+```sh
 # Signer 4 — kan (AWS KMS key, service idx 22 — brand new; uses the kan-aws flow.json entry)
+git pull
 export AWS_PROFILE=signer-3
 flow transactions sign ./transactions/add-keys/2026/oct-26-signers-2-3/service-revoke-sig-3.rlp \
   --signer kan-aws \
   --filter payload \
   --save ./transactions/add-keys/2026/oct-26-signers-2-3/service-revoke-sig-complete.rlp
+git add ./transactions/add-keys/2026/oct-26-signers-2-3/service-revoke-sig-complete.rlp
+git commit -m "service revoke: kan sign (aws)"
+git push
 ```
 
-### Submit
+### Submit (Vishal)
 
 ```sh
+git pull
 flow transactions send-signed \
   --network mainnet \
   ./transactions/add-keys/2026/oct-26-signers-2-3/service-revoke-sig-complete.rlp
+# Record the sealed tx id in the "Results" section at the bottom of this README,
+# then:
+git add transactions/add-keys/2026/oct-26-signers-2-3/README.md
+git commit -m "service revoke: record tx id"
+git push
 ```
 
 **If the tx seals**: Peter's and Kan's AWS KMS integrations are proven on mainnet. Confirm on FlowScan that service idx 13 (Peter old GCP) and idx 11 (Kan old GCP) both show `Revoked: true`. **→ Proceed to Step 3.**
@@ -189,9 +253,10 @@ flow transactions send-signed \
 
 **Gate**: Step 2 sealed successfully.
 
-### Build
+### Build (Vishal)
 
 ```sh
+git pull
 flow transactions build ./templates/add_two_keys.cdc \
   --network mainnet \
   --args-json "$(cat ./transactions/add-keys/2026/oct-26-signers-2-3/arguments_add_staking.json)" \
@@ -202,6 +267,9 @@ flow transactions build ./templates/add_two_keys.cdc \
   --gas-limit 9999 \
   -x payload \
   --save ./transactions/add-keys/2026/oct-26-signers-2-3/staking-add-unsigned.rlp
+git add ./transactions/add-keys/2026/oct-26-signers-2-3/staking-add-unsigned.rlp
+git commit -m "staking add: unsigned rlp"
+git push
 ```
 
 ### Collect signatures (vishal AWS + peter GCP + bluesign GCP + kan GCP = 4 × 250w = 1000w)
@@ -210,41 +278,69 @@ Peter and Kan sign with their current staking GCP keys — their new AWS pubkeys
 
 ```sh
 # Signer 1 — vishal (AWS KMS key, staking idx 12; also proposer)
+git pull
 export AWS_PROFILE=signer-1
 flow transactions sign ./transactions/add-keys/2026/oct-26-signers-2-3/staking-add-unsigned.rlp \
   -f flow-staking.json \
   --signer vishal \
   --filter payload \
   --save ./transactions/add-keys/2026/oct-26-signers-2-3/staking-add-sig-1.rlp
+git add ./transactions/add-keys/2026/oct-26-signers-2-3/staking-add-sig-1.rlp
+git commit -m "staking add: vishal sign"
+git push
+```
 
+```sh
 # Signer 2 — peter (GCP key, staking idx 7)
+git pull
 flow transactions sign ./transactions/add-keys/2026/oct-26-signers-2-3/staking-add-sig-1.rlp \
   -f flow-staking.json \
   --signer peter \
   --filter payload \
   --save ./transactions/add-keys/2026/oct-26-signers-2-3/staking-add-sig-2.rlp
+git add ./transactions/add-keys/2026/oct-26-signers-2-3/staking-add-sig-2.rlp
+git commit -m "staking add: peter sign"
+git push
+```
 
+```sh
 # Signer 3 — bluesign/Denniz (GCP key, staking idx 10)
+git pull
 flow transactions sign ./transactions/add-keys/2026/oct-26-signers-2-3/staking-add-sig-2.rlp \
   -f flow-staking.json \
   --signer bluesign \
   --filter payload \
   --save ./transactions/add-keys/2026/oct-26-signers-2-3/staking-add-sig-3.rlp
+git add ./transactions/add-keys/2026/oct-26-signers-2-3/staking-add-sig-3.rlp
+git commit -m "staking add: bluesign sign"
+git push
+```
 
+```sh
 # Signer 4 — kan (GCP key, staking idx 5)
+git pull
 flow transactions sign ./transactions/add-keys/2026/oct-26-signers-2-3/staking-add-sig-3.rlp \
   -f flow-staking.json \
   --signer kan \
   --filter payload \
   --save ./transactions/add-keys/2026/oct-26-signers-2-3/staking-add-sig-complete.rlp
+git add ./transactions/add-keys/2026/oct-26-signers-2-3/staking-add-sig-complete.rlp
+git commit -m "staking add: kan sign"
+git push
 ```
 
-### Submit
+### Submit (Vishal)
 
 ```sh
+git pull
 flow transactions send-signed \
   --network mainnet \
   ./transactions/add-keys/2026/oct-26-signers-2-3/staking-add-sig-complete.rlp
+# Record the sealed tx id in the "Results" section at the bottom of this README,
+# then:
+git add transactions/add-keys/2026/oct-26-signers-2-3/README.md
+git commit -m "staking add: record tx id"
+git push
 ```
 
 Confirm from FlowScan that Peter's pubkey landed at **staking idx 13** and Kan's at **staking idx 14**. These values match the pre-committed `peter-aws` / `kan-aws` entries in `flow-staking.json`.
@@ -255,9 +351,10 @@ Confirm from FlowScan that Peter's pubkey landed at **staking idx 13** and Kan's
 
 AWS → flow-cli → on-chain verifier is already proven for all three signers by Step 2 on the service account; the staking account revoke is just the symmetric cleanup against the same KMS key material.
 
-### Build
+### Build (Vishal)
 
 ```sh
+git pull
 flow transactions build ./transactions/add-keys/2026/oct-26-signers-2-3/revoke_two_keys.cdc \
   --network mainnet \
   --args-json "$(cat ./transactions/add-keys/2026/oct-26-signers-2-3/arguments_revoke_staking.json)" \
@@ -268,49 +365,80 @@ flow transactions build ./transactions/add-keys/2026/oct-26-signers-2-3/revoke_t
   --gas-limit 9999 \
   -x payload \
   --save ./transactions/add-keys/2026/oct-26-signers-2-3/staking-revoke-unsigned.rlp
+git add ./transactions/add-keys/2026/oct-26-signers-2-3/staking-revoke-unsigned.rlp
+git commit -m "staking revoke: unsigned rlp"
+git push
 ```
 
 ### Collect signatures (vishal AWS + peter AWS + bluesign GCP + kan AWS = 4 × 250w = 1000w)
 
 ```sh
 # Signer 1 — vishal (AWS KMS key, staking idx 12; also proposer)
+git pull
 export AWS_PROFILE=signer-1
 flow transactions sign ./transactions/add-keys/2026/oct-26-signers-2-3/staking-revoke-unsigned.rlp \
   -f flow-staking.json \
   --signer vishal \
   --filter payload \
   --save ./transactions/add-keys/2026/oct-26-signers-2-3/staking-revoke-sig-1.rlp
+git add ./transactions/add-keys/2026/oct-26-signers-2-3/staking-revoke-sig-1.rlp
+git commit -m "staking revoke: vishal sign"
+git push
+```
 
+```sh
 # Signer 2 — peter (AWS KMS key, staking idx 13; uses the peter-aws flow-staking.json entry)
+git pull
 export AWS_PROFILE=signer-2
 flow transactions sign ./transactions/add-keys/2026/oct-26-signers-2-3/staking-revoke-sig-1.rlp \
   -f flow-staking.json \
   --signer peter-aws \
   --filter payload \
   --save ./transactions/add-keys/2026/oct-26-signers-2-3/staking-revoke-sig-2.rlp
+git add ./transactions/add-keys/2026/oct-26-signers-2-3/staking-revoke-sig-2.rlp
+git commit -m "staking revoke: peter sign (aws)"
+git push
+```
 
+```sh
 # Signer 3 — bluesign/Denniz (GCP key, staking idx 10)
+git pull
 flow transactions sign ./transactions/add-keys/2026/oct-26-signers-2-3/staking-revoke-sig-2.rlp \
   -f flow-staking.json \
   --signer bluesign \
   --filter payload \
   --save ./transactions/add-keys/2026/oct-26-signers-2-3/staking-revoke-sig-3.rlp
+git add ./transactions/add-keys/2026/oct-26-signers-2-3/staking-revoke-sig-3.rlp
+git commit -m "staking revoke: bluesign sign"
+git push
+```
 
+```sh
 # Signer 4 — kan (AWS KMS key, staking idx 14; uses the kan-aws flow-staking.json entry)
+git pull
 export AWS_PROFILE=signer-3
 flow transactions sign ./transactions/add-keys/2026/oct-26-signers-2-3/staking-revoke-sig-3.rlp \
   -f flow-staking.json \
   --signer kan-aws \
   --filter payload \
   --save ./transactions/add-keys/2026/oct-26-signers-2-3/staking-revoke-sig-complete.rlp
+git add ./transactions/add-keys/2026/oct-26-signers-2-3/staking-revoke-sig-complete.rlp
+git commit -m "staking revoke: kan sign (aws)"
+git push
 ```
 
-### Submit
+### Submit (Vishal)
 
 ```sh
+git pull
 flow transactions send-signed \
   --network mainnet \
   ./transactions/add-keys/2026/oct-26-signers-2-3/staking-revoke-sig-complete.rlp
+# Record the sealed tx id in the "Results" section at the bottom of this README,
+# then:
+git add transactions/add-keys/2026/oct-26-signers-2-3/README.md
+git commit -m "staking revoke: record tx id"
+git push
 ```
 
 After seal, confirm staking idx 7 (Peter old GCP) and idx 5 (Kan old GCP) both show `Revoked: true` on FlowScan. The Foundation multisig is now fully on AWS KMS for all three signer slots.
