@@ -166,7 +166,7 @@ flow transactions build ./transactions/add-keys/2026/oct-26-signers-2-3/revoke_t
   --proposer-key-index 20 \
   --authorizer 0xe467b9dd11fa00df \
   --payer 0xe467b9dd11fa00df \
-  --gas-limit 500000 \
+  --gas-limit 9999 \
   -x payload \
   --save ./transactions/add-keys/2026/oct-26-signers-2-3/service-revoke-unsigned.rlp
 git add ./transactions/add-keys/2026/oct-26-signers-2-3/service-revoke-unsigned.rlp
