@@ -72,7 +72,7 @@ flow transactions build ./templates/add_two_keys.cdc \
   --proposer-key-index 20 \
   --authorizer 0xe467b9dd11fa00df \
   --payer 0xe467b9dd11fa00df \
-  --gas-limit 500000 \
+  --gas-limit 9999 \
   -x payload \
   --save ./transactions/add-keys/2026/oct-26-signers-2-3/service-add-unsigned.rlp
 git add ./transactions/add-keys/2026/oct-26-signers-2-3/service-add-unsigned.rlp
