@@ -69,6 +69,19 @@ With a CLI error of the form:
 (SetContract) is not authorized: deploying contracts requires authorization from specific accounts
 ```
 
+### Post-multisig run — Nov 18, 2026
+
+Ran immediately after the multisig transaction sealed, from the same probe account.
+
+| | |
+|---|---|
+| Transaction (rejected deploy) | [`89c74571a7eafd0319f94eefb4b3966d205189396dd5d442d89828695e85201e`](https://flowscan.org/transaction/89c74571a7eafd0319f94eefb4b3966d205189396dd5d442d89828695e85201e) |
+| Attempted contract | `DeploymentProbe_post` on `0xcaa8b2e4800fbf12` (not deployed — transaction reverted) |
+| Probe account balance | 0.88509525 → 0.88315525 FLOW (−0.00194 — only fees charged, no storage reserved) |
+| Sequence number | 188 → 189 |
+| FVM error | `(SetContract) is not authorized: deploying contracts requires authorization from specific accounts` |
+| Outcome | `deploy REJECTED → restriction IS active` ✅ (end-to-end confirmed on Mainnet) |
+
 ## If the multisig is reverted
 
 Re-run with a fresh tag (e.g. `postrevert`) to confirm the flag was flipped back off:
