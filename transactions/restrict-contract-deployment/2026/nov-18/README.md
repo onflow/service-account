@@ -18,9 +18,12 @@ This is a Cadence 1.0 version of the pre-1.0 transaction last used in [`transact
 - Script: [`set_contract_deployment_restricted.cdc`](./set_contract_deployment_restricted.cdc)
 - Argument: `restricted: Bool = true` ([`arguments.json`](./arguments.json))
 
+> **Signer workflow note**: every code block below is a complete copy-paste for one signer. The `git pull` at the top syncs the previous signer's RLP into your clone; the `git add` / `git commit` / `git push` at the bottom publishes your signed RLP for the next signer. All work happens on branch `local/restrict-contract-deployment-2026-nov-18`.
+
 ## Vishal Builds
 
 ```sh
+git pull
 flow transactions build ./transactions/restrict-contract-deployment/2026/nov-18/set_contract_deployment_restricted.cdc \
   --network mainnet \
   --args-json "$(cat ./transactions/restrict-contract-deployment/2026/nov-18/arguments.json)" \
@@ -31,47 +34,67 @@ flow transactions build ./transactions/restrict-contract-deployment/2026/nov-18/
   --gas-limit 9999 \
   -x payload \
   --save ./transactions/restrict-contract-deployment/2026/nov-18/restrict-nov-18-unsigned.rlp
+git add ./transactions/restrict-contract-deployment/2026/nov-18/restrict-nov-18-unsigned.rlp
+git commit -m "restrict: unsigned rlp"
+git push
 ```
 
 ## Vishal Signs
 
 ```sh
+git pull
 flow transactions sign ./transactions/restrict-contract-deployment/2026/nov-18/restrict-nov-18-unsigned.rlp \
   --signer vishal \
   --filter payload \
   --save ./transactions/restrict-contract-deployment/2026/nov-18/restrict-nov-18-sig-1.rlp
+git add ./transactions/restrict-contract-deployment/2026/nov-18/restrict-nov-18-sig-1.rlp
+git commit -m "restrict: vishal sign"
+git push
 ```
 
-## Jeff Signs
+## Layne Signs
 
 ```sh
+git pull
 flow transactions sign ./transactions/restrict-contract-deployment/2026/nov-18/restrict-nov-18-sig-1.rlp \
-  --signer jeff \
+  --signer layne \
   --filter payload \
   --save ./transactions/restrict-contract-deployment/2026/nov-18/restrict-nov-18-sig-2.rlp
+git add ./transactions/restrict-contract-deployment/2026/nov-18/restrict-nov-18-sig-2.rlp
+git commit -m "restrict: layne sign"
+git push
 ```
 
 ## Bluesign Signs
 
 ```sh
+git pull
 flow transactions sign ./transactions/restrict-contract-deployment/2026/nov-18/restrict-nov-18-sig-2.rlp \
   --signer bluesign \
   --filter payload \
   --save ./transactions/restrict-contract-deployment/2026/nov-18/restrict-nov-18-sig-3.rlp
+git add ./transactions/restrict-contract-deployment/2026/nov-18/restrict-nov-18-sig-3.rlp
+git commit -m "restrict: bluesign sign"
+git push
 ```
 
 ## Kan Signs
 
 ```sh
+git pull
 flow transactions sign ./transactions/restrict-contract-deployment/2026/nov-18/restrict-nov-18-sig-3.rlp \
   --signer kan \
   --filter payload \
   --save ./transactions/restrict-contract-deployment/2026/nov-18/restrict-nov-18-sig-complete.rlp
+git add ./transactions/restrict-contract-deployment/2026/nov-18/restrict-nov-18-sig-complete.rlp
+git commit -m "restrict: kan sign"
+git push
 ```
 
 ## Somebody Submits
 
 ```sh
+git pull
 flow transactions send-signed --network mainnet ./transactions/restrict-contract-deployment/2026/nov-18/restrict-nov-18-sig-complete.rlp
 ```
 
