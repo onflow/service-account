@@ -18,7 +18,7 @@ This is a Cadence 1.0 version of the pre-1.0 transaction last used in [`transact
 - Script: [`set_contract_deployment_restricted.cdc`](./set_contract_deployment_restricted.cdc)
 - Argument: `restricted: Bool = true` ([`arguments.json`](./arguments.json))
 
-> **Signer workflow note**: every code block below is a complete copy-paste for one signer. The `git pull` at the top syncs the previous signer's RLP into your clone; the `git add` / `git commit` / `git push` at the bottom publishes your signed RLP for the next signer. All work happens on branch `local/restrict-contract-deployment-2026-nov-18`.
+> **Signer workflow note**: every code block below is a complete copy-paste for one signer. The `git pull` at the top syncs the previous signer's RLP into your clone; the `git add` / `git commit` / `git push` at the bottom publishes your signed RLP for the next signer. All work happens on branch `vishal/restrict-contract-deployment-2026-nov-18`.
 
 ## Vishal Builds
 
