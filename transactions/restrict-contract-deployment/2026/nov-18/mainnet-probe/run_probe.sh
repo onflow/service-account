@@ -33,7 +33,7 @@ if [[ ! -f "$PROBE_CONFIG" ]]; then
 fi
 
 # Sanitize tag -> valid Cadence identifier chars only
-SAFE_TAG="$(echo "$TAG" | tr -c '[:alnum:]_' '_')"
+SAFE_TAG="$(printf '%s' "$TAG" | tr -c '[:alnum:]_' '_')"
 CONTRACT_NAME="DeploymentProbe_${SAFE_TAG}"
 
 TMPDIR="$(mktemp -d)"
