@@ -42,7 +42,9 @@ git push
 ## Vishal Signs
 
 ```sh
+# Signer 1 — vishal (AWS KMS, service idx 20)
 git pull
+export AWS_PROFILE=signer-1
 flow transactions sign ./transactions/restrict-contract-deployment/2026/nov-18/restrict-nov-18-unsigned.rlp \
   --signer vishal \
   --filter payload \
@@ -55,6 +57,7 @@ git push
 ## Layne Signs
 
 ```sh
+# Signer 2 — layne (GCP KMS, service idx 19)
 git pull
 flow transactions sign ./transactions/restrict-contract-deployment/2026/nov-18/restrict-nov-18-sig-1.rlp \
   --signer layne \
@@ -68,6 +71,7 @@ git push
 ## Bluesign Signs
 
 ```sh
+# Signer 3 — bluesign (GCP KMS, service idx 18)
 git pull
 flow transactions sign ./transactions/restrict-contract-deployment/2026/nov-18/restrict-nov-18-sig-2.rlp \
   --signer bluesign \
@@ -81,7 +85,9 @@ git push
 ## Kan Signs
 
 ```sh
+# Signer 4 — kan (AWS KMS, service idx 22; closes the envelope)
 git pull
+export AWS_PROFILE=signer-3
 flow transactions sign ./transactions/restrict-contract-deployment/2026/nov-18/restrict-nov-18-sig-3.rlp \
   --signer kan \
   --filter payload \
