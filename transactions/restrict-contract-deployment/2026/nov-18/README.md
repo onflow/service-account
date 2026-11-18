@@ -106,4 +106,6 @@ flow transactions send-signed --network mainnet ./transactions/restrict-contract
 
 ## Results
 
-https://flowscan.org/transaction/
+Sealed on Mainnet: [`7f60663e95a50555ffeb903f5c474fb717797ede930c57d08a12bdcfd19be1c9`](https://www.flowscan.io/tx/7f60663e95a50555ffeb903f5c474fb717797ede930c57d08a12bdcfd19be1c9)
+
+Post-multisig verification (deploy rejected from a non-authorized account): [`89c74571a7eafd0319f94eefb4b3966d205189396dd5d442d89828695e85201e`](https://www.flowscan.io/tx/89c74571a7eafd0319f94eefb4b3966d205189396dd5d442d89828695e85201e) — see [`./mainnet-probe/`](./mainnet-probe/).
