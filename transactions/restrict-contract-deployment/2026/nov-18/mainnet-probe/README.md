@@ -39,6 +39,18 @@ RESULT: deploy SUCCEEDED → restriction is NOT active
 
 This proves the probe account can currently deploy and that the probe itself works.
 
+### Pre-multisig run — Nov 18, 2026
+
+Ran ahead of ceremony day to clear one step off the checklist.
+
+| | |
+|---|---|
+| Transaction | [`3e94fada41998b6e5ea5086ddfb902475e300ed372c1b66646e70f662f37025e`](https://flowscan.org/transaction/3e94fada41998b6e5ea5086ddfb902475e300ed372c1b66646e70f662f37025e) |
+| Deployed contract | `DeploymentProbe_pre_` on `0xcaa8b2e4800fbf12` (trailing `_` is a pre-fix leftover; subsequent runs produce clean names) |
+| Probe account balance | 0.88911525 → 0.88509525 FLOW (−0.00402) |
+| Sequence number | 187 → 188 |
+| Outcome | `deploy SUCCEEDED → restriction is NOT active` ✅ (baseline confirmed) |
+
 ## After the multisig
 
 ```sh
