@@ -52,7 +52,11 @@ echo "  network: mainnet"
 echo "  signer : ${PROBE_SIGNER}  (from ${PROBE_CONFIG})"
 echo "----------------------------------------------------------------"
 
-OUTPUT=$(flow accounts add-contract "$CONTRACT_PATH" \
+# IMPORTANT: run flow from an empty directory. `flow accounts add-contract`
+# will auto-rewrite any flow.json it finds in cwd (registering the deployed
+# contract + injecting dependencies), which would clobber the repo's hand-
+# maintained flow.json if we were in the repo root.
+OUTPUT=$(cd "$TMPDIR" && flow accounts add-contract "$CONTRACT_PATH" \
     --network mainnet \
     --signer "$PROBE_SIGNER" \
     -f "$PROBE_CONFIG" 2>&1)
